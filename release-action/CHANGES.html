@@ -94,10 +94,6 @@ method.  [<a href="https://github.com/planetarium/libplanet/pull/210">#210</a>]<
 <li>Removed <code>IBlockPolicy&lt;T&gt;.ValidateBlocks()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/210">#210</a>]</li>
 <li><code>BlockChain&lt;T&gt;[int]</code> became to throw <code>ArgumentOutOfRangeException</code> instead
 of <code>IndexOutOfRangeException</code>.  [<a href="https://github.com/planetarium/libplanet/pull/210">#210</a>]</li>
-<li>Added <code>GetAddressesMask(HashDigest&lt;SHA256&gt;)</code> method to <code>IStore</code> interface
-and its all implementations.  [<a href="https://github.com/planetarium/libplanet/issues/189">#189</a>, <a href="https://github.com/planetarium/libplanet/pull/197">#197</a>]</li>
-<li>The signature of <code>IStore.PutBlock&lt;T&gt;(Block&lt;T&gt;)</code> method was changed to
-<code>PutBlock&lt;T&gt;(Block&lt;T&gt;, Address)</code>.  [<a href="https://github.com/planetarium/libplanet/issues/189">#189</a>, <a href="https://github.com/planetarium/libplanet/pull/197">#197</a>]</li>
 <li>Removed <code>KeyEquals()</code> methods from all classes and structs.  [<a href="https://github.com/planetarium/libplanet/pull/216">#216</a>]</li>
 <li><code>Swarm</code> class now does not implement <code>IEquatable&lt;Swarm&gt;</code> anymore and
 its <code>Equals(object)</code> method and <code>GetHashCode()</code> method became to have
@@ -120,6 +116,20 @@ related classes method parameters and field types have changed accordingly.</li>
 <li>Removed <code>HashDigest.HasLeadingZeroBits()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/213">#213</a>]</li>
 <li>The signature of <code>IStore.PutBlock&lt;T&gt;(Block&lt;T&gt;)</code> method was changed to
 <code>PutBlock&lt;T&gt;(Block&lt;T&gt;, Address)</code>.  [<a href="https://github.com/planetarium/libplanet/issues/189">#189</a>, <a href="https://github.com/planetarium/libplanet/pull/197">#197</a>]</li>
+<li><code>Block&lt;T&gt;.Hash</code> is no longer calculated using the full data of the
+<code>Transaction&lt;T&gt;</code>, but is calculated using only the <code>Transaction&lt;T&gt;.Id</code>.
+[<a href="https://github.com/planetarium/libplanet/pull/234">#234</a>]</li>
+<li>Added <code>IStore.LookupStateReference&lt;T&gt;(string, Address, Block&lt;T&gt;)</code> method.
+[<a href="https://github.com/planetarium/libplanet/pull/232">#232</a>]</li>
+<li>Added <code>IStore.StoreStateReference&lt;T&gt;(string, Block&lt;T&gt;)</code> method.
+[<a href="https://github.com/planetarium/libplanet/pull/232">#232</a>]</li>
+<li>Added <code>IStore.ForkStateReferences&lt;T&gt;(string, string, Block&lt;T&gt;, IImmutableSet&lt;Address&gt;</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/232">#232</a>]</li>
+<li>Removed <code>Block&lt;T&gt;.Validate()</code> and <code>Block&lt;T&gt;.EvaluateActions()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/243">#243</a>]</li>
+<li>Added <code>Transaction&lt;T&gt;.Nonce</code> and <code>RawTransaction.Nonce</code> properties.
+[<a href="https://github.com/planetarium/libplanet/pull/246">#246</a>]</li>
+<li>Added <code>IStore.GetTxNonce(string, Address)</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/246">#246</a>]</li>
+<li>Added <code>IStore.IncreaseTxNonce&lt;T&gt;(string, Block&lt;T&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/246">#246</a>]</li>
+<li>Added <code>IStore.ForkTxNonce&lt;T&gt;(string, string, Block&lt;T&gt;, IImmutableSet&lt;Address&gt;</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/246">#246</a>]</li>
 </ul>
 <h3 id="added-interfaces">Added interfaces</h3>
 <ul>
@@ -143,6 +153,11 @@ and the mining <code>difficultyBoundDivisor</code>.  [<a href="https://github.co
 <li><code>Swarm</code> constructor became to receive a <code>linger</code> (or <code>millisecondsLinger</code>)
 parameter.  This purposes to determine how long to wait for pending
 messages when a <code>Swarm</code> instance is requested to terminate.</li>
+<li>Added <code>NamespaceNotFoundException</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/232">#232</a>]</li>
+<li>Added <code>Block&lt;T&gt;.Evaluate()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/243">#243</a>]</li>
+<li>Made <code>InvalidBlockTimestampException</code> class <code>public</code> so that it can be
+caught. [<a href="https://github.com/planetarium/libplanet/issues/133">#133</a>, <a href="https://github.com/planetarium/libplanet/pull/251">#251</a>]</li>
+<li>Added <code>InvalidTxNonceException</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/246">#246</a>]</li>
 </ul>
 <h3 id="behavioral-changes">Behavioral changes</h3>
 <ul>
@@ -157,8 +172,24 @@ difficulty bomb.  [<a href="https://github.com/planetarium/libplanet/pull/213">#
 target number to representing a divisor to obtain the target number.
 [<a href="https://github.com/planetarium/libplanet/pull/213">#213</a>]</li>
 <li><code>BlockSet&lt;T&gt;[int]</code> changed so as not to validate a block.  [<a href="https://github.com/planetarium/libplanet/pull/231">#231</a>]</li>
+<li>Improved read performance of <code>Block&lt;T&gt;.Hash</code> and <code>Transaction&lt;T&gt;.Id</code>.
+[<a href="https://github.com/planetarium/libplanet/issues/228">#228</a>, <a href="https://github.com/planetarium/libplanet/pull/234">#234</a>]</li>
+<li><code>Swarm.StartAsync()</code> now does not call <code>Swarm.StopAsync()</code> anymore,
+therefore <code>Swarm.StopAsync()</code> should be explicitly called.  [<a href="https://github.com/planetarium/libplanet/pull/236">#236</a>]</li>
+<li><code>Transaction&lt;T&gt;.EvaluateActionsGradually()</code> became to record
+<code>IAccountStateDelta.SetState()</code> calls even if its argument is the same
+to the previous state. [<a href="https://github.com/planetarium/libplanet/pull/241">#241</a>]</li>
+<li><code>Block&lt;T&gt;.Validate()</code> and <code>Block&lt;T&gt;.EvaluateActions()</code> are integrated into
+<code>Block&lt;T&gt;.Evaluate()</code>.  [<a href="https://github.com/planetarium/libplanet/pull/243">#243</a>]</li>
+<li><code>BlockChain&lt;T&gt;.Append()</code> became to execute <code>Action.Execute()</code> only once per
+action in the <code>Block&lt;T&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/243">#243</a>]</li>
+<li><code>BlockChain&lt;T&gt;.Append()</code> method became to throw <code>InvalidTxNonceException</code>
+when the <code>Transaction&lt;T&gt;.Nonce</code> does not correspond to its <code>Signer</code>'s
+current nonce.  [<a href="https://github.com/planetarium/libplanet/pull/246">#246</a>]</li>
+<li><code>Swarm</code> became to enforce <code>ForceDotNet.Force()</code> in <a href="https://github.com/somdoron/AsyncIO">AsyncIO</a> while it's running on
+Mono runtime.  [<a href="https://github.com/planetarium/libplanet/pull/247">#247</a>]</li>
 </ul>
-<h1 id="bug-fixes">Bug fixes</h1>
+<h3 id="bug-fixes">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that TURN relay had been disconnected when being connected for
 longer than 5 minutes.  [<a href="https://github.com/planetarium/libplanet/pull/198">#198</a>]</li>
@@ -183,6 +214,12 @@ of already validated blocks.  [<a href="https://github.com/planetarium/libplanet
 [<a href="https://github.com/planetarium/libplanet/pull/217">#217</a>]</li>
 <li>Improved concurrency of <code>BlockChain&lt;T&gt;.Append()</code> method by removing
 unnecessary race conditions. [<a href="https://github.com/planetarium/libplanet/pull/217">#217</a>]</li>
+<li>Fixed a bug that <code>Swarm</code> could not properly communicate with <code>Peer</code> behind
+NAT. [<a href="https://github.com/planetarium/libplanet/pull/240">#240</a>]</li>
+<li>Fixed a bug that <code>BlockChain&lt;T&gt;.FindNextHashes()</code> throws
+<code>ArgumentOutOfRangeException</code> when chain is empty.</li>
+<li>Fixed a bug that <code>TurnClient.AcceptRelayedStreamAsync()</code>didn't handle
+concurrent connections correctly. [<a href="https://github.com/planetarium/libplanet/pull/256">#256</a>]</li>
 </ul>
 <h2 id="version-022">Version 0.2.2</h2>
 <p>Released on April 12, 2019.</p>

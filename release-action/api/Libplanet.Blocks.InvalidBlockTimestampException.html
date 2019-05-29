@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Delegate Hashcash.Stamp
+    <title>Class InvalidBlockTimestampException
    | Libplanet </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Delegate Hashcash.Stamp
+    <meta name="title" content="Class InvalidBlockTimestampException
    | Libplanet ">
     <meta name="generator" content="docfx 2.42.1.0">
     
@@ -104,8 +104,8 @@
                           <li class="">
                             <a href="Libplanet.Hashcash.html" title="Hashcash" class="">Hashcash</a>
                           </li>
-                          <li class="active">
-                            <a href="Libplanet.Hashcash.Stamp.html" title="Hashcash.Stamp" class="active">Hashcash.Stamp</a>
+                          <li class="">
+                            <a href="Libplanet.Hashcash.Stamp.html" title="Hashcash.Stamp" class="">Hashcash.Stamp</a>
                           </li>
                           <li class="">
                             <a href="Libplanet.HashDigest-1.html" title="HashDigest&lt;T&gt;" class="">HashDigest&lt;T&gt;</a>
@@ -203,8 +203,8 @@
                           <li class="">
                             <a href="Libplanet.Blocks.InvalidBlockPreviousHashException.html" title="InvalidBlockPreviousHashException" class="">InvalidBlockPreviousHashException</a>
                           </li>
-                          <li class="">
-                            <a href="Libplanet.Blocks.InvalidBlockTimestampException.html" title="InvalidBlockTimestampException" class="">InvalidBlockTimestampException</a>
+                          <li class="active">
+                            <a href="Libplanet.Blocks.InvalidBlockTimestampException.html" title="InvalidBlockTimestampException" class="active">InvalidBlockTimestampException</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -346,24 +346,104 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Libplanet.Hashcash.Stamp">
+            <article class="content wrap" id="_content" data-uid="Libplanet.Blocks.InvalidBlockTimestampException">
   
   
-  <h1 id="Libplanet_Hashcash_Stamp" data-uid="Libplanet.Hashcash.Stamp" class="text-break">Delegate Hashcash.Stamp
+  <h1 id="Libplanet_Blocks_InvalidBlockTimestampException" data-uid="Libplanet.Blocks.InvalidBlockTimestampException" class="text-break">Class InvalidBlockTimestampException
   </h1>
-  <div class="markdown level0 summary"><p>A delegate to determine a consistent <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>s
-representation derived from a given <code data-dev-comment-type="paramref" class="paramref">nonce</code>.</p>
-<p>Since it is called multiple times with different
-<code data-dev-comment-type="paramref" class="paramref">nonce</code>s for
-<a href="https://en.wikipedia.org/wiki/Proof-of-work_system">proof-of-work system</a>, the total time an implementation elapses
-should not vary for different <code data-dev-comment-type="paramref" class="paramref">nonce</code>s.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Libplanet.html">Libplanet</a></h6>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception">Exception</a></div>
+    <div class="level2"><a class="xref" href="Libplanet.Blocks.InvalidBlockException.html">InvalidBlockException</a></div>
+    <div class="level3"><span class="xref">InvalidBlockTimestampException</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">ISerializable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.getbaseexception#System_Exception_GetBaseException">Exception.GetBaseException()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.getobjectdata#System_Exception_GetObjectData_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_">Exception.GetObjectData(SerializationInfo, StreamingContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.gettype#System_Exception_GetType">Exception.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.tostring#System_Exception_ToString">Exception.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.data#System_Exception_Data">Exception.Data</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.helplink#System_Exception_HelpLink">Exception.HelpLink</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.hresult#System_Exception_HResult">Exception.HResult</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.innerexception#System_Exception_InnerException">Exception.InnerException</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.message#System_Exception_Message">Exception.Message</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.source#System_Exception_Source">Exception.Source</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.stacktrace#System_Exception_StackTrace">Exception.StackTrace</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.targetsite#System_Exception_TargetSite">Exception.TargetSite</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.exception.serializeobjectstate">Exception.SerializeObjectState</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Libplanet.Blocks.html">Libplanet.Blocks</a></h6>
   <h6><strong>Assembly</strong>: Libplanet.dll</h6>
-  <h5 id="Libplanet_Hashcash_Stamp_syntax">Syntax</h5>
+  <h5 id="Libplanet_Blocks_InvalidBlockTimestampException_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate byte[] Stamp(Nonce nonce);</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class InvalidBlockTimestampException : InvalidBlockException, ISerializable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dahlia/libplanet/new/release-action/apiSpec/new?filename=Libplanet_Blocks_InvalidBlockTimestampException__ctor_System_String_.md&amp;value=---%0Auid%3A%20Libplanet.Blocks.InvalidBlockTimestampException.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dahlia/libplanet/blob/release-action/Libplanet/Blocks/InvalidBlockTimestampException.cs/#L8">View Source</a>
+  </span>
+  <a id="Libplanet_Blocks_InvalidBlockTimestampException__ctor_" data-uid="Libplanet.Blocks.InvalidBlockTimestampException.#ctor*"></a>
+  <h4 id="Libplanet_Blocks_InvalidBlockTimestampException__ctor_System_String_" data-uid="Libplanet.Blocks.InvalidBlockTimestampException.#ctor(System.String)">InvalidBlockTimestampException(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InvalidBlockTimestampException(string message)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -376,37 +456,15 @@ should not vary for different <code data-dev-comment-type="paramref" class="para
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Libplanet.Nonce.html">Nonce</a></td>
-        <td><span class="parametername">nonce</span></td>
-        <td><p>An arbitrary nonce for an attempt, provided
-by <a class="xref" href="Libplanet.Hashcash.html#Libplanet_Hashcash_Answer_Libplanet_Hashcash_Stamp_System_Int64_">Answer(Hashcash.Stamp, Int64)</a> method.</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
-        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a> array determined from the given
-<code data-dev-comment-type="paramref" class="paramref">nonce</code>.  It should return consistently
-an equivalent array for equivalent <code data-dev-comment-type="paramref" class="paramref">nonce</code>
-values.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="seealso">See Also</h3>
-  <div class="seealso">
-      <div><a class="xref" href="Libplanet.Hashcash.html#Libplanet_Hashcash_Answer_Libplanet_Hashcash_Stamp_System_Int64_">Answer(Hashcash.Stamp, Int64)</a></div>
-      <div><a class="xref" href="Libplanet.Nonce.html">Nonce</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.runtime.serialization.iserializable">System.Runtime.Serialization.ISerializable</a>
   </div>
 </article>
           </div>
@@ -416,10 +474,10 @@ values.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/new/release-action/apiSpec/new?filename=Libplanet_Hashcash_Stamp.md&amp;value=---%0Auid%3A%20Libplanet.Hashcash.Stamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dahlia/libplanet/new/release-action/apiSpec/new?filename=Libplanet_Blocks_InvalidBlockTimestampException.md&amp;value=---%0Auid%3A%20Libplanet.Blocks.InvalidBlockTimestampException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/release-action/Libplanet/Hashcash.cs/#L31" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/release-action/Libplanet/Blocks/InvalidBlockTimestampException.cs/#L5" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
