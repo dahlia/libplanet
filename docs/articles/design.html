@@ -8,14 +8,14 @@
     <title>Libplanet design | Libplanet </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Libplanet design | Libplanet ">
-    <meta name="generator" content="docfx 2.40.7.0">
+    <meta name="generator" content="docfx 2.42.1.0">
     
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../styles/docfx.css">
     <link rel="stylesheet" href="../styles/main.css">
-    <meta property="docfx:navrel" content="../toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
     
     
     
@@ -44,7 +44,21 @@
                   <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
                 </div>
               </form>
-            </div>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/design.html" title="Design">Design</a>
+                      </li>
+                      <li>
+                          <a href="../api/Libplanet.html" title="API Reference">API Reference</a>
+                      </li>
+                      <li>
+                          <a href="../CHANGES.html" title="Changelog">Changelog</a>
+                      </li>
+                      <li>
+                          <a href="../CONTRIBUTING.html" title="Contribute">Contribute</a>
+                      </li>
+                </ul>    </div>
           </div>
         </nav>
         
@@ -57,11 +71,26 @@
         </div>
       </header>
       <div role="main" class="container body-content hide-when-search">
-        
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="active">
+                      <a href="design.html" title="Design" class="active">Design</a>
+                    </li>
+                  </ul>        </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="article row grid-right">
@@ -69,44 +98,42 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="libplanet-design">Libplanet design</h1>
 
-<p>Libplanet is a sort of network/storage library for <a href="https://en.wikipedia.org/wiki/Peer-to-peer">peer-to-peer</a>
-distributed multiplayer games.  From a perspective of this library's user,
-it can be like a client library of a <a href="https://en.wikipedia.org/wiki/Platform_as_a_service">PaaS</a> for games, except that autonomous
-nodes run by gamers communicate with each other without any authority of
-the centralized server.</p>
-<p>Under the hood, because we should ignore malicious nodes in the network so that
-nodes gamers run can be autonomous, it is based on <a href="https://en.wikipedia.org/wiki/Digital_signature">digital signature</a>,
-<a href="https://en.wikipedia.org/wiki/Byzantine_fault_tolerance">BFT</a> consensus, and data replication, or instead, we can call it <a href="https://en.wikipedia.org/wiki/Blockchain">blockchain</a>.</p>
+<p>Libplanet is a network/storage library for <a href="https://en.wikipedia.org/wiki/Peer-to-peer">peer-to-peer</a> distributed
+multiplayer games.  From the perspective of this library's user,
+it can be similar to a client library of a <a href="https://en.wikipedia.org/wiki/Platform_as_a_service">PaaS</a> for games,
+except that autonomous nodes run by gamers communicate with
+each other without any authority of the centralized server.</p>
+<p>Under the hood, because we need to prevent malicious nodes in the network from
+corrupting network autonomy, the library utilizes <a href="https://en.wikipedia.org/wiki/Digital_signature">digital signature</a>,
+<a href="https://en.wikipedia.org/wiki/Byzantine_fault_tolerance">BFT</a> consensus, and data replication, or simply <a href="https://en.wikipedia.org/wiki/Blockchain">blockchain</a>.</p>
 <p>Implementing blockchain and BFT consensus for peer-to-peer distributed
 multiplayer games is highly complicated, requires a lot of code to
-be written, and is fitful and tedious to test.  For the future of decentralized
-online games to come, rather than every single game making such redundant
-effort, it will be a cost-efficient way to achieve a high level of product
-quality that we make an open source library for common things together.</p>
+be written, and is difficult and tedious to test.  For the future of
+decentralized online games, rather than every single game making such redundant
+effort, it will be more cost-efficient to make a high quality open source
+library for commonly performed tasks.</p>
 <h2 id="platform-and-packaging">Platform and packaging</h2>
-<p>Libplanet is a .NET library at present in order to be used along with <a href="https://unity3d.com/">Unity</a>,
-that a lot of small and big teams creating video games use.  (We have a
-long-running roadmap to support other platforms, though.)</p>
+<p>Presently, Libplanet is a .NET library in order to be used along with <a href="https://unity3d.com/">Unity</a>,
+one of the most popular multiplatform game engines.  (We have a long-running
+roadmap to support other platforms, though.)</p>
 <p>However, Libplanet is not only a Unity plugin distributed through
 the <a href="https://assetstore.unity.com/">Unity Asset Store</a>, but also a standard .NET library distributed through
 <a href="https://www.nuget.org/">NuGet</a>.  Because, as <a href="https://en.bitcoin.it/wiki/Mining">block mining</a> is indispensable for running
-the decentralized public network, besides nodes gamers run (i.e., game apps),
-it needs to be possible to make non-game headless nodes to mine (i.e., miners)
-as well.  A peer-to-peer distributed multiplayer game based on Libplanet can be
-packaged as both forms at a time: a game app drawing beautiful graphics
-through the Unity engine for gamers' machines (e.g., Android, iOS, macOS,
-Windows), and a mining <a href="https://en.wikipedia.org/wiki/Daemon_(computing)">daemon</a> runnable on miners' machines
-(e.g., Linux).</p>
+a decentralized public network, mining-only headless nodes need to exist besides
+game clients that also act as nodes. A peer-to-peer distributed multiplayer game
+based on Libplanet can be packaged as both: a Unity based game application for
+multiplatform gaming devices (e.g., Android, iOS, macOS, Windows), and a mining
+<a href="https://en.wikipedia.org/wiki/Daemon_(computing)">daemon</a> runnable on miners' machines (e.g., Linux).</p>
 <p>For the maximum compatibility and portability, we currently target
 <a href="https://docs.microsoft.com/en-us/dotnet/standard/net-standard">.NET Standard</a> 2.0.</p>
 <h2 id="transactions-and-actions">Transactions and actions</h2>
-<p>Every action happened in a game built on Libplanet should be recorded in
+<p>Every action that happened in a game built on Libplanet should be recorded in
 the blockchain.  Although trivial things like chatting between players could be
-an exception as these do not affect rules or incentives of a game, the whole
-things, e.g., character's moving, battle, progression (i.e., exp), item drops,
+an exception as these do not affect rules or incentives of a game, actions such
+as a character's movement, battle, progression (i.e., exp), item drops,
 reinforcements, breakages, trades, that are non-trivial and affect game states
 should be recorded to the append-only log.  Each log has its own digital
-signature to prove that the corresponding gamer did it.</p>
+signature to prove that the corresponding gamer is responsible.</p>
 <p>We call the unit of such pair of log and its signature a
 <a class="xref" href="../api/Libplanet.Tx.Transaction-1.html">Transaction&lt;T&gt;</a>, and it consists of multiple
 <a class="xref" href="../api/Libplanet.Tx.Transaction-1.html#Libplanet_Tx_Transaction_1_Actions">Actions</a>.  How transactions and actions grouped is
@@ -116,25 +143,26 @@ or be into two or three groups (e.g., <em>{A} &amp; {B, C, D}</em>), or rather h
 their sole group (e.g., <em>{A} &amp; {B} &amp; {C} &amp; {D}</em>).</p>
 <p>The primary purpose of separating transactions and actions is to have
 the flexible granularity of synchronization between nodes in the network.
-An actor can put one transaction they signed into a block at most.
-A transaction included in a block is confirmed by other nodes in the network
+An actor can at most put one signed transaction into a block. A transaction
+included in a block is confirmed by other nodes in the network
 when the block is mined.  It is also known as <a href="https://en.wikipedia.org/wiki/Consensus_(computer_science)">consensus</a>
 in distributed systems.</p>
 <p>It takes 5 to 20 seconds to mine a block.  It means that if we group four
 actions <em>A</em> to <em>D</em> into four distinct transactions like <em>{A} &amp; {B} &amp; {C} &amp; {D}</em>
-it must take 20 seconds at fastest to 80 seconds at latest until four actions
-are all confirmed in the network.  On the other hand, if we group the whole
-actions into a single transaction like <em>{A, B, C, D}</em> it takes only 5 seconds
+it must take 20 seconds to 80 seconds until four actions are all confirmed in
+the network.  On the other hand, if we group the actions into a single
+transaction like <em>{A, B, C, D}</em> it takes only 5 seconds
 at best to 20 seconds even at worst.</p>
 <p>Does it imply the best practice is to put as many actions as possible into
-as few transactions as possible?  It is not that simple.</p>
+as few transactions as possible?  Unfortunately it is not that simple.</p>
 <p>Putting many actions into few transactions decreases the immediacy of
 each action.  To other nodes (gamers), it looks like there is no change at
-all for a time, and then suddenly many things happen at a time.
-Grouping actions into transactions it balancing between throughput and latency,
+all for a while, and then suddenly many things happening at once.
+Grouping actions into transactions is a balance between throughput and latency,
 so different strategies should be chosen for the goal that a game aims to.</p>
 <p>There is another reason to group actions into transactions besides latency
-control.  It is, so actions made by different players interact with each other.
+control.  It is so that actions made by different players can interact with
+each other.
 For example, in a card game, right after a player ends their turn, they need to
 wait until the opponent ends their turn.  Even if it is desirable to increase
 throughput, it is nonsense to group two turns of actions into one transaction.
@@ -149,39 +177,37 @@ point for game engineers is <a class="xref" href="../api/Libplanet.Action.IActio
 the network and <a class="xref" href="../api/Libplanet.Action.IAction.html">IAction</a> purposes to implement the actual
 game logic.</p>
 <h2 id="accounts-and-addresses">Accounts and addresses</h2>
-<p>Libplanet creates digital signatures to find what player node made each
-transaction, without any authority of the centralized server.
+<p>Libplanet creates digital signatures to find which player node made each
+transaction, without relying on the authority of a centralized server.
 In the similar fashion to <a href="https://bitcoin.org/">Bitcoin</a> and <a href="https://www.ethereum.org/">Ethereum</a>, a transaction is signed
 with <a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA</a>, and a pair of each player's sole <a class="xref" href="../api/Libplanet.Crypto.PrivateKey.html">PrivateKey</a>
 and <a class="xref" href="../api/Libplanet.Crypto.PublicKey.html">PublicKey</a> used to sign transactions construct
 an <em>account</em>.  Since a pair of keys for an account is <em>chosen</em> at offline,
-the process so-called &quot;account creation&quot; can be omitted.</p>
+the process of so-called &quot;account creation&quot; can be omitted.</p>
 <p>An account can also be identified through the <a class="xref" href="../api/Libplanet.Address.html">Address</a> which is
 derived from the corresponding <a class="xref" href="../api/Libplanet.Crypto.PublicKey.html">PublicKey</a>.  It is shorter
 than <a class="xref" href="../api/Libplanet.Crypto.PublicKey.html">PublicKey</a> and follows the same form to Ethereum's.
 This means key pairs that have used for Ethereum can be reused for
-Libplanet-backed games too.  For example, a game can raise a fund or receive
-donations through Ethereum from crowds and then give them benefits in
-the game when they make the first release.</p>
+Libplanet-backed games too.  For example, a game can raise funding or receive
+donations through Ethereum and then reward people when the game is released.</p>
 <h2 id="actions-and-states">Actions and states</h2>
-<p>Every account starts with an empty state.  Every action in all transactions
-an account signed and any actions related to the account determine the current
-state of the account.  That is, no state is stored in the blockchain, but only
-actions that calculate the next state from the previous state are.</p>
-<p>However, on a game engineer's view, Libplanet probably looks like its blockchain
-has states as well, because it has the surface to query the current state by
-calculating all actions from the start to the end under the hood.  It is also
-likely that Libplanet's internals to calculate states will be further optimized
-at storage and network levels soon, game engineers are better to use Libplanet's
-states API rather than implementing a similar function.</p>
+<p>Every account starts with an empty state. The current state of the account is
+determined by actions that belong to the transactions signed by the account
+along with other actions that refer to the account. This means state is not
+stored in the blockchain, but only the actions that change the state are.</p>
+<p>However, from a game engineer's view, Libplanet probably looks like its
+blockchain store states as well. Libplanet exposes methods to query the current
+state of an account by computing the effect of actions under the hood. Since
+Libplanet's internal workings to calculate states will be further optimized
+at storage and network levels soon, game engineers are encouraged to use
+Libplanet's states API rather than implementing a similar function.</p>
 <p>Since all state changes need to be represented through actions, every object
 stored in states should be immutable.  Although the storage API accepts
-mutable objects too, to colleagues in the game team, it is not apparent to
-every state change needs to be represented action if objects are mutable,
-hence bug-prone.</p>
-<p>As a state is sometimes cached in the storage or transmitted over the network,
-it needs to be serializable.  That is, every game object to represent states
-must be marked with the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.serializableattribute">SerializableAttribute</a>.</p>
+mutable objects too, in this way collaborators might not understand that every
+state change needs to be represented by an action.</p>
+<p>A state needs to be serializable as it is transmitted over the network and
+sometimes cached in storage. Therefore, every game object that represents states
+must be marked with <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.serializableattribute">SerializableAttribute</a>.</p>
 </article>
           </div>
           
@@ -190,7 +216,7 @@ must be marked with the <a class="xref" href="https://docs.microsoft.com/dotnet/
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dahlia/libplanet.net/blob/docs/Docs/articles/design.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/docs/Docs/articles/design.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
