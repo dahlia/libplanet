@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "CHANGES.html",
-          "hash": "qj8PXMEOqlyy7oIH1mNhig=="
+          "hash": "I+6uzJY4VBdOJOzeeuxC5g=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Blockchain.BlockChain-1.html",
-          "hash": "Au+D9ouIvpz0tLcb2UlYYQ=="
+          "hash": "qDBRx3QDOijb0eFWcwF3Yw=="
         }
       },
       "is_incremental": false,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Net.Swarm-1.html",
-          "hash": "rGYdACvouQP3lb6/PjkXZQ=="
+          "hash": "9KktDc1mj6Pea1rSQNFa+w=="
         }
       },
       "is_incremental": false,
@@ -729,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Store.BaseStore.html",
-          "hash": "71JpujRLbD/39unGKtdzpA=="
+          "hash": "65RNz9xjJO8/wfn4WfMjbw=="
         }
       },
       "is_incremental": false,
@@ -753,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Store.FileStore.html",
-          "hash": "Ap75PogAlGb78gtwPfFVmQ=="
+          "hash": "yuLCb0nR36UzesyzpxcZag=="
         }
       },
       "is_incremental": false,
@@ -765,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Store.IStore.html",
-          "hash": "yuE6v4qqeCKfs3Jun7LXvg=="
+          "hash": "DdmLHuGcU+HtNW8UyqgN2A=="
         }
       },
       "is_incremental": false,
@@ -777,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Store.LiteDBStore.html",
-          "hash": "EcTLzB+DqmhwxfY87vy6hA=="
+          "hash": "1XzC2nSdv+oPaThNLpY8Lg=="
         }
       },
       "is_incremental": false,
@@ -801,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Store.StoreExtension.html",
-          "hash": "ePCTOsxQRCuoaTLKFbEOTw=="
+          "hash": "M0/kK2I64HKFeKxODp+Vkg=="
         }
       },
       "is_incremental": false,
