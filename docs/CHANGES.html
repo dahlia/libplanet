@@ -76,8 +76,17 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="libplanet-changelog">Libplanet changelog</h1>
 
-<h2 id="version-040">Version 0.4.0</h2>
+<h2 id="version-042">Version 0.4.2</h2>
 <p>To be released.</p>
+<h2 id="version-041">Version 0.4.1</h2>
+<p>Released on July 11, 2019.</p>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>Fixed a bug where the <code>BlockChain&lt;T&gt;.GetStates()</code> method had not returned
+the latest state when there are multiple addresses.  [<a href="https://github.com/planetarium/libplanet/pull/346">#346</a>]</li>
+</ul>
+<h2 id="version-040">Version 0.4.0</h2>
+<p>Released on July 8, 2019.</p>
 <h3 id="backward-incompatible-interface-changes">Backward-incompatible interface changes</h3>
 <ul>
 <li><code>Peer.AppProtocolVersion</code> became nullable to represent <code>Peer</code> whose version
@@ -122,6 +131,9 @@ became to neither longer take <code>BlockChain&lt;T&gt;</code> nor a generic met
 Because the <code>Swarm&lt;T&gt;</code> constructor takes it instead.  [<a href="https://github.com/planetarium/libplanet/pull/324">#324</a>]</li>
 <li><code>Swarm&lt;T&gt;</code> does not implement <code>ICollection&lt;Peer&gt;</code> anymore.  [<a href="https://github.com/planetarium/libplanet/pull/326">#326</a>]</li>
 <li>Added <code>IStore.DeleteNamespace()</code> method. [<a href="https://github.com/planetarium/libplanet/pull/329">#329</a>]</li>
+<li>Removed the <code>id</code> parameter from the <code>BlockChain&lt;T&gt;</code> constructor, and it
+became to automatically detect an appropriate <code>BlockChain&lt;T&gt;.Id</code>.
+[<a href="https://github.com/planetarium/libplanet/issues/279">#279</a>, <a href="https://github.com/planetarium/libplanet/pull/332">#332</a>]</li>
 </ul>
 <h3 id="added-interfaces">Added interfaces</h3>
 <ul>
@@ -165,7 +177,7 @@ references in the replaced chain. [<a href="https://github.com/planetarium/libpl
 under the circumstances that the height of
 the <code>BlockChain&lt;T&gt;</code> object is high.  [<a href="https://github.com/planetarium/libplanet/issues/282">#282</a>, <a href="https://github.com/planetarium/libplanet/pull/299">#299</a>]</li>
 </ul>
-<h3 id="bug-fixes">Bug fixes</h3>
+<h3 id="bug-fixes-1">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that <code>Swarm&lt;T&gt;</code> reported <code>TaskCanceledException</code> as an unknown
 exception while stopping. [<a href="https://github.com/planetarium/libplanet/pull/275">#275</a>]</li>
@@ -299,7 +311,7 @@ current nonce.  [<a href="https://github.com/planetarium/libplanet/pull/246">#24
 <li><code>Swarm</code> became to enforce <code>ForceDotNet.Force()</code> in <a href="https://github.com/somdoron/AsyncIO">AsyncIO</a> while it's running on
 Mono runtime.  [<a href="https://github.com/planetarium/libplanet/pull/247">#247</a>]</li>
 </ul>
-<h3 id="bug-fixes-1">Bug fixes</h3>
+<h3 id="bug-fixes-2">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that TURN relay had been disconnected when being connected for
 longer than 5 minutes.  [<a href="https://github.com/planetarium/libplanet/pull/198">#198</a>]</li>
