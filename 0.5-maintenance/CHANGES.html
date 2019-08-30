@@ -85,6 +85,9 @@
 reference is duplicate, where <code>trustedStateValidators</code> is present and
 a miner tries to download precalculated states from a trusted peer.
 [<a href="https://github.com/planetarium/libplanet/issues/465">#465</a>, <a href="https://github.com/planetarium/libplanet/pull/474">#474</a>]</li>
+<li>Fixed a bug tag <code>Swarm&lt;T&gt;.StartAsync()</code> sometimes had thrown an exception
+from <code>IStore</code> (e.g., <code>NullReferenceException</code>) during broadcasting
+transactions.  [<a href="https://github.com/planetarium/libplanet/issues/352">#352</a>, <a href="https://github.com/planetarium/libplanet/pull/476">#476</a>]</li>
 </ul>
 <h2 id="version-051">Version 0.5.1</h2>
 <p>Released on August 28, 2019.</p>
