@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using Libplanet.Stun;
+using Serilog;
 
 namespace Libplanet.Net
 {
@@ -36,20 +37,22 @@ namespace Libplanet.Net
         internal static async Task<TurnClient> CreateTurnClient(
             IEnumerable<IceServer> iceServers)
         {
+            ILogger logger = Log.ForContext<IceServer>();
             foreach (IceServer server in iceServers)
             {
                 foreach (Uri url in server.Urls)
                 {
                     if (url.Scheme != "turn")
                     {
+                        var msg = $"{nameof(IceServer)} currently only supports turn:// url; " +
+                            "{0} is ignored.";
+                        logger.Information(msg, url);
                         continue;
                     }
 
                     try
                     {
-                        int port = url.IsDefaultPort
-                            ? TurnClient.TurnDefaultPort
-                            : url.Port;
+                        int port = url.IsDefaultPort ? TurnClient.TurnDefaultPort : url.Port;
                         var turnClient = new TurnClient(
                             url.Host,
                             server.Username,
@@ -57,16 +60,26 @@ namespace Libplanet.Net
                             port);
 
                         // Check connectability
+                        logger.Debug("Check if {0} is reachable...", url);
                         await turnClient.GetMappedAddressAsync();
 
+                        logger.Debug("{0} is reachable: {1}.", url, turnClient);
                         return turnClient;
                     }
-                    catch (ArgumentException)
+                    catch (ArgumentException e)
                     {
+                        logger.Information(
+                            e,
+                            "Something went wrong with {0} (user: {1}): {2}",
+                            url,
+                            server.Username,
+                            e
+                        );
                         continue;
                     }
                     catch (SocketException)
                     {
+                        logger.Information("{0} is unreachable.", url);
                         continue;
                     }
                 }
