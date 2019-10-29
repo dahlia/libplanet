@@ -136,6 +136,10 @@ connections.  [<a href="https://github.com/planetarium/libplanet/pull/469">#469<
 <li><code>Swarm&lt;T&gt;.PreloadAsync()</code> became to ignore peers with lower tip.  [<a href="https://github.com/planetarium/libplanet/pull/592">#592</a>]</li>
 <li><code>KademliaProtocol&lt;T&gt;.RefreshTableAsync()</code> became to validate only stale
 peers.  [<a href="https://github.com/planetarium/libplanet/issues/568">#568</a>, <a href="https://github.com/planetarium/libplanet/pull/593">#593</a>]</li>
+<li><code>KademliaProtocol&lt;T&gt;</code> became not to check cached peers immediately after
+removing peers from table. Instead, added
+<code>IProtocol.CheckReplacementCacheAsync()</code> to check cached peers
+periodically.  [<a href="https://github.com/planetarium/libplanet/pull/608">#608</a>]</li>
 <li>Marked <code>Address</code> and <code>HashDigest</code> as readonly.  [<a href="https://github.com/planetarium/libplanet/pull/610">#610</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
@@ -161,6 +165,8 @@ evaluate.  [<a href="https://github.com/planetarium/libplanet/pull/591">#591</a>
 stale peers.  [<a href="https://github.com/planetarium/libplanet/issues/568">#568</a>, <a href="https://github.com/planetarium/libplanet/pull/593">#593</a>, <a href="https://github.com/planetarium/libplanet/pull/602">#602</a>]</li>
 <li>Fixed a bug that <code>TurnClient</code> had thrown <code>IOException</code> when accepting
 connection through a TURN relay server. [<a href="https://github.com/planetarium/libplanet/issues/453">#453</a>, <a href="https://github.com/planetarium/libplanet/pull/599">#599</a>]</li>
+<li>Fixed a bug that <code>KeyNotFoundException</code> occurred when sending a message
+through the TurnClient.</li>
 </ul>
 <h2 id="version-060">Version 0.6.0</h2>
 <p>Released on October 1, 2019.</p>
@@ -924,7 +930,7 @@ to ignore peers if their version is different.  [<a href="https://github.com/pla
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/9d5d39ec9cc69c3f9389e6b00bb613485fb4a261/CHANGES.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/7ae1f308a69c5d85489754bd663c412730f50ac5/CHANGES.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
