@@ -2944,6 +2944,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.KeyStore.Ciphers.Aes128Ctr.Iv
   nameWithType: Aes128Ctr.Iv
+- uid: Libplanet.KeyStore.Ciphers.Aes128Ctr.WriteJson(Utf8JsonWriter)
+  name: WriteJson(Utf8JsonWriter)
+  href: api/Libplanet.KeyStore.Ciphers.Aes128Ctr.html#Libplanet_KeyStore_Ciphers_Aes128Ctr_WriteJson_Utf8JsonWriter_
+  commentId: M:Libplanet.KeyStore.Ciphers.Aes128Ctr.WriteJson(Utf8JsonWriter)
+  fullName: Libplanet.KeyStore.Ciphers.Aes128Ctr.WriteJson(Utf8JsonWriter)
+  nameWithType: Aes128Ctr.WriteJson(Utf8JsonWriter)
+- uid: Libplanet.KeyStore.Ciphers.Aes128Ctr.WriteJson*
+  name: WriteJson
+  href: api/Libplanet.KeyStore.Ciphers.Aes128Ctr.html#Libplanet_KeyStore_Ciphers_Aes128Ctr_WriteJson_
+  commentId: Overload:Libplanet.KeyStore.Ciphers.Aes128Ctr.WriteJson
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Ciphers.Aes128Ctr.WriteJson
+  nameWithType: Aes128Ctr.WriteJson
 - uid: Libplanet.KeyStore.Ciphers.ICipher
   name: ICipher
   href: api/Libplanet.KeyStore.Ciphers.ICipher.html
@@ -2982,6 +2995,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.KeyStore.Ciphers.ICipher.Encrypt
   nameWithType: ICipher.Encrypt
+- uid: Libplanet.KeyStore.Ciphers.ICipher.WriteJson(Utf8JsonWriter)
+  name: WriteJson(Utf8JsonWriter)
+  href: api/Libplanet.KeyStore.Ciphers.ICipher.html#Libplanet_KeyStore_Ciphers_ICipher_WriteJson_Utf8JsonWriter_
+  commentId: M:Libplanet.KeyStore.Ciphers.ICipher.WriteJson(Utf8JsonWriter)
+  fullName: Libplanet.KeyStore.Ciphers.ICipher.WriteJson(Utf8JsonWriter)
+  nameWithType: ICipher.WriteJson(Utf8JsonWriter)
+- uid: Libplanet.KeyStore.Ciphers.ICipher.WriteJson*
+  name: WriteJson
+  href: api/Libplanet.KeyStore.Ciphers.ICipher.html#Libplanet_KeyStore_Ciphers_ICipher_WriteJson_
+  commentId: Overload:Libplanet.KeyStore.Ciphers.ICipher.WriteJson
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Ciphers.ICipher.WriteJson
+  nameWithType: ICipher.WriteJson
 - uid: Libplanet.KeyStore.IncorrectPassphraseException
   name: IncorrectPassphraseException
   href: api/Libplanet.KeyStore.IncorrectPassphraseException.html
@@ -3074,6 +3100,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.KeyStore.Kdfs.IKdf.Derive
   nameWithType: IKdf.Derive
+- uid: Libplanet.KeyStore.Kdfs.IKdf.WriteJson(Utf8JsonWriter)
+  name: WriteJson(Utf8JsonWriter)
+  href: api/Libplanet.KeyStore.Kdfs.IKdf.html#Libplanet_KeyStore_Kdfs_IKdf_WriteJson_Utf8JsonWriter_
+  commentId: M:Libplanet.KeyStore.Kdfs.IKdf.WriteJson(Utf8JsonWriter)
+  fullName: Libplanet.KeyStore.Kdfs.IKdf.WriteJson(Utf8JsonWriter)
+  nameWithType: IKdf.WriteJson(Utf8JsonWriter)
+- uid: Libplanet.KeyStore.Kdfs.IKdf.WriteJson*
+  name: WriteJson
+  href: api/Libplanet.KeyStore.Kdfs.IKdf.html#Libplanet_KeyStore_Kdfs_IKdf_WriteJson_
+  commentId: Overload:Libplanet.KeyStore.Kdfs.IKdf.WriteJson
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Kdfs.IKdf.WriteJson
+  nameWithType: IKdf.WriteJson
 - uid: Libplanet.KeyStore.Kdfs.Pbkdf2`1
   name: Pbkdf2<T>
   href: api/Libplanet.KeyStore.Kdfs.Pbkdf2-1.html
@@ -3178,6 +3217,23 @@ references:
   fullName.vb: Libplanet.KeyStore.Kdfs.Pbkdf2(Of T).Salt
   nameWithType: Pbkdf2<T>.Salt
   nameWithType.vb: Pbkdf2(Of T).Salt
+- uid: Libplanet.KeyStore.Kdfs.Pbkdf2`1.WriteJson(Utf8JsonWriter)
+  name: WriteJson(Utf8JsonWriter)
+  href: api/Libplanet.KeyStore.Kdfs.Pbkdf2-1.html#Libplanet_KeyStore_Kdfs_Pbkdf2_1_WriteJson_Utf8JsonWriter_
+  commentId: M:Libplanet.KeyStore.Kdfs.Pbkdf2`1.WriteJson(Utf8JsonWriter)
+  fullName: Libplanet.KeyStore.Kdfs.Pbkdf2<T>.WriteJson(Utf8JsonWriter)
+  fullName.vb: Libplanet.KeyStore.Kdfs.Pbkdf2(Of T).WriteJson(Utf8JsonWriter)
+  nameWithType: Pbkdf2<T>.WriteJson(Utf8JsonWriter)
+  nameWithType.vb: Pbkdf2(Of T).WriteJson(Utf8JsonWriter)
+- uid: Libplanet.KeyStore.Kdfs.Pbkdf2`1.WriteJson*
+  name: WriteJson
+  href: api/Libplanet.KeyStore.Kdfs.Pbkdf2-1.html#Libplanet_KeyStore_Kdfs_Pbkdf2_1_WriteJson_
+  commentId: Overload:Libplanet.KeyStore.Kdfs.Pbkdf2`1.WriteJson
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Kdfs.Pbkdf2<T>.WriteJson
+  fullName.vb: Libplanet.KeyStore.Kdfs.Pbkdf2(Of T).WriteJson
+  nameWithType: Pbkdf2<T>.WriteJson
+  nameWithType.vb: Pbkdf2(Of T).WriteJson
 - uid: Libplanet.KeyStore.KeyJsonException
   name: KeyJsonException
   href: api/Libplanet.KeyStore.KeyJsonException.html
@@ -3380,6 +3436,31 @@ references:
   isSpec: "True"
   fullName: Libplanet.KeyStore.ProtectedPrivateKey.Unprotect
   nameWithType: ProtectedPrivateKey.Unprotect
+- uid: Libplanet.KeyStore.ProtectedPrivateKey.WriteJson(Stream,System.Nullable{Guid}@)
+  name: WriteJson(Stream, Nullable<Guid>)
+  href: api/Libplanet.KeyStore.ProtectedPrivateKey.html#Libplanet_KeyStore_ProtectedPrivateKey_WriteJson_Stream_System_Nullable_Guid___
+  commentId: M:Libplanet.KeyStore.ProtectedPrivateKey.WriteJson(Stream,System.Nullable{Guid}@)
+  name.vb: WriteJson(Stream, ByRef Nullable(Of Guid))
+  fullName: Libplanet.KeyStore.ProtectedPrivateKey.WriteJson(Stream, System.Nullable<Guid>)
+  fullName.vb: Libplanet.KeyStore.ProtectedPrivateKey.WriteJson(Stream, ByRef System.Nullable(Of Guid))
+  nameWithType: ProtectedPrivateKey.WriteJson(Stream, Nullable<Guid>)
+  nameWithType.vb: ProtectedPrivateKey.WriteJson(Stream, ByRef Nullable(Of Guid))
+- uid: Libplanet.KeyStore.ProtectedPrivateKey.WriteJson(Utf8JsonWriter,System.Nullable{Guid}@)
+  name: WriteJson(Utf8JsonWriter, Nullable<Guid>)
+  href: api/Libplanet.KeyStore.ProtectedPrivateKey.html#Libplanet_KeyStore_ProtectedPrivateKey_WriteJson_Utf8JsonWriter_System_Nullable_Guid___
+  commentId: M:Libplanet.KeyStore.ProtectedPrivateKey.WriteJson(Utf8JsonWriter,System.Nullable{Guid}@)
+  name.vb: WriteJson(Utf8JsonWriter, ByRef Nullable(Of Guid))
+  fullName: Libplanet.KeyStore.ProtectedPrivateKey.WriteJson(Utf8JsonWriter, System.Nullable<Guid>)
+  fullName.vb: Libplanet.KeyStore.ProtectedPrivateKey.WriteJson(Utf8JsonWriter, ByRef System.Nullable(Of Guid))
+  nameWithType: ProtectedPrivateKey.WriteJson(Utf8JsonWriter, Nullable<Guid>)
+  nameWithType.vb: ProtectedPrivateKey.WriteJson(Utf8JsonWriter, ByRef Nullable(Of Guid))
+- uid: Libplanet.KeyStore.ProtectedPrivateKey.WriteJson*
+  name: WriteJson
+  href: api/Libplanet.KeyStore.ProtectedPrivateKey.html#Libplanet_KeyStore_ProtectedPrivateKey_WriteJson_
+  commentId: Overload:Libplanet.KeyStore.ProtectedPrivateKey.WriteJson
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.ProtectedPrivateKey.WriteJson
+  nameWithType: ProtectedPrivateKey.WriteJson
 - uid: Libplanet.KeyStore.UnsupportedKeyJsonException
   name: UnsupportedKeyJsonException
   href: api/Libplanet.KeyStore.UnsupportedKeyJsonException.html
