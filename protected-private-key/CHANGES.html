@@ -111,12 +111,12 @@ added it to <code>Swarm&lt;T&gt;.PreloadAsync()</code> &amp; <code>Swarm&lt;T&gt
 </ul>
 <h3 id="added-interfaces">Added interfaces</h3>
 <ul>
-<li>Added <code>ProtectedPrivateKey</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
-<li>Added <code>IncorrectPassphraseException</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
-<li>Added <code>ICipher</code> interface.  [<a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
-<li>Added <code>Aes128Ctr</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
-<li>Added <code>IKdf</code> interface.  [<a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
-<li>Added <code>Pbkdf2</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
+<li>Added <code>ProtectedPrivateKey</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/577">#577</a>, <a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
+<li>Added <code>IncorrectPassphraseException</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/577">#577</a>, <a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
+<li>Added <code>ICipher</code> interface.  [<a href="https://github.com/planetarium/libplanet/issues/577">#577</a>, <a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
+<li>Added <code>Aes128Ctr</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/577">#577</a>, <a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
+<li>Added <code>IKdf</code> interface.  [<a href="https://github.com/planetarium/libplanet/issues/577">#577</a>, <a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
+<li>Added <code>Pbkdf2</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/577">#577</a>, <a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
 <li>Added <code>BlockChain&lt;T&gt;.LongCount()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/575">#575</a>]</li>
 <li>Added <code>BlockChain&lt;T&gt;[HashDigest&lt;T&gt;]</code> indexer.  [<a href="https://github.com/planetarium/libplanet/issues/409">#409</a>, <a href="https://github.com/planetarium/libplanet/pull/583">#583</a>]</li>
 <li>Added <code>BlockChain&lt;T&gt;.Contains(HashDigest&lt;T&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/issues/409">#409</a>, <a href="https://github.com/planetarium/libplanet/pull/583">#583</a>]</li>
@@ -141,6 +141,8 @@ removing peers from table. Instead, added
 <code>IProtocol.CheckReplacementCacheAsync()</code> to check cached peers
 periodically.  [<a href="https://github.com/planetarium/libplanet/pull/608">#608</a>]</li>
 <li>Marked <code>Address</code> and <code>HashDigest</code> as readonly.  [<a href="https://github.com/planetarium/libplanet/pull/610">#610</a>]</li>
+<li><code>IceServer.CreateTurnClient()</code> became to throw <code>ArgumentException</code> when
+received invalid url.  [<a href="https://github.com/planetarium/libplanet/pull/622">#622</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
 <ul>
@@ -930,7 +932,7 @@ to ignore peers if their version is different.  [<a href="https://github.com/pla
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/7ae1f308a69c5d85489754bd663c412730f50ac5/CHANGES.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/d944d7f433fff806ee42fd2cafdb52d91f4e37eb/CHANGES.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
