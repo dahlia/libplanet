@@ -138,20 +138,22 @@ table when <code>Ping</code> is received.  [<a href="https://github.com/planetar
 <li><code>TurnClient.AcceptRelayedStreamAsync()</code> became to ignore disconnected
 connections.  [<a href="https://github.com/planetarium/libplanet/pull/469">#469</a>]</li>
 <li><code>Swarm&lt;T&gt;.PreloadAsync()</code> became to ignore peers with lower tip.  [<a href="https://github.com/planetarium/libplanet/pull/592">#592</a>]</li>
-<li><code>KademliaProtocol&lt;T&gt;.RefreshTableAsync()</code> became to validate only stale
-peers.  [<a href="https://github.com/planetarium/libplanet/issues/568">#568</a>, <a href="https://github.com/planetarium/libplanet/pull/593">#593</a>]</li>
-<li><code>KademliaProtocol&lt;T&gt;</code> became not to check cached peers immediately after
-removing peers from table. Instead, added
-<code>IProtocol.CheckReplacementCacheAsync()</code> to check cached peers
+<li><code>Swarm&lt;T&gt;</code> became to validate only stale peers.  [<a href="https://github.com/planetarium/libplanet/issues/568">#568</a>, <a href="https://github.com/planetarium/libplanet/pull/593">#593</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became not to check cached peers immediately after
+removing peers from its routing table. Instead, it checks cached peers
 periodically.  [<a href="https://github.com/planetarium/libplanet/pull/608">#608</a>]</li>
 <li>Marked <code>Address</code> and <code>HashDigest</code> as readonly.  [<a href="https://github.com/planetarium/libplanet/pull/610">#610</a>]</li>
 <li><code>IceServer.CreateTurnClient()</code> became to throw <code>ArgumentException</code> when
 received invalid url.  [<a href="https://github.com/planetarium/libplanet/pull/622">#622</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became to update peer table when receiving messages that are
+not related with <a href="https://en.wikipedia.org/wiki/Kademlia">Kademlia protocol</a>.  [<a href="https://github.com/planetarium/libplanet/issues/594">#594</a>, <a href="https://github.com/planetarium/libplanet/pull/627">#627</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became not to check least recently used peer every time when
+new peer is fetched.  [<a href="https://github.com/planetarium/libplanet/pull/627">#627</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
 <ul>
-<li>Fixed a bug where <code>KademliaProtocol&lt;T&gt;.UpdateAsync()</code> runs infinitely when
-a peer is evicted from <code>Bucket</code> and replacement cache is used.  [<a href="https://github.com/planetarium/libplanet/pull/566">#566</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;</code> had tried to update a peer infinitely when
+the peer is evicted from its table.  [<a href="https://github.com/planetarium/libplanet/pull/566">#566</a>]</li>
 <li>Fixed a bug where <code>Swarm&lt;T&gt;.AppendBlocksAsync()</code> re-requests blocks that
 already received when blockchain is empty.  [<a href="https://github.com/planetarium/libplanet/issues/550">#550</a>, <a href="https://github.com/planetarium/libplanet/pull/562">#562</a>]</li>
 <li>Fixed a bug that <code>Swarm&lt;T&gt;</code> had thrown <code>SocketException</code> with a message
@@ -167,12 +169,18 @@ when reorg happens.  [<a href="https://github.com/planetarium/libplanet/pull/579
 <li><code>LiteDBStore</code> became to guarantee atomicity of storing blocks. [<a href="https://github.com/planetarium/libplanet/pull/584">#584</a>]</li>
 <li>Fixed a bug that <code>BlockChain&lt;T&gt;</code> had appended a block even if fails to
 evaluate.  [<a href="https://github.com/planetarium/libplanet/pull/591">#591</a>]</li>
-<li>Fixed a bug where <code>KademliaProtocol&lt;T&gt;.RefreshTableAsync()</code> hadn't remove
-stale peers.  [<a href="https://github.com/planetarium/libplanet/issues/568">#568</a>, <a href="https://github.com/planetarium/libplanet/pull/593">#593</a>, <a href="https://github.com/planetarium/libplanet/pull/602">#602</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;</code> hadn't removed stale peers.
+[<a href="https://github.com/planetarium/libplanet/issues/568">#568</a>, <a href="https://github.com/planetarium/libplanet/pull/593">#593</a>, <a href="https://github.com/planetarium/libplanet/pull/602">#602</a>]</li>
 <li>Fixed a bug that <code>TurnClient</code> had thrown <code>IOException</code> when accepting
 connection through a TURN relay server. [<a href="https://github.com/planetarium/libplanet/issues/453">#453</a>, <a href="https://github.com/planetarium/libplanet/pull/599">#599</a>]</li>
 <li>Fixed a bug that <code>KeyNotFoundException</code> occurred when sending a message
 through the TurnClient.</li>
+<li>Fixed a bug where <code>BlockChain&lt;T&gt;.GetNextTxNonce</code> only returned the same
+nonce when transactions with an old nonce were staged.  [<a href="https://github.com/planetarium/libplanet/pull/637">#637</a>]</li>
+<li>Fixed a bug that <code>BlockChain&lt;T&gt;</code> had reset when <code>Swarm&lt;T&gt;.PreloadAsync()</code>
+fails.  [<a href="https://github.com/planetarium/libplanet/pull/644">#644</a>]</li>
+<li>Fixed bug that whole processes could halt when received an invalid
+type of message.  [<a href="https://github.com/planetarium/libplanet/issues/628">#628</a>, <a href="https://github.com/planetarium/libplanet/pull/641">#641</a>]</li>
 </ul>
 <h2 id="version-060">Version 0.6.0</h2>
 <p>Released on October 1, 2019.</p>
@@ -936,7 +944,7 @@ to ignore peers if their version is different.  [<a href="https://github.com/pla
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/512f3c70df42102d48a3e8ab6e2c815c30c5e48f/CHANGES.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/ef6506e2b666108c6ffaf7a4e85c1ae500aca589/CHANGES.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
