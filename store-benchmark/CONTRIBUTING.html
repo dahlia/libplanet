@@ -184,13 +184,13 @@ favorite editor.  Some recent editors have built-in support for EditorConfig,
 e.g., Rider (IntelliJ IDEA), Visual Studio.  Many editors have an extension to
 support EditorConfig, e.g., <a href="https://atom.io/packages/editorconfig">Atom</a>, <a href="https://github.com/editorconfig/editorconfig-emacs">Emacs</a>, <a href="https://github.com/editorconfig/editorconfig-vim">Vim</a>, <a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig">VS Code</a>.</p>
 <h2 id="benchmarks">Benchmarks</h2>
-<p>In order track performance improvements or regressions, we maintain a set of
-benchmarks and continously measure them in the CI.  You can run benchmarks
+<p>In order to track performance improvements or regressions, we maintain a set of
+benchmarks and continuously measure them in the CI.  You can run benchmarks
 on your local environment too:</p>
-<pre><code>dotnet run -p Libplanet.Benchmarks -c Release -- -j short &quot;*&quot;
+<pre><code>dotnet run -p Libplanet.Benchmarks -c Release -- -j short -f &quot;*&quot;
 </code></pre>
 <p>Note that there is <code>-j short</code>; without this a whole set of benchmarks takes
-quite long time.  This will print like below:</p>
+quite a long time.  This will print like below:</p>
 <pre><code>|               Method | UnrollFactor |      Mean |      Error |    StdDev |
 |--------------------- |------------- |----------:|-----------:|----------:|
 |       MineBlockEmpty |           16 |  12.20 ms |  11.649 ms | 0.6385 ms |
@@ -226,7 +226,7 @@ export PATH=&quot;$PATH:$DOTNET_ROOT&quot;
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/65b5f48c72e65632c61e15ac0820377041f8d4fa/Docs/CONTRIBUTING.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/22494cda2b1e5fba80db03d8f9e23829b384fa97/Docs/CONTRIBUTING.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
