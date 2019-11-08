@@ -99,6 +99,9 @@
                             <a href="Libplanet.AddressExtension.html" title="AddressExtension" class="">AddressExtension</a>
                           </li>
                           <li class="">
+                            <a href="Libplanet.BencodexExtension.html" title="BencodexExtension" class="">BencodexExtension</a>
+                          </li>
+                          <li class="">
                             <a href="Libplanet.ByteUtil.html" title="ByteUtil" class="">ByteUtil</a>
                           </li>
                           <li class="">
@@ -186,9 +189,6 @@
                             <a href="Libplanet.Blockchain.Policies.BlockPolicy-1.html" title="BlockPolicy&lt;T&gt;" class="">BlockPolicy&lt;T&gt;</a>
                           </li>
                           <li class="">
-                            <a href="Libplanet.Blockchain.Policies.BlockPolicyExtension.html" title="BlockPolicyExtension" class="">BlockPolicyExtension</a>
-                          </li>
-                          <li class="">
                             <a href="Libplanet.Blockchain.Policies.IBlockPolicy-1.html" title="IBlockPolicy&lt;T&gt;" class="">IBlockPolicy&lt;T&gt;</a>
                           </li>
                         </ul>  </li>
@@ -238,6 +238,54 @@
                           </li>
                           <li class="">
                             <a href="Libplanet.Crypto.SymmetricKey.html" title="SymmetricKey" class="">SymmetricKey</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Libplanet.KeyStore.html" title="Libplanet.KeyStore" class="">Libplanet.KeyStore</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Libplanet.KeyStore.IncorrectPassphraseException.html" title="IncorrectPassphraseException" class="">IncorrectPassphraseException</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.InvalidKeyJsonException.html" title="InvalidKeyJsonException" class="">InvalidKeyJsonException</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.KeyJsonException.html" title="KeyJsonException" class="">KeyJsonException</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.MismatchedAddressException.html" title="MismatchedAddressException" class="">MismatchedAddressException</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.ProtectedPrivateKey.html" title="ProtectedPrivateKey" class="">ProtectedPrivateKey</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.UnsupportedKeyJsonException.html" title="UnsupportedKeyJsonException" class="">UnsupportedKeyJsonException</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Libplanet.KeyStore.Ciphers.html" title="Libplanet.KeyStore.Ciphers" class="">Libplanet.KeyStore.Ciphers</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Libplanet.KeyStore.Ciphers.Aes128Ctr.html" title="Aes128Ctr" class="">Aes128Ctr</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.Ciphers.ICipher.html" title="ICipher" class="">ICipher</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Libplanet.KeyStore.Kdfs.html" title="Libplanet.KeyStore.Kdfs" class="">Libplanet.KeyStore.Kdfs</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Libplanet.KeyStore.Kdfs.IKdf.html" title="IKdf" class="">IKdf</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.Kdfs.Pbkdf2-1.html" title="Pbkdf2&lt;T&gt;" class="">Pbkdf2&lt;T&gt;</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -422,30 +470,27 @@ not code of an action.</p>
   <p>The following example shows how to implement an action of three types
 of in-game logic:</p>
 <pre><code>using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using Bencodex.Types;
 using Libplanet;
 using Libplanet.Action;
-
 public class MyAction : IAction
 {
     // Declare an enum type to distinguish types of in-game logic.
     public enum ActType { CreateCharacter, Attack, Heal }
-
     // Declare properties (or fields) to store &quot;bound&quot; argument values.
     public ActType Type { get; private set; }
     public Address TargetAddress { get; private set; }
-
     // Action must has a public parameterless constructor.
     // Usually this is used only by Libplanet&apos;s internals.
     public MyAction() {}
-
     // Take argument values to &quot;bind&quot; through constructor parameters.
     public MyAction(ActType type, Address targetAddress)
     {
         Type = type;
         TargetAddress = targetAddress;
     }
-
     // The main game logic belongs to here.  It takes the
     // previous states through its parameter named context,
     // and is offered &quot;bound&quot; argument values through
@@ -456,13 +501,12 @@ public class MyAction : IAction
         // ImmutableDictionary&lt;string, uint> is just for example,
         // As far as it is serializable, you can store any types.
         // (We recommend to use immutable types though.)
-        var state = (ImmutableDictionary&lt;string, uint>)
+        var state =
             context.PreviousStates.GetState(TargetAddress);
-
+        Dictionary dictionary;
         // This variable purposes to store the state
         // right after this action finishes.
-        ImmutableDictionary&lt;string, uint> nextState;
-
+        IImmutableDictionary&lt;IKey, IValue> nextState;
         // Does different things depending on the action&apos;s type.
         // This way is against the common principals of programming
         // as it is just an example.  You could compare this with
@@ -478,32 +522,38 @@ public class MyAction : IAction
                 else if (!(state is null))
                     throw new Exception(
                         &quot;Character was already created.&quot;);
-
-                nextState = ImmutableDictionary&lt;string, uint>.Empty
-                    .Add(&quot;hp&quot;, 20);
+                nextState = ImmutableDictionary&lt;IKey, IValue>.Empty
+                    .Add((Text)&quot;hp&quot;, (Integer)20);
                 break;
-
             case ActType.Attack:
+                dictionary = (Bencodex.Types.Dictionary)state;
                 nextState =
-                    state.SetItem(&quot;hp&quot;, Math.Max(state[&quot;hp&quot;] - 5, 0));
+                    dictionary.SetItem(
+                        (Text)&quot;hp&quot;,
+                        (Integer)Math.Max(
+                            dictionary.GetValue&lt;Integer>(&quot;hp&quot;) - 5,
+                            0)
+                    );
                 break;
-
             case ActType.Heal:
+                dictionary = (Bencodex.Types.Dictionary)state;
                 nextState =
-                    state.SetItem(&quot;hp&quot;, Math.Min(state[&quot;hp&quot;] + 5, 20));
+                    dictionary.SetItem(
+                        (Text)&quot;hp&quot;,
+                        (Integer)Math.Min(
+                            dictionary.GetValue&lt;Integer>(&quot;hp&quot;) + 5,
+                            20)
+                    );
                 break;
-
             default:
                 throw new Exception(
                     &quot;Properties are not properly initialized.&quot;);
         }
-
         // Builds a delta (dirty) from previous to next states, and
         // returns it.
         return context.PreviousStates.SetState(TargetAddress,
-            nextState);
+            (Dictionary)nextState);
     }
-
     // Side effects, i.e., any effects on other than states, are
     // done here.
     void IAction.Render(
@@ -511,7 +561,6 @@ public class MyAction : IAction
         IAccountStateDelta nextStates)
     {
         Character c;
-
         // You could compare this with a better example of
         // PolymorphicAction&lt;T> class.
         switch (Type)
@@ -523,20 +572,18 @@ public class MyAction : IAction
                     Hp = 0,
                 };
                 break;
-
             case ActType.Attack:
             case ActType.Heal:
                 c = Character.GetByAddress(TargetAddress);
                 break;
-
             default:
-                break;
+                return;
         }
-
-        c?.Hp = nextStates.GetState(TargetAddress)[&quot;hp&quot;];
-        c?.Draw();
+        c.Hp =
+            ((Bencodex.Types.Dictionary)nextStates.GetState(TargetAddress))
+                .GetValue&lt;Integer>(&quot;hp&quot;);
+        c.Draw();
     }
-
     // Sometimes a block to which an action belongs can be
     // a &quot;stale.&quot;  If that action already has been rendered,
     // it should be undone.
@@ -545,7 +592,6 @@ public class MyAction : IAction
         IAccountStateDelta nextStates)
     {
         Character c = Character.GetByAddress(TargetAddress);
-
         // You could compare this with a better example of
         // PolymorphicAction&lt;T> class.
         switch (Type)
@@ -553,34 +599,34 @@ public class MyAction : IAction
             case ActType.CreateCharacter:
                 c.Hide();
                 break;
-
             case ActType.Attack:
             case ActType.Heal:
                 IAccountStateDelta prevStates = context.PreviousStates;
-                c.Hp = prevStates.GetState(TargetAddress)[&quot;hp&quot;];
+                c.Hp = ((Bencodex.Types.Dictionary)prevStates.GetState(TargetAddress))
+                    .GetValue&lt;Integer>(&quot;hp&quot;);
                 c.Draw();
                 break;
-
             default:
                 break;
         }
     }
-
     // Serializes its &quot;bound arguments&quot; so that they are transmitted
     // over network or stored to the persistent storage.
-    // It uses .NET&apos;s built-in serialization mechanism.
-    IImmutableDictionary&lt;string, object> IAction.PlainValue =>
-        ImmutableDictionary&lt;string, object>.Empty
-            .Add(&quot;type&quot;, Type)
-            .Add(&quot;target_address&quot;, TargetAddress);
-
+    IValue IAction.PlainValue =>
+        new Bencodex.Types.Dictionary(new Dictionary&lt;IKey, IValue>
+        {
+            [(Text)&quot;type&quot;] = (Integer)(int)Type,
+            [(Text)&quot;target_address&quot;] = (Binary)TargetAddress.ToByteArray(),
+        });
     // Deserializes &quot;bound arguments&quot;.  That is, it is inverse
     // of PlainValue property.
     void IAction.LoadPlainValue(
-        IImmutableDictionary&lt;string, object> plainValue)
+        IValue plainValue)
     {
-        Type = (ActType)plainValue[&quot;type&quot;];
-        TargetAddress = (Address)plainValue[&quot;target_address&quot;];
+        var dictionary = (Bencodex.Types.Dictionary)plainValue;
+        Type = (ActType)(int)dictionary.GetValue&lt;Integer>(&quot;type&quot;);
+        TargetAddress =
+            new Address(dictionary.GetValue&lt;Binary>(&quot;target_address&quot;).Value);
     }
 }</code></pre>
 <p>Note that the above example has several bad practices.
@@ -591,24 +637,23 @@ example.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/524efd801ed5ebf245c3b9422ac20eef45a10e89/apiSpec/new?filename=Libplanet_Action_IAction_PlainValue.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction.PlainValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/5e43072db277b275b02c454358f56117c16872d3/apiSpec/new?filename=Libplanet_Action_IAction_PlainValue.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction.PlainValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/524efd801ed5ebf245c3b9422ac20eef45a10e89/Libplanet/Action/IAction.cs/#L229">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/5e43072db277b275b02c454358f56117c16872d3/Libplanet/Action/IAction.cs/#L221">View Source</a>
   </span>
   <a id="Libplanet_Action_IAction_PlainValue_" data-uid="Libplanet.Action.IAction.PlainValue*"></a>
   <h4 id="Libplanet_Action_IAction_PlainValue" data-uid="Libplanet.Action.IAction.PlainValue">PlainValue</h4>
   <div class="markdown level1 summary"><p>Serializes values bound to an action, which is held by properties
 (or fields) of an action, so that they can be transmitted over
 network or saved to persistent storage.</p>
-<p>Serialized values are deserialized by <a class="xref" href="Libplanet.Action.IAction.html#Libplanet_Action_IAction_LoadPlainValue_IImmutableDictionary_System_String_System_Object__">LoadPlainValue(IImmutableDictionary&lt;String, Object&gt;)</a> method
-later.</p>
-<p>It uses <a href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/">.NET&apos;s built-in serialization mechanism</a>.</p>
+<p>Serialized values are deserialized by
+<a class="xref" href="Libplanet.Action.IAction.html#Libplanet_Action_IAction_LoadPlainValue_IValue_">LoadPlainValue(IValue)</a> method later.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IImmutableDictionary&lt;string, object&gt; PlainValue { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">IValue PlainValue { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -620,25 +665,25 @@ later.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IImmutableDictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
-        <td><p>A value which encodes this action's bound values (held
-by properties or fields).  It has to be <a href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/">serializable</a>.</p>
+        <td><span class="xref">IValue</span></td>
+        <td><p>A Bencodex value which encodes this action's bound values (held
+by properties or fields).</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 id="Libplanet_Action_IAction_PlainValue_seealso">See Also</h5>
   <div class="seealso">
-      <div><a class="xref" href="Libplanet.Action.IAction.html#Libplanet_Action_IAction_LoadPlainValue_IImmutableDictionary_System_String_System_Object__">LoadPlainValue(IImmutableDictionary&lt;String, Object&gt;)</a></div>
+      <div><a class="xref" href="Libplanet.Action.IAction.html#Libplanet_Action_IAction_LoadPlainValue_IValue_">LoadPlainValue(IValue)</a></div>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/524efd801ed5ebf245c3b9422ac20eef45a10e89/apiSpec/new?filename=Libplanet_Action_IAction_Execute_Libplanet_Action_IActionContext_.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction.Execute(Libplanet.Action.IActionContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/5e43072db277b275b02c454358f56117c16872d3/apiSpec/new?filename=Libplanet_Action_IAction_Execute_Libplanet_Action_IActionContext_.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction.Execute(Libplanet.Action.IActionContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/524efd801ed5ebf245c3b9422ac20eef45a10e89/Libplanet/Action/IAction.cs/#L289">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/5e43072db277b275b02c454358f56117c16872d3/Libplanet/Action/IAction.cs/#L281">View Source</a>
   </span>
   <a id="Libplanet_Action_IAction_Execute_" data-uid="Libplanet.Action.IAction.Execute*"></a>
   <h4 id="Libplanet_Action_IAction_Execute_Libplanet_Action_IActionContext_" data-uid="Libplanet.Action.IAction.Execute(Libplanet.Action.IActionContext)">Execute(IActionContext)</h4>
@@ -726,13 +771,13 @@ machines, platforms, runtimes, compilers, and builds</a>.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/524efd801ed5ebf245c3b9422ac20eef45a10e89/apiSpec/new?filename=Libplanet_Action_IAction_LoadPlainValue_IImmutableDictionary_System_String_System_Object__.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction.LoadPlainValue(IImmutableDictionary%7BSystem.String%2CSystem.Object%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/5e43072db277b275b02c454358f56117c16872d3/apiSpec/new?filename=Libplanet_Action_IAction_LoadPlainValue_IValue_.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction.LoadPlainValue(IValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/524efd801ed5ebf245c3b9422ac20eef45a10e89/Libplanet/Action/IAction.cs/#L240">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/5e43072db277b275b02c454358f56117c16872d3/Libplanet/Action/IAction.cs/#L232">View Source</a>
   </span>
   <a id="Libplanet_Action_IAction_LoadPlainValue_" data-uid="Libplanet.Action.IAction.LoadPlainValue*"></a>
-  <h4 id="Libplanet_Action_IAction_LoadPlainValue_IImmutableDictionary_System_String_System_Object__" data-uid="Libplanet.Action.IAction.LoadPlainValue(IImmutableDictionary{System.String,System.Object})">LoadPlainValue(IImmutableDictionary&lt;String, Object&gt;)</h4>
+  <h4 id="Libplanet_Action_IAction_LoadPlainValue_IValue_" data-uid="Libplanet.Action.IAction.LoadPlainValue(IValue)">LoadPlainValue(IValue)</h4>
   <div class="markdown level1 summary"><p>Deserializes serialized data (i.e., data <a class="xref" href="Libplanet.Action.IAction.html#Libplanet_Action_IAction_PlainValue">PlainValue</a>
 property made), and then fills this action's properties (or fields)
 with the deserialized values.</p>
@@ -740,7 +785,7 @@ with the deserialized values.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void LoadPlainValue(IImmutableDictionary&lt;string, object&gt; plainValue)</code></pre>
+    <pre><code class="lang-csharp hljs">void LoadPlainValue(IValue plainValue)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -753,7 +798,7 @@ with the deserialized values.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IImmutableDictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><span class="xref">IValue</span></td>
         <td><span class="parametername">plainValue</span></td>
         <td><p>Data (made by <a class="xref" href="Libplanet.Action.IAction.html#Libplanet_Action_IAction_PlainValue">PlainValue</a>
 property) to be deserialized and assigned to this action's
@@ -762,16 +807,16 @@ properties (or fields).</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="Libplanet_Action_IAction_LoadPlainValue_IImmutableDictionary_System_String_System_Object___seealso">See Also</h5>
+  <h5 id="Libplanet_Action_IAction_LoadPlainValue_IValue__seealso">See Also</h5>
   <div class="seealso">
       <div><a class="xref" href="Libplanet.Action.IAction.html#Libplanet_Action_IAction_PlainValue">PlainValue</a></div>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/524efd801ed5ebf245c3b9422ac20eef45a10e89/apiSpec/new?filename=Libplanet_Action_IAction_Render_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction.Render(Libplanet.Action.IActionContext%2CLibplanet.Action.IAccountStateDelta)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/5e43072db277b275b02c454358f56117c16872d3/apiSpec/new?filename=Libplanet_Action_IAction_Render_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction.Render(Libplanet.Action.IActionContext%2CLibplanet.Action.IAccountStateDelta)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/524efd801ed5ebf245c3b9422ac20eef45a10e89/Libplanet/Action/IAction.cs/#L311">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/5e43072db277b275b02c454358f56117c16872d3/Libplanet/Action/IAction.cs/#L303">View Source</a>
   </span>
   <a id="Libplanet_Action_IAction_Render_" data-uid="Libplanet.Action.IAction.Render*"></a>
   <h4 id="Libplanet_Action_IAction_Render_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_" data-uid="Libplanet.Action.IAction.Render(Libplanet.Action.IActionContext,Libplanet.Action.IAccountStateDelta)">Render(IActionContext, IAccountStateDelta)</h4>
@@ -820,10 +865,10 @@ executed, which means it is equivalent to what <a class="xref" href="Libplanet.A
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/524efd801ed5ebf245c3b9422ac20eef45a10e89/apiSpec/new?filename=Libplanet_Action_IAction_Unrender_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction.Unrender(Libplanet.Action.IActionContext%2CLibplanet.Action.IAccountStateDelta)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/5e43072db277b275b02c454358f56117c16872d3/apiSpec/new?filename=Libplanet_Action_IAction_Unrender_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction.Unrender(Libplanet.Action.IActionContext%2CLibplanet.Action.IAccountStateDelta)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/524efd801ed5ebf245c3b9422ac20eef45a10e89/Libplanet/Action/IAction.cs/#L335">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/5e43072db277b275b02c454358f56117c16872d3/Libplanet/Action/IAction.cs/#L327">View Source</a>
   </span>
   <a id="Libplanet_Action_IAction_Unrender_" data-uid="Libplanet.Action.IAction.Unrender*"></a>
   <h4 id="Libplanet_Action_IAction_Unrender_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_" data-uid="Libplanet.Action.IAction.Unrender(Libplanet.Action.IActionContext,Libplanet.Action.IAccountStateDelta)">Unrender(IActionContext, IAccountStateDelta)</h4>
@@ -882,10 +927,10 @@ with redrawing the graphics on the display at the finish.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/new/524efd801ed5ebf245c3b9422ac20eef45a10e89/apiSpec/new?filename=Libplanet_Action_IAction.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dahlia/libplanet/new/5e43072db277b275b02c454358f56117c16872d3/apiSpec/new?filename=Libplanet_Action_IAction.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/524efd801ed5ebf245c3b9422ac20eef45a10e89/Libplanet/Action/IAction.cs/#L210" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/5e43072db277b275b02c454358f56117c16872d3/Libplanet/Action/IAction.cs/#L208" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

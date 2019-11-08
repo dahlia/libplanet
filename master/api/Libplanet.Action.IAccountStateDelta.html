@@ -99,6 +99,9 @@
                             <a href="Libplanet.AddressExtension.html" title="AddressExtension" class="">AddressExtension</a>
                           </li>
                           <li class="">
+                            <a href="Libplanet.BencodexExtension.html" title="BencodexExtension" class="">BencodexExtension</a>
+                          </li>
+                          <li class="">
                             <a href="Libplanet.ByteUtil.html" title="ByteUtil" class="">ByteUtil</a>
                           </li>
                           <li class="">
@@ -186,9 +189,6 @@
                             <a href="Libplanet.Blockchain.Policies.BlockPolicy-1.html" title="BlockPolicy&lt;T&gt;" class="">BlockPolicy&lt;T&gt;</a>
                           </li>
                           <li class="">
-                            <a href="Libplanet.Blockchain.Policies.BlockPolicyExtension.html" title="BlockPolicyExtension" class="">BlockPolicyExtension</a>
-                          </li>
-                          <li class="">
                             <a href="Libplanet.Blockchain.Policies.IBlockPolicy-1.html" title="IBlockPolicy&lt;T&gt;" class="">IBlockPolicy&lt;T&gt;</a>
                           </li>
                         </ul>  </li>
@@ -238,6 +238,54 @@
                           </li>
                           <li class="">
                             <a href="Libplanet.Crypto.SymmetricKey.html" title="SymmetricKey" class="">SymmetricKey</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Libplanet.KeyStore.html" title="Libplanet.KeyStore" class="">Libplanet.KeyStore</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Libplanet.KeyStore.IncorrectPassphraseException.html" title="IncorrectPassphraseException" class="">IncorrectPassphraseException</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.InvalidKeyJsonException.html" title="InvalidKeyJsonException" class="">InvalidKeyJsonException</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.KeyJsonException.html" title="KeyJsonException" class="">KeyJsonException</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.MismatchedAddressException.html" title="MismatchedAddressException" class="">MismatchedAddressException</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.ProtectedPrivateKey.html" title="ProtectedPrivateKey" class="">ProtectedPrivateKey</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.UnsupportedKeyJsonException.html" title="UnsupportedKeyJsonException" class="">UnsupportedKeyJsonException</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Libplanet.KeyStore.Ciphers.html" title="Libplanet.KeyStore.Ciphers" class="">Libplanet.KeyStore.Ciphers</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Libplanet.KeyStore.Ciphers.Aes128Ctr.html" title="Aes128Ctr" class="">Aes128Ctr</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.Ciphers.ICipher.html" title="ICipher" class="">ICipher</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Libplanet.KeyStore.Kdfs.html" title="Libplanet.KeyStore.Kdfs" class="">Libplanet.KeyStore.Kdfs</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Libplanet.KeyStore.Kdfs.IKdf.html" title="IKdf" class="">IKdf</a>
+                          </li>
+                          <li class="">
+                            <a href="Libplanet.KeyStore.Kdfs.Pbkdf2-1.html" title="Pbkdf2&lt;T&gt;" class="">Pbkdf2&lt;T&gt;</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -398,7 +446,7 @@ any state.</li></ul>
     <pre><code class="lang-csharp hljs">public interface IAccountStateDelta</code></pre>
   </div>
   <h5 id="Libplanet_Action_IAccountStateDelta_remarks"><strong>Remarks</strong></h5>
-  <div class="markdown level0 remarks"><p>This interface is immutable.  <a class="xref" href="Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_SetState_Libplanet_Address_System_Object_">SetState(Address, Object)</a>
+  <div class="markdown level0 remarks"><p>This interface is immutable.  <a class="xref" href="Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_SetState_Libplanet_Address_IValue_">SetState(Address, IValue)</a>
 method does not manipulate the instance, but returns a new
 <a class="xref" href="Libplanet.Action.IAccountStateDelta.html">IAccountStateDelta</a> instance with updated states.</p>
 </div>
@@ -406,10 +454,10 @@ method does not manipulate the instance, but returns a new
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/524efd801ed5ebf245c3b9422ac20eef45a10e89/apiSpec/new?filename=Libplanet_Action_IAccountStateDelta_UpdatedAddresses.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAccountStateDelta.UpdatedAddresses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/5e43072db277b275b02c454358f56117c16872d3/apiSpec/new?filename=Libplanet_Action_IAccountStateDelta_UpdatedAddresses.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAccountStateDelta.UpdatedAddresses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/524efd801ed5ebf245c3b9422ac20eef45a10e89/Libplanet/Action/IAccountStateDelta.cs/#L42">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/5e43072db277b275b02c454358f56117c16872d3/Libplanet/Action/IAccountStateDelta.cs/#L43">View Source</a>
   </span>
   <a id="Libplanet_Action_IAccountStateDelta_UpdatedAddresses_" data-uid="Libplanet.Action.IAccountStateDelta.UpdatedAddresses*"></a>
   <h4 id="Libplanet_Action_IAccountStateDelta_UpdatedAddresses" data-uid="Libplanet.Action.IAccountStateDelta.UpdatedAddresses">UpdatedAddresses</h4>
@@ -440,10 +488,10 @@ been updated since then.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/524efd801ed5ebf245c3b9422ac20eef45a10e89/apiSpec/new?filename=Libplanet_Action_IAccountStateDelta_GetState_Libplanet_Address_.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAccountStateDelta.GetState(Libplanet.Address)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/5e43072db277b275b02c454358f56117c16872d3/apiSpec/new?filename=Libplanet_Action_IAccountStateDelta_GetState_Libplanet_Address_.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAccountStateDelta.GetState(Libplanet.Address)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/524efd801ed5ebf245c3b9422ac20eef45a10e89/Libplanet/Action/IAccountStateDelta.cs/#L53">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/5e43072db277b275b02c454358f56117c16872d3/Libplanet/Action/IAccountStateDelta.cs/#L54">View Source</a>
   </span>
   <a id="Libplanet_Action_IAccountStateDelta_GetState_" data-uid="Libplanet.Action.IAccountStateDelta.GetState*"></a>
   <h4 id="Libplanet_Action_IAccountStateDelta_GetState_Libplanet_Address_" data-uid="Libplanet.Action.IAccountStateDelta.GetState(Libplanet.Address)">GetState(Address)</h4>
@@ -452,7 +500,7 @@ been updated since then.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">object GetState(Address address)</code></pre>
+    <pre><code class="lang-csharp hljs">IValue GetState(Address address)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -483,7 +531,7 @@ the account to get its state.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="xref">IValue</span></td>
         <td><p>The account state of the given <code data-dev-comment-type="paramref" class="paramref">address</code>.
 If it has never been set to any state it returns <code>null</code>
 instead.</p>
@@ -493,13 +541,13 @@ instead.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/524efd801ed5ebf245c3b9422ac20eef45a10e89/apiSpec/new?filename=Libplanet_Action_IAccountStateDelta_SetState_Libplanet_Address_System_Object_.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAccountStateDelta.SetState(Libplanet.Address%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/5e43072db277b275b02c454358f56117c16872d3/apiSpec/new?filename=Libplanet_Action_IAccountStateDelta_SetState_Libplanet_Address_IValue_.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAccountStateDelta.SetState(Libplanet.Address%2CIValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/524efd801ed5ebf245c3b9422ac20eef45a10e89/Libplanet/Action/IAccountStateDelta.cs/#L72">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/5e43072db277b275b02c454358f56117c16872d3/Libplanet/Action/IAccountStateDelta.cs/#L73">View Source</a>
   </span>
   <a id="Libplanet_Action_IAccountStateDelta_SetState_" data-uid="Libplanet.Action.IAccountStateDelta.SetState*"></a>
-  <h4 id="Libplanet_Action_IAccountStateDelta_SetState_Libplanet_Address_System_Object_" data-uid="Libplanet.Action.IAccountStateDelta.SetState(Libplanet.Address,System.Object)">SetState(Address, Object)</h4>
+  <h4 id="Libplanet_Action_IAccountStateDelta_SetState_Libplanet_Address_IValue_" data-uid="Libplanet.Action.IAccountStateDelta.SetState(Libplanet.Address,IValue)">SetState(Address, IValue)</h4>
   <div class="markdown level1 summary"><p>Gets a new instance that the account state of the given
 <code data-dev-comment-type="paramref" class="paramref">address</code> is set to the given
 <code data-dev-comment-type="paramref" class="paramref">state</code>.</p>
@@ -507,7 +555,7 @@ instead.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAccountStateDelta SetState(Address address, object state)</code></pre>
+    <pre><code class="lang-csharp hljs">IAccountStateDelta SetState(Address address, IValue state)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -527,7 +575,7 @@ the account to set its state.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="xref">IValue</span></td>
         <td><span class="parametername">state</span></td>
         <td><p>The new state to fill the account with.</p>
 </td>
@@ -552,7 +600,7 @@ is set to the given <code data-dev-comment-type="paramref" class="paramref">stat
       </tr>
     </tbody>
   </table>
-  <h5 id="Libplanet_Action_IAccountStateDelta_SetState_Libplanet_Address_System_Object__remarks">Remarks</h5>
+  <h5 id="Libplanet_Action_IAccountStateDelta_SetState_Libplanet_Address_IValue__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This method method does not manipulate the instance,
 but returns a new <a class="xref" href="Libplanet.Action.IAccountStateDelta.html">IAccountStateDelta</a> instance
 with updated states instead.</p>
@@ -565,10 +613,10 @@ with updated states instead.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/new/524efd801ed5ebf245c3b9422ac20eef45a10e89/apiSpec/new?filename=Libplanet_Action_IAccountStateDelta.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAccountStateDelta%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dahlia/libplanet/new/5e43072db277b275b02c454358f56117c16872d3/apiSpec/new?filename=Libplanet_Action_IAccountStateDelta.md&amp;value=---%0Auid%3A%20Libplanet.Action.IAccountStateDelta%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/524efd801ed5ebf245c3b9422ac20eef45a10e89/Libplanet/Action/IAccountStateDelta.cs/#L36" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/5e43072db277b275b02c454358f56117c16872d3/Libplanet/Action/IAccountStateDelta.cs/#L37" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
