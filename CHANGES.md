@@ -27,7 +27,12 @@ To be released.
 
 ### Behavioral changes
 
+ -  `Swarm<T>` became to send 100 blocks (instead of 500 blocks) for each
+    reply during IDL, in order to stabilize connection in high latency
+    environments.
+
 ### Bug fixes
+
  -  Fixed a bug where the canonical chain could be deleted if `Swarm<T>` failed
     to download blocks due to network connection.  [[#675]]
 
