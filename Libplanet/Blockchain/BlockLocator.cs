@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -7,6 +8,10 @@ namespace Libplanet.Blockchain
     internal class BlockLocator : IEnumerable<HashDigest<SHA256>>
     {
         private readonly IEnumerable<HashDigest<SHA256>> _impl;
+
+        public BlockLocator(Func<int, HashDigest<SHA256>> indexBlockHash, int threshold = 10)
+        {
+        }
 
         public BlockLocator(IEnumerable<HashDigest<SHA256>> hashes)
         {

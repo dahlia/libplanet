@@ -4,6 +4,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -629,6 +630,10 @@ namespace Libplanet.Net
         }
 
         // FIXME: It is not guaranteed that states will be reported in order. see issue #436, #430
+        [SuppressMessage(
+            "Microsoft.StyleCop.CSharp.ReadabilityRules",
+            "MEN003",
+            Justification = "No jutification.  This should not be committed.")]
         internal async Task PreloadAsync(
             bool render,
             TimeSpan? dialTimeout = null,
@@ -677,47 +682,94 @@ namespace Libplanet.Net
 
             try
             {
-                var blockDownloadComplete = false;
-                foreach ((BoundPeer Peer, long? Height) peerWithHeight in peersWithHeight)
+                // TODO: progress
+                // Gather demand block hashes
+                IEnumerable<HashDigest<SHA256>> demandHashes = null;
+                long currentTipIndex = workspace.Tip?.Index ?? -1;
+                long totalBlocksToDownload = 0;
+                BlockLocator locator = workspace.GetBlockLocator();
+                foreach ((BoundPeer peer, long? peerHeight) in peersWithHeight)
                 {
-                    try
+                    long peerIndex = peerHeight ?? -1;
+
+                    if (peer is null || currentTipIndex >= peerIndex)
                     {
-                        _logger.Information(
-                            "Try to download blocks from {EndPoint}@{Address}.",
-                            peerWithHeight.Peer.EndPoint,
-                            peerWithHeight.Peer.Address.ToHex());
-                        await SyncBehindsBlocksFromPeerAsync(
-                            workspace,
-                            peerWithHeight,
-                            progress,
-                            cancellationToken,
-                            render
-                        );
-                    }
-                    catch (Exception e)
-                    {
-                        _logger.Error(
-                            "Exception was thrown during downloading blocks from "
-                            + "{EndPoint}@{Address}.\n{Exception}",
-                            peerWithHeight.Peer.EndPoint,
-                            peerWithHeight.Peer.Address.ToHex(),
-                            e);
                         continue;
                     }
 
-                    _logger.Information(
-                        "Finished to download blocks from {EndPoint}@{Address}.",
-                        peerWithHeight.Peer.EndPoint,
-                        peerWithHeight.Peer.Address.ToHex());
-                    blockDownloadComplete = true;
+                    FillBlocksAsyncStarted.Set();
+                    totalBlocksToDownload = peerIndex - currentTipIndex;
+                    demandHashes =
+                        await GetBlockHashesAsync(peer, locator, null, cancellationToken);
                     break;
                 }
 
-                if (!blockDownloadComplete)
+                if (demandHashes is null)
                 {
-                    _logger.Information("Failed to download blocks from peers.");
+                    _logger.Information("Failed to reach any peer to download recent blocks.");
                     return;
                 }
+
+                var blockCompletion = new BlockCompletion<BoundPeer, T>(
+                    completionPredicate: workspace.ContainsBlock,
+                    window: 100,
+                    cancellationToken: cancellationToken
+                );
+                blockCompletion.Demand(demandHashes);
+                long receivedBlockCount = 0L;
+                await blockCompletion.Complete(
+                    peers: peersWithHeight.Select(pair => pair.Item1).ToList(),
+                    cancellationToken: cancellationToken,
+                    blockFetcher: (peer, hashes) =>
+                    {
+                        _logger.Information(
+                            "Try to download blocks from {EndPoint}@{Address}...",
+                            peer.EndPoint,
+                            peer.Address.ToHex()
+                        );
+
+                        // TODO: catch exceptions
+                        return new AsyncEnumerable<Block<T>>(async yield =>
+                        {
+                            await GetBlocksAsync(peer, hashes).ForEachAsync(
+                                async block =>
+                                {
+                                    await yield.ReturnAsync(block);
+                                    receivedBlockCount++;
+                                    progress?.Report(new BlockDownloadState
+                                    {
+                                        TotalBlockCount = totalBlocksToDownload,
+                                        ReceivedBlockCount = receivedBlockCount,
+                                        ReceivedBlockHash = block.Hash,
+                                        SourcePeer = peer,
+                                    });
+                                },
+                                cancellationToken: cancellationToken
+                            );
+                        });
+                    }
+                ).ForEachAsync(
+                    block =>
+                    {
+                        _logger.Verbose(
+                            "Add a block #{BlockIndex} {BlockHash}...",
+                            block.Index,
+                            block.Hash
+                        );
+                        workspace.Append(
+                            block,
+                            DateTimeOffset.UtcNow,
+                            evaluateActions: render,
+                            renderActions: render
+                        );
+                        _logger.Debug(
+                            "Appended a block #{BlockIndex} {BlockHash} to the workspace chain.",
+                            block.Index,
+                            block.Hash
+                        );
+                    },
+                    cancellationToken: cancellationToken
+                );
 
                 if (workspace.Tip is null)
                 {
@@ -1173,33 +1225,61 @@ namespace Libplanet.Net
             });
         }
 
-        private async Task SyncBehindsBlocksFromPeerAsync(
+        private System.Collections.Async.IAsyncEnumerable<HashDigest<SHA256>>
+        FetchDemandBlockHashes(
             BlockChain<T> blockChain,
-            (BoundPeer, long?) peerWithLength,
-            IProgress<BlockDownloadState> progress,
-            CancellationToken cancellationToken,
-            bool render
+            IReadOnlyList<(BoundPeer, long?)> peersWithHeight,
+            CancellationToken cancellationToken = default
         )
         {
-            if (peerWithLength.Item1 != null &&
-                !(blockChain.Tip?.Index >= (peerWithLength.Item2 ?? -1)))
+            long currentTipIndex = blockChain.Tip?.Index ?? -1;
+            return new AsyncEnumerable<HashDigest<SHA256>>(async yield =>
             {
-                long currentTipIndex = blockChain.Tip?.Index ?? -1;
-                long peerIndex = peerWithLength.Item2 ?? -1;
-                long totalBlockCount = peerIndex - currentTipIndex;
+                BlockLocator locator = blockChain.GetBlockLocator();
+                int peersCount = peersWithHeight.Count;
+                int i = 0;
+                foreach ((BoundPeer peer, long? peerHeight) in peersWithHeight)
+                {
+                    i++;
+                    long peerIndex = peerHeight ?? -1;
 
-                _logger.Debug("Synchronizing previous blocks from " +
-                    $"[{peerWithLength.Item1.Address.ToHex()}]");
-                await SyncPreviousBlocksAsync(
-                    blockChain,
-                    peerWithLength.Item1,
-                    null,
-                    progress,
-                    totalBlockCount,
-                    evaluateActions: render,
-                    cancellationToken: cancellationToken
-                );
-            }
+                    if (peer is null || currentTipIndex >= peerIndex)
+                    {
+                        continue;
+                    }
+
+                    FillBlocksAsyncStarted.Set();
+                    var totalBlocksToDownload = peerIndex - currentTipIndex;
+                    IEnumerable<HashDigest<SHA256>> hashes;
+                    try
+                    {
+                        hashes = await GetBlockHashesAsync(peer, locator, null, cancellationToken);
+                    }
+                    catch (Exception)
+                    {
+                        if (i == peersCount)
+                        {
+                            _logger.Warning(
+                                "Failed to fetch demand block hashes from peers: {Peers}.",
+                                peersWithHeight.Select(p => p.Item1).ToArray()
+                            );
+                            throw;
+                        }
+
+                        _logger.Debug(
+                            "Failed to fetch demand block hashes from {Peer}; " +
+                            "retry with another peer...",
+                            peer
+                        );
+                        continue;
+                    }
+
+                    foreach (HashDigest<SHA256> hash in hashes)
+                    {
+                        await yield.ReturnAsync(hash);
+                    }
+                }
+            });
         }
 
         private async Task<bool> SyncRecentStatesFromTrustedPeersAsync(
