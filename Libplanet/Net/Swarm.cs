@@ -546,10 +546,7 @@ namespace Libplanet.Net
         public void BroadcastBlocks(IEnumerable<Block<T>> blocks)
         {
             _logger.Debug("Trying to broadcast blocks...");
-            var message = new BlockHashes(
-                Address,
-                blocks.Select(b => b.Hash)
-            );
+            var message = new BlockHashes(blocks.Select(b => (b.Index, b.Hash)));
             BroadcastMessage(message);
             _logger.Debug("Block broadcasting complete.");
         }
@@ -997,7 +994,7 @@ namespace Libplanet.Net
 
             if (parsedMessage is BlockHashes blockHashes)
             {
-                return blockHashes.Hashes;
+                return blockHashes.Hashes.Select(b => b.Item2);
             }
 
             throw new InvalidMessageException(
@@ -1444,12 +1441,12 @@ namespace Libplanet.Net
 
                 case GetBlockHashes getBlockHashes:
                     {
-                        IEnumerable<HashDigest<SHA256>> hashes =
+                        IEnumerable<(long i, HashDigest<SHA256> hash)> hashes =
                             BlockChain.FindNextHashes(
                                 getBlockHashes.Locator,
                                 getBlockHashes.Stop,
                                 FindNextHashesChunkSize);
-                        var reply = new BlockHashes(Address, hashes)
+                        var reply = new BlockHashes(hashes)
                         {
                             Identity = getBlockHashes.Identity,
                         };
@@ -1505,6 +1502,7 @@ namespace Libplanet.Net
             }
 
             ImmutableList<HashDigest<SHA256>> newHashes = message.Hashes
+                .Select(b => b.Item2)
                 .Where(hash => !_store.ContainsBlock(hash))
                 .ToImmutableList();
 

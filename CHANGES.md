@@ -28,6 +28,10 @@ To be released.
 
 ### Backward-incompatible network protocol changes
 
+ -  The existing `BlockHashes` message type (with the type number `0x05`) was
+    replaced by a new `BlockHashes` message type (with type number `0x0d`)
+    so that include block indices as well as block hashes.  [[#707]]
+
 ### Backward-incompatible storage format changes
 
  -  The introduced `DefaultStore` is incompatible at the file-level with
@@ -62,6 +66,7 @@ To be released.
 [#680]: https://github.com/planetarium/libplanet/pull/680
 [#685]: https://github.com/planetarium/libplanet/pull/685
 [#692]: https://github.com/planetarium/libplanet/pull/692
+[#707]: https://github.com/planetarium/libplanet/pull/707
 
 
 Version 0.7.0
