@@ -850,15 +850,15 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T)
   nameWithType: BlockChain<T>
   nameWithType.vb: BlockChain(Of T)
-- uid: Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore)
-  name: BlockChain(IBlockPolicy<T>, IStore)
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1__ctor_Libplanet_Blockchain_Policies_IBlockPolicy__0__Libplanet_Store_IStore_
-  commentId: M:Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore)
-  name.vb: BlockChain(IBlockPolicy(Of T), IStore)
-  fullName: Libplanet.Blockchain.BlockChain<T>.BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy<T>, Libplanet.Store.IStore)
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy(Of T), Libplanet.Store.IStore)
-  nameWithType: BlockChain<T>.BlockChain(IBlockPolicy<T>, IStore)
-  nameWithType.vb: BlockChain(Of T).BlockChain(IBlockPolicy(Of T), IStore)
+- uid: Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore,Libplanet.Blocks.Block{`0})
+  name: BlockChain(IBlockPolicy<T>, IStore, Block<T>)
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1__ctor_Libplanet_Blockchain_Policies_IBlockPolicy__0__Libplanet_Store_IStore_Libplanet_Blocks_Block__0__
+  commentId: M:Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore,Libplanet.Blocks.Block{`0})
+  name.vb: BlockChain(IBlockPolicy(Of T), IStore, Block(Of T))
+  fullName: Libplanet.Blockchain.BlockChain<T>.BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy<T>, Libplanet.Store.IStore, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy(Of T), Libplanet.Store.IStore, Libplanet.Blocks.Block(Of T))
+  nameWithType: BlockChain<T>.BlockChain(IBlockPolicy<T>, IStore, Block<T>)
+  nameWithType.vb: BlockChain(Of T).BlockChain(IBlockPolicy(Of T), IStore, Block(Of T))
 - uid: Libplanet.Blockchain.BlockChain`1.#ctor*
   name: BlockChain
   href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1__ctor_
@@ -964,6 +964,23 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Finalize
   nameWithType: BlockChain<T>.Finalize
   nameWithType.vb: BlockChain(Of T).Finalize
+- uid: Libplanet.Blockchain.BlockChain`1.Genesis
+  name: Genesis
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Genesis
+  commentId: P:Libplanet.Blockchain.BlockChain`1.Genesis
+  fullName: Libplanet.Blockchain.BlockChain<T>.Genesis
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Genesis
+  nameWithType: BlockChain<T>.Genesis
+  nameWithType.vb: BlockChain(Of T).Genesis
+- uid: Libplanet.Blockchain.BlockChain`1.Genesis*
+  name: Genesis
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Genesis_
+  commentId: Overload:Libplanet.Blockchain.BlockChain`1.Genesis
+  isSpec: "True"
+  fullName: Libplanet.Blockchain.BlockChain<T>.Genesis
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Genesis
+  nameWithType: BlockChain<T>.Genesis
+  nameWithType.vb: BlockChain(Of T).Genesis
 - uid: Libplanet.Blockchain.BlockChain`1.GetNextTxNonce(Libplanet.Address)
   name: GetNextTxNonce(Address)
   href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_GetNextTxNonce_Libplanet_Address_
@@ -1069,6 +1086,24 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Item
   nameWithType: BlockChain<T>.Item
   nameWithType.vb: BlockChain(Of T).Item
+- uid: Libplanet.Blockchain.BlockChain`1.MakeGenesisBlock(IEnumerable{`0},Libplanet.Crypto.PrivateKey,System.Nullable{DateTimeOffset})
+  name: MakeGenesisBlock(IEnumerable<T>, PrivateKey, Nullable<DateTimeOffset>)
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_MakeGenesisBlock_IEnumerable__0__Libplanet_Crypto_PrivateKey_System_Nullable_DateTimeOffset__
+  commentId: M:Libplanet.Blockchain.BlockChain`1.MakeGenesisBlock(IEnumerable{`0},Libplanet.Crypto.PrivateKey,System.Nullable{DateTimeOffset})
+  name.vb: MakeGenesisBlock(IEnumerable(Of T), PrivateKey, Nullable(Of DateTimeOffset))
+  fullName: Libplanet.Blockchain.BlockChain<T>.MakeGenesisBlock(IEnumerable<T>, Libplanet.Crypto.PrivateKey, System.Nullable<DateTimeOffset>)
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).MakeGenesisBlock(IEnumerable(Of T), Libplanet.Crypto.PrivateKey, System.Nullable(Of DateTimeOffset))
+  nameWithType: BlockChain<T>.MakeGenesisBlock(IEnumerable<T>, PrivateKey, Nullable<DateTimeOffset>)
+  nameWithType.vb: BlockChain(Of T).MakeGenesisBlock(IEnumerable(Of T), PrivateKey, Nullable(Of DateTimeOffset))
+- uid: Libplanet.Blockchain.BlockChain`1.MakeGenesisBlock*
+  name: MakeGenesisBlock
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_MakeGenesisBlock_
+  commentId: Overload:Libplanet.Blockchain.BlockChain`1.MakeGenesisBlock
+  isSpec: "True"
+  fullName: Libplanet.Blockchain.BlockChain<T>.MakeGenesisBlock
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).MakeGenesisBlock
+  nameWithType: BlockChain<T>.MakeGenesisBlock
+  nameWithType.vb: BlockChain(Of T).MakeGenesisBlock
 - uid: Libplanet.Blockchain.BlockChain`1.MakeTransaction(Libplanet.Crypto.PrivateKey,IEnumerable{`0},IImmutableSet{Libplanet.Address},System.Nullable{DateTimeOffset})
   name: MakeTransaction(PrivateKey, IEnumerable<T>, IImmutableSet<Address>, Nullable<DateTimeOffset>)
   href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_MakeTransaction_Libplanet_Crypto_PrivateKey_IEnumerable__0__IImmutableSet_Libplanet_Address__System_Nullable_DateTimeOffset__
@@ -1949,6 +1984,54 @@ references:
   isSpec: "True"
   fullName: Libplanet.Blocks.InvalidBlockTimestampException.InvalidBlockTimestampException
   nameWithType: InvalidBlockTimestampException.InvalidBlockTimestampException
+- uid: Libplanet.Blocks.InvalidGenesisBlockException
+  name: InvalidGenesisBlockException
+  href: api/Libplanet.Blocks.InvalidGenesisBlockException.html
+  commentId: T:Libplanet.Blocks.InvalidGenesisBlockException
+  fullName: Libplanet.Blocks.InvalidGenesisBlockException
+  nameWithType: InvalidGenesisBlockException
+- uid: Libplanet.Blocks.InvalidGenesisBlockException.#ctor(Libplanet.HashDigest{SHA256},Libplanet.HashDigest{SHA256},System.String)
+  name: InvalidGenesisBlockException(HashDigest<SHA256>, HashDigest<SHA256>, String)
+  href: api/Libplanet.Blocks.InvalidGenesisBlockException.html#Libplanet_Blocks_InvalidGenesisBlockException__ctor_Libplanet_HashDigest_SHA256__Libplanet_HashDigest_SHA256__System_String_
+  commentId: M:Libplanet.Blocks.InvalidGenesisBlockException.#ctor(Libplanet.HashDigest{SHA256},Libplanet.HashDigest{SHA256},System.String)
+  name.vb: InvalidGenesisBlockException(HashDigest(Of SHA256), HashDigest(Of SHA256), String)
+  fullName: Libplanet.Blocks.InvalidGenesisBlockException.InvalidGenesisBlockException(Libplanet.HashDigest<SHA256>, Libplanet.HashDigest<SHA256>, System.String)
+  fullName.vb: Libplanet.Blocks.InvalidGenesisBlockException.InvalidGenesisBlockException(Libplanet.HashDigest(Of SHA256), Libplanet.HashDigest(Of SHA256), System.String)
+  nameWithType: InvalidGenesisBlockException.InvalidGenesisBlockException(HashDigest<SHA256>, HashDigest<SHA256>, String)
+  nameWithType.vb: InvalidGenesisBlockException.InvalidGenesisBlockException(HashDigest(Of SHA256), HashDigest(Of SHA256), String)
+- uid: Libplanet.Blocks.InvalidGenesisBlockException.#ctor*
+  name: InvalidGenesisBlockException
+  href: api/Libplanet.Blocks.InvalidGenesisBlockException.html#Libplanet_Blocks_InvalidGenesisBlockException__ctor_
+  commentId: Overload:Libplanet.Blocks.InvalidGenesisBlockException.#ctor
+  isSpec: "True"
+  fullName: Libplanet.Blocks.InvalidGenesisBlockException.InvalidGenesisBlockException
+  nameWithType: InvalidGenesisBlockException.InvalidGenesisBlockException
+- uid: Libplanet.Blocks.InvalidGenesisBlockException.NetworkExpected
+  name: NetworkExpected
+  href: api/Libplanet.Blocks.InvalidGenesisBlockException.html#Libplanet_Blocks_InvalidGenesisBlockException_NetworkExpected
+  commentId: P:Libplanet.Blocks.InvalidGenesisBlockException.NetworkExpected
+  fullName: Libplanet.Blocks.InvalidGenesisBlockException.NetworkExpected
+  nameWithType: InvalidGenesisBlockException.NetworkExpected
+- uid: Libplanet.Blocks.InvalidGenesisBlockException.NetworkExpected*
+  name: NetworkExpected
+  href: api/Libplanet.Blocks.InvalidGenesisBlockException.html#Libplanet_Blocks_InvalidGenesisBlockException_NetworkExpected_
+  commentId: Overload:Libplanet.Blocks.InvalidGenesisBlockException.NetworkExpected
+  isSpec: "True"
+  fullName: Libplanet.Blocks.InvalidGenesisBlockException.NetworkExpected
+  nameWithType: InvalidGenesisBlockException.NetworkExpected
+- uid: Libplanet.Blocks.InvalidGenesisBlockException.Stored
+  name: Stored
+  href: api/Libplanet.Blocks.InvalidGenesisBlockException.html#Libplanet_Blocks_InvalidGenesisBlockException_Stored
+  commentId: P:Libplanet.Blocks.InvalidGenesisBlockException.Stored
+  fullName: Libplanet.Blocks.InvalidGenesisBlockException.Stored
+  nameWithType: InvalidGenesisBlockException.Stored
+- uid: Libplanet.Blocks.InvalidGenesisBlockException.Stored*
+  name: Stored
+  href: api/Libplanet.Blocks.InvalidGenesisBlockException.html#Libplanet_Blocks_InvalidGenesisBlockException_Stored_
+  commentId: Overload:Libplanet.Blocks.InvalidGenesisBlockException.Stored
+  isSpec: "True"
+  fullName: Libplanet.Blocks.InvalidGenesisBlockException.Stored
+  nameWithType: InvalidGenesisBlockException.Stored
 - uid: Libplanet.ByteUtil
   name: ByteUtil
   href: api/Libplanet.ByteUtil.html
@@ -3396,64 +3479,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.BlockDownloadState.TotalBlockCount
   nameWithType: BlockDownloadState.TotalBlockCount
-- uid: Libplanet.Net.BlockStateDownloadState
-  name: BlockStateDownloadState
-  href: api/Libplanet.Net.BlockStateDownloadState.html
-  commentId: T:Libplanet.Net.BlockStateDownloadState
-  fullName: Libplanet.Net.BlockStateDownloadState
-  nameWithType: BlockStateDownloadState
-- uid: Libplanet.Net.BlockStateDownloadState.CurrentPhase
-  name: CurrentPhase
-  href: api/Libplanet.Net.BlockStateDownloadState.html#Libplanet_Net_BlockStateDownloadState_CurrentPhase
-  commentId: P:Libplanet.Net.BlockStateDownloadState.CurrentPhase
-  fullName: Libplanet.Net.BlockStateDownloadState.CurrentPhase
-  nameWithType: BlockStateDownloadState.CurrentPhase
-- uid: Libplanet.Net.BlockStateDownloadState.CurrentPhase*
-  name: CurrentPhase
-  href: api/Libplanet.Net.BlockStateDownloadState.html#Libplanet_Net_BlockStateDownloadState_CurrentPhase_
-  commentId: Overload:Libplanet.Net.BlockStateDownloadState.CurrentPhase
-  isSpec: "True"
-  fullName: Libplanet.Net.BlockStateDownloadState.CurrentPhase
-  nameWithType: BlockStateDownloadState.CurrentPhase
-- uid: Libplanet.Net.BlockStateDownloadState.ReceivedBlockHash
-  name: ReceivedBlockHash
-  href: api/Libplanet.Net.BlockStateDownloadState.html#Libplanet_Net_BlockStateDownloadState_ReceivedBlockHash
-  commentId: P:Libplanet.Net.BlockStateDownloadState.ReceivedBlockHash
-  fullName: Libplanet.Net.BlockStateDownloadState.ReceivedBlockHash
-  nameWithType: BlockStateDownloadState.ReceivedBlockHash
-- uid: Libplanet.Net.BlockStateDownloadState.ReceivedBlockHash*
-  name: ReceivedBlockHash
-  href: api/Libplanet.Net.BlockStateDownloadState.html#Libplanet_Net_BlockStateDownloadState_ReceivedBlockHash_
-  commentId: Overload:Libplanet.Net.BlockStateDownloadState.ReceivedBlockHash
-  isSpec: "True"
-  fullName: Libplanet.Net.BlockStateDownloadState.ReceivedBlockHash
-  nameWithType: BlockStateDownloadState.ReceivedBlockHash
-- uid: Libplanet.Net.BlockStateDownloadState.ReceivedBlockStateCount
-  name: ReceivedBlockStateCount
-  href: api/Libplanet.Net.BlockStateDownloadState.html#Libplanet_Net_BlockStateDownloadState_ReceivedBlockStateCount
-  commentId: P:Libplanet.Net.BlockStateDownloadState.ReceivedBlockStateCount
-  fullName: Libplanet.Net.BlockStateDownloadState.ReceivedBlockStateCount
-  nameWithType: BlockStateDownloadState.ReceivedBlockStateCount
-- uid: Libplanet.Net.BlockStateDownloadState.ReceivedBlockStateCount*
-  name: ReceivedBlockStateCount
-  href: api/Libplanet.Net.BlockStateDownloadState.html#Libplanet_Net_BlockStateDownloadState_ReceivedBlockStateCount_
-  commentId: Overload:Libplanet.Net.BlockStateDownloadState.ReceivedBlockStateCount
-  isSpec: "True"
-  fullName: Libplanet.Net.BlockStateDownloadState.ReceivedBlockStateCount
-  nameWithType: BlockStateDownloadState.ReceivedBlockStateCount
-- uid: Libplanet.Net.BlockStateDownloadState.TotalBlockStateCount
-  name: TotalBlockStateCount
-  href: api/Libplanet.Net.BlockStateDownloadState.html#Libplanet_Net_BlockStateDownloadState_TotalBlockStateCount
-  commentId: P:Libplanet.Net.BlockStateDownloadState.TotalBlockStateCount
-  fullName: Libplanet.Net.BlockStateDownloadState.TotalBlockStateCount
-  nameWithType: BlockStateDownloadState.TotalBlockStateCount
-- uid: Libplanet.Net.BlockStateDownloadState.TotalBlockStateCount*
-  name: TotalBlockStateCount
-  href: api/Libplanet.Net.BlockStateDownloadState.html#Libplanet_Net_BlockStateDownloadState_TotalBlockStateCount_
-  commentId: Overload:Libplanet.Net.BlockStateDownloadState.TotalBlockStateCount
-  isSpec: "True"
-  fullName: Libplanet.Net.BlockStateDownloadState.TotalBlockStateCount
-  nameWithType: BlockStateDownloadState.TotalBlockStateCount
 - uid: Libplanet.Net.BoundPeer
   name: BoundPeer
   href: api/Libplanet.Net.BoundPeer.html
@@ -3892,6 +3917,25 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.PeerNotFoundException.PeerNotFoundException
   nameWithType: PeerNotFoundException.PeerNotFoundException
+- uid: Libplanet.Net.PreloadBlockDownloadFailEventArgs
+  name: PreloadBlockDownloadFailEventArgs
+  href: api/Libplanet.Net.PreloadBlockDownloadFailEventArgs.html
+  commentId: T:Libplanet.Net.PreloadBlockDownloadFailEventArgs
+  fullName: Libplanet.Net.PreloadBlockDownloadFailEventArgs
+  nameWithType: PreloadBlockDownloadFailEventArgs
+- uid: Libplanet.Net.PreloadBlockDownloadFailEventArgs.InnerExceptions
+  name: InnerExceptions
+  href: api/Libplanet.Net.PreloadBlockDownloadFailEventArgs.html#Libplanet_Net_PreloadBlockDownloadFailEventArgs_InnerExceptions
+  commentId: P:Libplanet.Net.PreloadBlockDownloadFailEventArgs.InnerExceptions
+  fullName: Libplanet.Net.PreloadBlockDownloadFailEventArgs.InnerExceptions
+  nameWithType: PreloadBlockDownloadFailEventArgs.InnerExceptions
+- uid: Libplanet.Net.PreloadBlockDownloadFailEventArgs.InnerExceptions*
+  name: InnerExceptions
+  href: api/Libplanet.Net.PreloadBlockDownloadFailEventArgs.html#Libplanet_Net_PreloadBlockDownloadFailEventArgs_InnerExceptions_
+  commentId: Overload:Libplanet.Net.PreloadBlockDownloadFailEventArgs.InnerExceptions
+  isSpec: "True"
+  fullName: Libplanet.Net.PreloadBlockDownloadFailEventArgs.InnerExceptions
+  nameWithType: PreloadBlockDownloadFailEventArgs.InnerExceptions
 - uid: Libplanet.Net.PreloadState
   name: PreloadState
   href: api/Libplanet.Net.PreloadState.html
@@ -3917,51 +3961,51 @@ references:
   commentId: F:Libplanet.Net.PreloadState.TotalPhase
   fullName: Libplanet.Net.PreloadState.TotalPhase
   nameWithType: PreloadState.TotalPhase
-- uid: Libplanet.Net.StateReferenceDownloadState
-  name: StateReferenceDownloadState
-  href: api/Libplanet.Net.StateReferenceDownloadState.html
-  commentId: T:Libplanet.Net.StateReferenceDownloadState
-  fullName: Libplanet.Net.StateReferenceDownloadState
-  nameWithType: StateReferenceDownloadState
-- uid: Libplanet.Net.StateReferenceDownloadState.CurrentPhase
+- uid: Libplanet.Net.StateDownloadState
+  name: StateDownloadState
+  href: api/Libplanet.Net.StateDownloadState.html
+  commentId: T:Libplanet.Net.StateDownloadState
+  fullName: Libplanet.Net.StateDownloadState
+  nameWithType: StateDownloadState
+- uid: Libplanet.Net.StateDownloadState.CurrentPhase
   name: CurrentPhase
-  href: api/Libplanet.Net.StateReferenceDownloadState.html#Libplanet_Net_StateReferenceDownloadState_CurrentPhase
-  commentId: P:Libplanet.Net.StateReferenceDownloadState.CurrentPhase
-  fullName: Libplanet.Net.StateReferenceDownloadState.CurrentPhase
-  nameWithType: StateReferenceDownloadState.CurrentPhase
-- uid: Libplanet.Net.StateReferenceDownloadState.CurrentPhase*
+  href: api/Libplanet.Net.StateDownloadState.html#Libplanet_Net_StateDownloadState_CurrentPhase
+  commentId: P:Libplanet.Net.StateDownloadState.CurrentPhase
+  fullName: Libplanet.Net.StateDownloadState.CurrentPhase
+  nameWithType: StateDownloadState.CurrentPhase
+- uid: Libplanet.Net.StateDownloadState.CurrentPhase*
   name: CurrentPhase
-  href: api/Libplanet.Net.StateReferenceDownloadState.html#Libplanet_Net_StateReferenceDownloadState_CurrentPhase_
-  commentId: Overload:Libplanet.Net.StateReferenceDownloadState.CurrentPhase
+  href: api/Libplanet.Net.StateDownloadState.html#Libplanet_Net_StateDownloadState_CurrentPhase_
+  commentId: Overload:Libplanet.Net.StateDownloadState.CurrentPhase
   isSpec: "True"
-  fullName: Libplanet.Net.StateReferenceDownloadState.CurrentPhase
-  nameWithType: StateReferenceDownloadState.CurrentPhase
-- uid: Libplanet.Net.StateReferenceDownloadState.ReceivedStateReferenceCount
-  name: ReceivedStateReferenceCount
-  href: api/Libplanet.Net.StateReferenceDownloadState.html#Libplanet_Net_StateReferenceDownloadState_ReceivedStateReferenceCount
-  commentId: P:Libplanet.Net.StateReferenceDownloadState.ReceivedStateReferenceCount
-  fullName: Libplanet.Net.StateReferenceDownloadState.ReceivedStateReferenceCount
-  nameWithType: StateReferenceDownloadState.ReceivedStateReferenceCount
-- uid: Libplanet.Net.StateReferenceDownloadState.ReceivedStateReferenceCount*
-  name: ReceivedStateReferenceCount
-  href: api/Libplanet.Net.StateReferenceDownloadState.html#Libplanet_Net_StateReferenceDownloadState_ReceivedStateReferenceCount_
-  commentId: Overload:Libplanet.Net.StateReferenceDownloadState.ReceivedStateReferenceCount
+  fullName: Libplanet.Net.StateDownloadState.CurrentPhase
+  nameWithType: StateDownloadState.CurrentPhase
+- uid: Libplanet.Net.StateDownloadState.ReceivedIterationCount
+  name: ReceivedIterationCount
+  href: api/Libplanet.Net.StateDownloadState.html#Libplanet_Net_StateDownloadState_ReceivedIterationCount
+  commentId: P:Libplanet.Net.StateDownloadState.ReceivedIterationCount
+  fullName: Libplanet.Net.StateDownloadState.ReceivedIterationCount
+  nameWithType: StateDownloadState.ReceivedIterationCount
+- uid: Libplanet.Net.StateDownloadState.ReceivedIterationCount*
+  name: ReceivedIterationCount
+  href: api/Libplanet.Net.StateDownloadState.html#Libplanet_Net_StateDownloadState_ReceivedIterationCount_
+  commentId: Overload:Libplanet.Net.StateDownloadState.ReceivedIterationCount
   isSpec: "True"
-  fullName: Libplanet.Net.StateReferenceDownloadState.ReceivedStateReferenceCount
-  nameWithType: StateReferenceDownloadState.ReceivedStateReferenceCount
-- uid: Libplanet.Net.StateReferenceDownloadState.TotalStateReferenceCount
-  name: TotalStateReferenceCount
-  href: api/Libplanet.Net.StateReferenceDownloadState.html#Libplanet_Net_StateReferenceDownloadState_TotalStateReferenceCount
-  commentId: P:Libplanet.Net.StateReferenceDownloadState.TotalStateReferenceCount
-  fullName: Libplanet.Net.StateReferenceDownloadState.TotalStateReferenceCount
-  nameWithType: StateReferenceDownloadState.TotalStateReferenceCount
-- uid: Libplanet.Net.StateReferenceDownloadState.TotalStateReferenceCount*
-  name: TotalStateReferenceCount
-  href: api/Libplanet.Net.StateReferenceDownloadState.html#Libplanet_Net_StateReferenceDownloadState_TotalStateReferenceCount_
-  commentId: Overload:Libplanet.Net.StateReferenceDownloadState.TotalStateReferenceCount
+  fullName: Libplanet.Net.StateDownloadState.ReceivedIterationCount
+  nameWithType: StateDownloadState.ReceivedIterationCount
+- uid: Libplanet.Net.StateDownloadState.TotalIterationCount
+  name: TotalIterationCount
+  href: api/Libplanet.Net.StateDownloadState.html#Libplanet_Net_StateDownloadState_TotalIterationCount
+  commentId: P:Libplanet.Net.StateDownloadState.TotalIterationCount
+  fullName: Libplanet.Net.StateDownloadState.TotalIterationCount
+  nameWithType: StateDownloadState.TotalIterationCount
+- uid: Libplanet.Net.StateDownloadState.TotalIterationCount*
+  name: TotalIterationCount
+  href: api/Libplanet.Net.StateDownloadState.html#Libplanet_Net_StateDownloadState_TotalIterationCount_
+  commentId: Overload:Libplanet.Net.StateDownloadState.TotalIterationCount
   isSpec: "True"
-  fullName: Libplanet.Net.StateReferenceDownloadState.TotalStateReferenceCount
-  nameWithType: StateReferenceDownloadState.TotalStateReferenceCount
+  fullName: Libplanet.Net.StateDownloadState.TotalIterationCount
+  nameWithType: StateDownloadState.TotalIterationCount
 - uid: Libplanet.Net.Swarm`1
   name: Swarm<T>
   href: api/Libplanet.Net.Swarm-1.html
@@ -4084,15 +4128,15 @@ references:
   fullName.vb: Libplanet.Net.Swarm(Of T).BootstrapAsync
   nameWithType: Swarm<T>.BootstrapAsync
   nameWithType.vb: Swarm(Of T).BootstrapAsync
-- uid: Libplanet.Net.Swarm`1.BroadcastBlocks(IEnumerable{Libplanet.Blocks.Block{`0}})
-  name: BroadcastBlocks(IEnumerable<Block<T>>)
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_BroadcastBlocks_IEnumerable_Libplanet_Blocks_Block__0___
-  commentId: M:Libplanet.Net.Swarm`1.BroadcastBlocks(IEnumerable{Libplanet.Blocks.Block{`0}})
-  name.vb: BroadcastBlocks(IEnumerable(Of Block(Of T)))
-  fullName: Libplanet.Net.Swarm<T>.BroadcastBlocks(IEnumerable<Libplanet.Blocks.Block<T>>)
-  fullName.vb: Libplanet.Net.Swarm(Of T).BroadcastBlocks(IEnumerable(Of Libplanet.Blocks.Block(Of T)))
-  nameWithType: Swarm<T>.BroadcastBlocks(IEnumerable<Block<T>>)
-  nameWithType.vb: Swarm(Of T).BroadcastBlocks(IEnumerable(Of Block(Of T)))
+- uid: Libplanet.Net.Swarm`1.BroadcastBlocks(IReadOnlyList{Libplanet.Blocks.Block{`0}})
+  name: BroadcastBlocks(IReadOnlyList<Block<T>>)
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_BroadcastBlocks_IReadOnlyList_Libplanet_Blocks_Block__0___
+  commentId: M:Libplanet.Net.Swarm`1.BroadcastBlocks(IReadOnlyList{Libplanet.Blocks.Block{`0}})
+  name.vb: BroadcastBlocks(IReadOnlyList(Of Block(Of T)))
+  fullName: Libplanet.Net.Swarm<T>.BroadcastBlocks(IReadOnlyList<Libplanet.Blocks.Block<T>>)
+  fullName.vb: Libplanet.Net.Swarm(Of T).BroadcastBlocks(IReadOnlyList(Of Libplanet.Blocks.Block(Of T)))
+  nameWithType: Swarm<T>.BroadcastBlocks(IReadOnlyList<Block<T>>)
+  nameWithType.vb: Swarm(Of T).BroadcastBlocks(IReadOnlyList(Of Block(Of T)))
 - uid: Libplanet.Net.Swarm`1.BroadcastBlocks*
   name: BroadcastBlocks
   href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_BroadcastBlocks_
@@ -4213,15 +4257,15 @@ references:
   fullName.vb: Libplanet.Net.Swarm(Of T).LastSeenTimestamps
   nameWithType: Swarm<T>.LastSeenTimestamps
   nameWithType.vb: Swarm(Of T).LastSeenTimestamps
-- uid: Libplanet.Net.Swarm`1.PreloadAsync(System.Nullable{TimeSpan},IProgress{Libplanet.Net.PreloadState},IImmutableSet{Libplanet.Address},CancellationToken)
-  name: PreloadAsync(Nullable<TimeSpan>, IProgress<PreloadState>, IImmutableSet<Address>, CancellationToken)
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_PreloadAsync_System_Nullable_TimeSpan__IProgress_Libplanet_Net_PreloadState__IImmutableSet_Libplanet_Address__CancellationToken_
-  commentId: M:Libplanet.Net.Swarm`1.PreloadAsync(System.Nullable{TimeSpan},IProgress{Libplanet.Net.PreloadState},IImmutableSet{Libplanet.Address},CancellationToken)
-  name.vb: PreloadAsync(Nullable(Of TimeSpan), IProgress(Of PreloadState), IImmutableSet(Of Address), CancellationToken)
-  fullName: Libplanet.Net.Swarm<T>.PreloadAsync(System.Nullable<TimeSpan>, IProgress<Libplanet.Net.PreloadState>, IImmutableSet<Libplanet.Address>, CancellationToken)
-  fullName.vb: Libplanet.Net.Swarm(Of T).PreloadAsync(System.Nullable(Of TimeSpan), IProgress(Of Libplanet.Net.PreloadState), IImmutableSet(Of Libplanet.Address), CancellationToken)
-  nameWithType: Swarm<T>.PreloadAsync(Nullable<TimeSpan>, IProgress<PreloadState>, IImmutableSet<Address>, CancellationToken)
-  nameWithType.vb: Swarm(Of T).PreloadAsync(Nullable(Of TimeSpan), IProgress(Of PreloadState), IImmutableSet(Of Address), CancellationToken)
+- uid: Libplanet.Net.Swarm`1.PreloadAsync(System.Nullable{TimeSpan},IProgress{Libplanet.Net.PreloadState},IImmutableSet{Libplanet.Address},EventHandler{Libplanet.Net.PreloadBlockDownloadFailEventArgs},CancellationToken)
+  name: PreloadAsync(Nullable<TimeSpan>, IProgress<PreloadState>, IImmutableSet<Address>, EventHandler<PreloadBlockDownloadFailEventArgs>, CancellationToken)
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_PreloadAsync_System_Nullable_TimeSpan__IProgress_Libplanet_Net_PreloadState__IImmutableSet_Libplanet_Address__EventHandler_Libplanet_Net_PreloadBlockDownloadFailEventArgs__CancellationToken_
+  commentId: M:Libplanet.Net.Swarm`1.PreloadAsync(System.Nullable{TimeSpan},IProgress{Libplanet.Net.PreloadState},IImmutableSet{Libplanet.Address},EventHandler{Libplanet.Net.PreloadBlockDownloadFailEventArgs},CancellationToken)
+  name.vb: PreloadAsync(Nullable(Of TimeSpan), IProgress(Of PreloadState), IImmutableSet(Of Address), EventHandler(Of PreloadBlockDownloadFailEventArgs), CancellationToken)
+  fullName: Libplanet.Net.Swarm<T>.PreloadAsync(System.Nullable<TimeSpan>, IProgress<Libplanet.Net.PreloadState>, IImmutableSet<Libplanet.Address>, EventHandler<Libplanet.Net.PreloadBlockDownloadFailEventArgs>, CancellationToken)
+  fullName.vb: Libplanet.Net.Swarm(Of T).PreloadAsync(System.Nullable(Of TimeSpan), IProgress(Of Libplanet.Net.PreloadState), IImmutableSet(Of Libplanet.Address), EventHandler(Of Libplanet.Net.PreloadBlockDownloadFailEventArgs), CancellationToken)
+  nameWithType: Swarm<T>.PreloadAsync(Nullable<TimeSpan>, IProgress<PreloadState>, IImmutableSet<Address>, EventHandler<PreloadBlockDownloadFailEventArgs>, CancellationToken)
+  nameWithType.vb: Swarm(Of T).PreloadAsync(Nullable(Of TimeSpan), IProgress(Of PreloadState), IImmutableSet(Of Address), EventHandler(Of PreloadBlockDownloadFailEventArgs), CancellationToken)
 - uid: Libplanet.Net.Swarm`1.PreloadAsync*
   name: PreloadAsync
   href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_PreloadAsync_
@@ -4248,22 +4292,24 @@ references:
   fullName.vb: Libplanet.Net.Swarm(Of T).Running
   nameWithType: Swarm<T>.Running
   nameWithType.vb: Swarm(Of T).Running
-- uid: Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,CancellationToken)
-  name: StartAsync(Int32, Int32, CancellationToken)
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_System_Int32_System_Int32_CancellationToken_
-  commentId: M:Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,CancellationToken)
-  fullName: Libplanet.Net.Swarm<T>.StartAsync(System.Int32, System.Int32, CancellationToken)
-  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(System.Int32, System.Int32, CancellationToken)
-  nameWithType: Swarm<T>.StartAsync(Int32, Int32, CancellationToken)
-  nameWithType.vb: Swarm(Of T).StartAsync(Int32, Int32, CancellationToken)
-- uid: Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,CancellationToken)
-  name: StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_TimeSpan_TimeSpan_CancellationToken_
-  commentId: M:Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,CancellationToken)
-  fullName: Libplanet.Net.Swarm<T>.StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  nameWithType: Swarm<T>.StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  nameWithType.vb: Swarm(Of T).StartAsync(TimeSpan, TimeSpan, CancellationToken)
+- uid: Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,EventHandler{Libplanet.Net.PreloadBlockDownloadFailEventArgs},CancellationToken)
+  name: StartAsync(Int32, Int32, EventHandler<PreloadBlockDownloadFailEventArgs>, CancellationToken)
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_System_Int32_System_Int32_EventHandler_Libplanet_Net_PreloadBlockDownloadFailEventArgs__CancellationToken_
+  commentId: M:Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,EventHandler{Libplanet.Net.PreloadBlockDownloadFailEventArgs},CancellationToken)
+  name.vb: StartAsync(Int32, Int32, EventHandler(Of PreloadBlockDownloadFailEventArgs), CancellationToken)
+  fullName: Libplanet.Net.Swarm<T>.StartAsync(System.Int32, System.Int32, EventHandler<Libplanet.Net.PreloadBlockDownloadFailEventArgs>, CancellationToken)
+  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(System.Int32, System.Int32, EventHandler(Of Libplanet.Net.PreloadBlockDownloadFailEventArgs), CancellationToken)
+  nameWithType: Swarm<T>.StartAsync(Int32, Int32, EventHandler<PreloadBlockDownloadFailEventArgs>, CancellationToken)
+  nameWithType.vb: Swarm(Of T).StartAsync(Int32, Int32, EventHandler(Of PreloadBlockDownloadFailEventArgs), CancellationToken)
+- uid: Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,EventHandler{Libplanet.Net.PreloadBlockDownloadFailEventArgs},CancellationToken)
+  name: StartAsync(TimeSpan, TimeSpan, EventHandler<PreloadBlockDownloadFailEventArgs>, CancellationToken)
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_TimeSpan_TimeSpan_EventHandler_Libplanet_Net_PreloadBlockDownloadFailEventArgs__CancellationToken_
+  commentId: M:Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,EventHandler{Libplanet.Net.PreloadBlockDownloadFailEventArgs},CancellationToken)
+  name.vb: StartAsync(TimeSpan, TimeSpan, EventHandler(Of PreloadBlockDownloadFailEventArgs), CancellationToken)
+  fullName: Libplanet.Net.Swarm<T>.StartAsync(TimeSpan, TimeSpan, EventHandler<Libplanet.Net.PreloadBlockDownloadFailEventArgs>, CancellationToken)
+  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(TimeSpan, TimeSpan, EventHandler(Of Libplanet.Net.PreloadBlockDownloadFailEventArgs), CancellationToken)
+  nameWithType: Swarm<T>.StartAsync(TimeSpan, TimeSpan, EventHandler<PreloadBlockDownloadFailEventArgs>, CancellationToken)
+  nameWithType.vb: Swarm(Of T).StartAsync(TimeSpan, TimeSpan, EventHandler(Of PreloadBlockDownloadFailEventArgs), CancellationToken)
 - uid: Libplanet.Net.Swarm`1.StartAsync*
   name: StartAsync
   href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_
@@ -5274,6 +5320,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.BaseStore.ListAddresses
   nameWithType: BaseStore.ListAddresses
+- uid: Libplanet.Store.BaseStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
+  name: ListAllStateReferences(Guid, Int64, Int64)
+  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_ListAllStateReferences_Guid_System_Int64_System_Int64_
+  commentId: M:Libplanet.Store.BaseStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
+  fullName: Libplanet.Store.BaseStore.ListAllStateReferences(Guid, System.Int64, System.Int64)
+  nameWithType: BaseStore.ListAllStateReferences(Guid, Int64, Int64)
+- uid: Libplanet.Store.BaseStore.ListAllStateReferences*
+  name: ListAllStateReferences
+  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_ListAllStateReferences_
+  commentId: Overload:Libplanet.Store.BaseStore.ListAllStateReferences
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseStore.ListAllStateReferences
+  nameWithType: BaseStore.ListAllStateReferences
 - uid: Libplanet.Store.BaseStore.ListChainIds
   name: ListChainIds()
   href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_ListChainIds
@@ -5613,12 +5672,12 @@ references:
   commentId: T:Libplanet.Store.DefaultStore
   fullName: Libplanet.Store.DefaultStore
   nameWithType: DefaultStore
-- uid: Libplanet.Store.DefaultStore.#ctor(System.String,System.Boolean,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)
-  name: DefaultStore(String, Boolean, Int32, Int32, Int32, Boolean, Boolean)
-  href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore__ctor_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_System_Boolean_System_Boolean_
-  commentId: M:Libplanet.Store.DefaultStore.#ctor(System.String,System.Boolean,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)
-  fullName: Libplanet.Store.DefaultStore.DefaultStore(System.String, System.Boolean, System.Int32, System.Int32, System.Int32, System.Boolean, System.Boolean)
-  nameWithType: DefaultStore.DefaultStore(String, Boolean, Int32, Int32, Int32, Boolean, Boolean)
+- uid: Libplanet.Store.DefaultStore.#ctor(System.String,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)
+  name: DefaultStore(String, Boolean, Int32, Int32, Int32, Int32, Boolean, Boolean)
+  href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore__ctor_System_String_System_Boolean_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_System_Boolean_
+  commentId: M:Libplanet.Store.DefaultStore.#ctor(System.String,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)
+  fullName: Libplanet.Store.DefaultStore.DefaultStore(System.String, System.Boolean, System.Int32, System.Int32, System.Int32, System.Int32, System.Boolean, System.Boolean)
+  nameWithType: DefaultStore.DefaultStore(String, Boolean, Int32, Int32, Int32, Int32, Boolean, Boolean)
 - uid: Libplanet.Store.DefaultStore.#ctor*
   name: DefaultStore
   href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore__ctor_
@@ -5981,6 +6040,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.DefaultStore.ListAddresses
   nameWithType: DefaultStore.ListAddresses
+- uid: Libplanet.Store.DefaultStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
+  name: ListAllStateReferences(Guid, Int64, Int64)
+  href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_ListAllStateReferences_Guid_System_Int64_System_Int64_
+  commentId: M:Libplanet.Store.DefaultStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
+  fullName: Libplanet.Store.DefaultStore.ListAllStateReferences(Guid, System.Int64, System.Int64)
+  nameWithType: DefaultStore.ListAllStateReferences(Guid, Int64, Int64)
+- uid: Libplanet.Store.DefaultStore.ListAllStateReferences*
+  name: ListAllStateReferences
+  href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_ListAllStateReferences_
+  commentId: Overload:Libplanet.Store.DefaultStore.ListAllStateReferences
+  isSpec: "True"
+  fullName: Libplanet.Store.DefaultStore.ListAllStateReferences
+  nameWithType: DefaultStore.ListAllStateReferences
 - uid: Libplanet.Store.DefaultStore.ListChainIds
   name: ListChainIds()
   href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_ListChainIds
@@ -6496,6 +6568,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.IStore.ListAddresses
   nameWithType: IStore.ListAddresses
+- uid: Libplanet.Store.IStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
+  name: ListAllStateReferences(Guid, Int64, Int64)
+  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_ListAllStateReferences_Guid_System_Int64_System_Int64_
+  commentId: M:Libplanet.Store.IStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
+  fullName: Libplanet.Store.IStore.ListAllStateReferences(Guid, System.Int64, System.Int64)
+  nameWithType: IStore.ListAllStateReferences(Guid, Int64, Int64)
+- uid: Libplanet.Store.IStore.ListAllStateReferences*
+  name: ListAllStateReferences
+  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_ListAllStateReferences_
+  commentId: Overload:Libplanet.Store.IStore.ListAllStateReferences
+  isSpec: "True"
+  fullName: Libplanet.Store.IStore.ListAllStateReferences
+  nameWithType: IStore.ListAllStateReferences
 - uid: Libplanet.Store.IStore.ListChainIds
   name: ListChainIds()
   href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_ListChainIds
@@ -6637,22 +6722,6 @@ references:
   commentId: T:Libplanet.Store.StoreExtension
   fullName: Libplanet.Store.StoreExtension
   nameWithType: StoreExtension
-- uid: Libplanet.Store.StoreExtension.ListAllStateReferences(Libplanet.Store.IStore,Guid,System.Nullable{Libplanet.HashDigest{SHA256}},System.Nullable{Libplanet.HashDigest{SHA256}})
-  name: ListAllStateReferences(IStore, Guid, Nullable<HashDigest<SHA256>>, Nullable<HashDigest<SHA256>>)
-  href: api/Libplanet.Store.StoreExtension.html#Libplanet_Store_StoreExtension_ListAllStateReferences_Libplanet_Store_IStore_Guid_System_Nullable_Libplanet_HashDigest_SHA256___System_Nullable_Libplanet_HashDigest_SHA256___
-  commentId: M:Libplanet.Store.StoreExtension.ListAllStateReferences(Libplanet.Store.IStore,Guid,System.Nullable{Libplanet.HashDigest{SHA256}},System.Nullable{Libplanet.HashDigest{SHA256}})
-  name.vb: ListAllStateReferences(IStore, Guid, Nullable(Of HashDigest(Of SHA256)), Nullable(Of HashDigest(Of SHA256)))
-  fullName: Libplanet.Store.StoreExtension.ListAllStateReferences(Libplanet.Store.IStore, Guid, System.Nullable<Libplanet.HashDigest<SHA256>>, System.Nullable<Libplanet.HashDigest<SHA256>>)
-  fullName.vb: Libplanet.Store.StoreExtension.ListAllStateReferences(Libplanet.Store.IStore, Guid, System.Nullable(Of Libplanet.HashDigest(Of SHA256)), System.Nullable(Of Libplanet.HashDigest(Of SHA256)))
-  nameWithType: StoreExtension.ListAllStateReferences(IStore, Guid, Nullable<HashDigest<SHA256>>, Nullable<HashDigest<SHA256>>)
-  nameWithType.vb: StoreExtension.ListAllStateReferences(IStore, Guid, Nullable(Of HashDigest(Of SHA256)), Nullable(Of HashDigest(Of SHA256)))
-- uid: Libplanet.Store.StoreExtension.ListAllStateReferences*
-  name: ListAllStateReferences
-  href: api/Libplanet.Store.StoreExtension.html#Libplanet_Store_StoreExtension_ListAllStateReferences_
-  commentId: Overload:Libplanet.Store.StoreExtension.ListAllStateReferences
-  isSpec: "True"
-  fullName: Libplanet.Store.StoreExtension.ListAllStateReferences
-  nameWithType: StoreExtension.ListAllStateReferences
 - uid: Libplanet.Store.StoreExtension.LookupStateReference*
   name: LookupStateReference
   href: api/Libplanet.Store.StoreExtension.html#Libplanet_Store_StoreExtension_LookupStateReference_

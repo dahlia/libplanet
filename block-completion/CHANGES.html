@@ -47,6 +47,9 @@
                 
                 <ul class="nav level1 navbar-nav">
                       <li>
+                          <a href="articles/overview.html" title="Overview">Overview</a>
+                      </li>
+                      <li>
                           <a href="articles/design.html" title="Design">Design</a>
                       </li>
                       <li>
@@ -100,8 +103,26 @@ the current chain, not entire storage.  [<a href="https://github.com/planetarium
 <code>IImmutableDictionary&lt;Address, IValue&gt;</code> instead of <code>AddressStateMap</code>.</li>
 </ul>
 </li>
+<li><code>Swarm&lt;T&gt;.PreloadAsync()</code> method and <code>Swarm&lt;T&gt;.StartAsync()</code> method became
+to take <code>preloadBlockDownloadFailed</code> event handler as an argument.
+[<a href="https://github.com/planetarium/libplanet/pull/694">#694</a>]</li>
+<li>Removed <code>StoreExtension.ListAllStateReferences&lt;T&gt;()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/701">#701</a>]</li>
+<li>Added the <code>genesisBlock</code> parameter to
+<code>BlockChain&lt;T&gt;()</code> constructor.  [<a href="https://github.com/planetarium/libplanet/pull/688">#688</a>]</li>
+<li>Removed <code>StateReferenceDownloadState</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li>Removed <code>BlockStateDownloadState</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
 </ul>
 <h3 id="backward-incompatible-network-protocol-changes">Backward-incompatible network protocol changes</h3>
+<ul>
+<li>Added <code>long</code>-typed <code>offset</code> parameter to <code>RecentStates</code> and
+<code>GetRecentStates</code> messages.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li>Added <code>int</code>-typed <code>iteration</code> parameter to <code>RecentStates</code> message.
+[<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li>The existing <code>BlockHashes</code> message type (with the type number <code>0x05</code>) was
+replaced by a new <code>BlockHashes</code> message type (with type number <code>0x0d</code>)
+in order to include an offset block index besides block hashes
+so that a receiver is able to determine their block indices too.  [<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>]</li>
+</ul>
 <h3 id="backward-incompatible-storage-format-changes">Backward-incompatible storage format changes</h3>
 <ul>
 <li>The introduced <code>DefaultStore</code> is incompatible at the file-level with
@@ -112,20 +133,47 @@ subdirectories and a LiteDB file for indices.  [<a href="https://github.com/plan
 <h3 id="added-apis">Added APIs</h3>
 <ul>
 <li>Added <code>DefaultStore</code> class to replace <code>LiteDBStore</code>.  [<a href="https://github.com/planetarium/libplanet/pull/662">#662</a>]</li>
+<li>Added <code>IStore.ListAllStateReferences&lt;T&gt;()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/701">#701</a>, <a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li>Added <code>BlockChain&lt;T&gt;.Genesis</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/688">#688</a>]</li>
+<li>Added <code>BlockChain&lt;T&gt;.MakeGenesisBlock()</code> static method.  [<a href="https://github.com/planetarium/libplanet/pull/688">#688</a>]</li>
+<li>Added <code>InvalidGenesisBlockException</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/688">#688</a>]</li>
+<li>Added <code>BlockHashDownloadState</code> class, a subclass of <code>PreloadState</code>.
+[<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>]</li>
+<li>Added <code>StateDownloadState</code> class, a subclass of <code>PreloadState</code>,
+which reports state preloading iteration progress.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
 </ul>
 <h3 id="behavioral-changes">Behavioral changes</h3>
 <ul>
+<li><code>Swarm&lt;T&gt;.PreloadAsync()</code> and <code>Swarm&lt;T&gt;.StartAsync()</code> became to download
+only a list of block hashes first and then download blocks from
+simultaneously multiple peers.  [<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>]</li>
 <li><code>Swarm&lt;T&gt;</code> became to compare only peer's addresses instead of public keys
 to determine if a peer is in routing table or not.  [<a href="https://github.com/planetarium/libplanet/pull/665">#665</a>]</li>
 <li><code>Swarm&lt;T&gt;</code> became to send 100 blocks (instead of 500 blocks) for each
 reply during IDL, in order to stabilize connection in high latency
 environments.  [<a href="https://github.com/planetarium/libplanet/pull/679">#679</a>]</li>
+<li>When <code>Swarm&lt;T&gt;.PreloadAsync()</code> method fails to download blocks,
+<code>Swarm&lt;T&gt;</code> became to call <code>preloadBlockDownloadFailed</code> event handler
+taken as an argument.  If the event handler is not present, <code>Swarm&lt;T&gt;</code>
+throws <code>SwarmException</code>.  [<a href="https://github.com/planetarium/libplanet/pull/694">#694</a>]</li>
+<li><code>Swarm&lt;T&gt;.PreloadAsync()</code> became not to sync state references and block
+states at once.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became to print less logs on debug level during sending states.
+[<a href="https://github.com/planetarium/libplanet/pull/706">#706</a>]</li>
+<li>Increased <code>Swarm&lt;T&gt;</code>'s network timeout value, in order to be stable
+a high latency internet connection.  [<a href="https://github.com/planetarium/libplanet/pull/709">#709</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
 <ul>
 <li>Fixed a bug where the canonical chain could be deleted if <code>Swarm&lt;T&gt;</code> failed
 to download blocks due to network connection.  [<a href="https://github.com/planetarium/libplanet/pull/675">#675</a>]</li>
 <li>Fixed bug that re-download block from scratch in preloading.  [<a href="https://github.com/planetarium/libplanet/pull/685">#685</a>]</li>
+<li>Fixed a bug where state references become outdated if a chain is forked
+and then adding existing blocks into it.  [<a href="https://github.com/planetarium/libplanet/pull/704">#704</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;</code> had exhausted all available sockets.  [<a href="https://github.com/planetarium/libplanet/pull/709">#709</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;</code> had infinitely repeated failed requests.
+[<a href="https://github.com/planetarium/libplanet/pull/709">#709</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;</code> hadn't stopped properly.  [<a href="https://github.com/planetarium/libplanet/pull/709">#709</a>]</li>
 </ul>
 <h2 id="version-070">Version 0.7.0</h2>
 <p>Released on November 8, 2019.</p>
