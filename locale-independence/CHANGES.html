@@ -114,7 +114,7 @@ to take <code>preloadBlockDownloadFailed</code> event handler as an argument.
 <li>Removed <code>TxReceived</code> and <code>BlockReceived</code> <code>AsyncAutoResetEvent</code>s
 from <code>Swarm&lt;T&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/issues/705">#705</a>, <a href="https://github.com/planetarium/libplanet/pull/725">#725</a>]</li>
 <li>Added <code>workers</code> optional parameter into <code>Swarm&lt;T&gt;()</code> constructor.
-[<a href="https://github.com/planetarium/libplanet/issues/613">#613</a>, <a href="https://github.com/planetarium/libplanet/pull/7276">#727</a>]</li>
+[<a href="https://github.com/planetarium/libplanet/issues/613">#613</a>, <a href="https://github.com/planetarium/libplanet/pull/727">#727</a>]</li>
 </ul>
 <h3 id="backward-incompatible-network-protocol-changes">Backward-incompatible network protocol changes</h3>
 <ul>
@@ -140,7 +140,7 @@ subdirectories and a LiteDB file for indices.  [<a href="https://github.com/plan
 <li>Added <code>StateDownloadState</code> class which reports state preloading iteration
 progress.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
 <li>Added <code>PeerDiscoveryException</code> class which inherits <code>SwarmException</code>
-class. [<a href="https://github.com/planetarium/libplanet/issues/604">#604</a>, <a href="https://github.com/planetarium/libplanet/pull/72">#726</a>]</li>
+class. [<a href="https://github.com/planetarium/libplanet/issues/604">#604</a>, <a href="https://github.com/planetarium/libplanet/pull/726">#726</a>]</li>
 </ul>
 <h3 id="behavioral-changes">Behavioral changes</h3>
 <ul>
@@ -157,7 +157,10 @@ states at once.  [<a href="https://github.com/planetarium/libplanet/pull/703">#7
 <li>Increased <code>Swarm&lt;T&gt;</code>'s network timeout value, in order to be stable
 a high latency internet connection.  [<a href="https://github.com/planetarium/libplanet/pull/709">#709</a>]</li>
 <li><code>Swarm&lt;T&gt;.BootstrapAsync()</code> became to report <code>PeerDiscoveryException</code>
-instead of <code>SwarmException</code> directly. [<a href="https://github.com/planetarium/libplanet/issues/604">#604</a>, <a href="https://github.com/planetarium/libplanet/pull/72">#726</a>]</li>
+instead of <code>SwarmException</code> directly. [<a href="https://github.com/planetarium/libplanet/issues/604">#604</a>, <a href="https://github.com/planetarium/libplanet/pull/726">#726</a>]</li>
+<li><code>BlockChain&lt;T&gt;.Append()</code> became to unstage the staged <code>Transaction&lt;T&gt;</code>s
+that have lower nonce than the highest nonce of the same signer's transactions
+in the same chain, since these virtually never become valid.  [<a href="https://github.com/planetarium/libplanet/issues/721">#721</a>, <a href="https://github.com/planetarium/libplanet/pull/728">#728</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
 <ul>
