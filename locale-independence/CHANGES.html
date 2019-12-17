@@ -114,7 +114,7 @@ to take <code>preloadBlockDownloadFailed</code> event handler as an argument.
 <li>Removed <code>TxReceived</code> and <code>BlockReceived</code> <code>AsyncAutoResetEvent</code>s
 from <code>Swarm&lt;T&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/issues/705">#705</a>, <a href="https://github.com/planetarium/libplanet/pull/725">#725</a>]</li>
 <li>Added <code>workers</code> optional parameter into <code>Swarm&lt;T&gt;()</code> constructor.
-[<a href="https://github.com/planetarium/libplanet/issues/613">#613</a>, <a href="https://github.com/planetarium/libplanet/pull/727">#727</a>]</li>
+[<a href="https://github.com/planetarium/libplanet/issues/613">#613</a>, <a href="https://github.com/planetarium/libplanet/pull/7276">#727</a>]</li>
 </ul>
 <h3 id="backward-incompatible-network-protocol-changes">Backward-incompatible network protocol changes</h3>
 <ul>
@@ -140,7 +140,7 @@ subdirectories and a LiteDB file for indices.  [<a href="https://github.com/plan
 <li>Added <code>StateDownloadState</code> class which reports state preloading iteration
 progress.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
 <li>Added <code>PeerDiscoveryException</code> class which inherits <code>SwarmException</code>
-class. [<a href="https://github.com/planetarium/libplanet/issues/604">#604</a>, <a href="https://github.com/planetarium/libplanet/pull/726">#726</a>]</li>
+class. [<a href="https://github.com/planetarium/libplanet/issues/604">#604</a>, <a href="https://github.com/planetarium/libplanet/pull/72">#726</a>]</li>
 </ul>
 <h3 id="behavioral-changes">Behavioral changes</h3>
 <ul>
@@ -157,7 +157,7 @@ states at once.  [<a href="https://github.com/planetarium/libplanet/pull/703">#7
 <li>Increased <code>Swarm&lt;T&gt;</code>'s network timeout value, in order to be stable
 a high latency internet connection.  [<a href="https://github.com/planetarium/libplanet/pull/709">#709</a>]</li>
 <li><code>Swarm&lt;T&gt;.BootstrapAsync()</code> became to report <code>PeerDiscoveryException</code>
-instead of <code>SwarmException</code> directly. [<a href="https://github.com/planetarium/libplanet/issues/604">#604</a>, <a href="https://github.com/planetarium/libplanet/pull/726">#726</a>]</li>
+instead of <code>SwarmException</code> directly. [<a href="https://github.com/planetarium/libplanet/issues/604">#604</a>, <a href="https://github.com/planetarium/libplanet/pull/72">#726</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
 <ul>
@@ -173,6 +173,9 @@ and then adding existing blocks into it.  [<a href="https://github.com/planetari
 <li>Fixed a bug where <code>BlockChain&lt;T&gt;.GetNextTxNonce()</code> had returned invalid tx
 nonce.  [<a href="https://github.com/planetarium/libplanet/pull/718">#718</a>]</li>
 <li>Fixed a bug where mined transactions were staged again.  [<a href="https://github.com/planetarium/libplanet/pull/719">#719</a>]</li>
+<li>Fixed a bug where <code>Block&lt;T&gt;.Hash</code> property, Block<t>.FromBencodex()<code>method,</code>Block<t>.ToBencodex()<code>method,</code>Transaction<t>.Id<code>property,</code>Transaction<t>.Signature<code>property,</code>Transaction<t>.FromBencodex()<code>method, and</code>Transaction<t>.ToBencodex()<code>method had been non-deterministic on some</code>CultureInfo.CurrentCulture<code>(e.g.,</code>ar_SA<code>,</code>fr_FR<code>,</code>th_TH`)
+so that it had caused network protocol incompatibilities.
+[<a href="https://github.com/planetarium/libplanet/pull/734">#734</a>]</t></t></t></t></t></t></li>
 </ul>
 <h2 id="version-070">Version 0.7.0</h2>
 <p>Released on November 8, 2019.</p>
