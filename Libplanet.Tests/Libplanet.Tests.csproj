@@ -2,7 +2,6 @@
   xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
   Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
     <IsPackable>false</IsPackable>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -11,22 +10,30 @@
     <CodeAnalysisRuleSet>..\Libplanet.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(MSBuildRuntimeType)'=='Core' ">
+    <MSBuildRuntimeVersion>$(
+      [System.Runtime.InteropServices.RuntimeInformation]::
+      FrameworkDescription.Substring(10))</MSBuildRuntimeVersion>
+    <MSBuildRuntimeMajorMinorVersion>$(MSBuildRuntimeVersion.Substring(
+      0, $(MSBuildRuntimeVersion.LastIndexOf('.')))
+    )</MSBuildRuntimeMajorMinorVersion>
+    <TargetFramework>netcoreapp$(MSBuildRuntimeMajorMinorVersion)</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(MSBuildRuntimeType)'!='Core' ">
+    <TargetFramework>net471</TargetFramework>
+  </PropertyGroup>
+
   <ItemGroup>
     <AdditionalFiles Include="..\Menees.Analyzers.Settings.xml">
       <Link>Menees.Analyzers.Settings.xml</Link>
     </AdditionalFiles>
     <AdditionalFiles Include="..\stylecop.json" />
+    <Content Include="xunit.runner.json">
+      <Link>xunit.runner.json</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
-
-  <PropertyGroup Condition=" '$(MSBuildRuntimeType)'!='Mono' And
-                             '$(MSBuildVersion)'&gt;='16.3.0'">
-    <TargetFramework>netcoreapp3.0</TargetFramework>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(MSBuildRuntimeType)'=='Mono' And
-                             '$(BuildingByReSharper)'!='true'">
-    <TargetFramework>net471</TargetFramework>
-  </PropertyGroup>
 
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\Libplanet.Tests.ruleset</CodeAnalysisRuleSet>
@@ -37,6 +44,10 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.0" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
     <PackageReference Include="Serilog.Enrichers.Thread" Version="3.0.0" />
     <PackageReference Include="Serilog.Sinks.XUnit" Version="1.0.7" />
     <PackageReference Include="SonarAnalyzer.CSharp" Version="8.1.0.13383">
@@ -55,23 +66,8 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
-    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
-  </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Libplanet\Libplanet.csproj" />
     <ProjectReference Include="..\Libplanet.Stun\Libplanet.Stun.csproj" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(MSBuildRuntimeType)'=='Mono' ">
-    <!--
-    As Mono has no proper AppDomain, we prevent it on Mono.
-    This works around Xunit's fatal error on Mono.
-    -->
-    <Content Include="xunit.runner.mono.json">
-      <Link>xunit.runner.json</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 </Project>
