@@ -6814,6 +6814,19 @@ references:
   commentId: T:Libplanet.Store.StoreExtension
   fullName: Libplanet.Store.StoreExtension
   nameWithType: StoreExtension
+- uid: Libplanet.Store.StoreExtension.Copy(Libplanet.Store.IStore,Libplanet.Store.IStore)
+  name: Copy(IStore, IStore)
+  href: api/Libplanet.Store.StoreExtension.html#Libplanet_Store_StoreExtension_Copy_Libplanet_Store_IStore_Libplanet_Store_IStore_
+  commentId: M:Libplanet.Store.StoreExtension.Copy(Libplanet.Store.IStore,Libplanet.Store.IStore)
+  fullName: Libplanet.Store.StoreExtension.Copy(Libplanet.Store.IStore, Libplanet.Store.IStore)
+  nameWithType: StoreExtension.Copy(IStore, IStore)
+- uid: Libplanet.Store.StoreExtension.Copy*
+  name: Copy
+  href: api/Libplanet.Store.StoreExtension.html#Libplanet_Store_StoreExtension_Copy_
+  commentId: Overload:Libplanet.Store.StoreExtension.Copy
+  isSpec: "True"
+  fullName: Libplanet.Store.StoreExtension.Copy
+  nameWithType: StoreExtension.Copy
 - uid: Libplanet.Store.StoreExtension.LookupStateReference*
   name: LookupStateReference
   href: api/Libplanet.Store.StoreExtension.html#Libplanet_Store_StoreExtension_LookupStateReference_
