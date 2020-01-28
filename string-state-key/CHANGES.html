@@ -87,13 +87,13 @@
 [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]
 <ul>
 <li>The return type of <code>IStore.GetBlockStates()</code> method became
-<code>IImmutableDictionary&lt;string, IValue&gt;</code>
-(was <code>IImmutableDictionary&lt;Address, IValue&gt;)</code>. [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
+<code>IImmutableDictionary&lt;string, IValue&gt;</code> (was <code>AddressStateMap</code>,
+which was removed too).  [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
 <li>The type of the second parameter of <code>IStore.SetBlockStates()</code> method
-became <code>IImmutableDictionary&lt;string, IValue&gt;</code>
-(was <code>IImmutableDictionary&lt;Address, IValue&gt;</code>). [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
+became <code>IImmutableDictionary&lt;string, IValue&gt;</code> (was <code>AddressStateMap</code>,
+which was removed too).  [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
 <li>The second parameter of <code>IStore.IterateStateReferences()</code> method became
-<code>string key</code> (was <code>Address address</code>). [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
+<code>string key</code> (was <code>Address address</code>).  [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
 <li>The second parameter of <code>IStore.StoreStateReference()</code> method became
 <code>IImmutableSet&lt;string&gt; keys</code> (was <code>IImmutableSet&lt;Address&gt; addresses</code>).
 [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
