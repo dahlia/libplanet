@@ -94,6 +94,10 @@ so that a receiver is able to determine their block indices too.  [<a href="http
 <ul>
 <li>Added <code>BlockHashDownloadState</code> class, a subclass of <code>PreloadState</code>.
 [<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>]</li>
+<li>Added <code>BlockDigest</code> struct.  [<a href="https://github.com/planetarium/libplanet/pull/785">#785</a>]</li>
+<li>Added <code>BlockHeader</code> struct.  [<a href="https://github.com/planetarium/libplanet/pull/785">#785</a>]</li>
+<li>Added <code>IStore.GetBlockDigest(HashDigest&lt;SHA256&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/785">#785</a>]</li>
+<li>Added <code>Block&lt;T&gt;.ToBlockDigest()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/785">#785</a>]</li>
 </ul>
 <h3 id="behavioral-changes">Behavioral changes</h3>
 <ul>
@@ -102,6 +106,11 @@ only a list of block hashes first and then download blocks from
 simultaneously multiple peers.  [<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>Fixed a <code>Swarm&lt;T&gt;</code>'s bug that had broadcasted a message to its source peer
+when the number of peers is not enough (less than the minimum number).
+[<a href="https://github.com/planetarium/libplanet/pull/788">#788</a>]</li>
+</ul>
 <h2 id="version-080">Version 0.8.0</h2>
 <p>Released on February 4, 2020.</p>
 <h3 id="backward-incompatible-api-changes-1">Backward-incompatible API changes</h3>
