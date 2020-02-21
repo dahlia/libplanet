@@ -90,16 +90,13 @@
 <li>The existing <code>BlockHashes</code> message type (with the type number <code>0x05</code>) was
 replaced by a new <code>BlockHashes</code> message type (with type number <code>0x0e</code>)
 in order to include an offset block index besides block hashes
-so that a receiver is able to determine their block indices too.
-[<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>, <a href="https://github.com/planetarium/libplanet/pull/798">#798</a>]</li>
+so that a receiver is able to determine their block indices too.  [<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>]</li>
 </ul>
 <h3 id="backward-incompatible-storage-format-changes">Backward-incompatible storage format changes</h3>
 <h3 id="added-apis">Added APIs</h3>
 <ul>
 <li>Added <code>BlockHashDownloadState</code> class, a subclass of <code>PreloadState</code>.
-[<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>, <a href="https://github.com/planetarium/libplanet/pull/798">#798</a>]</li>
-<li>Added <code>BlockVerificationState</code> class, a subclass of <code>PreloadState</code>.
-[<a href="https://github.com/planetarium/libplanet/pull/798">#798</a>]</li>
+[<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>]</li>
 <li>Added <code>BlockDigest</code> struct.  [<a href="https://github.com/planetarium/libplanet/pull/785">#785</a>]</li>
 <li>Added <code>BlockHeader</code> struct.  [<a href="https://github.com/planetarium/libplanet/pull/785">#785</a>]</li>
 <li>Added <code>IStore.GetBlockDigest(HashDigest&lt;SHA256&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/785">#785</a>]</li>
@@ -111,7 +108,7 @@ so that a receiver is able to determine their block indices too.
 lower nonce than the expected nonce in the chain.  [<a href="https://github.com/planetarium/libplanet/pull/791">#791</a>]</li>
 <li><code>Swarm&lt;T&gt;.PreloadAsync()</code> and <code>Swarm&lt;T&gt;.StartAsync()</code> became to download
 only a list of block hashes first and then download blocks from
-simultaneously multiple peers.  [<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>, <a href="https://github.com/planetarium/libplanet/pull/798">#798</a>]</li>
+simultaneously multiple peers.  [<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
 <ul>
