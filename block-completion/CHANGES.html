@@ -124,6 +124,9 @@ when the number of peers is not enough (less than the minimum number).
 when there is any staged transaction which has lower nonce than the expected
 nonce, that means, shares an already taken nonce by the same signer.
 [<a href="https://github.com/planetarium/libplanet/pull/791">#791</a>]</li>
+<li>Fixed a <code>Swarm&lt;T&gt;.PreloadAsync()</code> method's bug that temporary chain IDs
+in the store had been completely cleaned up in some corner cases
+if <code>cancellationToken</code> was requested.  [<a href="https://github.com/planetarium/libplanet/pull/798">#798</a>]</li>
 </ul>
 <h2 id="version-080">Version 0.8.0</h2>
 <p>Released on February 4, 2020.</p>
