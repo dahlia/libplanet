@@ -8,7 +8,7 @@
     <title>Libplanet changelog | Libplanet </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Libplanet changelog | Libplanet ">
-    <meta name="generator" content="docfx 2.45.1.0">
+    <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -47,6 +47,9 @@
                 
                 <ul class="nav level1 navbar-nav">
                       <li>
+                          <a href="articles/overview.html" title="Overview">Overview</a>
+                      </li>
+                      <li>
                           <a href="articles/design.html" title="Design">Design</a>
                       </li>
                       <li>
@@ -76,8 +79,256 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="libplanet-changelog">Libplanet changelog</h1>
 
-<h2 id="version-070">Version 0.7.0</h2>
+<h2 id="version-090">Version 0.9.0</h2>
 <p>To be released.</p>
+<h3 id="backward-incompatible-api-changes">Backward-incompatible API changes</h3>
+<ul>
+<li><code>BaseStore</code> class became to implement <code>IDisposable</code>.  [<a href="https://github.com/planetarium/libplanet/pull/789">#789</a>]</li>
+<li>Removed <code>IStore.DeleteIndex(Guid, HashDigest&lt;SHA256&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/802">#802</a>]</li>
+</ul>
+<h3 id="backward-incompatible-network-protocol-changes">Backward-incompatible network protocol changes</h3>
+<ul>
+<li>The existing <code>BlockHashes</code> message type (with the type number <code>0x05</code>) was
+replaced by a new <code>BlockHashes</code> message type (with type number <code>0x0e</code>)
+in order to include an offset block index besides block hashes
+so that a receiver is able to determine their block indices too.
+[<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>, <a href="https://github.com/planetarium/libplanet/pull/798">#798</a>]</li>
+</ul>
+<h3 id="backward-incompatible-storage-format-changes">Backward-incompatible storage format changes</h3>
+<h3 id="added-apis">Added APIs</h3>
+<ul>
+<li>Added <code>BlockHashDownloadState</code> class, a subclass of <code>PreloadState</code>.
+[<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>, <a href="https://github.com/planetarium/libplanet/pull/798">#798</a>]</li>
+<li>Added <code>BlockVerificationState</code> class, a subclass of <code>PreloadState</code>.
+[<a href="https://github.com/planetarium/libplanet/pull/798">#798</a>]</li>
+<li>Added <code>BlockDigest</code> struct.  [<a href="https://github.com/planetarium/libplanet/pull/785">#785</a>]</li>
+<li>Added <code>BlockHeader</code> struct.  [<a href="https://github.com/planetarium/libplanet/pull/785">#785</a>]</li>
+<li>Added <code>IStore.GetBlockDigest(HashDigest&lt;SHA256&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/785">#785</a>]</li>
+<li>Added <code>Block&lt;T&gt;.ToBlockDigest()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/785">#785</a>]</li>
+</ul>
+<h3 id="behavioral-changes">Behavioral changes</h3>
+<ul>
+<li><code>BlockChain.MineBlock()</code> method became to ignore transactions having
+lower nonce than the expected nonce in the chain.  [<a href="https://github.com/planetarium/libplanet/pull/791">#791</a>]</li>
+<li><code>Swarm&lt;T&gt;.PreloadAsync()</code> and <code>Swarm&lt;T&gt;.StartAsync()</code> became to download
+only a list of block hashes first and then download blocks from
+simultaneously multiple peers.  [<a href="https://github.com/planetarium/libplanet/pull/707">#707</a>, <a href="https://github.com/planetarium/libplanet/pull/798">#798</a>]</li>
+</ul>
+<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li><code>Swarm&lt;T&gt;</code> became not to sync the same <code>Block&lt;T&gt;</code>s or <code>Transaction&lt;T&gt;</code>s
+multiple times.  [<a href="https://github.com/planetarium/libplanet/pull/784">#784</a>]</li>
+<li>Fixed a <code>Swarm&lt;T&gt;</code>'s bug that had broadcasted a message to its source peer
+when the number of peers is not enough (less than the minimum number).
+[<a href="https://github.com/planetarium/libplanet/pull/788">#788</a>]</li>
+<li>Fixed a bug where <code>BlockChain.MineBlock()</code> had produced an invalid block
+when there is any staged transaction which has lower nonce than the expected
+nonce, that means, shares an already taken nonce by the same signer.
+[<a href="https://github.com/planetarium/libplanet/pull/791">#791</a>]</li>
+<li>Fixed a <code>Swarm&lt;T&gt;.PreloadAsync()</code> method's bug that temporary chain IDs
+in the store had been completely cleaned up in some corner cases
+if <code>cancellationToken</code> was requested.  [<a href="https://github.com/planetarium/libplanet/pull/798">#798</a>]</li>
+</ul>
+<h2 id="version-080">Version 0.8.0</h2>
+<p>Released on February 4, 2020.</p>
+<h3 id="backward-incompatible-api-changes-1">Backward-incompatible API changes</h3>
+<ul>
+<li>The internal representation for state keys became <code>string</code> (was <code>Address</code>).
+[<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]
+<ul>
+<li>The return type of <code>IStore.GetBlockStates()</code> method became
+<code>IImmutableDictionary&lt;string, IValue&gt;</code> (was <code>AddressStateMap</code>,
+which was removed too).  [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
+<li>The type of the second parameter of <code>IStore.SetBlockStates()</code> method
+became <code>IImmutableDictionary&lt;string, IValue&gt;</code> (was <code>AddressStateMap</code>,
+which was removed too).  [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
+<li>The second parameter of <code>IStore.IterateStateReferences()</code> method became
+<code>string key</code> (was <code>Address address</code>).  [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
+<li>The second parameter of <code>IStore.StoreStateReference()</code> method became
+<code>IImmutableSet&lt;string&gt; keys</code> (was <code>IImmutableSet&lt;Address&gt; addresses</code>).
+[<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
+<li><code>IStore.ListAddresses()</code> method was replaced by <code>IStore.ListStateKeys()</code>
+method. [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
+</ul>
+</li>
+<li>Added <code>Swarm&lt;T&gt;.FindSpecificPeer()</code> method to find a specific peer given
+the address.  [<a href="https://github.com/planetarium/libplanet/issues/570">#570</a>, <a href="https://github.com/planetarium/libplanet/pull/580">#580</a>]</li>
+<li>Removed <code>LiteDBStore</code> class.  Use <code>DefaultStore</code> instead.  [<a href="https://github.com/planetarium/libplanet/pull/662">#662</a>]</li>
+<li>Removed <code>BlockChain&lt;T&gt;.Contains(TxId)</code> method.
+Use <code>IStore.ContainsTransaction(TxId)</code> instead.  [<a href="https://github.com/planetarium/libplanet/pull/676">#676</a>]</li>
+<li>Renamed <code>BlockChain&lt;T&gt;.Contains(HashDigest&lt;SHA256&gt;)</code> method to
+<code>BlockChain&lt;T&gt;.ContainsBlock(HashDigest&lt;SHA256&gt;)</code>.  [<a href="https://github.com/planetarium/libplanet/pull/678">#678</a>]</li>
+<li>Removed <code>BlockChain&lt;T&gt;.Contains(Block&lt;T&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/678">#678</a>]</li>
+<li>Changed semantics of <code>BlockChain&lt;T&gt;.ContainsBlock(HashDigest&lt;SHA256&gt;)</code>
+method and <code>BlockChain&lt;T&gt;[HashDigest&lt;SHA256&gt;]</code> indexer as lookups only
+the current chain, not entire storage.  [<a href="https://github.com/planetarium/libplanet/pull/678">#678</a>]</li>
+<li>Added <code>IStore.ContainsBlock(HashDigest&lt;SHA256&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/678">#678</a>]</li>
+<li>Removed <code>AddressStateMap</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/98">#98</a>, <a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/692">#692</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]
+<ul>
+<li>The return type of <code>BlockChain&lt;T&gt;.GetState()</code> method became <code>IValue</code>
+(was <code>AddressStateMap</code>).</li>
+<li>The return type of <code>IStore.GetBlockStates()</code> method became
+<code>IImmutableDictionary&lt;string, IValue&gt;</code> (was <code>AddressStateMap</code>).</li>
+<li><code>IStore.SetBlockStates()</code> method became to take
+<code>IImmutableDictionary&lt;string, IValue&gt;</code> instead of <code>AddressStateMap</code>.</li>
+</ul>
+</li>
+<li><code>Swarm&lt;T&gt;.PreloadAsync()</code> method and <code>Swarm&lt;T&gt;.StartAsync()</code> method became
+to take <code>preloadBlockDownloadFailed</code> event handler as an argument.
+[<a href="https://github.com/planetarium/libplanet/pull/694">#694</a>]</li>
+<li>Added the <code>genesisBlock</code> parameter to
+<code>BlockChain&lt;T&gt;()</code> constructor.  [<a href="https://github.com/planetarium/libplanet/pull/688">#688</a>]</li>
+<li>Removed <code>StateReferenceDownloadState</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li>Removed <code>BlockStateDownloadState</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li>Removed <code>TxReceived</code> and <code>BlockReceived</code> <code>AsyncAutoResetEvent</code>s
+from <code>Swarm&lt;T&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/issues/705">#705</a>, <a href="https://github.com/planetarium/libplanet/pull/725">#725</a>]</li>
+<li>Added <code>workers</code> optional parameter into <code>Swarm&lt;T&gt;()</code> constructor.
+[<a href="https://github.com/planetarium/libplanet/issues/613">#613</a>, <a href="https://github.com/planetarium/libplanet/pull/727">#727</a>]</li>
+<li><code>Block&lt;T&gt;</code> class became not to implement <code>ISerializable</code>.  [<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li><code>Transaction&lt;T&gt;</code> class became not to implement <code>ISerializable</code>.  [<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li><code>Block&lt;T&gt;.ToBencodex()</code> became to return <code>Bencodex.Types.Dictionary</code>.
+[<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li><code>Transaction&lt;T&gt;.ToBencodex()</code> became to return <code>Bencodex.Types.Dictionary</code>.
+[<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li>Removed <code>Block&lt;T&gt;.FromBencodex(byte[])</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li>Removed <code>Transaction&lt;T&gt;.FromBencodex(byte[])</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li><code>Block&lt;T&gt;.ToBencodex()</code> became to take no arguments.  [<a href="https://github.com/planetarium/libplanet/issues/749">#749</a>, <a href="https://github.com/planetarium/libplanet/pull/757">#757</a>]</li>
+<li>Removed <code>Swarm&lt;T&gt;.BroadcastBlocks(IEnumerable&lt;Block&lt;T&gt;&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/764">#764</a>]</li>
+<li><code>StoreExtension.LookupStateReference&lt;T&gt;()</code> method was replaced by
+<code>IStore.LookupStateReference&lt;T&gt;()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/722">#722</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
+</ul>
+<h3 id="backward-incompatible-network-protocol-changes-1">Backward-incompatible network protocol changes</h3>
+<ul>
+<li>Added <code>long</code>-typed <code>offset</code> parameter to <code>RecentStates</code> and
+<code>GetRecentStates</code> messages.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li>Added <code>int</code>-typed <code>iteration</code> parameter to <code>RecentStates</code> message.
+[<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li>Added <code>BlockHeaderMessage</code> message.  [<a href="https://github.com/planetarium/libplanet/pull/764">#764</a>]</li>
+</ul>
+<h3 id="backward-incompatible-storage-format-changes-1">Backward-incompatible storage format changes</h3>
+<ul>
+<li>The introduced <code>DefaultStore</code> is incompatible at the file-level with
+the <code>LiteDBStore</code> which had existed.  <code>DefaultStore</code> became to take
+a directory instead of a single file, and it consists of multiple
+subdirectories and a LiteDB file for indices.  [<a href="https://github.com/planetarium/libplanet/pull/662">#662</a>, <a href="https://github.com/planetarium/libplanet/pull/680">#680</a>]</li>
+</ul>
+<h3 id="added-apis-1">Added APIs</h3>
+<ul>
+<li>Added <code>DefaultStore</code> class to replace <code>LiteDBStore</code>.  [<a href="https://github.com/planetarium/libplanet/pull/662">#662</a>]</li>
+<li>Added <code>IStore.ListAllStateReferences&lt;T&gt;()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/701">#701</a>, <a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li>Added <code>IStore.ListStateKeys()</code> method to replace <code>IStore.ListAddresses()</code>
+method.  [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
+<li>Added <code>IStore.LookupStateReference&lt;T&gt;()</code> method to replace
+<code>StoreExtension.LookupStateReference&lt;T&gt;()</code> method.  [<a href="https://github.com/planetarium/libplanet/issues/368">#368</a>, <a href="https://github.com/planetarium/libplanet/pull/722">#722</a>, <a href="https://github.com/planetarium/libplanet/pull/774">#774</a>]</li>
+<li>Added <code>BlockChain&lt;T&gt;.Genesis</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/688">#688</a>]</li>
+<li>Added <code>BlockChain&lt;T&gt;.MakeGenesisBlock()</code> static method.  [<a href="https://github.com/planetarium/libplanet/pull/688">#688</a>]</li>
+<li>Added <code>InvalidGenesisBlockException</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/688">#688</a>]</li>
+<li>Added <code>StateDownloadState</code> class, a subclass of <code>PreloadState</code>,
+which reports state preloading iteration progress.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li>Added <code>PeerDiscoveryException</code> class which inherits <code>SwarmException</code>
+class.  [<a href="https://github.com/planetarium/libplanet/issues/604">#604</a>, <a href="https://github.com/planetarium/libplanet/pull/726">#726</a>]</li>
+<li>Added <code>Swarm&lt;T&gt;.Peers</code> property which returns an enumerable of peers in
+<code>Swarm&lt;T&gt;</code>'s routing table.  [<a href="https://github.com/planetarium/libplanet/pull/739">#739</a>]</li>
+<li>Added <code>Block&lt;T&gt;.Serialize()</code> method which returns <code>byte[]</code>.  [<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li>Added <code>Transaction&lt;T&gt;.Serialize()</code> method which returns <code>byte[]</code>.  [<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li>Added <code>Block&lt;T&gt;(Bencodex.Types.Dictionary)</code> constructor.  [<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li>Added <code>Transaction&lt;T&gt;(Bencodex.Types.Dictionary)</code> constructor.  [<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li>Added <code>Block&lt;T&gt;.Deserialize(byte[])</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li>Added <code>Transaction&lt;T&gt;.Deserialize(byte[])</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/751">#751</a>]</li>
+<li>Added <code>StoreExtension.Copy(this IStore, IStore)</code> extension method.  [<a href="https://github.com/planetarium/libplanet/pull/753">#753</a>]</li>
+<li>Added a <code>HashDigest&lt;SHA256&gt;?</code>-typed <code>TxHash</code> property which digests
+all transactions in the block to <code>Block&lt;T&gt;</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/749">#749</a>, <a href="https://github.com/planetarium/libplanet/pull/757">#757</a>]</li>
+<li>Added <code>CryptoConfig</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/758">#758</a>]</li>
+<li>Added <code>ICryptoBackend</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/758">#758</a>]</li>
+<li>Added <code>DefaultCryptoBackend</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/758">#758</a>]</li>
+<li>Added <code>Swarm&lt;T&gt;.BroadcastBlock(Block&lt;T&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/764">#764</a>]</li>
+<li>Added <code>Swarm&lt;T&gt;.PeerStates</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/772">#772</a>]</li>
+<li>Added <code>PeerState</code> class which represents a <code>Peer</code>s state in the
+routing table.  [<a href="https://github.com/planetarium/libplanet/pull/772">#772</a>]</li>
+<li>Added <code>Swarm&lt;T&gt;.CheckAllPeersAsync()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/772">#772</a>]</li>
+</ul>
+<h3 id="behavioral-changes-1">Behavioral changes</h3>
+<ul>
+<li><code>Swarm&lt;T&gt;</code> became to compare only peer's addresses instead of public keys
+to determine if a peer is in routing table or not.  [<a href="https://github.com/planetarium/libplanet/pull/665">#665</a>]</li>
+<li>When <code>Swarm&lt;T&gt;.PreloadAsync()</code> method fails to download blocks,
+<code>Swarm&lt;T&gt;</code> became to call <code>preloadBlockDownloadFailed</code> event handler
+taken as an argument.  If the event handler is not present, <code>Swarm&lt;T&gt;</code>
+throws <code>SwarmException</code>.  [<a href="https://github.com/planetarium/libplanet/pull/694">#694</a>]</li>
+<li><code>Swarm&lt;T&gt;.PreloadAsync()</code> became not to sync state references and block
+states at once.  [<a href="https://github.com/planetarium/libplanet/pull/703">#703</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became to print less logs on debug level during sending states.
+[<a href="https://github.com/planetarium/libplanet/pull/706">#706</a>]</li>
+<li>Increased <code>Swarm&lt;T&gt;</code>'s network timeout value, in order to be stable
+a high latency internet connection.  [<a href="https://github.com/planetarium/libplanet/pull/709">#709</a>]</li>
+<li><code>Swarm&lt;T&gt;.BootstrapAsync()</code> became to report <code>PeerDiscoveryException</code>
+instead of <code>SwarmException</code> directly. [<a href="https://github.com/planetarium/libplanet/issues/604">#604</a>, <a href="https://github.com/planetarium/libplanet/pull/726">#726</a>]</li>
+<li><code>BlockChain&lt;T&gt;.Append()</code> became to unstage the staged <code>Transaction&lt;T&gt;</code>s
+that have lower nonce than the highest nonce of the same signer's transactions
+in the same chain, since these virtually never become valid.  [<a href="https://github.com/planetarium/libplanet/issues/721">#721</a>, <a href="https://github.com/planetarium/libplanet/pull/728">#728</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became not to fill blocks if received block hashes are
+continuous.  [<a href="https://github.com/planetarium/libplanet/pull/732">#732</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became to can process more requests at once by creating TURN
+relaying proxy concurrently.  [<a href="https://github.com/planetarium/libplanet/pull/744">#744</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became to throw <code>InvalidGenesisBlockException</code> when receiving
+block from the nodes that have a different genesis block.  [<a href="https://github.com/planetarium/libplanet/pull/746">#746</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became to distinguish the starting stages clearly.  In other words,
+<code>Swarm&lt;T&gt;.StartAsync()</code> became not to call <code>Swarm&lt;T&gt;.PreloadAsync()</code>.  [<a href="https://github.com/planetarium/libplanet/issues/735">#735</a>, <a href="https://github.com/planetarium/libplanet/pull/760">#760</a>]</li>
+<li>The hash of <code>Block&lt;T&gt;</code> has changed due to the change in the method of
+serialization.  [<a href="https://github.com/planetarium/libplanet/pull/762">#762</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became to ignore broadcasted block that has lower index than
+the current tip.  [<a href="https://github.com/planetarium/libplanet/pull/764">#764</a>]</li>
+<li>The way <code>Swarm&lt;T&gt;</code> chose peers to spread messages has changed.  [<a href="https://github.com/planetarium/libplanet/issues/765">#765</a>, <a href="https://github.com/planetarium/libplanet/pull/767">#767</a>]
+<ul>
+<li>If there are less than 10 peers in the routing table, select all peers.</li>
+<li>If there are more than 10 peers in the routing table,
+choose one from each bucket, and if the number is less than 10,
+then select an additional peers so that the total is 10.</li>
+</ul>
+</li>
+</ul>
+<h3 id="bug-fixes-1">Bug fixes</h3>
+<ul>
+<li>Fixed a bug where the canonical chain could be deleted if <code>Swarm&lt;T&gt;</code> failed
+to download blocks due to network connection.  [<a href="https://github.com/planetarium/libplanet/pull/675">#675</a>]</li>
+<li>Fixed bug that re-download block from scratch in preloading.  [<a href="https://github.com/planetarium/libplanet/pull/685">#685</a>]</li>
+<li>Fixed a bug where state references become outdated if a chain is forked
+and then adding existing blocks into it.  [<a href="https://github.com/planetarium/libplanet/pull/704">#704</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;</code> had exhausted all available sockets.  [<a href="https://github.com/planetarium/libplanet/pull/709">#709</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;</code> had infinitely repeated failed requests.
+[<a href="https://github.com/planetarium/libplanet/pull/709">#709</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;</code> hadn't stopped properly.  [<a href="https://github.com/planetarium/libplanet/pull/709">#709</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;.BootstrapAsync()</code> had stopped due to trivial
+(recoverable) <code>TimeoutException</code>s.  [<a href="https://github.com/planetarium/libplanet/issues/715">#715</a>, <a href="https://github.com/planetarium/libplanet/pull/716">#716</a>]</li>
+<li>Fixed a bug where <code>BlockChain&lt;T&gt;.GetNextTxNonce()</code> had returned invalid tx
+nonce.  [<a href="https://github.com/planetarium/libplanet/pull/718">#718</a>]</li>
+<li>Fixed a bug where mined transactions were staged again.  [<a href="https://github.com/planetarium/libplanet/pull/719">#719</a>]</li>
+<li>Fixed a bug where <code>Block&lt;T&gt;.Hash</code> property, <code>Block&lt;T&gt;.Mine()</code> method,
+<code>Block&lt;T&gt;.FromBencodex()</code> method, <code>Block&lt;T&gt;.ToBencodex()</code> method,
+<code>Transaction&lt;T&gt;.Id</code> property, <code>Transaction&lt;T&gt;.Signature</code> property,
+<code>Transaction&lt;T&gt;.Create()</code> method, <code>Transaction&lt;T&gt;.FromBencodex()</code> method,
+and <code>Transaction&lt;T&gt;.ToBencodex()</code> method had been non-deterministic on
+some <code>CultureInfo.CurrentCulture</code> (e.g., <code>ar_SA</code>, <code>fr_FR</code>, <code>th_TH</code>)
+so that it had caused network protocol incompatibilities.
+[<a href="https://github.com/planetarium/libplanet/pull/734">#734</a>]</li>
+<li>Fixed a bug where the states became empty between the tip of the peer to
+receive the states and the tip of the downloaded block.  [<a href="https://github.com/planetarium/libplanet/pull/736">#736</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;.StartAsync()</code> had thrown
+<code>NullReferenceException</code> when <code>host</code> parameter is present on the outside of NAT.
+[<a href="https://github.com/planetarium/libplanet/pull/744">#744</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;</code> had failed to request a TURN relay when it has
+an IPv6 address.  [<a href="https://github.com/planetarium/libplanet/pull/744">#744</a>]</li>
+<li>Fixed a bug where <code>DefaultStore</code> had invalid state references cache after fork.
+[<a href="https://github.com/planetarium/libplanet/pull/759">#759</a>]</li>
+<li>Fixed a bug where <code>BlockChain&lt;T&gt;</code> had rendered and evaluated actions in
+the genesis block during forking.  [<a href="https://github.com/planetarium/libplanet/pull/763">#763</a>]</li>
+<li>Fixed a <code>Swam&lt;T&gt;</code>'s bug that some <code>Transaction&lt;T&gt;</code>s had become excluded from
+mining <code>Block&lt;T&gt;</code>s after reorg from α to β where a <code>Transaction&lt;T&gt;</code> was once
+included by a <code>Block&lt;T&gt;</code> (α) and not included by an other <code>Block&lt;T&gt;</code> (β) for
+the same <code>Index</code> due to the latency gap between nodes.  [<a href="https://github.com/planetarium/libplanet/pull/775">#775</a>]</li>
+</ul>
+<h2 id="version-070">Version 0.7.0</h2>
+<p>Released on November 8, 2019.</p>
 <h3 id="backward-incompatible-interface-changes">Backward-incompatible interface changes</h3>
 <ul>
 <li>Renamed <code>minValue</code>/<code>maxValue</code> parameters to <code>lowerBound</code>/<code>upperBound</code> of
@@ -116,9 +367,9 @@ added it to <code>Swarm&lt;T&gt;.PreloadAsync()</code> &amp; <code>Swarm&lt;T&gt
 <li>Removed <code>BlockChain&lt;T&gt;.GetEnumerate()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/630">#630</a>]</li>
 <li>Removed <code>BlockPolicyExtension.ValidateBlocks()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/630">#630</a>]</li>
 <li><code>IBlockPolicy&lt;T&gt;.GetNextBlockDifficulty()</code> method became to receive
-<code>BlockChain&lt;T&gt;</code> instead of <code>IReadOnlyList&lt;Block&lt;&lt;T&gt;&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/630">#630</a>]</li>
+<code>BlockChain&lt;T&gt;</code> instead of <code>IReadOnlyList&lt;Block&lt;T&gt;&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/630">#630</a>]</li>
 <li><code>IBlockPolicy&lt;T&gt;.ValidateNextBlock()</code> method became to receive
-<code>BlockChain&lt;T&gt;</code> instead of <code>IReadOnlyList&lt;Block&lt;&lt;T&gt;&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/630">#630</a>]</li>
+<code>BlockChain&lt;T&gt;</code> instead of <code>IReadOnlyList&lt;Block&lt;T&gt;&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/630">#630</a>]</li>
 </ul>
 </li>
 </ul>
@@ -134,6 +385,7 @@ added it to <code>Swarm&lt;T&gt;.PreloadAsync()</code> &amp; <code>Swarm&lt;T&gt
 <li>Added <code>Aes128Ctr</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/577">#577</a>, <a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
 <li>Added <code>IKdf</code> interface.  [<a href="https://github.com/planetarium/libplanet/issues/577">#577</a>, <a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
 <li>Added <code>Pbkdf2</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/577">#577</a>, <a href="https://github.com/planetarium/libplanet/pull/614">#614</a>]</li>
+<li>Added <code>Scrypt</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/642">#642</a>, <a href="https://github.com/planetarium/libplanet/pull/654">#654</a>]</li>
 <li>Added <code>BlockChain&lt;T&gt;.LongCount()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/575">#575</a>]</li>
 <li>Added <code>BlockChain&lt;T&gt;[HashDigest&lt;T&gt;]</code> indexer.  [<a href="https://github.com/planetarium/libplanet/issues/409">#409</a>, <a href="https://github.com/planetarium/libplanet/pull/583">#583</a>]</li>
 <li>Added <code>BlockChain&lt;T&gt;.Contains(HashDigest&lt;T&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/issues/409">#409</a>, <a href="https://github.com/planetarium/libplanet/pull/583">#583</a>]</li>
@@ -143,7 +395,7 @@ added it to <code>Swarm&lt;T&gt;.PreloadAsync()</code> &amp; <code>Swarm&lt;T&gt
 <li>Added <code>BlockChain&lt;T&gt;.Contains(Block&lt;T&gt;)</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/630">#630</a>]</li>
 <li>Added <code>BlockDownloadState.SourcePeer</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/636">#636</a>]</li>
 </ul>
-<h3 id="behavioral-changes">Behavioral changes</h3>
+<h3 id="behavioral-changes-2">Behavioral changes</h3>
 <ul>
 <li>Changed to send <code>Pong</code> before updating the message sender to the routing
 table when <code>Ping</code> is received.  [<a href="https://github.com/planetarium/libplanet/pull/566">#566</a>]</li>
@@ -173,7 +425,7 @@ the <code>Block&lt;T&gt;</code> more than once.  [<a href="https://github.com/pl
 <li><code>Swarm&lt;T&gt;.PreloadAsync()</code> became to try downloading blocks from all neighbor peers,
 even if any peer among them is unavailable to send blocks.  [<a href="https://github.com/planetarium/libplanet/pull/636">#636</a>]</li>
 </ul>
-<h3 id="bug-fixes">Bug fixes</h3>
+<h3 id="bug-fixes-2">Bug fixes</h3>
 <ul>
 <li>Fixed a bug where <code>Swarm&lt;T&gt;</code> had tried to update a peer infinitely when
 the peer is evicted from its table.  [<a href="https://github.com/planetarium/libplanet/pull/566">#566</a>]</li>
@@ -204,6 +456,8 @@ nonce when transactions with an old nonce were staged.  [<a href="https://github
 fails.  [<a href="https://github.com/planetarium/libplanet/pull/644">#644</a>]</li>
 <li>Fixed bug that whole processes could halt when received an invalid
 type of message.  [<a href="https://github.com/planetarium/libplanet/issues/628">#628</a>, <a href="https://github.com/planetarium/libplanet/pull/641">#641</a>]</li>
+<li>Fixed a bug that received blocks could not be processed if a branch point
+is a stale block.  [<a href="https://github.com/planetarium/libplanet/pull/655">#655</a>]</li>
 </ul>
 <h2 id="version-060">Version 0.6.0</h2>
 <p>Released on October 1, 2019.</p>
@@ -288,7 +542,7 @@ of <code>BlockChain&lt;T&gt;.TipChangedEventArgs</code> when <code>BlockChain&lt
 <li><code>TxId</code> class became to implement <code>IComparable&lt;TxId&gt;</code> and
 <code>IComparable</code> interfaces.  [<a href="https://github.com/planetarium/libplanet/issues/244">#244</a>, <a href="https://github.com/planetarium/libplanet/pull/511">#511</a>]</li>
 </ul>
-<h3 id="behavioral-changes-1">Behavioral changes</h3>
+<h3 id="behavioral-changes-3">Behavioral changes</h3>
 <ul>
 <li><code>Swarm&lt;T&gt;</code> now broadcasts transactions as soon as new transactions are
 received.  [<a href="https://github.com/planetarium/libplanet/issues/463">#463</a>, <a href="https://github.com/planetarium/libplanet/pull/496">#496</a>]</li>
@@ -320,7 +574,7 @@ and transactions in each group (per signer) are ordered by
 <li><code>LiteDBStore()</code> became to create the database in memory if the <code>path</code>
 parameter is <code>null</code>.  [<a href="https://github.com/planetarium/libplanet/pull/521">#521</a>]</li>
 </ul>
-<h3 id="bug-fixes-1">Bug fixes</h3>
+<h3 id="bug-fixes-3">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that <code>Swarm&lt;T&gt;</code> hadn't released its TURN related resources on
 <code>Swarm&lt;T&gt;.StopAsync()</code>.  [<a href="https://github.com/planetarium/libplanet/pull/450">#450</a>]</li>
@@ -332,14 +586,14 @@ occurred during fetching block from other peers.  [<a href="https://github.com/p
 </ul>
 <h2 id="version-053">Version 0.5.3</h2>
 <p>Released on September 9, 2019.</p>
-<h3 id="bug-fixes-2">Bug fixes</h3>
+<h3 id="bug-fixes-4">Bug fixes</h3>
 <ul>
 <li>Fix bug where <code>IAccountStateDelta.GetState()</code> hadn't returned proper state
 when the block action is evaluated.  [<a href="https://github.com/planetarium/libplanet/pull/500">#500</a>]</li>
 </ul>
 <h2 id="version-052">Version 0.5.2</h2>
 <p>Released on August 29, 2019.</p>
-<h3 id="bug-fixes-3">Bug fixes</h3>
+<h3 id="bug-fixes-5">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that <code>Swarm&lt;T&gt;.PreloadAsync()</code> method had thrown <code>LiteException</code>
 (or other exception depending on <code>IStore</code>), which indicates a state
@@ -352,7 +606,7 @@ transactions.  [<a href="https://github.com/planetarium/libplanet/issues/352">#3
 </ul>
 <h2 id="version-051">Version 0.5.1</h2>
 <p>Released on August 28, 2019.</p>
-<h3 id="bug-fixes-4">Bug fixes</h3>
+<h3 id="bug-fixes-6">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that <code>ArgumentNullException</code> had been thrown when a blockchain,
 which consists of incomplete states (i.e., precalculated states downloaded
@@ -415,7 +669,7 @@ and <code>BlockStateDownloadState</code> classes to cover all phases in the enti
 preloading process.  [<a href="https://github.com/planetarium/libplanet/issues/397">#397</a>, <a href="https://github.com/planetarium/libplanet/pull/400">#400</a>]</li>
 <li>Added <code>Address(ImmutableArray&lt;byte&gt;)</code> constructor.  [<a href="https://github.com/planetarium/libplanet/issues/442">#442</a>, <a href="https://github.com/planetarium/libplanet/pull/443">#443</a>]</li>
 </ul>
-<h3 id="behavioral-changes-2">Behavioral changes</h3>
+<h3 id="behavioral-changes-4">Behavioral changes</h3>
 <ul>
 <li><code>BlockChain&lt;T&gt;.PreloadAsync()</code> method became to omit rendering of
 <code>IAction</code>s in the preloaded behind blocks.  [<a href="https://github.com/planetarium/libplanet/issues/272">#272</a>, <a href="https://github.com/planetarium/libplanet/pull/343">#343</a>]</li>
@@ -448,7 +702,7 @@ the <code>Transaction&lt;T&gt;</code> more than once.  [<a href="https://github.
 <code>false</code>.  [<a href="https://github.com/planetarium/libplanet/pull/423">#423</a>]</li>
 <li><code>PrivateKey(byte[])</code> constructor became to check validity.  [<a href="https://github.com/planetarium/libplanet/pull/438">#438</a>]</li>
 </ul>
-<h3 id="bug-fixes-5">Bug fixes</h3>
+<h3 id="bug-fixes-7">Bug fixes</h3>
 <ul>
 <li>Fixed a bug where the <code>LiteDBStore.IterateStagedTransactionIds()</code> returns
 duplicated transaction ids.  [<a href="https://github.com/planetarium/libplanet/pull/366">#366</a>]</li>
@@ -476,7 +730,7 @@ took a long time.  [<a href="https://github.com/planetarium/libplanet/pull/424">
 </ul>
 <h2 id="version-041">Version 0.4.1</h2>
 <p>Released on July 11, 2019.</p>
-<h3 id="bug-fixes-6">Bug fixes</h3>
+<h3 id="bug-fixes-8">Bug fixes</h3>
 <ul>
 <li>Fixed a bug where the <code>BlockChain&lt;T&gt;.GetStates()</code> method had not returned
 the latest state when there are multiple addresses.  [<a href="https://github.com/planetarium/libplanet/pull/346">#346</a>]</li>
@@ -547,7 +801,7 @@ transactions too during nonce computation.  [<a href="https://github.com/planeta
 <li>Added <code>StoreExtension</code> static class.  [<a href="https://github.com/planetarium/libplanet/issues/272">#272</a>, <a href="https://github.com/planetarium/libplanet/pull/307">#307</a>]</li>
 <li>Added <code>Swarm&lt;T&gt;.BlockChain</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/272">#272</a>, <a href="https://github.com/planetarium/libplanet/pull/343">#343</a>]</li>
 </ul>
-<h3 id="behavioral-changes-3">Behavioral changes</h3>
+<h3 id="behavioral-changes-5">Behavioral changes</h3>
 <ul>
 <li><code>BlockChain&lt;T&gt;.GetStates()</code> method became to throw
 <code>IncompleteBlockStatesException</code> if its <code>Store</code> lacks the states of a block
@@ -574,7 +828,7 @@ references in the replaced chain. [<a href="https://github.com/planetarium/libpl
 under the circumstances that the height of
 the <code>BlockChain&lt;T&gt;</code> object is high.  [<a href="https://github.com/planetarium/libplanet/issues/282">#282</a>, <a href="https://github.com/planetarium/libplanet/pull/299">#299</a>]</li>
 </ul>
-<h3 id="bug-fixes-7">Bug fixes</h3>
+<h3 id="bug-fixes-9">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that <code>Swarm&lt;T&gt;</code> reported <code>TaskCanceledException</code> as an unknown
 exception while stopping. [<a href="https://github.com/planetarium/libplanet/pull/275">#275</a>]</li>
@@ -604,9 +858,9 @@ a message.  [<a href="https://github.com/planetarium/libplanet/pull/321">#321</a
 <li>Added <code>IAction.Unrender(IActionContext, IAccountStateDelta)</code> method.
 [<a href="https://github.com/planetarium/libplanet/issues/31">#31</a>, <a href="https://github.com/planetarium/libplanet/pull/212">#212</a>]</li>
 <li><code>BlockChain&lt;T&gt;.Validate()</code> method became to receive
-<code>IReadOnlyList&lt;Block&lt;&lt;T&gt;&gt;</code> instead of <code>IEnumerable&lt;Block&lt;T&gt;&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/205">#205</a>]</li>
+<code>IReadOnlyList&lt;Block&lt;T&gt;&gt;</code> instead of <code>IEnumerable&lt;Block&lt;T&gt;&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/205">#205</a>]</li>
 <li><code>IBlockPolicy&lt;T&gt;.GetNextBlockDifficulty()</code> method became to receive
-<code>IReadOnlyList&lt;Block&lt;&lt;T&gt;&gt;</code> instead of <code>IEnumerable&lt;Block&lt;T&gt;&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/205">#205</a>]</li>
+<code>IReadOnlyList&lt;Block&lt;T&gt;&gt;</code> instead of <code>IEnumerable&lt;Block&lt;T&gt;&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/205">#205</a>]</li>
 <li>Added
 <code>IBlockPolicy&lt;T&gt;.ValidateNextBlock(IReadOnlyList&lt;Block&lt;T&gt;&gt;, Block&lt;T&gt;)</code>
 method.  [<a href="https://github.com/planetarium/libplanet/pull/210">#210</a>]</li>
@@ -679,7 +933,7 @@ messages when a <code>Swarm</code> instance is requested to terminate.</li>
 caught. [<a href="https://github.com/planetarium/libplanet/issues/133">#133</a>, <a href="https://github.com/planetarium/libplanet/pull/251">#251</a>]</li>
 <li>Added <code>InvalidTxNonceException</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/246">#246</a>]</li>
 </ul>
-<h3 id="behavioral-changes-4">Behavioral changes</h3>
+<h3 id="behavioral-changes-6">Behavioral changes</h3>
 <ul>
 <li><code>Swarm.StartAsync()</code> now receives the height of blocks (tip <code>Index</code>) from
 other known peers and synchronizes the blocks if necessary
@@ -709,7 +963,7 @@ current nonce.  [<a href="https://github.com/planetarium/libplanet/pull/246">#24
 <li><code>Swarm</code> became to enforce <code>ForceDotNet.Force()</code> in <a href="https://github.com/somdoron/AsyncIO">AsyncIO</a> while
 it's running on Mono runtime.  [<a href="https://github.com/planetarium/libplanet/pull/247">#247</a>]</li>
 </ul>
-<h3 id="bug-fixes-8">Bug fixes</h3>
+<h3 id="bug-fixes-10">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that TURN relay had been disconnected when being connected for
 longer than 5 minutes.  [<a href="https://github.com/planetarium/libplanet/pull/198">#198</a>]</li>
@@ -986,7 +1240,7 @@ to ignore peers if their version is different.  [<a href="https://github.com/pla
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2019 <a href="https://planetariumhq.com/">Planetarium</a><br>Generated by DocFX
+            Copyright © 2019–2020 <a href="https://planetariumhq.com/">Planetarium</a>
             
           </div>
         </div>
