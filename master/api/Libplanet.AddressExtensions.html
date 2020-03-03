@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface IBlockPolicy&lt;T&gt;
+    <title>Class AddressExtensions
    | Libplanet </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface IBlockPolicy&lt;T&gt;
+    <meta name="title" content="Class AddressExtensions
    | Libplanet ">
     <meta name="generator" content="docfx 2.48.1.0">
     
@@ -98,8 +98,8 @@
                           <li class="">
                             <a href="Libplanet.Address.html" title="Address" class="">Address</a>
                           </li>
-                          <li class="">
-                            <a href="Libplanet.AddressExtensions.html" title="AddressExtensions" class="">AddressExtensions</a>
+                          <li class="active">
+                            <a href="Libplanet.AddressExtensions.html" title="AddressExtensions" class="active">AddressExtensions</a>
                           </li>
                           <li class="">
                             <a href="Libplanet.ByteArrayExtensions.html" title="ByteArrayExtensions" class="">ByteArrayExtensions</a>
@@ -188,8 +188,8 @@
                           <li class="">
                             <a href="Libplanet.Blockchain.Policies.BlockPolicy-1.html" title="BlockPolicy&lt;T&gt;" class="">BlockPolicy&lt;T&gt;</a>
                           </li>
-                          <li class="active">
-                            <a href="Libplanet.Blockchain.Policies.IBlockPolicy-1.html" title="IBlockPolicy&lt;T&gt;" class="active">IBlockPolicy&lt;T&gt;</a>
+                          <li class="">
+                            <a href="Libplanet.Blockchain.Policies.IBlockPolicy-1.html" title="IBlockPolicy&lt;T&gt;" class="">IBlockPolicy&lt;T&gt;</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -457,92 +457,45 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Libplanet.Blockchain.Policies.IBlockPolicy`1">
+            <article class="content wrap" id="_content" data-uid="Libplanet.AddressExtensions">
   
   
-  <h1 id="Libplanet_Blockchain_Policies_IBlockPolicy_1" data-uid="Libplanet.Blockchain.Policies.IBlockPolicy`1" class="text-break">Interface IBlockPolicy&lt;T&gt;
+  <h1 id="Libplanet_AddressExtensions" data-uid="Libplanet.AddressExtensions" class="text-break">Class AddressExtensions
   </h1>
-  <div class="markdown level0 summary"><p>An interface to determine if consecutive <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a>s are
-valid, and to suggest how difficult a <a class="xref" href="Libplanet.Blocks.Block-1.html#Libplanet_Blocks_Block_1_Nonce">Nonce</a>
-for a <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a> to be mined.</p>
+  <div class="markdown level0 summary"><p>This extension class enables some convenient methods (sugar for
+the most part) to deal with <a class="xref" href="Libplanet.Address.html">Address</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Libplanet.Blockchain.Policies.html">Libplanet.Blockchain.Policies</a></h6>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">AddressExtensions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Libplanet.html">Libplanet</a></h6>
   <h6><strong>Assembly</strong>: Libplanet.dll</h6>
-  <h5 id="Libplanet_Blockchain_Policies_IBlockPolicy_1_syntax">Syntax</h5>
+  <h5 id="Libplanet_AddressExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IBlockPolicy&lt;T&gt;
-    where T : IAction, new()</code></pre>
+    <pre><code class="lang-csharp hljs">public static class AddressExtensions : object</code></pre>
   </div>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td><p>An <a class="xref" href="Libplanet.Action.IAction.html">IAction</a> type.  It should match
-to <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a>'s type parameter.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/master/apiSpec/new?filename=Libplanet_Blockchain_Policies_IBlockPolicy_1_BlockAction.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.Policies.IBlockPolicy%601.BlockAction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/master/Libplanet/Blockchain/Policies/IBlockPolicy.cs/#L19">View Source</a>
-  </span>
-  <a id="Libplanet_Blockchain_Policies_IBlockPolicy_1_BlockAction_" data-uid="Libplanet.Blockchain.Policies.IBlockPolicy`1.BlockAction*"></a>
-  <h4 id="Libplanet_Blockchain_Policies_IBlockPolicy_1_BlockAction" data-uid="Libplanet.Blockchain.Policies.IBlockPolicy`1.BlockAction">BlockAction</h4>
-  <div class="markdown level1 summary"><p>A block action to execute and be rendered for every block.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAction BlockAction { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Libplanet.Action.IAction.html">IAction</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/master/apiSpec/new?filename=Libplanet_Blockchain_Policies_IBlockPolicy_1_GetNextBlockDifficulty_Libplanet_Blockchain_BlockChain__0__.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.Policies.IBlockPolicy%601.GetNextBlockDifficulty(Libplanet.Blockchain.BlockChain%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/master/apiSpec/new?filename=Libplanet_AddressExtensions_ToAddress_Libplanet_Crypto_PublicKey_.md&amp;value=---%0Auid%3A%20Libplanet.AddressExtensions.ToAddress(Libplanet.Crypto.PublicKey)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/master/Libplanet/Blockchain/Policies/IBlockPolicy.cs/#L47">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/master/Libplanet/AddressExtensions.cs/#L23">View Source</a>
   </span>
-  <a id="Libplanet_Blockchain_Policies_IBlockPolicy_1_GetNextBlockDifficulty_" data-uid="Libplanet.Blockchain.Policies.IBlockPolicy`1.GetNextBlockDifficulty*"></a>
-  <h4 id="Libplanet_Blockchain_Policies_IBlockPolicy_1_GetNextBlockDifficulty_Libplanet_Blockchain_BlockChain__0__" data-uid="Libplanet.Blockchain.Policies.IBlockPolicy`1.GetNextBlockDifficulty(Libplanet.Blockchain.BlockChain{`0})">GetNextBlockDifficulty(BlockChain&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Determines a right <a class="xref" href="Libplanet.Blocks.Block-1.html#Libplanet_Blocks_Block_1_Difficulty">Difficulty</a>
-for a new <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a> to be mined
-right after the given <code data-dev-comment-type="paramref" class="paramref">blocks</code>.</p>
+  <a id="Libplanet_AddressExtensions_ToAddress_" data-uid="Libplanet.AddressExtensions.ToAddress*"></a>
+  <h4 id="Libplanet_AddressExtensions_ToAddress_Libplanet_Crypto_PublicKey_" data-uid="Libplanet.AddressExtensions.ToAddress(Libplanet.Crypto.PublicKey)">ToAddress(PublicKey)</h4>
+  <div class="markdown level1 summary"><p>Derives the corresponding <a class="xref" href="Libplanet.Address.html">Address</a> from a <a class="xref" href="Libplanet.Crypto.PublicKey.html">PublicKey</a>.</p>
+<p>This enables a code like <code>publicKey.ToAddress()</code> instead
+of <code>new Address(publicKey)</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">long GetNextBlockDifficulty(BlockChain&lt;T&gt; blocks)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Address ToAddress(this PublicKey publicKey)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -555,10 +508,10 @@ right after the given <code data-dev-comment-type="paramref" class="paramref">bl
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Libplanet.Blockchain.BlockChain-1.html">BlockChain</a>&lt;T&gt;</td>
-        <td><span class="parametername">blocks</span></td>
-        <td><p>Consecutive <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a>s to be
-followed by a new <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a> to be mined.</p>
+        <td><a class="xref" href="Libplanet.Crypto.PublicKey.html">PublicKey</a></td>
+        <td><span class="parametername">publicKey</span></td>
+        <td><p>A <a class="xref" href="Libplanet.Crypto.PublicKey.html">PublicKey</a> to derive
+the corresponding <a class="xref" href="Libplanet.Address.html">Address</a> from.</p>
 </td>
       </tr>
     </tbody>
@@ -573,76 +526,21 @@ followed by a new <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><p>A right <a class="xref" href="Libplanet.Blocks.Block-1.html#Libplanet_Blocks_Block_1_Difficulty">Difficulty</a>
-for a new <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a> to be mined.</p>
+        <td><a class="xref" href="Libplanet.Address.html">Address</a></td>
+        <td><p>The corresponding <a class="xref" href="Libplanet.Address.html">Address</a> derived from
+<code data-dev-comment-type="paramref" class="paramref">publicKey</code>.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/master/apiSpec/new?filename=Libplanet_Blockchain_Policies_IBlockPolicy_1_ValidateNextBlock_Libplanet_Blockchain_BlockChain__0__Libplanet_Blocks_Block__0__.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.Policies.IBlockPolicy%601.ValidateNextBlock(Libplanet.Blockchain.BlockChain%7B%600%7D%2CLibplanet.Blocks.Block%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/master/Libplanet/Blockchain/Policies/IBlockPolicy.cs/#L34">View Source</a>
-  </span>
-  <a id="Libplanet_Blockchain_Policies_IBlockPolicy_1_ValidateNextBlock_" data-uid="Libplanet.Blockchain.Policies.IBlockPolicy`1.ValidateNextBlock*"></a>
-  <h4 id="Libplanet_Blockchain_Policies_IBlockPolicy_1_ValidateNextBlock_Libplanet_Blockchain_BlockChain__0__Libplanet_Blocks_Block__0__" data-uid="Libplanet.Blockchain.Policies.IBlockPolicy`1.ValidateNextBlock(Libplanet.Blockchain.BlockChain{`0},Libplanet.Blocks.Block{`0})">ValidateNextBlock(BlockChain&lt;T&gt;, Block&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Checks if <code data-dev-comment-type="paramref" class="paramref">nextBlock</code> is invalid, and if that
-returns the reason.</p>
-<p>Note that it returns <code>null</code> when
-<code data-dev-comment-type="paramref" class="paramref">nextBlock</code> is <em>valid</em>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">InvalidBlockException ValidateNextBlock(BlockChain&lt;T&gt; blocks, Block&lt;T&gt; nextBlock)</code></pre>
+  <h5 id="Libplanet_AddressExtensions_ToAddress_Libplanet_Crypto_PublicKey__seealso">See Also</h5>
+  <div class="seealso">
+      <div><a class="xref" href="Libplanet.Address.html#Libplanet_Address__ctor_Libplanet_Crypto_PublicKey_">Address(PublicKey)</a></div>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Libplanet.Blockchain.BlockChain-1.html">BlockChain</a>&lt;T&gt;</td>
-        <td><span class="parametername">blocks</span></td>
-        <td><p>Consecutive <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a>s to
-append <code data-dev-comment-type="paramref" class="paramref">nextBlock</code>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Libplanet.Blocks.Block-1.html">Block</a>&lt;T&gt;</td>
-        <td><span class="parametername">nextBlock</span></td>
-        <td><p>The next block to append to
-<code data-dev-comment-type="paramref" class="paramref">blocks</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Libplanet.Blocks.InvalidBlockException.html">InvalidBlockException</a></td>
-        <td><p>The reason why the given <code data-dev-comment-type="paramref" class="paramref">blocks</code> are
-<em>invalid</em>, or <code>null</code> if <code data-dev-comment-type="paramref" class="paramref">blocks</code> are
-<em>valid</em>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Libplanet.Address.html">Address</a></div>
+  </div>
 </article>
           </div>
           
@@ -651,10 +549,10 @@ append <code data-dev-comment-type="paramref" class="paramref">nextBlock</code>.
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/new/master/apiSpec/new?filename=Libplanet_Blockchain_Policies_IBlockPolicy_1.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.Policies.IBlockPolicy%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dahlia/libplanet/new/master/apiSpec/new?filename=Libplanet_AddressExtensions.md&amp;value=---%0Auid%3A%20Libplanet.AddressExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/master/Libplanet/Blockchain/Policies/IBlockPolicy.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/master/Libplanet/AddressExtensions.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
