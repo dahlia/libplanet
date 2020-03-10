@@ -3803,12 +3803,70 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.AppProtocolVersion.AppProtocolVersion
   nameWithType: AppProtocolVersion.AppProtocolVersion
+- uid: Libplanet.Net.AppProtocolVersion.Equals(Libplanet.Net.AppProtocolVersion)
+  name: Equals(AppProtocolVersion)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Equals_Libplanet_Net_AppProtocolVersion_
+  commentId: M:Libplanet.Net.AppProtocolVersion.Equals(Libplanet.Net.AppProtocolVersion)
+  fullName: Libplanet.Net.AppProtocolVersion.Equals(Libplanet.Net.AppProtocolVersion)
+  nameWithType: AppProtocolVersion.Equals(AppProtocolVersion)
+- uid: Libplanet.Net.AppProtocolVersion.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Equals_System_Object_
+  commentId: M:Libplanet.Net.AppProtocolVersion.Equals(System.Object)
+  fullName: Libplanet.Net.AppProtocolVersion.Equals(System.Object)
+  nameWithType: AppProtocolVersion.Equals(Object)
+- uid: Libplanet.Net.AppProtocolVersion.Equals*
+  name: Equals
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Equals_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.Equals
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.Equals
+  nameWithType: AppProtocolVersion.Equals
 - uid: Libplanet.Net.AppProtocolVersion.Extra
   name: Extra
   href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Extra
   commentId: F:Libplanet.Net.AppProtocolVersion.Extra
   fullName: Libplanet.Net.AppProtocolVersion.Extra
   nameWithType: AppProtocolVersion.Extra
+- uid: Libplanet.Net.AppProtocolVersion.GetHashCode
+  name: GetHashCode()
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_GetHashCode
+  commentId: M:Libplanet.Net.AppProtocolVersion.GetHashCode
+  fullName: Libplanet.Net.AppProtocolVersion.GetHashCode()
+  nameWithType: AppProtocolVersion.GetHashCode()
+- uid: Libplanet.Net.AppProtocolVersion.GetHashCode*
+  name: GetHashCode
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_GetHashCode_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.GetHashCode
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.GetHashCode
+  nameWithType: AppProtocolVersion.GetHashCode
+- uid: Libplanet.Net.AppProtocolVersion.op_Equality(Libplanet.Net.AppProtocolVersion,Libplanet.Net.AppProtocolVersion)
+  name: Equality(AppProtocolVersion, AppProtocolVersion)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_op_Equality_Libplanet_Net_AppProtocolVersion_Libplanet_Net_AppProtocolVersion_
+  commentId: M:Libplanet.Net.AppProtocolVersion.op_Equality(Libplanet.Net.AppProtocolVersion,Libplanet.Net.AppProtocolVersion)
+  fullName: Libplanet.Net.AppProtocolVersion.Equality(Libplanet.Net.AppProtocolVersion, Libplanet.Net.AppProtocolVersion)
+  nameWithType: AppProtocolVersion.Equality(AppProtocolVersion, AppProtocolVersion)
+- uid: Libplanet.Net.AppProtocolVersion.op_Equality*
+  name: Equality
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_op_Equality_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.Equality
+  nameWithType: AppProtocolVersion.Equality
+- uid: Libplanet.Net.AppProtocolVersion.op_Inequality(Libplanet.Net.AppProtocolVersion,Libplanet.Net.AppProtocolVersion)
+  name: Inequality(AppProtocolVersion, AppProtocolVersion)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_op_Inequality_Libplanet_Net_AppProtocolVersion_Libplanet_Net_AppProtocolVersion_
+  commentId: M:Libplanet.Net.AppProtocolVersion.op_Inequality(Libplanet.Net.AppProtocolVersion,Libplanet.Net.AppProtocolVersion)
+  fullName: Libplanet.Net.AppProtocolVersion.Inequality(Libplanet.Net.AppProtocolVersion, Libplanet.Net.AppProtocolVersion)
+  nameWithType: AppProtocolVersion.Inequality(AppProtocolVersion, AppProtocolVersion)
+- uid: Libplanet.Net.AppProtocolVersion.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_op_Inequality_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.Inequality
+  nameWithType: AppProtocolVersion.Inequality
 - uid: Libplanet.Net.AppProtocolVersion.Signature
   name: Signature
   href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Signature
@@ -4677,15 +4735,15 @@ references:
   fullName.vb: Libplanet.Net.Swarm(Of T)
   nameWithType: Swarm<T>
   nameWithType.vb: Swarm(Of T)
-- uid: Libplanet.Net.Swarm`1.#ctor(Libplanet.Blockchain.BlockChain{`0},Libplanet.Crypto.PrivateKey,Libplanet.Net.AppProtocolVersion,System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{DateTimeOffset},IEnumerable{Libplanet.Net.IceServer},EventHandler{Libplanet.Net.DifferentProtocolVersionEventArgs},IEnumerable{Libplanet.Crypto.PublicKey})
-  name: Swarm(BlockChain<T>, PrivateKey, AppProtocolVersion, Int32, String, Nullable<Int32>, Nullable<DateTimeOffset>, IEnumerable<IceServer>, EventHandler<DifferentProtocolVersionEventArgs>, IEnumerable<PublicKey>)
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1__ctor_Libplanet_Blockchain_BlockChain__0__Libplanet_Crypto_PrivateKey_Libplanet_Net_AppProtocolVersion_System_Int32_System_String_System_Nullable_System_Int32__System_Nullable_DateTimeOffset__IEnumerable_Libplanet_Net_IceServer__EventHandler_Libplanet_Net_DifferentProtocolVersionEventArgs__IEnumerable_Libplanet_Crypto_PublicKey__
-  commentId: M:Libplanet.Net.Swarm`1.#ctor(Libplanet.Blockchain.BlockChain{`0},Libplanet.Crypto.PrivateKey,Libplanet.Net.AppProtocolVersion,System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{DateTimeOffset},IEnumerable{Libplanet.Net.IceServer},EventHandler{Libplanet.Net.DifferentProtocolVersionEventArgs},IEnumerable{Libplanet.Crypto.PublicKey})
-  name.vb: Swarm(BlockChain(Of T), PrivateKey, AppProtocolVersion, Int32, String, Nullable(Of Int32), Nullable(Of DateTimeOffset), IEnumerable(Of IceServer), EventHandler(Of DifferentProtocolVersionEventArgs), IEnumerable(Of PublicKey))
-  fullName: Libplanet.Net.Swarm<T>.Swarm(Libplanet.Blockchain.BlockChain<T>, Libplanet.Crypto.PrivateKey, Libplanet.Net.AppProtocolVersion, System.Int32, System.String, System.Nullable<System.Int32>, System.Nullable<DateTimeOffset>, IEnumerable<Libplanet.Net.IceServer>, EventHandler<Libplanet.Net.DifferentProtocolVersionEventArgs>, IEnumerable<Libplanet.Crypto.PublicKey>)
-  fullName.vb: Libplanet.Net.Swarm(Of T).Swarm(Libplanet.Blockchain.BlockChain(Of T), Libplanet.Crypto.PrivateKey, Libplanet.Net.AppProtocolVersion, System.Int32, System.String, System.Nullable(Of System.Int32), System.Nullable(Of DateTimeOffset), IEnumerable(Of Libplanet.Net.IceServer), EventHandler(Of Libplanet.Net.DifferentProtocolVersionEventArgs), IEnumerable(Of Libplanet.Crypto.PublicKey))
-  nameWithType: Swarm<T>.Swarm(BlockChain<T>, PrivateKey, AppProtocolVersion, Int32, String, Nullable<Int32>, Nullable<DateTimeOffset>, IEnumerable<IceServer>, EventHandler<DifferentProtocolVersionEventArgs>, IEnumerable<PublicKey>)
-  nameWithType.vb: Swarm(Of T).Swarm(BlockChain(Of T), PrivateKey, AppProtocolVersion, Int32, String, Nullable(Of Int32), Nullable(Of DateTimeOffset), IEnumerable(Of IceServer), EventHandler(Of DifferentProtocolVersionEventArgs), IEnumerable(Of PublicKey))
+- uid: Libplanet.Net.Swarm`1.#ctor(Libplanet.Blockchain.BlockChain{`0},Libplanet.Crypto.PrivateKey,Libplanet.Net.AppProtocolVersion,System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{DateTimeOffset},IEnumerable{Libplanet.Net.IceServer},EventHandler{Libplanet.Net.DifferentProtocolVersionEventArgs})
+  name: Swarm(BlockChain<T>, PrivateKey, AppProtocolVersion, Int32, String, Nullable<Int32>, Nullable<DateTimeOffset>, IEnumerable<IceServer>, EventHandler<DifferentProtocolVersionEventArgs>)
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1__ctor_Libplanet_Blockchain_BlockChain__0__Libplanet_Crypto_PrivateKey_Libplanet_Net_AppProtocolVersion_System_Int32_System_String_System_Nullable_System_Int32__System_Nullable_DateTimeOffset__IEnumerable_Libplanet_Net_IceServer__EventHandler_Libplanet_Net_DifferentProtocolVersionEventArgs__
+  commentId: M:Libplanet.Net.Swarm`1.#ctor(Libplanet.Blockchain.BlockChain{`0},Libplanet.Crypto.PrivateKey,Libplanet.Net.AppProtocolVersion,System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{DateTimeOffset},IEnumerable{Libplanet.Net.IceServer},EventHandler{Libplanet.Net.DifferentProtocolVersionEventArgs})
+  name.vb: Swarm(BlockChain(Of T), PrivateKey, AppProtocolVersion, Int32, String, Nullable(Of Int32), Nullable(Of DateTimeOffset), IEnumerable(Of IceServer), EventHandler(Of DifferentProtocolVersionEventArgs))
+  fullName: Libplanet.Net.Swarm<T>.Swarm(Libplanet.Blockchain.BlockChain<T>, Libplanet.Crypto.PrivateKey, Libplanet.Net.AppProtocolVersion, System.Int32, System.String, System.Nullable<System.Int32>, System.Nullable<DateTimeOffset>, IEnumerable<Libplanet.Net.IceServer>, EventHandler<Libplanet.Net.DifferentProtocolVersionEventArgs>)
+  fullName.vb: Libplanet.Net.Swarm(Of T).Swarm(Libplanet.Blockchain.BlockChain(Of T), Libplanet.Crypto.PrivateKey, Libplanet.Net.AppProtocolVersion, System.Int32, System.String, System.Nullable(Of System.Int32), System.Nullable(Of DateTimeOffset), IEnumerable(Of Libplanet.Net.IceServer), EventHandler(Of Libplanet.Net.DifferentProtocolVersionEventArgs))
+  nameWithType: Swarm<T>.Swarm(BlockChain<T>, PrivateKey, AppProtocolVersion, Int32, String, Nullable<Int32>, Nullable<DateTimeOffset>, IEnumerable<IceServer>, EventHandler<DifferentProtocolVersionEventArgs>)
+  nameWithType.vb: Swarm(Of T).Swarm(BlockChain(Of T), PrivateKey, AppProtocolVersion, Int32, String, Nullable(Of Int32), Nullable(Of DateTimeOffset), IEnumerable(Of IceServer), EventHandler(Of DifferentProtocolVersionEventArgs))
 - uid: Libplanet.Net.Swarm`1.#ctor*
   name: Swarm
   href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1__ctor_
@@ -4712,23 +4770,6 @@ references:
   fullName.vb: Libplanet.Net.Swarm(Of T).Address
   nameWithType: Swarm<T>.Address
   nameWithType.vb: Swarm(Of T).Address
-- uid: Libplanet.Net.Swarm`1.AppProtocolVersionCertificates
-  name: AppProtocolVersionCertificates
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_AppProtocolVersionCertificates
-  commentId: P:Libplanet.Net.Swarm`1.AppProtocolVersionCertificates
-  fullName: Libplanet.Net.Swarm<T>.AppProtocolVersionCertificates
-  fullName.vb: Libplanet.Net.Swarm(Of T).AppProtocolVersionCertificates
-  nameWithType: Swarm<T>.AppProtocolVersionCertificates
-  nameWithType.vb: Swarm(Of T).AppProtocolVersionCertificates
-- uid: Libplanet.Net.Swarm`1.AppProtocolVersionCertificates*
-  name: AppProtocolVersionCertificates
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_AppProtocolVersionCertificates_
-  commentId: Overload:Libplanet.Net.Swarm`1.AppProtocolVersionCertificates
-  isSpec: "True"
-  fullName: Libplanet.Net.Swarm<T>.AppProtocolVersionCertificates
-  fullName.vb: Libplanet.Net.Swarm(Of T).AppProtocolVersionCertificates
-  nameWithType: Swarm<T>.AppProtocolVersionCertificates
-  nameWithType.vb: Swarm(Of T).AppProtocolVersionCertificates
 - uid: Libplanet.Net.Swarm`1.AsPeer
   name: AsPeer
   href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_AsPeer
@@ -5965,6 +6006,22 @@ references:
   fullName.vb: Libplanet.Store.BaseStore.LookupStateReference(Of T)(Guid, System.String, Libplanet.Blocks.Block(Of T))
   nameWithType: BaseStore.LookupStateReference<T>(Guid, String, Block<T>)
   nameWithType.vb: BaseStore.LookupStateReference(Of T)(Guid, String, Block(Of T))
+- uid: Libplanet.Store.BaseStore.PruneBlockStates*
+  name: PruneBlockStates
+  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_PruneBlockStates_
+  commentId: Overload:Libplanet.Store.BaseStore.PruneBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseStore.PruneBlockStates
+  nameWithType: BaseStore.PruneBlockStates
+- uid: Libplanet.Store.BaseStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name: PruneBlockStates<T>(Guid, Block<T>)
+  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_PruneBlockStates__1_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.BaseStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name.vb: PruneBlockStates(Of T)(Guid, Block(Of T))
+  fullName: Libplanet.Store.BaseStore.PruneBlockStates<T>(Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.BaseStore.PruneBlockStates(Of T)(Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: BaseStore.PruneBlockStates<T>(Guid, Block<T>)
+  nameWithType.vb: BaseStore.PruneBlockStates(Of T)(Guid, Block(Of T))
 - uid: Libplanet.Store.BaseStore.PutBlock*
   name: PutBlock
   href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_PutBlock_
@@ -6701,6 +6758,22 @@ references:
   fullName.vb: Libplanet.Store.DefaultStore.LookupStateReference(Of T)(Guid, System.String, Libplanet.Blocks.Block(Of T))
   nameWithType: DefaultStore.LookupStateReference<T>(Guid, String, Block<T>)
   nameWithType.vb: DefaultStore.LookupStateReference(Of T)(Guid, String, Block(Of T))
+- uid: Libplanet.Store.DefaultStore.PruneBlockStates*
+  name: PruneBlockStates
+  href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_PruneBlockStates_
+  commentId: Overload:Libplanet.Store.DefaultStore.PruneBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.DefaultStore.PruneBlockStates
+  nameWithType: DefaultStore.PruneBlockStates
+- uid: Libplanet.Store.DefaultStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name: PruneBlockStates<T>(Guid, Block<T>)
+  href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_PruneBlockStates__1_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.DefaultStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name.vb: PruneBlockStates(Of T)(Guid, Block(Of T))
+  fullName: Libplanet.Store.DefaultStore.PruneBlockStates<T>(Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.DefaultStore.PruneBlockStates(Of T)(Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: DefaultStore.PruneBlockStates<T>(Guid, Block<T>)
+  nameWithType.vb: DefaultStore.PruneBlockStates(Of T)(Guid, Block(Of T))
 - uid: Libplanet.Store.DefaultStore.PutBlock*
   name: PutBlock
   href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_PutBlock_
@@ -7245,6 +7318,22 @@ references:
   fullName.vb: Libplanet.Store.IStore.LookupStateReference(Of T)(Guid, System.String, Libplanet.Blocks.Block(Of T))
   nameWithType: IStore.LookupStateReference<T>(Guid, String, Block<T>)
   nameWithType.vb: IStore.LookupStateReference(Of T)(Guid, String, Block(Of T))
+- uid: Libplanet.Store.IStore.PruneBlockStates*
+  name: PruneBlockStates
+  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_PruneBlockStates_
+  commentId: Overload:Libplanet.Store.IStore.PruneBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.IStore.PruneBlockStates
+  nameWithType: IStore.PruneBlockStates
+- uid: Libplanet.Store.IStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name: PruneBlockStates<T>(Guid, Block<T>)
+  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_PruneBlockStates__1_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.IStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name.vb: PruneBlockStates(Of T)(Guid, Block(Of T))
+  fullName: Libplanet.Store.IStore.PruneBlockStates<T>(Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.IStore.PruneBlockStates(Of T)(Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: IStore.PruneBlockStates<T>(Guid, Block<T>)
+  nameWithType.vb: IStore.PruneBlockStates(Of T)(Guid, Block(Of T))
 - uid: Libplanet.Store.IStore.PutBlock*
   name: PutBlock
   href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_PutBlock_
