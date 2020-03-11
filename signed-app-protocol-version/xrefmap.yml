@@ -3781,12 +3781,6 @@ references:
   commentId: T:Libplanet.Net.AppProtocolVersion
   fullName: Libplanet.Net.AppProtocolVersion
   nameWithType: AppProtocolVersion
-- uid: Libplanet.Net.AppProtocolVersion.#ctor(Libplanet.Crypto.PrivateKey,System.Int32,IValue)
-  name: AppProtocolVersion(PrivateKey, Int32, IValue)
-  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion__ctor_Libplanet_Crypto_PrivateKey_System_Int32_IValue_
-  commentId: M:Libplanet.Net.AppProtocolVersion.#ctor(Libplanet.Crypto.PrivateKey,System.Int32,IValue)
-  fullName: Libplanet.Net.AppProtocolVersion.AppProtocolVersion(Libplanet.Crypto.PrivateKey, System.Int32, IValue)
-  nameWithType: AppProtocolVersion.AppProtocolVersion(PrivateKey, Int32, IValue)
 - uid: Libplanet.Net.AppProtocolVersion.#ctor(System.Int32,IValue,ImmutableArray{System.Byte},Libplanet.Address)
   name: AppProtocolVersion(Int32, IValue, ImmutableArray<Byte>, Address)
   href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion__ctor_System_Int32_IValue_ImmutableArray_System_Byte__Libplanet_Address_
@@ -3867,6 +3861,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.AppProtocolVersion.Inequality
   nameWithType: AppProtocolVersion.Inequality
+- uid: Libplanet.Net.AppProtocolVersion.Sign(Libplanet.Crypto.PrivateKey,System.Int32,IValue)
+  name: Sign(PrivateKey, Int32, IValue)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Sign_Libplanet_Crypto_PrivateKey_System_Int32_IValue_
+  commentId: M:Libplanet.Net.AppProtocolVersion.Sign(Libplanet.Crypto.PrivateKey,System.Int32,IValue)
+  fullName: Libplanet.Net.AppProtocolVersion.Sign(Libplanet.Crypto.PrivateKey, System.Int32, IValue)
+  nameWithType: AppProtocolVersion.Sign(PrivateKey, Int32, IValue)
+- uid: Libplanet.Net.AppProtocolVersion.Sign*
+  name: Sign
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Sign_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.Sign
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.Sign
+  nameWithType: AppProtocolVersion.Sign
 - uid: Libplanet.Net.AppProtocolVersion.Signature
   name: Signature
   href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Signature
