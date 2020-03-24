@@ -3909,19 +3909,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.KeyStore.Web3KeyStore.Add
   nameWithType: Web3KeyStore.Add
-- uid: Libplanet.KeyStore.Web3KeyStore.DefaultStore
-  name: DefaultStore
-  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_DefaultStore
-  commentId: P:Libplanet.KeyStore.Web3KeyStore.DefaultStore
-  fullName: Libplanet.KeyStore.Web3KeyStore.DefaultStore
-  nameWithType: Web3KeyStore.DefaultStore
-- uid: Libplanet.KeyStore.Web3KeyStore.DefaultStore*
-  name: DefaultStore
-  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_DefaultStore_
-  commentId: Overload:Libplanet.KeyStore.Web3KeyStore.DefaultStore
+- uid: Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore
+  name: DefaultKeyStore
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_DefaultKeyStore
+  commentId: P:Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore
+  fullName: Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore
+  nameWithType: Web3KeyStore.DefaultKeyStore
+- uid: Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore*
+  name: DefaultKeyStore
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_DefaultKeyStore_
+  commentId: Overload:Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore
   isSpec: "True"
-  fullName: Libplanet.KeyStore.Web3KeyStore.DefaultStore
-  nameWithType: Web3KeyStore.DefaultStore
+  fullName: Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore
+  nameWithType: Web3KeyStore.DefaultKeyStore
 - uid: Libplanet.KeyStore.Web3KeyStore.Get(Guid)
   name: Get(Guid)
   href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_Get_Guid_
