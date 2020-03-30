@@ -749,6 +749,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Address.GetObjectData
   nameWithType: Address.GetObjectData
+- uid: Libplanet.Address.op_Equality(Libplanet.Address,Libplanet.Address)
+  name: Equality(Address, Address)
+  href: api/Libplanet.Address.html#Libplanet_Address_op_Equality_Libplanet_Address_Libplanet_Address_
+  commentId: M:Libplanet.Address.op_Equality(Libplanet.Address,Libplanet.Address)
+  fullName: Libplanet.Address.Equality(Libplanet.Address, Libplanet.Address)
+  nameWithType: Address.Equality(Address, Address)
+- uid: Libplanet.Address.op_Equality*
+  name: Equality
+  href: api/Libplanet.Address.html#Libplanet_Address_op_Equality_
+  commentId: Overload:Libplanet.Address.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Address.Equality
+  nameWithType: Address.Equality
+- uid: Libplanet.Address.op_Inequality(Libplanet.Address,Libplanet.Address)
+  name: Inequality(Address, Address)
+  href: api/Libplanet.Address.html#Libplanet_Address_op_Inequality_Libplanet_Address_Libplanet_Address_
+  commentId: M:Libplanet.Address.op_Inequality(Libplanet.Address,Libplanet.Address)
+  fullName: Libplanet.Address.Inequality(Libplanet.Address, Libplanet.Address)
+  nameWithType: Address.Inequality(Address, Address)
+- uid: Libplanet.Address.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Address.html#Libplanet_Address_op_Inequality_
+  commentId: Overload:Libplanet.Address.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Address.Inequality
+  nameWithType: Address.Inequality
 - uid: Libplanet.Address.Size
   name: Size
   href: api/Libplanet.Address.html#Libplanet_Address_Size
@@ -800,6 +826,12 @@ references:
   commentId: T:Libplanet.AddressExtensions
   fullName: Libplanet.AddressExtensions
   nameWithType: AddressExtensions
+- uid: Libplanet.AddressExtensions.ToAddress(Libplanet.Crypto.PrivateKey)
+  name: ToAddress(PrivateKey)
+  href: api/Libplanet.AddressExtensions.html#Libplanet_AddressExtensions_ToAddress_Libplanet_Crypto_PrivateKey_
+  commentId: M:Libplanet.AddressExtensions.ToAddress(Libplanet.Crypto.PrivateKey)
+  fullName: Libplanet.AddressExtensions.ToAddress(Libplanet.Crypto.PrivateKey)
+  nameWithType: AddressExtensions.ToAddress(PrivateKey)
 - uid: Libplanet.AddressExtensions.ToAddress(Libplanet.Crypto.PublicKey)
   name: ToAddress(PublicKey)
   href: api/Libplanet.AddressExtensions.html#Libplanet_AddressExtensions_ToAddress_Libplanet_Crypto_PublicKey_
@@ -1142,24 +1174,24 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Policy
   nameWithType: BlockChain<T>.Policy
   nameWithType.vb: BlockChain(Of T).Policy
-- uid: Libplanet.Blockchain.BlockChain`1.StageTransactions(IImmutableSet{Libplanet.Tx.Transaction{`0}})
-  name: StageTransactions(IImmutableSet<Transaction<T>>)
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_StageTransactions_IImmutableSet_Libplanet_Tx_Transaction__0___
-  commentId: M:Libplanet.Blockchain.BlockChain`1.StageTransactions(IImmutableSet{Libplanet.Tx.Transaction{`0}})
-  name.vb: StageTransactions(IImmutableSet(Of Transaction(Of T)))
-  fullName: Libplanet.Blockchain.BlockChain<T>.StageTransactions(IImmutableSet<Libplanet.Tx.Transaction<T>>)
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).StageTransactions(IImmutableSet(Of Libplanet.Tx.Transaction(Of T)))
-  nameWithType: BlockChain<T>.StageTransactions(IImmutableSet<Transaction<T>>)
-  nameWithType.vb: BlockChain(Of T).StageTransactions(IImmutableSet(Of Transaction(Of T)))
-- uid: Libplanet.Blockchain.BlockChain`1.StageTransactions*
-  name: StageTransactions
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_StageTransactions_
-  commentId: Overload:Libplanet.Blockchain.BlockChain`1.StageTransactions
+- uid: Libplanet.Blockchain.BlockChain`1.StageTransaction(Libplanet.Tx.Transaction{`0})
+  name: StageTransaction(Transaction<T>)
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_StageTransaction_Libplanet_Tx_Transaction__0__
+  commentId: M:Libplanet.Blockchain.BlockChain`1.StageTransaction(Libplanet.Tx.Transaction{`0})
+  name.vb: StageTransaction(Transaction(Of T))
+  fullName: Libplanet.Blockchain.BlockChain<T>.StageTransaction(Libplanet.Tx.Transaction<T>)
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).StageTransaction(Libplanet.Tx.Transaction(Of T))
+  nameWithType: BlockChain<T>.StageTransaction(Transaction<T>)
+  nameWithType.vb: BlockChain(Of T).StageTransaction(Transaction(Of T))
+- uid: Libplanet.Blockchain.BlockChain`1.StageTransaction*
+  name: StageTransaction
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_StageTransaction_
+  commentId: Overload:Libplanet.Blockchain.BlockChain`1.StageTransaction
   isSpec: "True"
-  fullName: Libplanet.Blockchain.BlockChain<T>.StageTransactions
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).StageTransactions
-  nameWithType: BlockChain<T>.StageTransactions
-  nameWithType.vb: BlockChain(Of T).StageTransactions
+  fullName: Libplanet.Blockchain.BlockChain<T>.StageTransaction
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).StageTransaction
+  nameWithType: BlockChain<T>.StageTransaction
+  nameWithType.vb: BlockChain(Of T).StageTransaction
 - uid: Libplanet.Blockchain.BlockChain`1.Tip
   name: Tip
   href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Tip
@@ -1262,24 +1294,24 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T).TipChangedEventArgs.PreviousIndex
   nameWithType: BlockChain<T>.TipChangedEventArgs.PreviousIndex
   nameWithType.vb: BlockChain(Of T).TipChangedEventArgs.PreviousIndex
-- uid: Libplanet.Blockchain.BlockChain`1.UnstageTransactions(ISet{Libplanet.Tx.Transaction{`0}})
-  name: UnstageTransactions(ISet<Transaction<T>>)
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_UnstageTransactions_ISet_Libplanet_Tx_Transaction__0___
-  commentId: M:Libplanet.Blockchain.BlockChain`1.UnstageTransactions(ISet{Libplanet.Tx.Transaction{`0}})
-  name.vb: UnstageTransactions(ISet(Of Transaction(Of T)))
-  fullName: Libplanet.Blockchain.BlockChain<T>.UnstageTransactions(ISet<Libplanet.Tx.Transaction<T>>)
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).UnstageTransactions(ISet(Of Libplanet.Tx.Transaction(Of T)))
-  nameWithType: BlockChain<T>.UnstageTransactions(ISet<Transaction<T>>)
-  nameWithType.vb: BlockChain(Of T).UnstageTransactions(ISet(Of Transaction(Of T)))
-- uid: Libplanet.Blockchain.BlockChain`1.UnstageTransactions*
-  name: UnstageTransactions
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_UnstageTransactions_
-  commentId: Overload:Libplanet.Blockchain.BlockChain`1.UnstageTransactions
+- uid: Libplanet.Blockchain.BlockChain`1.UnstageTransaction(Libplanet.Tx.Transaction{`0})
+  name: UnstageTransaction(Transaction<T>)
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_UnstageTransaction_Libplanet_Tx_Transaction__0__
+  commentId: M:Libplanet.Blockchain.BlockChain`1.UnstageTransaction(Libplanet.Tx.Transaction{`0})
+  name.vb: UnstageTransaction(Transaction(Of T))
+  fullName: Libplanet.Blockchain.BlockChain<T>.UnstageTransaction(Libplanet.Tx.Transaction<T>)
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).UnstageTransaction(Libplanet.Tx.Transaction(Of T))
+  nameWithType: BlockChain<T>.UnstageTransaction(Transaction<T>)
+  nameWithType.vb: BlockChain(Of T).UnstageTransaction(Transaction(Of T))
+- uid: Libplanet.Blockchain.BlockChain`1.UnstageTransaction*
+  name: UnstageTransaction
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_UnstageTransaction_
+  commentId: Overload:Libplanet.Blockchain.BlockChain`1.UnstageTransaction
   isSpec: "True"
-  fullName: Libplanet.Blockchain.BlockChain<T>.UnstageTransactions
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).UnstageTransactions
-  nameWithType: BlockChain<T>.UnstageTransactions
-  nameWithType.vb: BlockChain(Of T).UnstageTransactions
+  fullName: Libplanet.Blockchain.BlockChain<T>.UnstageTransaction
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).UnstageTransaction
+  nameWithType: BlockChain<T>.UnstageTransaction
+  nameWithType.vb: BlockChain(Of T).UnstageTransaction
 - uid: Libplanet.Blockchain.IncompleteBlockStatesException
   name: IncompleteBlockStatesException
   href: api/Libplanet.Blockchain.IncompleteBlockStatesException.html
@@ -1374,22 +1406,24 @@ references:
   fullName.vb: Libplanet.Blockchain.Policies.BlockPolicy(Of T)
   nameWithType: BlockPolicy<T>
   nameWithType.vb: BlockPolicy(Of T)
-- uid: Libplanet.Blockchain.Policies.BlockPolicy`1.#ctor(Libplanet.Action.IAction,System.Int32,System.Int64,System.Int32)
-  name: BlockPolicy(IAction, Int32, Int64, Int32)
-  href: api/Libplanet.Blockchain.Policies.BlockPolicy-1.html#Libplanet_Blockchain_Policies_BlockPolicy_1__ctor_Libplanet_Action_IAction_System_Int32_System_Int64_System_Int32_
-  commentId: M:Libplanet.Blockchain.Policies.BlockPolicy`1.#ctor(Libplanet.Action.IAction,System.Int32,System.Int64,System.Int32)
-  fullName: Libplanet.Blockchain.Policies.BlockPolicy<T>.BlockPolicy(Libplanet.Action.IAction, System.Int32, System.Int64, System.Int32)
-  fullName.vb: Libplanet.Blockchain.Policies.BlockPolicy(Of T).BlockPolicy(Libplanet.Action.IAction, System.Int32, System.Int64, System.Int32)
-  nameWithType: BlockPolicy<T>.BlockPolicy(IAction, Int32, Int64, Int32)
-  nameWithType.vb: BlockPolicy(Of T).BlockPolicy(IAction, Int32, Int64, Int32)
-- uid: Libplanet.Blockchain.Policies.BlockPolicy`1.#ctor(Libplanet.Action.IAction,TimeSpan,System.Int64,System.Int32)
-  name: BlockPolicy(IAction, TimeSpan, Int64, Int32)
-  href: api/Libplanet.Blockchain.Policies.BlockPolicy-1.html#Libplanet_Blockchain_Policies_BlockPolicy_1__ctor_Libplanet_Action_IAction_TimeSpan_System_Int64_System_Int32_
-  commentId: M:Libplanet.Blockchain.Policies.BlockPolicy`1.#ctor(Libplanet.Action.IAction,TimeSpan,System.Int64,System.Int32)
-  fullName: Libplanet.Blockchain.Policies.BlockPolicy<T>.BlockPolicy(Libplanet.Action.IAction, TimeSpan, System.Int64, System.Int32)
-  fullName.vb: Libplanet.Blockchain.Policies.BlockPolicy(Of T).BlockPolicy(Libplanet.Action.IAction, TimeSpan, System.Int64, System.Int32)
-  nameWithType: BlockPolicy<T>.BlockPolicy(IAction, TimeSpan, Int64, Int32)
-  nameWithType.vb: BlockPolicy(Of T).BlockPolicy(IAction, TimeSpan, Int64, Int32)
+- uid: Libplanet.Blockchain.Policies.BlockPolicy`1.#ctor(Libplanet.Action.IAction,System.Int32,System.Int64,System.Int32,Predicate{Libplanet.Tx.Transaction{`0}})
+  name: BlockPolicy(IAction, Int32, Int64, Int32, Predicate<Transaction<T>>)
+  href: api/Libplanet.Blockchain.Policies.BlockPolicy-1.html#Libplanet_Blockchain_Policies_BlockPolicy_1__ctor_Libplanet_Action_IAction_System_Int32_System_Int64_System_Int32_Predicate_Libplanet_Tx_Transaction__0___
+  commentId: M:Libplanet.Blockchain.Policies.BlockPolicy`1.#ctor(Libplanet.Action.IAction,System.Int32,System.Int64,System.Int32,Predicate{Libplanet.Tx.Transaction{`0}})
+  name.vb: BlockPolicy(IAction, Int32, Int64, Int32, Predicate(Of Transaction(Of T)))
+  fullName: Libplanet.Blockchain.Policies.BlockPolicy<T>.BlockPolicy(Libplanet.Action.IAction, System.Int32, System.Int64, System.Int32, Predicate<Libplanet.Tx.Transaction<T>>)
+  fullName.vb: Libplanet.Blockchain.Policies.BlockPolicy(Of T).BlockPolicy(Libplanet.Action.IAction, System.Int32, System.Int64, System.Int32, Predicate(Of Libplanet.Tx.Transaction(Of T)))
+  nameWithType: BlockPolicy<T>.BlockPolicy(IAction, Int32, Int64, Int32, Predicate<Transaction<T>>)
+  nameWithType.vb: BlockPolicy(Of T).BlockPolicy(IAction, Int32, Int64, Int32, Predicate(Of Transaction(Of T)))
+- uid: Libplanet.Blockchain.Policies.BlockPolicy`1.#ctor(Libplanet.Action.IAction,TimeSpan,System.Int64,System.Int32,Predicate{Libplanet.Tx.Transaction{`0}})
+  name: BlockPolicy(IAction, TimeSpan, Int64, Int32, Predicate<Transaction<T>>)
+  href: api/Libplanet.Blockchain.Policies.BlockPolicy-1.html#Libplanet_Blockchain_Policies_BlockPolicy_1__ctor_Libplanet_Action_IAction_TimeSpan_System_Int64_System_Int32_Predicate_Libplanet_Tx_Transaction__0___
+  commentId: M:Libplanet.Blockchain.Policies.BlockPolicy`1.#ctor(Libplanet.Action.IAction,TimeSpan,System.Int64,System.Int32,Predicate{Libplanet.Tx.Transaction{`0}})
+  name.vb: BlockPolicy(IAction, TimeSpan, Int64, Int32, Predicate(Of Transaction(Of T)))
+  fullName: Libplanet.Blockchain.Policies.BlockPolicy<T>.BlockPolicy(Libplanet.Action.IAction, TimeSpan, System.Int64, System.Int32, Predicate<Libplanet.Tx.Transaction<T>>)
+  fullName.vb: Libplanet.Blockchain.Policies.BlockPolicy(Of T).BlockPolicy(Libplanet.Action.IAction, TimeSpan, System.Int64, System.Int32, Predicate(Of Libplanet.Tx.Transaction(Of T)))
+  nameWithType: BlockPolicy<T>.BlockPolicy(IAction, TimeSpan, Int64, Int32, Predicate<Transaction<T>>)
+  nameWithType.vb: BlockPolicy(Of T).BlockPolicy(IAction, TimeSpan, Int64, Int32, Predicate(Of Transaction(Of T)))
 - uid: Libplanet.Blockchain.Policies.BlockPolicy`1.#ctor*
   name: BlockPolicy
   href: api/Libplanet.Blockchain.Policies.BlockPolicy-1.html#Libplanet_Blockchain_Policies_BlockPolicy_1__ctor_
@@ -1433,6 +1467,24 @@ references:
   fullName.vb: Libplanet.Blockchain.Policies.BlockPolicy(Of T).BlockInterval
   nameWithType: BlockPolicy<T>.BlockInterval
   nameWithType.vb: BlockPolicy(Of T).BlockInterval
+- uid: Libplanet.Blockchain.Policies.BlockPolicy`1.DoesTransactionFollowsPolicy(Libplanet.Tx.Transaction{`0})
+  name: DoesTransactionFollowsPolicy(Transaction<T>)
+  href: api/Libplanet.Blockchain.Policies.BlockPolicy-1.html#Libplanet_Blockchain_Policies_BlockPolicy_1_DoesTransactionFollowsPolicy_Libplanet_Tx_Transaction__0__
+  commentId: M:Libplanet.Blockchain.Policies.BlockPolicy`1.DoesTransactionFollowsPolicy(Libplanet.Tx.Transaction{`0})
+  name.vb: DoesTransactionFollowsPolicy(Transaction(Of T))
+  fullName: Libplanet.Blockchain.Policies.BlockPolicy<T>.DoesTransactionFollowsPolicy(Libplanet.Tx.Transaction<T>)
+  fullName.vb: Libplanet.Blockchain.Policies.BlockPolicy(Of T).DoesTransactionFollowsPolicy(Libplanet.Tx.Transaction(Of T))
+  nameWithType: BlockPolicy<T>.DoesTransactionFollowsPolicy(Transaction<T>)
+  nameWithType.vb: BlockPolicy(Of T).DoesTransactionFollowsPolicy(Transaction(Of T))
+- uid: Libplanet.Blockchain.Policies.BlockPolicy`1.DoesTransactionFollowsPolicy*
+  name: DoesTransactionFollowsPolicy
+  href: api/Libplanet.Blockchain.Policies.BlockPolicy-1.html#Libplanet_Blockchain_Policies_BlockPolicy_1_DoesTransactionFollowsPolicy_
+  commentId: Overload:Libplanet.Blockchain.Policies.BlockPolicy`1.DoesTransactionFollowsPolicy
+  isSpec: "True"
+  fullName: Libplanet.Blockchain.Policies.BlockPolicy<T>.DoesTransactionFollowsPolicy
+  fullName.vb: Libplanet.Blockchain.Policies.BlockPolicy(Of T).DoesTransactionFollowsPolicy
+  nameWithType: BlockPolicy<T>.DoesTransactionFollowsPolicy
+  nameWithType.vb: BlockPolicy(Of T).DoesTransactionFollowsPolicy
 - uid: Libplanet.Blockchain.Policies.BlockPolicy`1.GetNextBlockDifficulty(Libplanet.Blockchain.BlockChain{`0})
   name: GetNextBlockDifficulty(BlockChain<T>)
   href: api/Libplanet.Blockchain.Policies.BlockPolicy-1.html#Libplanet_Blockchain_Policies_BlockPolicy_1_GetNextBlockDifficulty_Libplanet_Blockchain_BlockChain__0__
@@ -1495,6 +1547,24 @@ references:
   fullName.vb: Libplanet.Blockchain.Policies.IBlockPolicy(Of T).BlockAction
   nameWithType: IBlockPolicy<T>.BlockAction
   nameWithType.vb: IBlockPolicy(Of T).BlockAction
+- uid: Libplanet.Blockchain.Policies.IBlockPolicy`1.DoesTransactionFollowsPolicy(Libplanet.Tx.Transaction{`0})
+  name: DoesTransactionFollowsPolicy(Transaction<T>)
+  href: api/Libplanet.Blockchain.Policies.IBlockPolicy-1.html#Libplanet_Blockchain_Policies_IBlockPolicy_1_DoesTransactionFollowsPolicy_Libplanet_Tx_Transaction__0__
+  commentId: M:Libplanet.Blockchain.Policies.IBlockPolicy`1.DoesTransactionFollowsPolicy(Libplanet.Tx.Transaction{`0})
+  name.vb: DoesTransactionFollowsPolicy(Transaction(Of T))
+  fullName: Libplanet.Blockchain.Policies.IBlockPolicy<T>.DoesTransactionFollowsPolicy(Libplanet.Tx.Transaction<T>)
+  fullName.vb: Libplanet.Blockchain.Policies.IBlockPolicy(Of T).DoesTransactionFollowsPolicy(Libplanet.Tx.Transaction(Of T))
+  nameWithType: IBlockPolicy<T>.DoesTransactionFollowsPolicy(Transaction<T>)
+  nameWithType.vb: IBlockPolicy(Of T).DoesTransactionFollowsPolicy(Transaction(Of T))
+- uid: Libplanet.Blockchain.Policies.IBlockPolicy`1.DoesTransactionFollowsPolicy*
+  name: DoesTransactionFollowsPolicy
+  href: api/Libplanet.Blockchain.Policies.IBlockPolicy-1.html#Libplanet_Blockchain_Policies_IBlockPolicy_1_DoesTransactionFollowsPolicy_
+  commentId: Overload:Libplanet.Blockchain.Policies.IBlockPolicy`1.DoesTransactionFollowsPolicy
+  isSpec: "True"
+  fullName: Libplanet.Blockchain.Policies.IBlockPolicy<T>.DoesTransactionFollowsPolicy
+  fullName.vb: Libplanet.Blockchain.Policies.IBlockPolicy(Of T).DoesTransactionFollowsPolicy
+  nameWithType: IBlockPolicy<T>.DoesTransactionFollowsPolicy
+  nameWithType.vb: IBlockPolicy(Of T).DoesTransactionFollowsPolicy
 - uid: Libplanet.Blockchain.Policies.IBlockPolicy`1.GetNextBlockDifficulty(Libplanet.Blockchain.BlockChain{`0})
   name: GetNextBlockDifficulty(BlockChain<T>)
   href: api/Libplanet.Blockchain.Policies.IBlockPolicy-1.html#Libplanet_Blockchain_Policies_IBlockPolicy_1_GetNextBlockDifficulty_Libplanet_Blockchain_BlockChain__0__
@@ -1727,6 +1797,42 @@ references:
   fullName.vb: Libplanet.Blocks.Block(Of T).Nonce
   nameWithType: Block<T>.Nonce
   nameWithType.vb: Block(Of T).Nonce
+- uid: Libplanet.Blocks.Block`1.op_Equality(Libplanet.Blocks.Block{`0},Libplanet.Blocks.Block{`0})
+  name: Equality(Block<T>, Block<T>)
+  href: api/Libplanet.Blocks.Block-1.html#Libplanet_Blocks_Block_1_op_Equality_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__
+  commentId: M:Libplanet.Blocks.Block`1.op_Equality(Libplanet.Blocks.Block{`0},Libplanet.Blocks.Block{`0})
+  name.vb: Equality(Block(Of T), Block(Of T))
+  fullName: Libplanet.Blocks.Block<T>.Equality(Libplanet.Blocks.Block<T>, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Blocks.Block(Of T).Equality(Libplanet.Blocks.Block(Of T), Libplanet.Blocks.Block(Of T))
+  nameWithType: Block<T>.Equality(Block<T>, Block<T>)
+  nameWithType.vb: Block(Of T).Equality(Block(Of T), Block(Of T))
+- uid: Libplanet.Blocks.Block`1.op_Equality*
+  name: Equality
+  href: api/Libplanet.Blocks.Block-1.html#Libplanet_Blocks_Block_1_op_Equality_
+  commentId: Overload:Libplanet.Blocks.Block`1.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Blocks.Block<T>.Equality
+  fullName.vb: Libplanet.Blocks.Block(Of T).Equality
+  nameWithType: Block<T>.Equality
+  nameWithType.vb: Block(Of T).Equality
+- uid: Libplanet.Blocks.Block`1.op_Inequality(Libplanet.Blocks.Block{`0},Libplanet.Blocks.Block{`0})
+  name: Inequality(Block<T>, Block<T>)
+  href: api/Libplanet.Blocks.Block-1.html#Libplanet_Blocks_Block_1_op_Inequality_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__
+  commentId: M:Libplanet.Blocks.Block`1.op_Inequality(Libplanet.Blocks.Block{`0},Libplanet.Blocks.Block{`0})
+  name.vb: Inequality(Block(Of T), Block(Of T))
+  fullName: Libplanet.Blocks.Block<T>.Inequality(Libplanet.Blocks.Block<T>, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Blocks.Block(Of T).Inequality(Libplanet.Blocks.Block(Of T), Libplanet.Blocks.Block(Of T))
+  nameWithType: Block<T>.Inequality(Block<T>, Block<T>)
+  nameWithType.vb: Block(Of T).Inequality(Block(Of T), Block(Of T))
+- uid: Libplanet.Blocks.Block`1.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Blocks.Block-1.html#Libplanet_Blocks_Block_1_op_Inequality_
+  commentId: Overload:Libplanet.Blocks.Block`1.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Blocks.Block<T>.Inequality
+  fullName.vb: Libplanet.Blocks.Block(Of T).Inequality
+  nameWithType: Block<T>.Inequality
+  nameWithType.vb: Block(Of T).Inequality
 - uid: Libplanet.Blocks.Block`1.PreviousHash
   name: PreviousHash
   href: api/Libplanet.Blocks.Block-1.html#Libplanet_Blocks_Block_1_PreviousHash
@@ -2572,6 +2678,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Crypto.PrivateKey.ExchangeKey
   nameWithType: PrivateKey.ExchangeKey
+- uid: Libplanet.Crypto.PrivateKey.op_Equality(Libplanet.Crypto.PrivateKey,Libplanet.Crypto.PrivateKey)
+  name: Equality(PrivateKey, PrivateKey)
+  href: api/Libplanet.Crypto.PrivateKey.html#Libplanet_Crypto_PrivateKey_op_Equality_Libplanet_Crypto_PrivateKey_Libplanet_Crypto_PrivateKey_
+  commentId: M:Libplanet.Crypto.PrivateKey.op_Equality(Libplanet.Crypto.PrivateKey,Libplanet.Crypto.PrivateKey)
+  fullName: Libplanet.Crypto.PrivateKey.Equality(Libplanet.Crypto.PrivateKey, Libplanet.Crypto.PrivateKey)
+  nameWithType: PrivateKey.Equality(PrivateKey, PrivateKey)
+- uid: Libplanet.Crypto.PrivateKey.op_Equality*
+  name: Equality
+  href: api/Libplanet.Crypto.PrivateKey.html#Libplanet_Crypto_PrivateKey_op_Equality_
+  commentId: Overload:Libplanet.Crypto.PrivateKey.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Crypto.PrivateKey.Equality
+  nameWithType: PrivateKey.Equality
+- uid: Libplanet.Crypto.PrivateKey.op_Inequality(Libplanet.Crypto.PrivateKey,Libplanet.Crypto.PrivateKey)
+  name: Inequality(PrivateKey, PrivateKey)
+  href: api/Libplanet.Crypto.PrivateKey.html#Libplanet_Crypto_PrivateKey_op_Inequality_Libplanet_Crypto_PrivateKey_Libplanet_Crypto_PrivateKey_
+  commentId: M:Libplanet.Crypto.PrivateKey.op_Inequality(Libplanet.Crypto.PrivateKey,Libplanet.Crypto.PrivateKey)
+  fullName: Libplanet.Crypto.PrivateKey.Inequality(Libplanet.Crypto.PrivateKey, Libplanet.Crypto.PrivateKey)
+  nameWithType: PrivateKey.Inequality(PrivateKey, PrivateKey)
+- uid: Libplanet.Crypto.PrivateKey.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Crypto.PrivateKey.html#Libplanet_Crypto_PrivateKey_op_Inequality_
+  commentId: Overload:Libplanet.Crypto.PrivateKey.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Crypto.PrivateKey.Inequality
+  nameWithType: PrivateKey.Inequality
 - uid: Libplanet.Crypto.PrivateKey.PublicKey
   name: PublicKey
   href: api/Libplanet.Crypto.PrivateKey.html#Libplanet_Crypto_PrivateKey_PublicKey
@@ -2652,6 +2784,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Crypto.PublicKey.Format
   nameWithType: PublicKey.Format
+- uid: Libplanet.Crypto.PublicKey.op_Equality(Libplanet.Crypto.PublicKey,Libplanet.Crypto.PublicKey)
+  name: Equality(PublicKey, PublicKey)
+  href: api/Libplanet.Crypto.PublicKey.html#Libplanet_Crypto_PublicKey_op_Equality_Libplanet_Crypto_PublicKey_Libplanet_Crypto_PublicKey_
+  commentId: M:Libplanet.Crypto.PublicKey.op_Equality(Libplanet.Crypto.PublicKey,Libplanet.Crypto.PublicKey)
+  fullName: Libplanet.Crypto.PublicKey.Equality(Libplanet.Crypto.PublicKey, Libplanet.Crypto.PublicKey)
+  nameWithType: PublicKey.Equality(PublicKey, PublicKey)
+- uid: Libplanet.Crypto.PublicKey.op_Equality*
+  name: Equality
+  href: api/Libplanet.Crypto.PublicKey.html#Libplanet_Crypto_PublicKey_op_Equality_
+  commentId: Overload:Libplanet.Crypto.PublicKey.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Crypto.PublicKey.Equality
+  nameWithType: PublicKey.Equality
+- uid: Libplanet.Crypto.PublicKey.op_Inequality(Libplanet.Crypto.PublicKey,Libplanet.Crypto.PublicKey)
+  name: Inequality(PublicKey, PublicKey)
+  href: api/Libplanet.Crypto.PublicKey.html#Libplanet_Crypto_PublicKey_op_Inequality_Libplanet_Crypto_PublicKey_Libplanet_Crypto_PublicKey_
+  commentId: M:Libplanet.Crypto.PublicKey.op_Inequality(Libplanet.Crypto.PublicKey,Libplanet.Crypto.PublicKey)
+  fullName: Libplanet.Crypto.PublicKey.Inequality(Libplanet.Crypto.PublicKey, Libplanet.Crypto.PublicKey)
+  nameWithType: PublicKey.Inequality(PublicKey, PublicKey)
+- uid: Libplanet.Crypto.PublicKey.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Crypto.PublicKey.html#Libplanet_Crypto_PublicKey_op_Inequality_
+  commentId: Overload:Libplanet.Crypto.PublicKey.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Crypto.PublicKey.Inequality
+  nameWithType: PublicKey.Inequality
 - uid: Libplanet.Crypto.PublicKey.Verify(System.Byte[],System.Byte[])
   name: Verify(Byte[], Byte[])
   href: api/Libplanet.Crypto.PublicKey.html#Libplanet_Crypto_PublicKey_Verify_System_Byte___System_Byte___
@@ -2735,6 +2893,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Crypto.SymmetricKey.Encrypt
   nameWithType: SymmetricKey.Encrypt
+- uid: Libplanet.Crypto.SymmetricKey.op_Equality(Libplanet.Crypto.SymmetricKey,Libplanet.Crypto.SymmetricKey)
+  name: Equality(SymmetricKey, SymmetricKey)
+  href: api/Libplanet.Crypto.SymmetricKey.html#Libplanet_Crypto_SymmetricKey_op_Equality_Libplanet_Crypto_SymmetricKey_Libplanet_Crypto_SymmetricKey_
+  commentId: M:Libplanet.Crypto.SymmetricKey.op_Equality(Libplanet.Crypto.SymmetricKey,Libplanet.Crypto.SymmetricKey)
+  fullName: Libplanet.Crypto.SymmetricKey.Equality(Libplanet.Crypto.SymmetricKey, Libplanet.Crypto.SymmetricKey)
+  nameWithType: SymmetricKey.Equality(SymmetricKey, SymmetricKey)
+- uid: Libplanet.Crypto.SymmetricKey.op_Equality*
+  name: Equality
+  href: api/Libplanet.Crypto.SymmetricKey.html#Libplanet_Crypto_SymmetricKey_op_Equality_
+  commentId: Overload:Libplanet.Crypto.SymmetricKey.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Crypto.SymmetricKey.Equality
+  nameWithType: SymmetricKey.Equality
+- uid: Libplanet.Crypto.SymmetricKey.op_Inequality(Libplanet.Crypto.SymmetricKey,Libplanet.Crypto.SymmetricKey)
+  name: Inequality(SymmetricKey, SymmetricKey)
+  href: api/Libplanet.Crypto.SymmetricKey.html#Libplanet_Crypto_SymmetricKey_op_Inequality_Libplanet_Crypto_SymmetricKey_Libplanet_Crypto_SymmetricKey_
+  commentId: M:Libplanet.Crypto.SymmetricKey.op_Inequality(Libplanet.Crypto.SymmetricKey,Libplanet.Crypto.SymmetricKey)
+  fullName: Libplanet.Crypto.SymmetricKey.Inequality(Libplanet.Crypto.SymmetricKey, Libplanet.Crypto.SymmetricKey)
+  nameWithType: SymmetricKey.Inequality(SymmetricKey, SymmetricKey)
+- uid: Libplanet.Crypto.SymmetricKey.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Crypto.SymmetricKey.html#Libplanet_Crypto_SymmetricKey_op_Inequality_
+  commentId: Overload:Libplanet.Crypto.SymmetricKey.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Crypto.SymmetricKey.Inequality
+  nameWithType: SymmetricKey.Inequality
 - uid: Libplanet.Crypto.SymmetricKey.ToByteArray
   name: ToByteArray()
   href: api/Libplanet.Crypto.SymmetricKey.html#Libplanet_Crypto_SymmetricKey_ToByteArray
@@ -3117,6 +3301,77 @@ references:
   isSpec: "True"
   fullName: Libplanet.KeyStore.Ciphers.ICipher.WriteJson
   nameWithType: ICipher.WriteJson
+- uid: Libplanet.KeyStore.IKeyStore
+  name: IKeyStore
+  href: api/Libplanet.KeyStore.IKeyStore.html
+  commentId: T:Libplanet.KeyStore.IKeyStore
+  fullName: Libplanet.KeyStore.IKeyStore
+  nameWithType: IKeyStore
+- uid: Libplanet.KeyStore.IKeyStore.Add(Libplanet.KeyStore.ProtectedPrivateKey)
+  name: Add(ProtectedPrivateKey)
+  href: api/Libplanet.KeyStore.IKeyStore.html#Libplanet_KeyStore_IKeyStore_Add_Libplanet_KeyStore_ProtectedPrivateKey_
+  commentId: M:Libplanet.KeyStore.IKeyStore.Add(Libplanet.KeyStore.ProtectedPrivateKey)
+  fullName: Libplanet.KeyStore.IKeyStore.Add(Libplanet.KeyStore.ProtectedPrivateKey)
+  nameWithType: IKeyStore.Add(ProtectedPrivateKey)
+- uid: Libplanet.KeyStore.IKeyStore.Add*
+  name: Add
+  href: api/Libplanet.KeyStore.IKeyStore.html#Libplanet_KeyStore_IKeyStore_Add_
+  commentId: Overload:Libplanet.KeyStore.IKeyStore.Add
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.IKeyStore.Add
+  nameWithType: IKeyStore.Add
+- uid: Libplanet.KeyStore.IKeyStore.Get(Guid)
+  name: Get(Guid)
+  href: api/Libplanet.KeyStore.IKeyStore.html#Libplanet_KeyStore_IKeyStore_Get_Guid_
+  commentId: M:Libplanet.KeyStore.IKeyStore.Get(Guid)
+  fullName: Libplanet.KeyStore.IKeyStore.Get(Guid)
+  nameWithType: IKeyStore.Get(Guid)
+- uid: Libplanet.KeyStore.IKeyStore.Get*
+  name: Get
+  href: api/Libplanet.KeyStore.IKeyStore.html#Libplanet_KeyStore_IKeyStore_Get_
+  commentId: Overload:Libplanet.KeyStore.IKeyStore.Get
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.IKeyStore.Get
+  nameWithType: IKeyStore.Get
+- uid: Libplanet.KeyStore.IKeyStore.List
+  name: List()
+  href: api/Libplanet.KeyStore.IKeyStore.html#Libplanet_KeyStore_IKeyStore_List
+  commentId: M:Libplanet.KeyStore.IKeyStore.List
+  fullName: Libplanet.KeyStore.IKeyStore.List()
+  nameWithType: IKeyStore.List()
+- uid: Libplanet.KeyStore.IKeyStore.List*
+  name: List
+  href: api/Libplanet.KeyStore.IKeyStore.html#Libplanet_KeyStore_IKeyStore_List_
+  commentId: Overload:Libplanet.KeyStore.IKeyStore.List
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.IKeyStore.List
+  nameWithType: IKeyStore.List
+- uid: Libplanet.KeyStore.IKeyStore.ListIds
+  name: ListIds()
+  href: api/Libplanet.KeyStore.IKeyStore.html#Libplanet_KeyStore_IKeyStore_ListIds
+  commentId: M:Libplanet.KeyStore.IKeyStore.ListIds
+  fullName: Libplanet.KeyStore.IKeyStore.ListIds()
+  nameWithType: IKeyStore.ListIds()
+- uid: Libplanet.KeyStore.IKeyStore.ListIds*
+  name: ListIds
+  href: api/Libplanet.KeyStore.IKeyStore.html#Libplanet_KeyStore_IKeyStore_ListIds_
+  commentId: Overload:Libplanet.KeyStore.IKeyStore.ListIds
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.IKeyStore.ListIds
+  nameWithType: IKeyStore.ListIds
+- uid: Libplanet.KeyStore.IKeyStore.Remove(Guid)
+  name: Remove(Guid)
+  href: api/Libplanet.KeyStore.IKeyStore.html#Libplanet_KeyStore_IKeyStore_Remove_Guid_
+  commentId: M:Libplanet.KeyStore.IKeyStore.Remove(Guid)
+  fullName: Libplanet.KeyStore.IKeyStore.Remove(Guid)
+  nameWithType: IKeyStore.Remove(Guid)
+- uid: Libplanet.KeyStore.IKeyStore.Remove*
+  name: Remove
+  href: api/Libplanet.KeyStore.IKeyStore.html#Libplanet_KeyStore_IKeyStore_Remove_
+  commentId: Overload:Libplanet.KeyStore.IKeyStore.Remove
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.IKeyStore.Remove
+  nameWithType: IKeyStore.Remove
 - uid: Libplanet.KeyStore.IncorrectPassphraseException
   name: IncorrectPassphraseException
   href: api/Libplanet.KeyStore.IncorrectPassphraseException.html
@@ -3484,6 +3739,25 @@ references:
   isSpec: "True"
   fullName: Libplanet.KeyStore.KeyJsonException.KeyJsonException
   nameWithType: KeyJsonException.KeyJsonException
+- uid: Libplanet.KeyStore.KeyStoreException
+  name: KeyStoreException
+  href: api/Libplanet.KeyStore.KeyStoreException.html
+  commentId: T:Libplanet.KeyStore.KeyStoreException
+  fullName: Libplanet.KeyStore.KeyStoreException
+  nameWithType: KeyStoreException
+- uid: Libplanet.KeyStore.KeyStoreException.#ctor(System.String)
+  name: KeyStoreException(String)
+  href: api/Libplanet.KeyStore.KeyStoreException.html#Libplanet_KeyStore_KeyStoreException__ctor_System_String_
+  commentId: M:Libplanet.KeyStore.KeyStoreException.#ctor(System.String)
+  fullName: Libplanet.KeyStore.KeyStoreException.KeyStoreException(System.String)
+  nameWithType: KeyStoreException.KeyStoreException(String)
+- uid: Libplanet.KeyStore.KeyStoreException.#ctor*
+  name: KeyStoreException
+  href: api/Libplanet.KeyStore.KeyStoreException.html#Libplanet_KeyStore_KeyStoreException__ctor_
+  commentId: Overload:Libplanet.KeyStore.KeyStoreException.#ctor
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.KeyStoreException.KeyStoreException
+  nameWithType: KeyStoreException.KeyStoreException
 - uid: Libplanet.KeyStore.MismatchedAddressException
   name: MismatchedAddressException
   href: api/Libplanet.KeyStore.MismatchedAddressException.html
@@ -3532,6 +3806,38 @@ references:
   isSpec: "True"
   fullName: Libplanet.KeyStore.MismatchedAddressException.ExpectedAddress
   nameWithType: MismatchedAddressException.ExpectedAddress
+- uid: Libplanet.KeyStore.NoKeyException
+  name: NoKeyException
+  href: api/Libplanet.KeyStore.NoKeyException.html
+  commentId: T:Libplanet.KeyStore.NoKeyException
+  fullName: Libplanet.KeyStore.NoKeyException
+  nameWithType: NoKeyException
+- uid: Libplanet.KeyStore.NoKeyException.#ctor(Guid,System.String)
+  name: NoKeyException(Guid, String)
+  href: api/Libplanet.KeyStore.NoKeyException.html#Libplanet_KeyStore_NoKeyException__ctor_Guid_System_String_
+  commentId: M:Libplanet.KeyStore.NoKeyException.#ctor(Guid,System.String)
+  fullName: Libplanet.KeyStore.NoKeyException.NoKeyException(Guid, System.String)
+  nameWithType: NoKeyException.NoKeyException(Guid, String)
+- uid: Libplanet.KeyStore.NoKeyException.#ctor*
+  name: NoKeyException
+  href: api/Libplanet.KeyStore.NoKeyException.html#Libplanet_KeyStore_NoKeyException__ctor_
+  commentId: Overload:Libplanet.KeyStore.NoKeyException.#ctor
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.NoKeyException.NoKeyException
+  nameWithType: NoKeyException.NoKeyException
+- uid: Libplanet.KeyStore.NoKeyException.KeyId
+  name: KeyId
+  href: api/Libplanet.KeyStore.NoKeyException.html#Libplanet_KeyStore_NoKeyException_KeyId
+  commentId: P:Libplanet.KeyStore.NoKeyException.KeyId
+  fullName: Libplanet.KeyStore.NoKeyException.KeyId
+  nameWithType: NoKeyException.KeyId
+- uid: Libplanet.KeyStore.NoKeyException.KeyId*
+  name: KeyId
+  href: api/Libplanet.KeyStore.NoKeyException.html#Libplanet_KeyStore_NoKeyException_KeyId_
+  commentId: Overload:Libplanet.KeyStore.NoKeyException.KeyId
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.NoKeyException.KeyId
+  nameWithType: NoKeyException.KeyId
 - uid: Libplanet.KeyStore.ProtectedPrivateKey
   name: ProtectedPrivateKey
   href: api/Libplanet.KeyStore.ProtectedPrivateKey.html
@@ -3711,6 +4017,116 @@ references:
   isSpec: "True"
   fullName: Libplanet.KeyStore.UnsupportedKeyJsonException.UnsupportedKeyJsonException
   nameWithType: UnsupportedKeyJsonException.UnsupportedKeyJsonException
+- uid: Libplanet.KeyStore.Web3KeyStore
+  name: Web3KeyStore
+  href: api/Libplanet.KeyStore.Web3KeyStore.html
+  commentId: T:Libplanet.KeyStore.Web3KeyStore
+  fullName: Libplanet.KeyStore.Web3KeyStore
+  nameWithType: Web3KeyStore
+- uid: Libplanet.KeyStore.Web3KeyStore.#ctor(System.String)
+  name: Web3KeyStore(String)
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore__ctor_System_String_
+  commentId: M:Libplanet.KeyStore.Web3KeyStore.#ctor(System.String)
+  fullName: Libplanet.KeyStore.Web3KeyStore.Web3KeyStore(System.String)
+  nameWithType: Web3KeyStore.Web3KeyStore(String)
+- uid: Libplanet.KeyStore.Web3KeyStore.#ctor*
+  name: Web3KeyStore
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore__ctor_
+  commentId: Overload:Libplanet.KeyStore.Web3KeyStore.#ctor
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Web3KeyStore.Web3KeyStore
+  nameWithType: Web3KeyStore.Web3KeyStore
+- uid: Libplanet.KeyStore.Web3KeyStore.Add(Libplanet.KeyStore.ProtectedPrivateKey)
+  name: Add(ProtectedPrivateKey)
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_Add_Libplanet_KeyStore_ProtectedPrivateKey_
+  commentId: M:Libplanet.KeyStore.Web3KeyStore.Add(Libplanet.KeyStore.ProtectedPrivateKey)
+  fullName: Libplanet.KeyStore.Web3KeyStore.Add(Libplanet.KeyStore.ProtectedPrivateKey)
+  nameWithType: Web3KeyStore.Add(ProtectedPrivateKey)
+- uid: Libplanet.KeyStore.Web3KeyStore.Add*
+  name: Add
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_Add_
+  commentId: Overload:Libplanet.KeyStore.Web3KeyStore.Add
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Web3KeyStore.Add
+  nameWithType: Web3KeyStore.Add
+- uid: Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore
+  name: DefaultKeyStore
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_DefaultKeyStore
+  commentId: P:Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore
+  fullName: Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore
+  nameWithType: Web3KeyStore.DefaultKeyStore
+- uid: Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore*
+  name: DefaultKeyStore
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_DefaultKeyStore_
+  commentId: Overload:Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Web3KeyStore.DefaultKeyStore
+  nameWithType: Web3KeyStore.DefaultKeyStore
+- uid: Libplanet.KeyStore.Web3KeyStore.Get(Guid)
+  name: Get(Guid)
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_Get_Guid_
+  commentId: M:Libplanet.KeyStore.Web3KeyStore.Get(Guid)
+  fullName: Libplanet.KeyStore.Web3KeyStore.Get(Guid)
+  nameWithType: Web3KeyStore.Get(Guid)
+- uid: Libplanet.KeyStore.Web3KeyStore.Get*
+  name: Get
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_Get_
+  commentId: Overload:Libplanet.KeyStore.Web3KeyStore.Get
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Web3KeyStore.Get
+  nameWithType: Web3KeyStore.Get
+- uid: Libplanet.KeyStore.Web3KeyStore.List
+  name: List()
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_List
+  commentId: M:Libplanet.KeyStore.Web3KeyStore.List
+  fullName: Libplanet.KeyStore.Web3KeyStore.List()
+  nameWithType: Web3KeyStore.List()
+- uid: Libplanet.KeyStore.Web3KeyStore.List*
+  name: List
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_List_
+  commentId: Overload:Libplanet.KeyStore.Web3KeyStore.List
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Web3KeyStore.List
+  nameWithType: Web3KeyStore.List
+- uid: Libplanet.KeyStore.Web3KeyStore.ListIds
+  name: ListIds()
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_ListIds
+  commentId: M:Libplanet.KeyStore.Web3KeyStore.ListIds
+  fullName: Libplanet.KeyStore.Web3KeyStore.ListIds()
+  nameWithType: Web3KeyStore.ListIds()
+- uid: Libplanet.KeyStore.Web3KeyStore.ListIds*
+  name: ListIds
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_ListIds_
+  commentId: Overload:Libplanet.KeyStore.Web3KeyStore.ListIds
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Web3KeyStore.ListIds
+  nameWithType: Web3KeyStore.ListIds
+- uid: Libplanet.KeyStore.Web3KeyStore.Path
+  name: Path
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_Path
+  commentId: P:Libplanet.KeyStore.Web3KeyStore.Path
+  fullName: Libplanet.KeyStore.Web3KeyStore.Path
+  nameWithType: Web3KeyStore.Path
+- uid: Libplanet.KeyStore.Web3KeyStore.Path*
+  name: Path
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_Path_
+  commentId: Overload:Libplanet.KeyStore.Web3KeyStore.Path
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Web3KeyStore.Path
+  nameWithType: Web3KeyStore.Path
+- uid: Libplanet.KeyStore.Web3KeyStore.Remove(Guid)
+  name: Remove(Guid)
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_Remove_Guid_
+  commentId: M:Libplanet.KeyStore.Web3KeyStore.Remove(Guid)
+  fullName: Libplanet.KeyStore.Web3KeyStore.Remove(Guid)
+  nameWithType: Web3KeyStore.Remove(Guid)
+- uid: Libplanet.KeyStore.Web3KeyStore.Remove*
+  name: Remove
+  href: api/Libplanet.KeyStore.Web3KeyStore.html#Libplanet_KeyStore_Web3KeyStore_Remove_
+  commentId: Overload:Libplanet.KeyStore.Web3KeyStore.Remove
+  isSpec: "True"
+  fullName: Libplanet.KeyStore.Web3KeyStore.Remove
+  nameWithType: Web3KeyStore.Remove
 - uid: Libplanet.Net
   name: Libplanet.Net
   href: api/Libplanet.Net.html
@@ -3762,6 +4178,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.ActionExecutionState.ExecutedBlockHash
   nameWithType: ActionExecutionState.ExecutedBlockHash
+- uid: Libplanet.Net.ActionExecutionState.op_Equality(Libplanet.Net.ActionExecutionState,Libplanet.Net.ActionExecutionState)
+  name: Equality(ActionExecutionState, ActionExecutionState)
+  href: api/Libplanet.Net.ActionExecutionState.html#Libplanet_Net_ActionExecutionState_op_Equality_Libplanet_Net_ActionExecutionState_Libplanet_Net_ActionExecutionState_
+  commentId: M:Libplanet.Net.ActionExecutionState.op_Equality(Libplanet.Net.ActionExecutionState,Libplanet.Net.ActionExecutionState)
+  fullName: Libplanet.Net.ActionExecutionState.Equality(Libplanet.Net.ActionExecutionState, Libplanet.Net.ActionExecutionState)
+  nameWithType: ActionExecutionState.Equality(ActionExecutionState, ActionExecutionState)
+- uid: Libplanet.Net.ActionExecutionState.op_Equality*
+  name: Equality
+  href: api/Libplanet.Net.ActionExecutionState.html#Libplanet_Net_ActionExecutionState_op_Equality_
+  commentId: Overload:Libplanet.Net.ActionExecutionState.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Net.ActionExecutionState.Equality
+  nameWithType: ActionExecutionState.Equality
+- uid: Libplanet.Net.ActionExecutionState.op_Inequality(Libplanet.Net.ActionExecutionState,Libplanet.Net.ActionExecutionState)
+  name: Inequality(ActionExecutionState, ActionExecutionState)
+  href: api/Libplanet.Net.ActionExecutionState.html#Libplanet_Net_ActionExecutionState_op_Inequality_Libplanet_Net_ActionExecutionState_Libplanet_Net_ActionExecutionState_
+  commentId: M:Libplanet.Net.ActionExecutionState.op_Inequality(Libplanet.Net.ActionExecutionState,Libplanet.Net.ActionExecutionState)
+  fullName: Libplanet.Net.ActionExecutionState.Inequality(Libplanet.Net.ActionExecutionState, Libplanet.Net.ActionExecutionState)
+  nameWithType: ActionExecutionState.Inequality(ActionExecutionState, ActionExecutionState)
+- uid: Libplanet.Net.ActionExecutionState.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Net.ActionExecutionState.html#Libplanet_Net_ActionExecutionState_op_Inequality_
+  commentId: Overload:Libplanet.Net.ActionExecutionState.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Net.ActionExecutionState.Inequality
+  nameWithType: ActionExecutionState.Inequality
 - uid: Libplanet.Net.ActionExecutionState.TotalBlockCount
   name: TotalBlockCount
   href: api/Libplanet.Net.ActionExecutionState.html#Libplanet_Net_ActionExecutionState_TotalBlockCount
@@ -3775,6 +4217,182 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.ActionExecutionState.TotalBlockCount
   nameWithType: ActionExecutionState.TotalBlockCount
+- uid: Libplanet.Net.AppProtocolVersion
+  name: AppProtocolVersion
+  href: api/Libplanet.Net.AppProtocolVersion.html
+  commentId: T:Libplanet.Net.AppProtocolVersion
+  fullName: Libplanet.Net.AppProtocolVersion
+  nameWithType: AppProtocolVersion
+- uid: Libplanet.Net.AppProtocolVersion.#ctor(System.Int32,IValue,ImmutableArray{System.Byte},Libplanet.Address)
+  name: AppProtocolVersion(Int32, IValue, ImmutableArray<Byte>, Address)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion__ctor_System_Int32_IValue_ImmutableArray_System_Byte__Libplanet_Address_
+  commentId: M:Libplanet.Net.AppProtocolVersion.#ctor(System.Int32,IValue,ImmutableArray{System.Byte},Libplanet.Address)
+  name.vb: AppProtocolVersion(Int32, IValue, ImmutableArray(Of Byte), Address)
+  fullName: Libplanet.Net.AppProtocolVersion.AppProtocolVersion(System.Int32, IValue, ImmutableArray<System.Byte>, Libplanet.Address)
+  fullName.vb: Libplanet.Net.AppProtocolVersion.AppProtocolVersion(System.Int32, IValue, ImmutableArray(Of System.Byte), Libplanet.Address)
+  nameWithType: AppProtocolVersion.AppProtocolVersion(Int32, IValue, ImmutableArray<Byte>, Address)
+  nameWithType.vb: AppProtocolVersion.AppProtocolVersion(Int32, IValue, ImmutableArray(Of Byte), Address)
+- uid: Libplanet.Net.AppProtocolVersion.#ctor*
+  name: AppProtocolVersion
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion__ctor_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.#ctor
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.AppProtocolVersion
+  nameWithType: AppProtocolVersion.AppProtocolVersion
+- uid: Libplanet.Net.AppProtocolVersion.Equals(Libplanet.Net.AppProtocolVersion)
+  name: Equals(AppProtocolVersion)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Equals_Libplanet_Net_AppProtocolVersion_
+  commentId: M:Libplanet.Net.AppProtocolVersion.Equals(Libplanet.Net.AppProtocolVersion)
+  fullName: Libplanet.Net.AppProtocolVersion.Equals(Libplanet.Net.AppProtocolVersion)
+  nameWithType: AppProtocolVersion.Equals(AppProtocolVersion)
+- uid: Libplanet.Net.AppProtocolVersion.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Equals_System_Object_
+  commentId: M:Libplanet.Net.AppProtocolVersion.Equals(System.Object)
+  fullName: Libplanet.Net.AppProtocolVersion.Equals(System.Object)
+  nameWithType: AppProtocolVersion.Equals(Object)
+- uid: Libplanet.Net.AppProtocolVersion.Equals*
+  name: Equals
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Equals_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.Equals
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.Equals
+  nameWithType: AppProtocolVersion.Equals
+- uid: Libplanet.Net.AppProtocolVersion.Extra
+  name: Extra
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Extra
+  commentId: F:Libplanet.Net.AppProtocolVersion.Extra
+  fullName: Libplanet.Net.AppProtocolVersion.Extra
+  nameWithType: AppProtocolVersion.Extra
+- uid: Libplanet.Net.AppProtocolVersion.FromToken(System.String)
+  name: FromToken(String)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_FromToken_System_String_
+  commentId: M:Libplanet.Net.AppProtocolVersion.FromToken(System.String)
+  fullName: Libplanet.Net.AppProtocolVersion.FromToken(System.String)
+  nameWithType: AppProtocolVersion.FromToken(String)
+- uid: Libplanet.Net.AppProtocolVersion.FromToken*
+  name: FromToken
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_FromToken_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.FromToken
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.FromToken
+  nameWithType: AppProtocolVersion.FromToken
+- uid: Libplanet.Net.AppProtocolVersion.GetHashCode
+  name: GetHashCode()
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_GetHashCode
+  commentId: M:Libplanet.Net.AppProtocolVersion.GetHashCode
+  fullName: Libplanet.Net.AppProtocolVersion.GetHashCode()
+  nameWithType: AppProtocolVersion.GetHashCode()
+- uid: Libplanet.Net.AppProtocolVersion.GetHashCode*
+  name: GetHashCode
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_GetHashCode_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.GetHashCode
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.GetHashCode
+  nameWithType: AppProtocolVersion.GetHashCode
+- uid: Libplanet.Net.AppProtocolVersion.op_Equality(Libplanet.Net.AppProtocolVersion,Libplanet.Net.AppProtocolVersion)
+  name: Equality(AppProtocolVersion, AppProtocolVersion)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_op_Equality_Libplanet_Net_AppProtocolVersion_Libplanet_Net_AppProtocolVersion_
+  commentId: M:Libplanet.Net.AppProtocolVersion.op_Equality(Libplanet.Net.AppProtocolVersion,Libplanet.Net.AppProtocolVersion)
+  fullName: Libplanet.Net.AppProtocolVersion.Equality(Libplanet.Net.AppProtocolVersion, Libplanet.Net.AppProtocolVersion)
+  nameWithType: AppProtocolVersion.Equality(AppProtocolVersion, AppProtocolVersion)
+- uid: Libplanet.Net.AppProtocolVersion.op_Equality*
+  name: Equality
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_op_Equality_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.Equality
+  nameWithType: AppProtocolVersion.Equality
+- uid: Libplanet.Net.AppProtocolVersion.op_Inequality(Libplanet.Net.AppProtocolVersion,Libplanet.Net.AppProtocolVersion)
+  name: Inequality(AppProtocolVersion, AppProtocolVersion)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_op_Inequality_Libplanet_Net_AppProtocolVersion_Libplanet_Net_AppProtocolVersion_
+  commentId: M:Libplanet.Net.AppProtocolVersion.op_Inequality(Libplanet.Net.AppProtocolVersion,Libplanet.Net.AppProtocolVersion)
+  fullName: Libplanet.Net.AppProtocolVersion.Inequality(Libplanet.Net.AppProtocolVersion, Libplanet.Net.AppProtocolVersion)
+  nameWithType: AppProtocolVersion.Inequality(AppProtocolVersion, AppProtocolVersion)
+- uid: Libplanet.Net.AppProtocolVersion.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_op_Inequality_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.Inequality
+  nameWithType: AppProtocolVersion.Inequality
+- uid: Libplanet.Net.AppProtocolVersion.Sign(Libplanet.Crypto.PrivateKey,System.Int32,IValue)
+  name: Sign(PrivateKey, Int32, IValue)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Sign_Libplanet_Crypto_PrivateKey_System_Int32_IValue_
+  commentId: M:Libplanet.Net.AppProtocolVersion.Sign(Libplanet.Crypto.PrivateKey,System.Int32,IValue)
+  fullName: Libplanet.Net.AppProtocolVersion.Sign(Libplanet.Crypto.PrivateKey, System.Int32, IValue)
+  nameWithType: AppProtocolVersion.Sign(PrivateKey, Int32, IValue)
+- uid: Libplanet.Net.AppProtocolVersion.Sign*
+  name: Sign
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Sign_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.Sign
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.Sign
+  nameWithType: AppProtocolVersion.Sign
+- uid: Libplanet.Net.AppProtocolVersion.Signature
+  name: Signature
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Signature
+  commentId: P:Libplanet.Net.AppProtocolVersion.Signature
+  fullName: Libplanet.Net.AppProtocolVersion.Signature
+  nameWithType: AppProtocolVersion.Signature
+- uid: Libplanet.Net.AppProtocolVersion.Signature*
+  name: Signature
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Signature_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.Signature
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.Signature
+  nameWithType: AppProtocolVersion.Signature
+- uid: Libplanet.Net.AppProtocolVersion.Signer
+  name: Signer
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Signer
+  commentId: F:Libplanet.Net.AppProtocolVersion.Signer
+  fullName: Libplanet.Net.AppProtocolVersion.Signer
+  nameWithType: AppProtocolVersion.Signer
+- uid: Libplanet.Net.AppProtocolVersion.Token
+  name: Token
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Token
+  commentId: P:Libplanet.Net.AppProtocolVersion.Token
+  fullName: Libplanet.Net.AppProtocolVersion.Token
+  nameWithType: AppProtocolVersion.Token
+- uid: Libplanet.Net.AppProtocolVersion.Token*
+  name: Token
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Token_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.Token
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.Token
+  nameWithType: AppProtocolVersion.Token
+- uid: Libplanet.Net.AppProtocolVersion.ToString
+  name: ToString()
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_ToString
+  commentId: M:Libplanet.Net.AppProtocolVersion.ToString
+  fullName: Libplanet.Net.AppProtocolVersion.ToString()
+  nameWithType: AppProtocolVersion.ToString()
+- uid: Libplanet.Net.AppProtocolVersion.ToString*
+  name: ToString
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_ToString_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.ToString
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.ToString
+  nameWithType: AppProtocolVersion.ToString
+- uid: Libplanet.Net.AppProtocolVersion.Verify(Libplanet.Crypto.PublicKey)
+  name: Verify(PublicKey)
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Verify_Libplanet_Crypto_PublicKey_
+  commentId: M:Libplanet.Net.AppProtocolVersion.Verify(Libplanet.Crypto.PublicKey)
+  fullName: Libplanet.Net.AppProtocolVersion.Verify(Libplanet.Crypto.PublicKey)
+  nameWithType: AppProtocolVersion.Verify(PublicKey)
+- uid: Libplanet.Net.AppProtocolVersion.Verify*
+  name: Verify
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Verify_
+  commentId: Overload:Libplanet.Net.AppProtocolVersion.Verify
+  isSpec: "True"
+  fullName: Libplanet.Net.AppProtocolVersion.Verify
+  nameWithType: AppProtocolVersion.Verify
+- uid: Libplanet.Net.AppProtocolVersion.Version
+  name: Version
+  href: api/Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Version
+  commentId: F:Libplanet.Net.AppProtocolVersion.Version
+  fullName: Libplanet.Net.AppProtocolVersion.Version
+  nameWithType: AppProtocolVersion.Version
 - uid: Libplanet.Net.BlockDownloadState
   name: BlockDownloadState
   href: api/Libplanet.Net.BlockDownloadState.html
@@ -3794,6 +4412,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.BlockDownloadState.CurrentPhase
   nameWithType: BlockDownloadState.CurrentPhase
+- uid: Libplanet.Net.BlockDownloadState.op_Equality(Libplanet.Net.BlockDownloadState,Libplanet.Net.BlockDownloadState)
+  name: Equality(BlockDownloadState, BlockDownloadState)
+  href: api/Libplanet.Net.BlockDownloadState.html#Libplanet_Net_BlockDownloadState_op_Equality_Libplanet_Net_BlockDownloadState_Libplanet_Net_BlockDownloadState_
+  commentId: M:Libplanet.Net.BlockDownloadState.op_Equality(Libplanet.Net.BlockDownloadState,Libplanet.Net.BlockDownloadState)
+  fullName: Libplanet.Net.BlockDownloadState.Equality(Libplanet.Net.BlockDownloadState, Libplanet.Net.BlockDownloadState)
+  nameWithType: BlockDownloadState.Equality(BlockDownloadState, BlockDownloadState)
+- uid: Libplanet.Net.BlockDownloadState.op_Equality*
+  name: Equality
+  href: api/Libplanet.Net.BlockDownloadState.html#Libplanet_Net_BlockDownloadState_op_Equality_
+  commentId: Overload:Libplanet.Net.BlockDownloadState.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Net.BlockDownloadState.Equality
+  nameWithType: BlockDownloadState.Equality
+- uid: Libplanet.Net.BlockDownloadState.op_Inequality(Libplanet.Net.BlockDownloadState,Libplanet.Net.BlockDownloadState)
+  name: Inequality(BlockDownloadState, BlockDownloadState)
+  href: api/Libplanet.Net.BlockDownloadState.html#Libplanet_Net_BlockDownloadState_op_Inequality_Libplanet_Net_BlockDownloadState_Libplanet_Net_BlockDownloadState_
+  commentId: M:Libplanet.Net.BlockDownloadState.op_Inequality(Libplanet.Net.BlockDownloadState,Libplanet.Net.BlockDownloadState)
+  fullName: Libplanet.Net.BlockDownloadState.Inequality(Libplanet.Net.BlockDownloadState, Libplanet.Net.BlockDownloadState)
+  nameWithType: BlockDownloadState.Inequality(BlockDownloadState, BlockDownloadState)
+- uid: Libplanet.Net.BlockDownloadState.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Net.BlockDownloadState.html#Libplanet_Net_BlockDownloadState_op_Inequality_
+  commentId: Overload:Libplanet.Net.BlockDownloadState.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Net.BlockDownloadState.Inequality
+  nameWithType: BlockDownloadState.Inequality
 - uid: Libplanet.Net.BlockDownloadState.ReceivedBlockCount
   name: ReceivedBlockCount
   href: api/Libplanet.Net.BlockDownloadState.html#Libplanet_Net_BlockDownloadState_ReceivedBlockCount
@@ -3878,6 +4522,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.BlockHashDownloadState.EstimatedTotalBlockHashCount
   nameWithType: BlockHashDownloadState.EstimatedTotalBlockHashCount
+- uid: Libplanet.Net.BlockHashDownloadState.op_Equality(Libplanet.Net.BlockHashDownloadState,Libplanet.Net.BlockHashDownloadState)
+  name: Equality(BlockHashDownloadState, BlockHashDownloadState)
+  href: api/Libplanet.Net.BlockHashDownloadState.html#Libplanet_Net_BlockHashDownloadState_op_Equality_Libplanet_Net_BlockHashDownloadState_Libplanet_Net_BlockHashDownloadState_
+  commentId: M:Libplanet.Net.BlockHashDownloadState.op_Equality(Libplanet.Net.BlockHashDownloadState,Libplanet.Net.BlockHashDownloadState)
+  fullName: Libplanet.Net.BlockHashDownloadState.Equality(Libplanet.Net.BlockHashDownloadState, Libplanet.Net.BlockHashDownloadState)
+  nameWithType: BlockHashDownloadState.Equality(BlockHashDownloadState, BlockHashDownloadState)
+- uid: Libplanet.Net.BlockHashDownloadState.op_Equality*
+  name: Equality
+  href: api/Libplanet.Net.BlockHashDownloadState.html#Libplanet_Net_BlockHashDownloadState_op_Equality_
+  commentId: Overload:Libplanet.Net.BlockHashDownloadState.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Net.BlockHashDownloadState.Equality
+  nameWithType: BlockHashDownloadState.Equality
+- uid: Libplanet.Net.BlockHashDownloadState.op_Inequality(Libplanet.Net.BlockHashDownloadState,Libplanet.Net.BlockHashDownloadState)
+  name: Inequality(BlockHashDownloadState, BlockHashDownloadState)
+  href: api/Libplanet.Net.BlockHashDownloadState.html#Libplanet_Net_BlockHashDownloadState_op_Inequality_Libplanet_Net_BlockHashDownloadState_Libplanet_Net_BlockHashDownloadState_
+  commentId: M:Libplanet.Net.BlockHashDownloadState.op_Inequality(Libplanet.Net.BlockHashDownloadState,Libplanet.Net.BlockHashDownloadState)
+  fullName: Libplanet.Net.BlockHashDownloadState.Inequality(Libplanet.Net.BlockHashDownloadState, Libplanet.Net.BlockHashDownloadState)
+  nameWithType: BlockHashDownloadState.Inequality(BlockHashDownloadState, BlockHashDownloadState)
+- uid: Libplanet.Net.BlockHashDownloadState.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Net.BlockHashDownloadState.html#Libplanet_Net_BlockHashDownloadState_op_Inequality_
+  commentId: Overload:Libplanet.Net.BlockHashDownloadState.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Net.BlockHashDownloadState.Inequality
+  nameWithType: BlockHashDownloadState.Inequality
 - uid: Libplanet.Net.BlockHashDownloadState.ReceivedBlockHashCount
   name: ReceivedBlockHashCount
   href: api/Libplanet.Net.BlockHashDownloadState.html#Libplanet_Net_BlockHashDownloadState_ReceivedBlockHashCount
@@ -3923,6 +4593,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.BlockVerificationState.CurrentPhase
   nameWithType: BlockVerificationState.CurrentPhase
+- uid: Libplanet.Net.BlockVerificationState.op_Equality(Libplanet.Net.BlockVerificationState,Libplanet.Net.BlockVerificationState)
+  name: Equality(BlockVerificationState, BlockVerificationState)
+  href: api/Libplanet.Net.BlockVerificationState.html#Libplanet_Net_BlockVerificationState_op_Equality_Libplanet_Net_BlockVerificationState_Libplanet_Net_BlockVerificationState_
+  commentId: M:Libplanet.Net.BlockVerificationState.op_Equality(Libplanet.Net.BlockVerificationState,Libplanet.Net.BlockVerificationState)
+  fullName: Libplanet.Net.BlockVerificationState.Equality(Libplanet.Net.BlockVerificationState, Libplanet.Net.BlockVerificationState)
+  nameWithType: BlockVerificationState.Equality(BlockVerificationState, BlockVerificationState)
+- uid: Libplanet.Net.BlockVerificationState.op_Equality*
+  name: Equality
+  href: api/Libplanet.Net.BlockVerificationState.html#Libplanet_Net_BlockVerificationState_op_Equality_
+  commentId: Overload:Libplanet.Net.BlockVerificationState.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Net.BlockVerificationState.Equality
+  nameWithType: BlockVerificationState.Equality
+- uid: Libplanet.Net.BlockVerificationState.op_Inequality(Libplanet.Net.BlockVerificationState,Libplanet.Net.BlockVerificationState)
+  name: Inequality(BlockVerificationState, BlockVerificationState)
+  href: api/Libplanet.Net.BlockVerificationState.html#Libplanet_Net_BlockVerificationState_op_Inequality_Libplanet_Net_BlockVerificationState_Libplanet_Net_BlockVerificationState_
+  commentId: M:Libplanet.Net.BlockVerificationState.op_Inequality(Libplanet.Net.BlockVerificationState,Libplanet.Net.BlockVerificationState)
+  fullName: Libplanet.Net.BlockVerificationState.Inequality(Libplanet.Net.BlockVerificationState, Libplanet.Net.BlockVerificationState)
+  nameWithType: BlockVerificationState.Inequality(BlockVerificationState, BlockVerificationState)
+- uid: Libplanet.Net.BlockVerificationState.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Net.BlockVerificationState.html#Libplanet_Net_BlockVerificationState_op_Inequality_
+  commentId: Overload:Libplanet.Net.BlockVerificationState.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Net.BlockVerificationState.Inequality
+  nameWithType: BlockVerificationState.Inequality
 - uid: Libplanet.Net.BlockVerificationState.TotalBlockCount
   name: TotalBlockCount
   href: api/Libplanet.Net.BlockVerificationState.html#Libplanet_Net_BlockVerificationState_TotalBlockCount
@@ -3968,12 +4664,12 @@ references:
   commentId: T:Libplanet.Net.BoundPeer
   fullName: Libplanet.Net.BoundPeer
   nameWithType: BoundPeer
-- uid: Libplanet.Net.BoundPeer.#ctor(Libplanet.Crypto.PublicKey,DnsEndPoint,System.Int32)
-  name: BoundPeer(PublicKey, DnsEndPoint, Int32)
-  href: api/Libplanet.Net.BoundPeer.html#Libplanet_Net_BoundPeer__ctor_Libplanet_Crypto_PublicKey_DnsEndPoint_System_Int32_
-  commentId: M:Libplanet.Net.BoundPeer.#ctor(Libplanet.Crypto.PublicKey,DnsEndPoint,System.Int32)
-  fullName: Libplanet.Net.BoundPeer.BoundPeer(Libplanet.Crypto.PublicKey, DnsEndPoint, System.Int32)
-  nameWithType: BoundPeer.BoundPeer(PublicKey, DnsEndPoint, Int32)
+- uid: Libplanet.Net.BoundPeer.#ctor(Libplanet.Crypto.PublicKey,DnsEndPoint,Libplanet.Net.AppProtocolVersion)
+  name: BoundPeer(PublicKey, DnsEndPoint, AppProtocolVersion)
+  href: api/Libplanet.Net.BoundPeer.html#Libplanet_Net_BoundPeer__ctor_Libplanet_Crypto_PublicKey_DnsEndPoint_Libplanet_Net_AppProtocolVersion_
+  commentId: M:Libplanet.Net.BoundPeer.#ctor(Libplanet.Crypto.PublicKey,DnsEndPoint,Libplanet.Net.AppProtocolVersion)
+  fullName: Libplanet.Net.BoundPeer.BoundPeer(Libplanet.Crypto.PublicKey, DnsEndPoint, Libplanet.Net.AppProtocolVersion)
+  nameWithType: BoundPeer.BoundPeer(PublicKey, DnsEndPoint, AppProtocolVersion)
 - uid: Libplanet.Net.BoundPeer.#ctor*
   name: BoundPeer
   href: api/Libplanet.Net.BoundPeer.html#Libplanet_Net_BoundPeer__ctor_
@@ -4007,6 +4703,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.BoundPeer.GetObjectData
   nameWithType: BoundPeer.GetObjectData
+- uid: Libplanet.Net.BoundPeer.op_Equality(Libplanet.Net.BoundPeer,Libplanet.Net.BoundPeer)
+  name: Equality(BoundPeer, BoundPeer)
+  href: api/Libplanet.Net.BoundPeer.html#Libplanet_Net_BoundPeer_op_Equality_Libplanet_Net_BoundPeer_Libplanet_Net_BoundPeer_
+  commentId: M:Libplanet.Net.BoundPeer.op_Equality(Libplanet.Net.BoundPeer,Libplanet.Net.BoundPeer)
+  fullName: Libplanet.Net.BoundPeer.Equality(Libplanet.Net.BoundPeer, Libplanet.Net.BoundPeer)
+  nameWithType: BoundPeer.Equality(BoundPeer, BoundPeer)
+- uid: Libplanet.Net.BoundPeer.op_Equality*
+  name: Equality
+  href: api/Libplanet.Net.BoundPeer.html#Libplanet_Net_BoundPeer_op_Equality_
+  commentId: Overload:Libplanet.Net.BoundPeer.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Net.BoundPeer.Equality
+  nameWithType: BoundPeer.Equality
+- uid: Libplanet.Net.BoundPeer.op_Inequality(Libplanet.Net.BoundPeer,Libplanet.Net.BoundPeer)
+  name: Inequality(BoundPeer, BoundPeer)
+  href: api/Libplanet.Net.BoundPeer.html#Libplanet_Net_BoundPeer_op_Inequality_Libplanet_Net_BoundPeer_Libplanet_Net_BoundPeer_
+  commentId: M:Libplanet.Net.BoundPeer.op_Inequality(Libplanet.Net.BoundPeer,Libplanet.Net.BoundPeer)
+  fullName: Libplanet.Net.BoundPeer.Inequality(Libplanet.Net.BoundPeer, Libplanet.Net.BoundPeer)
+  nameWithType: BoundPeer.Inequality(BoundPeer, BoundPeer)
+- uid: Libplanet.Net.BoundPeer.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Net.BoundPeer.html#Libplanet_Net_BoundPeer_op_Inequality_
+  commentId: Overload:Libplanet.Net.BoundPeer.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Net.BoundPeer.Inequality
+  nameWithType: BoundPeer.Inequality
 - uid: Libplanet.Net.BoundPeer.ToString
   name: ToString()
   href: api/Libplanet.Net.BoundPeer.html#Libplanet_Net_BoundPeer_ToString
@@ -4020,18 +4742,24 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.BoundPeer.ToString
   nameWithType: BoundPeer.ToString
+- uid: Libplanet.Net.DifferentAppProtocolVersionEncountered
+  name: DifferentAppProtocolVersionEncountered
+  href: api/Libplanet.Net.DifferentAppProtocolVersionEncountered.html
+  commentId: T:Libplanet.Net.DifferentAppProtocolVersionEncountered
+  fullName: Libplanet.Net.DifferentAppProtocolVersionEncountered
+  nameWithType: DifferentAppProtocolVersionEncountered
 - uid: Libplanet.Net.DifferentAppProtocolVersionException
   name: DifferentAppProtocolVersionException
   href: api/Libplanet.Net.DifferentAppProtocolVersionException.html
   commentId: T:Libplanet.Net.DifferentAppProtocolVersionException
   fullName: Libplanet.Net.DifferentAppProtocolVersionException
   nameWithType: DifferentAppProtocolVersionException
-- uid: Libplanet.Net.DifferentAppProtocolVersionException.#ctor(System.String,System.Int32,System.Int32)
-  name: DifferentAppProtocolVersionException(String, Int32, Int32)
-  href: api/Libplanet.Net.DifferentAppProtocolVersionException.html#Libplanet_Net_DifferentAppProtocolVersionException__ctor_System_String_System_Int32_System_Int32_
-  commentId: M:Libplanet.Net.DifferentAppProtocolVersionException.#ctor(System.String,System.Int32,System.Int32)
-  fullName: Libplanet.Net.DifferentAppProtocolVersionException.DifferentAppProtocolVersionException(System.String, System.Int32, System.Int32)
-  nameWithType: DifferentAppProtocolVersionException.DifferentAppProtocolVersionException(String, Int32, Int32)
+- uid: Libplanet.Net.DifferentAppProtocolVersionException.#ctor(System.String,Libplanet.Net.AppProtocolVersion,Libplanet.Net.AppProtocolVersion)
+  name: DifferentAppProtocolVersionException(String, AppProtocolVersion, AppProtocolVersion)
+  href: api/Libplanet.Net.DifferentAppProtocolVersionException.html#Libplanet_Net_DifferentAppProtocolVersionException__ctor_System_String_Libplanet_Net_AppProtocolVersion_Libplanet_Net_AppProtocolVersion_
+  commentId: M:Libplanet.Net.DifferentAppProtocolVersionException.#ctor(System.String,Libplanet.Net.AppProtocolVersion,Libplanet.Net.AppProtocolVersion)
+  fullName: Libplanet.Net.DifferentAppProtocolVersionException.DifferentAppProtocolVersionException(System.String, Libplanet.Net.AppProtocolVersion, Libplanet.Net.AppProtocolVersion)
+  nameWithType: DifferentAppProtocolVersionException.DifferentAppProtocolVersionException(String, AppProtocolVersion, AppProtocolVersion)
 - uid: Libplanet.Net.DifferentAppProtocolVersionException.#ctor*
   name: DifferentAppProtocolVersionException
   href: api/Libplanet.Net.DifferentAppProtocolVersionException.html#Libplanet_Net_DifferentAppProtocolVersionException__ctor_
@@ -4065,38 +4793,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.DifferentAppProtocolVersionException.ExpectedVersion
   nameWithType: DifferentAppProtocolVersionException.ExpectedVersion
-- uid: Libplanet.Net.DifferentProtocolVersionEventArgs
-  name: DifferentProtocolVersionEventArgs
-  href: api/Libplanet.Net.DifferentProtocolVersionEventArgs.html
-  commentId: T:Libplanet.Net.DifferentProtocolVersionEventArgs
-  fullName: Libplanet.Net.DifferentProtocolVersionEventArgs
-  nameWithType: DifferentProtocolVersionEventArgs
-- uid: Libplanet.Net.DifferentProtocolVersionEventArgs.ActualVersion
-  name: ActualVersion
-  href: api/Libplanet.Net.DifferentProtocolVersionEventArgs.html#Libplanet_Net_DifferentProtocolVersionEventArgs_ActualVersion
-  commentId: P:Libplanet.Net.DifferentProtocolVersionEventArgs.ActualVersion
-  fullName: Libplanet.Net.DifferentProtocolVersionEventArgs.ActualVersion
-  nameWithType: DifferentProtocolVersionEventArgs.ActualVersion
-- uid: Libplanet.Net.DifferentProtocolVersionEventArgs.ActualVersion*
-  name: ActualVersion
-  href: api/Libplanet.Net.DifferentProtocolVersionEventArgs.html#Libplanet_Net_DifferentProtocolVersionEventArgs_ActualVersion_
-  commentId: Overload:Libplanet.Net.DifferentProtocolVersionEventArgs.ActualVersion
-  isSpec: "True"
-  fullName: Libplanet.Net.DifferentProtocolVersionEventArgs.ActualVersion
-  nameWithType: DifferentProtocolVersionEventArgs.ActualVersion
-- uid: Libplanet.Net.DifferentProtocolVersionEventArgs.ExpectedVersion
-  name: ExpectedVersion
-  href: api/Libplanet.Net.DifferentProtocolVersionEventArgs.html#Libplanet_Net_DifferentProtocolVersionEventArgs_ExpectedVersion
-  commentId: P:Libplanet.Net.DifferentProtocolVersionEventArgs.ExpectedVersion
-  fullName: Libplanet.Net.DifferentProtocolVersionEventArgs.ExpectedVersion
-  nameWithType: DifferentProtocolVersionEventArgs.ExpectedVersion
-- uid: Libplanet.Net.DifferentProtocolVersionEventArgs.ExpectedVersion*
-  name: ExpectedVersion
-  href: api/Libplanet.Net.DifferentProtocolVersionEventArgs.html#Libplanet_Net_DifferentProtocolVersionEventArgs_ExpectedVersion_
-  commentId: Overload:Libplanet.Net.DifferentProtocolVersionEventArgs.ExpectedVersion
-  isSpec: "True"
-  fullName: Libplanet.Net.DifferentProtocolVersionEventArgs.ExpectedVersion
-  nameWithType: DifferentProtocolVersionEventArgs.ExpectedVersion
 - uid: Libplanet.Net.IceServer
   name: IceServer
   href: api/Libplanet.Net.IceServer.html
@@ -4266,12 +4962,12 @@ references:
   commentId: T:Libplanet.Net.Peer
   fullName: Libplanet.Net.Peer
   nameWithType: Peer
-- uid: Libplanet.Net.Peer.#ctor(Libplanet.Crypto.PublicKey,System.Int32)
-  name: Peer(PublicKey, Int32)
-  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer__ctor_Libplanet_Crypto_PublicKey_System_Int32_
-  commentId: M:Libplanet.Net.Peer.#ctor(Libplanet.Crypto.PublicKey,System.Int32)
-  fullName: Libplanet.Net.Peer.Peer(Libplanet.Crypto.PublicKey, System.Int32)
-  nameWithType: Peer.Peer(PublicKey, Int32)
+- uid: Libplanet.Net.Peer.#ctor(Libplanet.Crypto.PublicKey,Libplanet.Net.AppProtocolVersion)
+  name: Peer(PublicKey, AppProtocolVersion)
+  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer__ctor_Libplanet_Crypto_PublicKey_Libplanet_Net_AppProtocolVersion_
+  commentId: M:Libplanet.Net.Peer.#ctor(Libplanet.Crypto.PublicKey,Libplanet.Net.AppProtocolVersion)
+  fullName: Libplanet.Net.Peer.Peer(Libplanet.Crypto.PublicKey, Libplanet.Net.AppProtocolVersion)
+  nameWithType: Peer.Peer(PublicKey, AppProtocolVersion)
 - uid: Libplanet.Net.Peer.#ctor(SerializationInfo,StreamingContext)
   name: Peer(SerializationInfo, StreamingContext)
   href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer__ctor_SerializationInfo_StreamingContext_
@@ -4324,6 +5020,48 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.Peer.GetObjectData
   nameWithType: Peer.GetObjectData
+- uid: Libplanet.Net.Peer.IsCompatibleWith(Libplanet.Net.AppProtocolVersion,IEnumerable{Libplanet.Crypto.PublicKey},Libplanet.Net.DifferentAppProtocolVersionEncountered)
+  name: IsCompatibleWith(AppProtocolVersion, IEnumerable<PublicKey>, DifferentAppProtocolVersionEncountered)
+  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_IsCompatibleWith_Libplanet_Net_AppProtocolVersion_IEnumerable_Libplanet_Crypto_PublicKey__Libplanet_Net_DifferentAppProtocolVersionEncountered_
+  commentId: M:Libplanet.Net.Peer.IsCompatibleWith(Libplanet.Net.AppProtocolVersion,IEnumerable{Libplanet.Crypto.PublicKey},Libplanet.Net.DifferentAppProtocolVersionEncountered)
+  name.vb: IsCompatibleWith(AppProtocolVersion, IEnumerable(Of PublicKey), DifferentAppProtocolVersionEncountered)
+  fullName: Libplanet.Net.Peer.IsCompatibleWith(Libplanet.Net.AppProtocolVersion, IEnumerable<Libplanet.Crypto.PublicKey>, Libplanet.Net.DifferentAppProtocolVersionEncountered)
+  fullName.vb: Libplanet.Net.Peer.IsCompatibleWith(Libplanet.Net.AppProtocolVersion, IEnumerable(Of Libplanet.Crypto.PublicKey), Libplanet.Net.DifferentAppProtocolVersionEncountered)
+  nameWithType: Peer.IsCompatibleWith(AppProtocolVersion, IEnumerable<PublicKey>, DifferentAppProtocolVersionEncountered)
+  nameWithType.vb: Peer.IsCompatibleWith(AppProtocolVersion, IEnumerable(Of PublicKey), DifferentAppProtocolVersionEncountered)
+- uid: Libplanet.Net.Peer.IsCompatibleWith*
+  name: IsCompatibleWith
+  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_IsCompatibleWith_
+  commentId: Overload:Libplanet.Net.Peer.IsCompatibleWith
+  isSpec: "True"
+  fullName: Libplanet.Net.Peer.IsCompatibleWith
+  nameWithType: Peer.IsCompatibleWith
+- uid: Libplanet.Net.Peer.op_Equality(Libplanet.Net.Peer,Libplanet.Net.Peer)
+  name: Equality(Peer, Peer)
+  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_op_Equality_Libplanet_Net_Peer_Libplanet_Net_Peer_
+  commentId: M:Libplanet.Net.Peer.op_Equality(Libplanet.Net.Peer,Libplanet.Net.Peer)
+  fullName: Libplanet.Net.Peer.Equality(Libplanet.Net.Peer, Libplanet.Net.Peer)
+  nameWithType: Peer.Equality(Peer, Peer)
+- uid: Libplanet.Net.Peer.op_Equality*
+  name: Equality
+  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_op_Equality_
+  commentId: Overload:Libplanet.Net.Peer.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Net.Peer.Equality
+  nameWithType: Peer.Equality
+- uid: Libplanet.Net.Peer.op_Inequality(Libplanet.Net.Peer,Libplanet.Net.Peer)
+  name: Inequality(Peer, Peer)
+  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_op_Inequality_Libplanet_Net_Peer_Libplanet_Net_Peer_
+  commentId: M:Libplanet.Net.Peer.op_Inequality(Libplanet.Net.Peer,Libplanet.Net.Peer)
+  fullName: Libplanet.Net.Peer.Inequality(Libplanet.Net.Peer, Libplanet.Net.Peer)
+  nameWithType: Peer.Inequality(Peer, Peer)
+- uid: Libplanet.Net.Peer.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_op_Inequality_
+  commentId: Overload:Libplanet.Net.Peer.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Net.Peer.Inequality
+  nameWithType: Peer.Inequality
 - uid: Libplanet.Net.Peer.PublicIPAddress
   name: PublicIPAddress
   href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_PublicIPAddress
@@ -4496,6 +5234,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.PreloadState.CurrentPhase
   nameWithType: PreloadState.CurrentPhase
+- uid: Libplanet.Net.PreloadState.op_Equality(Libplanet.Net.PreloadState,Libplanet.Net.PreloadState)
+  name: Equality(PreloadState, PreloadState)
+  href: api/Libplanet.Net.PreloadState.html#Libplanet_Net_PreloadState_op_Equality_Libplanet_Net_PreloadState_Libplanet_Net_PreloadState_
+  commentId: M:Libplanet.Net.PreloadState.op_Equality(Libplanet.Net.PreloadState,Libplanet.Net.PreloadState)
+  fullName: Libplanet.Net.PreloadState.Equality(Libplanet.Net.PreloadState, Libplanet.Net.PreloadState)
+  nameWithType: PreloadState.Equality(PreloadState, PreloadState)
+- uid: Libplanet.Net.PreloadState.op_Equality*
+  name: Equality
+  href: api/Libplanet.Net.PreloadState.html#Libplanet_Net_PreloadState_op_Equality_
+  commentId: Overload:Libplanet.Net.PreloadState.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Net.PreloadState.Equality
+  nameWithType: PreloadState.Equality
+- uid: Libplanet.Net.PreloadState.op_Inequality(Libplanet.Net.PreloadState,Libplanet.Net.PreloadState)
+  name: Inequality(PreloadState, PreloadState)
+  href: api/Libplanet.Net.PreloadState.html#Libplanet_Net_PreloadState_op_Inequality_Libplanet_Net_PreloadState_Libplanet_Net_PreloadState_
+  commentId: M:Libplanet.Net.PreloadState.op_Inequality(Libplanet.Net.PreloadState,Libplanet.Net.PreloadState)
+  fullName: Libplanet.Net.PreloadState.Inequality(Libplanet.Net.PreloadState, Libplanet.Net.PreloadState)
+  nameWithType: PreloadState.Inequality(PreloadState, PreloadState)
+- uid: Libplanet.Net.PreloadState.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Net.PreloadState.html#Libplanet_Net_PreloadState_op_Inequality_
+  commentId: Overload:Libplanet.Net.PreloadState.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Net.PreloadState.Inequality
+  nameWithType: PreloadState.Inequality
 - uid: Libplanet.Net.PreloadState.TotalPhase
   name: TotalPhase
   href: api/Libplanet.Net.PreloadState.html#Libplanet_Net_PreloadState_TotalPhase
@@ -4599,15 +5363,15 @@ references:
   fullName.vb: Libplanet.Net.Swarm(Of T)
   nameWithType: Swarm<T>
   nameWithType.vb: Swarm(Of T)
-- uid: Libplanet.Net.Swarm`1.#ctor(Libplanet.Blockchain.BlockChain{`0},Libplanet.Crypto.PrivateKey,System.Int32,System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{DateTimeOffset},IEnumerable{Libplanet.Net.IceServer},EventHandler{Libplanet.Net.DifferentProtocolVersionEventArgs})
-  name: Swarm(BlockChain<T>, PrivateKey, Int32, Int32, String, Nullable<Int32>, Nullable<DateTimeOffset>, IEnumerable<IceServer>, EventHandler<DifferentProtocolVersionEventArgs>)
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1__ctor_Libplanet_Blockchain_BlockChain__0__Libplanet_Crypto_PrivateKey_System_Int32_System_Int32_System_String_System_Nullable_System_Int32__System_Nullable_DateTimeOffset__IEnumerable_Libplanet_Net_IceServer__EventHandler_Libplanet_Net_DifferentProtocolVersionEventArgs__
-  commentId: M:Libplanet.Net.Swarm`1.#ctor(Libplanet.Blockchain.BlockChain{`0},Libplanet.Crypto.PrivateKey,System.Int32,System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{DateTimeOffset},IEnumerable{Libplanet.Net.IceServer},EventHandler{Libplanet.Net.DifferentProtocolVersionEventArgs})
-  name.vb: Swarm(BlockChain(Of T), PrivateKey, Int32, Int32, String, Nullable(Of Int32), Nullable(Of DateTimeOffset), IEnumerable(Of IceServer), EventHandler(Of DifferentProtocolVersionEventArgs))
-  fullName: Libplanet.Net.Swarm<T>.Swarm(Libplanet.Blockchain.BlockChain<T>, Libplanet.Crypto.PrivateKey, System.Int32, System.Int32, System.String, System.Nullable<System.Int32>, System.Nullable<DateTimeOffset>, IEnumerable<Libplanet.Net.IceServer>, EventHandler<Libplanet.Net.DifferentProtocolVersionEventArgs>)
-  fullName.vb: Libplanet.Net.Swarm(Of T).Swarm(Libplanet.Blockchain.BlockChain(Of T), Libplanet.Crypto.PrivateKey, System.Int32, System.Int32, System.String, System.Nullable(Of System.Int32), System.Nullable(Of DateTimeOffset), IEnumerable(Of Libplanet.Net.IceServer), EventHandler(Of Libplanet.Net.DifferentProtocolVersionEventArgs))
-  nameWithType: Swarm<T>.Swarm(BlockChain<T>, PrivateKey, Int32, Int32, String, Nullable<Int32>, Nullable<DateTimeOffset>, IEnumerable<IceServer>, EventHandler<DifferentProtocolVersionEventArgs>)
-  nameWithType.vb: Swarm(Of T).Swarm(BlockChain(Of T), PrivateKey, Int32, Int32, String, Nullable(Of Int32), Nullable(Of DateTimeOffset), IEnumerable(Of IceServer), EventHandler(Of DifferentProtocolVersionEventArgs))
+- uid: Libplanet.Net.Swarm`1.#ctor(Libplanet.Blockchain.BlockChain{`0},Libplanet.Crypto.PrivateKey,Libplanet.Net.AppProtocolVersion,System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{DateTimeOffset},IEnumerable{Libplanet.Net.IceServer},Libplanet.Net.DifferentAppProtocolVersionEncountered,IEnumerable{Libplanet.Crypto.PublicKey})
+  name: Swarm(BlockChain<T>, PrivateKey, AppProtocolVersion, Int32, String, Nullable<Int32>, Nullable<DateTimeOffset>, IEnumerable<IceServer>, DifferentAppProtocolVersionEncountered, IEnumerable<PublicKey>)
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1__ctor_Libplanet_Blockchain_BlockChain__0__Libplanet_Crypto_PrivateKey_Libplanet_Net_AppProtocolVersion_System_Int32_System_String_System_Nullable_System_Int32__System_Nullable_DateTimeOffset__IEnumerable_Libplanet_Net_IceServer__Libplanet_Net_DifferentAppProtocolVersionEncountered_IEnumerable_Libplanet_Crypto_PublicKey__
+  commentId: M:Libplanet.Net.Swarm`1.#ctor(Libplanet.Blockchain.BlockChain{`0},Libplanet.Crypto.PrivateKey,Libplanet.Net.AppProtocolVersion,System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{DateTimeOffset},IEnumerable{Libplanet.Net.IceServer},Libplanet.Net.DifferentAppProtocolVersionEncountered,IEnumerable{Libplanet.Crypto.PublicKey})
+  name.vb: Swarm(BlockChain(Of T), PrivateKey, AppProtocolVersion, Int32, String, Nullable(Of Int32), Nullable(Of DateTimeOffset), IEnumerable(Of IceServer), DifferentAppProtocolVersionEncountered, IEnumerable(Of PublicKey))
+  fullName: Libplanet.Net.Swarm<T>.Swarm(Libplanet.Blockchain.BlockChain<T>, Libplanet.Crypto.PrivateKey, Libplanet.Net.AppProtocolVersion, System.Int32, System.String, System.Nullable<System.Int32>, System.Nullable<DateTimeOffset>, IEnumerable<Libplanet.Net.IceServer>, Libplanet.Net.DifferentAppProtocolVersionEncountered, IEnumerable<Libplanet.Crypto.PublicKey>)
+  fullName.vb: Libplanet.Net.Swarm(Of T).Swarm(Libplanet.Blockchain.BlockChain(Of T), Libplanet.Crypto.PrivateKey, Libplanet.Net.AppProtocolVersion, System.Int32, System.String, System.Nullable(Of System.Int32), System.Nullable(Of DateTimeOffset), IEnumerable(Of Libplanet.Net.IceServer), Libplanet.Net.DifferentAppProtocolVersionEncountered, IEnumerable(Of Libplanet.Crypto.PublicKey))
+  nameWithType: Swarm<T>.Swarm(BlockChain<T>, PrivateKey, AppProtocolVersion, Int32, String, Nullable<Int32>, Nullable<DateTimeOffset>, IEnumerable<IceServer>, DifferentAppProtocolVersionEncountered, IEnumerable<PublicKey>)
+  nameWithType.vb: Swarm(Of T).Swarm(BlockChain(Of T), PrivateKey, AppProtocolVersion, Int32, String, Nullable(Of Int32), Nullable(Of DateTimeOffset), IEnumerable(Of IceServer), DifferentAppProtocolVersionEncountered, IEnumerable(Of PublicKey))
 - uid: Libplanet.Net.Swarm`1.#ctor*
   name: Swarm
   href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1__ctor_
@@ -4971,6 +5735,23 @@ references:
   fullName.vb: Libplanet.Net.Swarm(Of T).TraceTable
   nameWithType: Swarm<T>.TraceTable
   nameWithType.vb: Swarm(Of T).TraceTable
+- uid: Libplanet.Net.Swarm`1.TrustedAppProtocolVersionSigners
+  name: TrustedAppProtocolVersionSigners
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_TrustedAppProtocolVersionSigners
+  commentId: P:Libplanet.Net.Swarm`1.TrustedAppProtocolVersionSigners
+  fullName: Libplanet.Net.Swarm<T>.TrustedAppProtocolVersionSigners
+  fullName.vb: Libplanet.Net.Swarm(Of T).TrustedAppProtocolVersionSigners
+  nameWithType: Swarm<T>.TrustedAppProtocolVersionSigners
+  nameWithType.vb: Swarm(Of T).TrustedAppProtocolVersionSigners
+- uid: Libplanet.Net.Swarm`1.TrustedAppProtocolVersionSigners*
+  name: TrustedAppProtocolVersionSigners
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_TrustedAppProtocolVersionSigners_
+  commentId: Overload:Libplanet.Net.Swarm`1.TrustedAppProtocolVersionSigners
+  isSpec: "True"
+  fullName: Libplanet.Net.Swarm<T>.TrustedAppProtocolVersionSigners
+  fullName.vb: Libplanet.Net.Swarm(Of T).TrustedAppProtocolVersionSigners
+  nameWithType: Swarm<T>.TrustedAppProtocolVersionSigners
+  nameWithType.vb: Swarm(Of T).TrustedAppProtocolVersionSigners
 - uid: Libplanet.Net.Swarm`1.WaitForRunningAsync
   name: WaitForRunningAsync()
   href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_WaitForRunningAsync
@@ -5060,6 +5841,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Nonce.ByteArray
   nameWithType: Nonce.ByteArray
+- uid: Libplanet.Nonce.op_Equality(Libplanet.Nonce,Libplanet.Nonce)
+  name: Equality(Nonce, Nonce)
+  href: api/Libplanet.Nonce.html#Libplanet_Nonce_op_Equality_Libplanet_Nonce_Libplanet_Nonce_
+  commentId: M:Libplanet.Nonce.op_Equality(Libplanet.Nonce,Libplanet.Nonce)
+  fullName: Libplanet.Nonce.Equality(Libplanet.Nonce, Libplanet.Nonce)
+  nameWithType: Nonce.Equality(Nonce, Nonce)
+- uid: Libplanet.Nonce.op_Equality*
+  name: Equality
+  href: api/Libplanet.Nonce.html#Libplanet_Nonce_op_Equality_
+  commentId: Overload:Libplanet.Nonce.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Nonce.Equality
+  nameWithType: Nonce.Equality
+- uid: Libplanet.Nonce.op_Inequality(Libplanet.Nonce,Libplanet.Nonce)
+  name: Inequality(Nonce, Nonce)
+  href: api/Libplanet.Nonce.html#Libplanet_Nonce_op_Inequality_Libplanet_Nonce_Libplanet_Nonce_
+  commentId: M:Libplanet.Nonce.op_Inequality(Libplanet.Nonce,Libplanet.Nonce)
+  fullName: Libplanet.Nonce.Inequality(Libplanet.Nonce, Libplanet.Nonce)
+  nameWithType: Nonce.Inequality(Nonce, Nonce)
+- uid: Libplanet.Nonce.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Nonce.html#Libplanet_Nonce_op_Inequality_
+  commentId: Overload:Libplanet.Nonce.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Nonce.Inequality
+  nameWithType: Nonce.Inequality
 - uid: Libplanet.Nonce.ToByteArray
   name: ToByteArray()
   href: api/Libplanet.Nonce.html#Libplanet_Nonce_ToByteArray
@@ -5870,6 +6677,22 @@ references:
   fullName.vb: Libplanet.Store.BaseStore.LookupStateReference(Of T)(Guid, System.String, Libplanet.Blocks.Block(Of T))
   nameWithType: BaseStore.LookupStateReference<T>(Guid, String, Block<T>)
   nameWithType.vb: BaseStore.LookupStateReference(Of T)(Guid, String, Block(Of T))
+- uid: Libplanet.Store.BaseStore.PruneBlockStates*
+  name: PruneBlockStates
+  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_PruneBlockStates_
+  commentId: Overload:Libplanet.Store.BaseStore.PruneBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseStore.PruneBlockStates
+  nameWithType: BaseStore.PruneBlockStates
+- uid: Libplanet.Store.BaseStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name: PruneBlockStates<T>(Guid, Block<T>)
+  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_PruneBlockStates__1_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.BaseStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name.vb: PruneBlockStates(Of T)(Guid, Block(Of T))
+  fullName: Libplanet.Store.BaseStore.PruneBlockStates<T>(Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.BaseStore.PruneBlockStates(Of T)(Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: BaseStore.PruneBlockStates<T>(Guid, Block<T>)
+  nameWithType.vb: BaseStore.PruneBlockStates(Of T)(Guid, Block(Of T))
 - uid: Libplanet.Store.BaseStore.PutBlock*
   name: PutBlock
   href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_PutBlock_
@@ -6606,6 +7429,22 @@ references:
   fullName.vb: Libplanet.Store.DefaultStore.LookupStateReference(Of T)(Guid, System.String, Libplanet.Blocks.Block(Of T))
   nameWithType: DefaultStore.LookupStateReference<T>(Guid, String, Block<T>)
   nameWithType.vb: DefaultStore.LookupStateReference(Of T)(Guid, String, Block(Of T))
+- uid: Libplanet.Store.DefaultStore.PruneBlockStates*
+  name: PruneBlockStates
+  href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_PruneBlockStates_
+  commentId: Overload:Libplanet.Store.DefaultStore.PruneBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.DefaultStore.PruneBlockStates
+  nameWithType: DefaultStore.PruneBlockStates
+- uid: Libplanet.Store.DefaultStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name: PruneBlockStates<T>(Guid, Block<T>)
+  href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_PruneBlockStates__1_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.DefaultStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name.vb: PruneBlockStates(Of T)(Guid, Block(Of T))
+  fullName: Libplanet.Store.DefaultStore.PruneBlockStates<T>(Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.DefaultStore.PruneBlockStates(Of T)(Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: DefaultStore.PruneBlockStates<T>(Guid, Block<T>)
+  nameWithType.vb: DefaultStore.PruneBlockStates(Of T)(Guid, Block(Of T))
 - uid: Libplanet.Store.DefaultStore.PutBlock*
   name: PutBlock
   href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_PutBlock_
@@ -7150,6 +7989,22 @@ references:
   fullName.vb: Libplanet.Store.IStore.LookupStateReference(Of T)(Guid, System.String, Libplanet.Blocks.Block(Of T))
   nameWithType: IStore.LookupStateReference<T>(Guid, String, Block<T>)
   nameWithType.vb: IStore.LookupStateReference(Of T)(Guid, String, Block(Of T))
+- uid: Libplanet.Store.IStore.PruneBlockStates*
+  name: PruneBlockStates
+  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_PruneBlockStates_
+  commentId: Overload:Libplanet.Store.IStore.PruneBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.IStore.PruneBlockStates
+  nameWithType: IStore.PruneBlockStates
+- uid: Libplanet.Store.IStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name: PruneBlockStates<T>(Guid, Block<T>)
+  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_PruneBlockStates__1_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.IStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name.vb: PruneBlockStates(Of T)(Guid, Block(Of T))
+  fullName: Libplanet.Store.IStore.PruneBlockStates<T>(Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.IStore.PruneBlockStates(Of T)(Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: IStore.PruneBlockStates<T>(Guid, Block<T>)
+  nameWithType.vb: IStore.PruneBlockStates(Of T)(Guid, Block(Of T))
 - uid: Libplanet.Store.IStore.PutBlock*
   name: PutBlock
   href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_PutBlock_
@@ -8040,6 +8895,32 @@ references:
   isSpec: "True"
   fullName: Libplanet.Tx.TxId.GetObjectData
   nameWithType: TxId.GetObjectData
+- uid: Libplanet.Tx.TxId.op_Equality(Libplanet.Tx.TxId,Libplanet.Tx.TxId)
+  name: Equality(TxId, TxId)
+  href: api/Libplanet.Tx.TxId.html#Libplanet_Tx_TxId_op_Equality_Libplanet_Tx_TxId_Libplanet_Tx_TxId_
+  commentId: M:Libplanet.Tx.TxId.op_Equality(Libplanet.Tx.TxId,Libplanet.Tx.TxId)
+  fullName: Libplanet.Tx.TxId.Equality(Libplanet.Tx.TxId, Libplanet.Tx.TxId)
+  nameWithType: TxId.Equality(TxId, TxId)
+- uid: Libplanet.Tx.TxId.op_Equality*
+  name: Equality
+  href: api/Libplanet.Tx.TxId.html#Libplanet_Tx_TxId_op_Equality_
+  commentId: Overload:Libplanet.Tx.TxId.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Tx.TxId.Equality
+  nameWithType: TxId.Equality
+- uid: Libplanet.Tx.TxId.op_Inequality(Libplanet.Tx.TxId,Libplanet.Tx.TxId)
+  name: Inequality(TxId, TxId)
+  href: api/Libplanet.Tx.TxId.html#Libplanet_Tx_TxId_op_Inequality_Libplanet_Tx_TxId_Libplanet_Tx_TxId_
+  commentId: M:Libplanet.Tx.TxId.op_Inequality(Libplanet.Tx.TxId,Libplanet.Tx.TxId)
+  fullName: Libplanet.Tx.TxId.Inequality(Libplanet.Tx.TxId, Libplanet.Tx.TxId)
+  nameWithType: TxId.Inequality(TxId, TxId)
+- uid: Libplanet.Tx.TxId.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Tx.TxId.html#Libplanet_Tx_TxId_op_Inequality_
+  commentId: Overload:Libplanet.Tx.TxId.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Tx.TxId.Inequality
+  nameWithType: TxId.Inequality
 - uid: Libplanet.Tx.TxId.Size
   name: Size
   href: api/Libplanet.Tx.TxId.html#Libplanet_Tx_TxId_Size
@@ -8085,3 +8966,22 @@ references:
   isSpec: "True"
   fullName: Libplanet.Tx.TxId.ToString
   nameWithType: TxId.ToString
+- uid: Libplanet.Tx.TxViolatingBlockPolicyException
+  name: TxViolatingBlockPolicyException
+  href: api/Libplanet.Tx.TxViolatingBlockPolicyException.html
+  commentId: T:Libplanet.Tx.TxViolatingBlockPolicyException
+  fullName: Libplanet.Tx.TxViolatingBlockPolicyException
+  nameWithType: TxViolatingBlockPolicyException
+- uid: Libplanet.Tx.TxViolatingBlockPolicyException.#ctor(Libplanet.Tx.TxId,System.String)
+  name: TxViolatingBlockPolicyException(TxId, String)
+  href: api/Libplanet.Tx.TxViolatingBlockPolicyException.html#Libplanet_Tx_TxViolatingBlockPolicyException__ctor_Libplanet_Tx_TxId_System_String_
+  commentId: M:Libplanet.Tx.TxViolatingBlockPolicyException.#ctor(Libplanet.Tx.TxId,System.String)
+  fullName: Libplanet.Tx.TxViolatingBlockPolicyException.TxViolatingBlockPolicyException(Libplanet.Tx.TxId, System.String)
+  nameWithType: TxViolatingBlockPolicyException.TxViolatingBlockPolicyException(TxId, String)
+- uid: Libplanet.Tx.TxViolatingBlockPolicyException.#ctor*
+  name: TxViolatingBlockPolicyException
+  href: api/Libplanet.Tx.TxViolatingBlockPolicyException.html#Libplanet_Tx_TxViolatingBlockPolicyException__ctor_
+  commentId: Overload:Libplanet.Tx.TxViolatingBlockPolicyException.#ctor
+  isSpec: "True"
+  fullName: Libplanet.Tx.TxViolatingBlockPolicyException.TxViolatingBlockPolicyException
+  nameWithType: TxViolatingBlockPolicyException.TxViolatingBlockPolicyException
