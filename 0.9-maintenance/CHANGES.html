@@ -62,9 +62,21 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="libplanet-changelog">Libplanet changelog</h1>
 
-<h2 id="version-091">Version 0.9.1</h2>
+<h2 id="version-093">Version 0.9.3</h2>
 <p>To be released.</p>
-<h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>Fixed a <code>Swarm&lt;T&gt;.PreloadAsync()</code> method's bug that had hanged in a state
+downloading block hashes and finally unexpectedly terminated when a peer's
+chain had gotten reorged.   [<a href="https://github.com/planetarium/libplanet/issues/880">#880</a>, <a href="https://github.com/planetarium/libplanet/pull/884">#884</a>]</li>
+</ul>
+<h2 id="version-092">Version 0.9.2</h2>
+<p>Released on May 20, 2020.</p>
+<ul>
+<li>(Libplanet.RocksDBStore) Fixed a memory leak bug in <code>RocksDBStore</code>.
+[<a href="https://github.com/planetarium/libplanet/pull/870">#870</a>]</li>
+</ul>
+<h2 id="version-091">Version 0.9.1</h2>
+<p>Released on May 7, 2020.</p>
 <ul>
 <li>Fixed a bug where the canonical chain had changed if any actions had thrown
 an exception during <code>Swarm&lt;T&gt;.PreloadAsync()</code>.  [<a href="https://github.com/planetarium/libplanet/pull/862">#862</a>]</li>
@@ -118,8 +130,8 @@ parameter to <code>Swarm()</code> constructor.  [<a href="https://github.com/pla
 that receives only one transaction.  [<a href="https://github.com/planetarium/libplanet/pull/820">#820</a>]</li>
 <li>Replaced <code>BlockChain&lt;T&gt;.UnstageTransactions()</code> with <code>.UnstageTransaction()</code>
 that receives only one transaction.  [<a href="https://github.com/planetarium/libplanet/pull/820">#820</a>]</li>
-<li>Added <code>IBlockPolicy.DoesTransactionFollowPolicy()</code> method which is a method to
-determine if a transaction follows the block policy.  [<a href="https://github.com/planetarium/libplanet/pull/827">#827</a>]</li>
+<li>Added <code>IBlockPolicy.DoesTransactionFollowPolicy()</code> method which is a method
+to determine if a transaction follows the block policy.  [<a href="https://github.com/planetarium/libplanet/pull/827">#827</a>]</li>
 </ul>
 <h3 id="backward-incompatible-network-protocol-changes">Backward-incompatible network protocol changes</h3>
 <ul>
@@ -173,7 +185,7 @@ creation.  [<a href="https://github.com/planetarium/libplanet/issues/817">#817</
 connections.  [<a href="https://github.com/planetarium/libplanet/pull/846">#846</a>]</li>
 <li>Improved response throughput of <code>Swarm&lt;T&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/849">#849</a>]</li>
 </ul>
-<h3 id="bug-fixes-1">Bug fixes</h3>
+<h3 id="bug-fixes">Bug fixes</h3>
 <ul>
 <li><code>Swarm&lt;T&gt;</code> became not to sync the same <code>Block&lt;T&gt;</code>s or <code>Transaction&lt;T&gt;</code>s
 multiple times.  [<a href="https://github.com/planetarium/libplanet/pull/784">#784</a>]</li>
@@ -362,7 +374,7 @@ then select an additional peers so that the total is 10.</li>
 </ul>
 </li>
 </ul>
-<h3 id="bug-fixes-2">Bug fixes</h3>
+<h3 id="bug-fixes-1">Bug fixes</h3>
 <ul>
 <li>Fixed a bug where the canonical chain could be deleted if <code>Swarm&lt;T&gt;</code> failed
 to download blocks due to network connection.  [<a href="https://github.com/planetarium/libplanet/pull/675">#675</a>]</li>
@@ -502,7 +514,7 @@ the <code>Block&lt;T&gt;</code> more than once.  [<a href="https://github.com/pl
 <li><code>Swarm&lt;T&gt;.PreloadAsync()</code> became to try downloading blocks from all neighbor peers,
 even if any peer among them is unavailable to send blocks.  [<a href="https://github.com/planetarium/libplanet/pull/636">#636</a>]</li>
 </ul>
-<h3 id="bug-fixes-3">Bug fixes</h3>
+<h3 id="bug-fixes-2">Bug fixes</h3>
 <ul>
 <li>Fixed a bug where <code>Swarm&lt;T&gt;</code> had tried to update a peer infinitely when
 the peer is evicted from its table.  [<a href="https://github.com/planetarium/libplanet/pull/566">#566</a>]</li>
@@ -651,7 +663,7 @@ and transactions in each group (per signer) are ordered by
 <li><code>LiteDBStore()</code> became to create the database in memory if the <code>path</code>
 parameter is <code>null</code>.  [<a href="https://github.com/planetarium/libplanet/pull/521">#521</a>]</li>
 </ul>
-<h3 id="bug-fixes-4">Bug fixes</h3>
+<h3 id="bug-fixes-3">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that <code>Swarm&lt;T&gt;</code> hadn't released its TURN related resources on
 <code>Swarm&lt;T&gt;.StopAsync()</code>.  [<a href="https://github.com/planetarium/libplanet/pull/450">#450</a>]</li>
@@ -663,14 +675,14 @@ occurred during fetching block from other peers.  [<a href="https://github.com/p
 </ul>
 <h2 id="version-053">Version 0.5.3</h2>
 <p>Released on September 9, 2019.</p>
-<h3 id="bug-fixes-5">Bug fixes</h3>
+<h3 id="bug-fixes-4">Bug fixes</h3>
 <ul>
 <li>Fix bug where <code>IAccountStateDelta.GetState()</code> hadn't returned proper state
 when the block action is evaluated.  [<a href="https://github.com/planetarium/libplanet/pull/500">#500</a>]</li>
 </ul>
 <h2 id="version-052">Version 0.5.2</h2>
 <p>Released on August 29, 2019.</p>
-<h3 id="bug-fixes-6">Bug fixes</h3>
+<h3 id="bug-fixes-5">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that <code>Swarm&lt;T&gt;.PreloadAsync()</code> method had thrown <code>LiteException</code>
 (or other exception depending on <code>IStore</code>), which indicates a state
@@ -683,7 +695,7 @@ transactions.  [<a href="https://github.com/planetarium/libplanet/issues/352">#3
 </ul>
 <h2 id="version-051">Version 0.5.1</h2>
 <p>Released on August 28, 2019.</p>
-<h3 id="bug-fixes-7">Bug fixes</h3>
+<h3 id="bug-fixes-6">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that <code>ArgumentNullException</code> had been thrown when a blockchain,
 which consists of incomplete states (i.e., precalculated states downloaded
@@ -779,7 +791,7 @@ the <code>Transaction&lt;T&gt;</code> more than once.  [<a href="https://github.
 <code>false</code>.  [<a href="https://github.com/planetarium/libplanet/pull/423">#423</a>]</li>
 <li><code>PrivateKey(byte[])</code> constructor became to check validity.  [<a href="https://github.com/planetarium/libplanet/pull/438">#438</a>]</li>
 </ul>
-<h3 id="bug-fixes-8">Bug fixes</h3>
+<h3 id="bug-fixes-7">Bug fixes</h3>
 <ul>
 <li>Fixed a bug where the <code>LiteDBStore.IterateStagedTransactionIds()</code> returns
 duplicated transaction ids.  [<a href="https://github.com/planetarium/libplanet/pull/366">#366</a>]</li>
@@ -807,7 +819,7 @@ took a long time.  [<a href="https://github.com/planetarium/libplanet/pull/424">
 </ul>
 <h2 id="version-041">Version 0.4.1</h2>
 <p>Released on July 11, 2019.</p>
-<h3 id="bug-fixes-9">Bug fixes</h3>
+<h3 id="bug-fixes-8">Bug fixes</h3>
 <ul>
 <li>Fixed a bug where the <code>BlockChain&lt;T&gt;.GetStates()</code> method had not returned
 the latest state when there are multiple addresses.  [<a href="https://github.com/planetarium/libplanet/pull/346">#346</a>]</li>
@@ -905,7 +917,7 @@ references in the replaced chain. [<a href="https://github.com/planetarium/libpl
 under the circumstances that the height of
 the <code>BlockChain&lt;T&gt;</code> object is high.  [<a href="https://github.com/planetarium/libplanet/issues/282">#282</a>, <a href="https://github.com/planetarium/libplanet/pull/299">#299</a>]</li>
 </ul>
-<h3 id="bug-fixes-10">Bug fixes</h3>
+<h3 id="bug-fixes-9">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that <code>Swarm&lt;T&gt;</code> reported <code>TaskCanceledException</code> as an unknown
 exception while stopping. [<a href="https://github.com/planetarium/libplanet/pull/275">#275</a>]</li>
@@ -1040,7 +1052,7 @@ current nonce.  [<a href="https://github.com/planetarium/libplanet/pull/246">#24
 <li><code>Swarm</code> became to enforce <code>ForceDotNet.Force()</code> in <a href="https://github.com/somdoron/AsyncIO">AsyncIO</a> while
 it's running on Mono runtime.  [<a href="https://github.com/planetarium/libplanet/pull/247">#247</a>]</li>
 </ul>
-<h3 id="bug-fixes-11">Bug fixes</h3>
+<h3 id="bug-fixes-10">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that TURN relay had been disconnected when being connected for
 longer than 5 minutes.  [<a href="https://github.com/planetarium/libplanet/pull/198">#198</a>]</li>
