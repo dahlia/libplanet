@@ -68,6 +68,8 @@
 <ul>
 <li>Added <code>IAction.RenderError()</code> and <code>IAction.UnrenderError()</code> methods.
 [<a href="https://github.com/planetarium/libplanet/issues/860">#860</a>, <a href="https://github.com/planetarium/libplanet/pull/875">#875</a>]</li>
+<li>Added <code>render</code> optional parameter to <code>BlockChain&lt;T&gt;()</code> constructor.
+[<a href="https://github.com/planetarium/libplanet/pull/883">#883</a>]</li>
 </ul>
 <h3 id="backward-incompatible-network-protocol-changes">Backward-incompatible network protocol changes</h3>
 <h3 id="backward-incompatible-storage-format-changes">Backward-incompatible storage format changes</h3>
@@ -86,7 +88,21 @@ broadcast.  [<a href="https://github.com/planetarium/libplanet/issues/858">#858<
 an exception to <code>ActionEvaluation</code>s.  [<a href="https://github.com/planetarium/libplanet/issues/860">#860</a>, <a href="https://github.com/planetarium/libplanet/pull/875">#875</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
+<ul>
+<li>Fixed a bug that <code>Swarm&lt;T&gt;</code> had failed to receive a request from TURN relay
+connections.  [<a href="https://github.com/planetarium/libplanet/issues/404">#404</a>, <a href="https://github.com/planetarium/libplanet/issues/871">#871</a>, [#890]]</li>
+</ul>
 <h3 id="cli-tools">CLI tools</h3>
+<h2 id="version-094">Version 0.9.4</h2>
+<p>Released on June 2, 2020.</p>
+<ul>
+<li>(Libplanet.RocksDBStore) Fixed a bug that  <code>RocksDBStore.DeleteChainId()</code>
+method had thrown <code>KeyNotFoundException</code> when there's no such chain ID.
+[<a href="https://github.com/planetarium/libplanet/pull/891">#891</a>]</li>
+<li>(Libplanet.RocksDBStore) Fixed a bug that <code>RocksDBStore</code> had written logs
+into the incorrect context <code>DefaultContext</code>, not <code>RocksDBStore</code>
+the correct one.  [<a href="https://github.com/planetarium/libplanet/pull/891">#891</a>]</li>
+</ul>
 <h2 id="version-093">Version 0.9.3</h2>
 <p>Released on May 29, 2020.</p>
 <ul>
