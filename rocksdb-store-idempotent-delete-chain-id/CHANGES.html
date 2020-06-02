@@ -68,6 +68,9 @@
 <li>(Libplanet.RocksDBStore) Fixed a bug that  <code>RocksDBStore.DeleteChainId()</code>
 method had thrown <code>KeyNotFoundException</code> when there's no such chain ID.
 [<a href="https://github.com/planetarium/libplanet/pull/891">#891</a>]</li>
+<li>(Libplanet.RocksDBStore) Fixed a bug that <code>RocksDBStore</code> had written logs
+into the incorrect context <code>DefaultContext</code>, not <code>RocksDBStore</code>
+the correct one.  [<a href="https://github.com/planetarium/libplanet/pull/891">#891</a>]</li>
 </ul>
 <h2 id="version-093">Version 0.9.3</h2>
 <p>Released on May 29, 2020.</p>
