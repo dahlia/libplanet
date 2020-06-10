@@ -1961,14 +1961,14 @@ references:
   fullName.vb: Libplanet.Blocks.Block(Of T).Difficulty
   nameWithType: Block<T>.Difficulty
   nameWithType.vb: Block(Of T).Difficulty
-- uid: Libplanet.Blocks.Block`1.Evaluate(DateTimeOffset,Libplanet.Action.AccountStateGetter)
-  name: Evaluate(DateTimeOffset, AccountStateGetter)
-  href: api/Libplanet.Blocks.Block-1.html#Libplanet_Blocks_Block_1_Evaluate_DateTimeOffset_Libplanet_Action_AccountStateGetter_
-  commentId: M:Libplanet.Blocks.Block`1.Evaluate(DateTimeOffset,Libplanet.Action.AccountStateGetter)
-  fullName: Libplanet.Blocks.Block<T>.Evaluate(DateTimeOffset, Libplanet.Action.AccountStateGetter)
-  fullName.vb: Libplanet.Blocks.Block(Of T).Evaluate(DateTimeOffset, Libplanet.Action.AccountStateGetter)
-  nameWithType: Block<T>.Evaluate(DateTimeOffset, AccountStateGetter)
-  nameWithType.vb: Block(Of T).Evaluate(DateTimeOffset, AccountStateGetter)
+- uid: Libplanet.Blocks.Block`1.Evaluate(DateTimeOffset,Libplanet.Action.AccountStateGetter,Libplanet.Action.AccountBalanceGetter)
+  name: Evaluate(DateTimeOffset, AccountStateGetter, AccountBalanceGetter)
+  href: api/Libplanet.Blocks.Block-1.html#Libplanet_Blocks_Block_1_Evaluate_DateTimeOffset_Libplanet_Action_AccountStateGetter_Libplanet_Action_AccountBalanceGetter_
+  commentId: M:Libplanet.Blocks.Block`1.Evaluate(DateTimeOffset,Libplanet.Action.AccountStateGetter,Libplanet.Action.AccountBalanceGetter)
+  fullName: Libplanet.Blocks.Block<T>.Evaluate(DateTimeOffset, Libplanet.Action.AccountStateGetter, Libplanet.Action.AccountBalanceGetter)
+  fullName.vb: Libplanet.Blocks.Block(Of T).Evaluate(DateTimeOffset, Libplanet.Action.AccountStateGetter, Libplanet.Action.AccountBalanceGetter)
+  nameWithType: Block<T>.Evaluate(DateTimeOffset, AccountStateGetter, AccountBalanceGetter)
+  nameWithType.vb: Block(Of T).Evaluate(DateTimeOffset, AccountStateGetter, AccountBalanceGetter)
 - uid: Libplanet.Blocks.Block`1.Evaluate*
   name: Evaluate
   href: api/Libplanet.Blocks.Block-1.html#Libplanet_Blocks_Block_1_Evaluate_
