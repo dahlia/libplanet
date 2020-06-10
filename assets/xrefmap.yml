@@ -3263,14 +3263,7 @@ references:
 - uid: Libplanet.Currency.Hash
   name: Hash
   href: api/Libplanet.Currency.html#Libplanet_Currency_Hash
-  commentId: P:Libplanet.Currency.Hash
-  fullName: Libplanet.Currency.Hash
-  nameWithType: Currency.Hash
-- uid: Libplanet.Currency.Hash*
-  name: Hash
-  href: api/Libplanet.Currency.html#Libplanet_Currency_Hash_
-  commentId: Overload:Libplanet.Currency.Hash
-  isSpec: "True"
+  commentId: F:Libplanet.Currency.Hash
   fullName: Libplanet.Currency.Hash
   nameWithType: Currency.Hash
 - uid: Libplanet.Currency.Minters
