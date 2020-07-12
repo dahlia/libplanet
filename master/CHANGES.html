@@ -68,6 +68,20 @@
 <ul>
 <li>Added <code>IAction.RenderError()</code> and <code>IAction.UnrenderError()</code> methods.
 [<a href="https://github.com/planetarium/libplanet/issues/860">#860</a>, <a href="https://github.com/planetarium/libplanet/pull/875">#875</a>]</li>
+<li>Added methods related fungible asset states to <code>IAccountStateDelta</code>:
+[<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]
+<ul>
+<li><code>UpdatedFungibleAssetsAccounts</code> property</li>
+<li><code>MintAsset(Address, Currency, BigInteger)</code> method</li>
+<li><code>TransferAsset(Address, Address, Currency, BigInteger)</code> method</li>
+<li><code>BurnAsset(Address, Currency, BigInteger)</code> method</li>
+<li><code>GetBalance(Address, Currency)</code> method</li>
+</ul>
+</li>
+<li>Added <code>IAccountStateDelta.StateUpdatedAddresses</code> property in order to
+distinguish state updates from asset states.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
+<li>Added an optional parameter <code>AccountBalanceGetter accountBalanceGetter</code> to
+<code>Block&lt;T&gt;.EvaluateActionsPerTx()</code> method.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
 <li><code>BlockChain&lt;T&gt;.StageTransaction()</code> became to throw
 <code>InvalidTxGenesisHashException</code> when it takes a <code>Transaction&lt;T&gt;</code> from
 a heterogeneous <code>BlockChain&lt;T&gt;</code> with a different genesis block.
@@ -76,15 +90,28 @@ a heterogeneous <code>BlockChain&lt;T&gt;</code> with a different genesis block.
 [<a href="https://github.com/planetarium/libplanet/pull/883">#883</a>]</li>
 </ul>
 <h3 id="backward-incompatible-network-protocol-changes">Backward-incompatible network protocol changes</h3>
+<ul>
+<li>The message field <code>RecentStates.StateReferences</code> became to
+<code>IImmutableDictionary&lt;string, IImmutableList&lt;HashDigest&lt;SHA256&gt;&gt;&gt;</code> from
+<code>IImmutableDictionary&lt;Address, IImmutableList&lt;HashDigest&lt;SHA256&gt;&gt;&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/912">#912</a>]</li>
+<li>The existing <code>RecentStates</code> message type (with the type number <code>0x0f</code>) was
+replaced by a new <code>RecentStates</code> message type
+(with the type number <code>0x13</code>).  [<a href="https://github.com/planetarium/libplanet/pull/912">#912</a>]</li>
+</ul>
 <h3 id="backward-incompatible-storage-format-changes">Backward-incompatible storage format changes</h3>
 <ul>
 <li>Added <code>RawTransaction&lt;T&gt;.GenesisHash</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/796">#796</a>, <a href="https://github.com/planetarium/libplanet/pull/878">#878</a>]</li>
 </ul>
 <h3 id="added-apis">Added APIs</h3>
 <ul>
+<li>Added <code>Currency</code> struct.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
+<li>Added <code>AccountBalanceGetter</code> delegate.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
 <li>Added <code>TurnClient.BindProxies()</code> method. [<a href="https://github.com/planetarium/libplanet/issues/756">#756</a>, <a href="https://github.com/planetarium/libplanet/pull/868">#868</a>]</li>
 <li>Added <code>ActionEvaluation.Exception</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/860">#860</a>, [<a href="https://github.com/planetarium/libplanet/pull/875">#875</a>]]</li>
 <li>Added <code>InvalidTxGenesisHashException</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/796">#796</a>, <a href="https://github.com/planetarium/libplanet/pull/878">#878</a>]</li>
+<li>Added <code>CurrencyPermissionException</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
+<li>Added <code>InsufficientBalanceException</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
+<li>Added <code>BlockChain&lt;T&gt;.GetBalance()</code> method.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
 </ul>
 <h3 id="behavioral-changes">Behavioral changes</h3>
 <ul>
@@ -99,15 +126,35 @@ a heterogeneous <code>BlockChain&lt;T&gt;</code> with a different genesis block.
 <code>UnexpectedlyTerminatedActionException</code> directly. Instead, it records
 an exception to <code>ActionEvaluation</code>s.  [<a href="https://github.com/planetarium/libplanet/issues/860">#860</a>, <a href="https://github.com/planetarium/libplanet/pull/875">#875</a>]</li>
 <li>Added <code>Transaction&lt;T&gt;.GenesisHash</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/796">#796</a>, <a href="https://github.com/planetarium/libplanet/pull/878">#878</a>]</li>
+<li>Added <code>IAccountStateDelta.UpdatedAddresses</code> property contains
+asset updates besides state updates.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
 <li><code>Swarm&lt;T&gt;</code> became to ignore received transaction with different
 genesis hash.  [<a href="https://github.com/planetarium/libplanet/issues/796">#796</a>, <a href="https://github.com/planetarium/libplanet/pull/878">#878</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became to ignore invalid <code>BlockHeader</code>s immediately.  [<a href="https://github.com/planetarium/libplanet/pull/898">#898</a>]</li>
+<li><code>Swarm&lt;T&gt;.PreloadAsync()</code> became to clean up only temporary chains.
+[<a href="https://github.com/planetarium/libplanet/pull/902">#902</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
 <ul>
 <li>Fixed a bug that <code>Swarm&lt;T&gt;</code> had failed to receive a request from TURN relay
-connections.  [<a href="https://github.com/planetarium/libplanet/issues/404">#404</a>, <a href="https://github.com/planetarium/libplanet/issues/871">#871</a>, [#890]]</li>
+connections.  [<a href="https://github.com/planetarium/libplanet/issues/404">#404</a>, <a href="https://github.com/planetarium/libplanet/issues/871">#871</a>, <a href="https://github.com/planetarium/libplanet/pull/890">#890</a>]</li>
+<li>Fixed a bug where <code>Swarm&lt;T&gt;</code> had been terminated and never reconnected when
+it had been once disconnected from TURN (mostly due to <a href="https://en.wikipedia.org/wiki/Sleep_mode">sleep mode</a>, etc.).
+[<a href="https://github.com/planetarium/libplanet/pull/909">#909</a>]</li>
+<li>Fixed a bug in which pre-computed state delivery had failed when a state
+key is not an <code>Address</code> when preloading.  [<a href="https://github.com/planetarium/libplanet/pull/912">#912</a>]</li>
+<li>Fixed a bug where <code>UnexpectedlyTerminatedException</code> hadn't been serialized
+with <code>BinaryFormatter</code>.  [<a href="https://github.com/planetarium/libplanet/pull/913">#913</a>]</li>
+<li>Fixed a bug where <code>TurnClient</code> hadn't applied cancellation token to its
+connections.  [<a href="https://github.com/planetarium/libplanet/pull/916">#916</a>]</li>
 </ul>
 <h3 id="cli-tools">CLI tools</h3>
+<h2 id="version-095">Version 0.9.5</h2>
+<p>Released on June 12, 2020.</p>
+<ul>
+<li>Fixed a bug that had not properly received block hashes after the chain had reorged.
+[<a href="https://github.com/planetarium/libplanet/issues/880">#880</a>, <a href="https://github.com/planetarium/libplanet/pull/905">#905</a>]</li>
+</ul>
 <h2 id="version-094">Version 0.9.4</h2>
 <p>Released on June 2, 2020.</p>
 <ul>
