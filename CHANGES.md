@@ -93,8 +93,9 @@ To be released.
  -  Fixed a bug where `TurnClient` hadn't applied cancellation token to its
     connections.  [[#916]]
 
-
 ### CLI tools
+
+ -  The `planet` command became installable using `npm`.
 
 [#404]: https://github.com/planetarium/libplanet/issues/404
 [#666]: https://github.com/planetarium/libplanet/issues/666
