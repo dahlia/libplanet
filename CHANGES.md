@@ -4,7 +4,6 @@ Libplanet changelog
 Version 0.10.0
 --------------
 
-To be released.
 
 ### Backward-incompatible API changes
 

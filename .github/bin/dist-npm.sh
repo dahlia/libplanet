@@ -13,9 +13,9 @@ if [ "$NODE_AUTH_TOKEN" = "" ]; then
 fi
 
 if [ "$publish_package" = "" ]; then
-  dry_run=--dry-run
+  dry_run=
 else
-  dry_run=--dry-run
+  dry_run=
 fi
 
 set -x
