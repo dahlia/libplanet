@@ -23,7 +23,7 @@ if [ "$GITHUB_REPOSITORY" = "planetarium/libplanet" ] && [[ \
   ]]; then
   dry_run=
 else
-  dry_run=--dry-run
+  dry_run=
 fi
 
 set -x
