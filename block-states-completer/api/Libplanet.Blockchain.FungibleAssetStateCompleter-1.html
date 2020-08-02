@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Delegate FungibleAssetStateCompleter
+    <title>Delegate FungibleAssetStateCompleter&lt;T&gt;
    | Libplanet </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Delegate FungibleAssetStateCompleter
+    <meta name="title" content="Delegate FungibleAssetStateCompleter&lt;T&gt;
    | Libplanet ">
     <meta name="generator" content="docfx 2.48.1.0">
     
@@ -68,21 +68,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Libplanet.Blockchain.FungibleAssetStateCompleter">
+            <article class="content wrap" id="_content" data-uid="Libplanet.Blockchain.FungibleAssetStateCompleter`1">
   
   
-  <h1 id="Libplanet_Blockchain_FungibleAssetStateCompleter" data-uid="Libplanet.Blockchain.FungibleAssetStateCompleter" class="text-break">Delegate FungibleAssetStateCompleter
+  <h1 id="Libplanet_Blockchain_FungibleAssetStateCompleter_1" data-uid="Libplanet.Blockchain.FungibleAssetStateCompleter`1" class="text-break">Delegate FungibleAssetStateCompleter&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>A delegate to be called when <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_GetBalance_Libplanet_Address_Libplanet_Currency_System_Nullable_Libplanet_HashDigest_SHA256___Libplanet_Blockchain_FungibleAssetStateCompleter_">GetBalance(Address, Currency, Nullable&lt;HashDigest&lt;SHA256&gt;&gt;, FungibleAssetStateCompleter)</a> method encounters a block having
-incomplete dirty states. <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_GetBalance_Libplanet_Address_Libplanet_Currency_System_Nullable_Libplanet_HashDigest_SHA256___Libplanet_Blockchain_FungibleAssetStateCompleter_">GetBalance(Address, Currency, Nullable&lt;HashDigest&lt;SHA256&gt;&gt;, FungibleAssetStateCompleter)</a> method returns this delegate's return
-value instead for such case.</p>
+  <div class="markdown level0 summary"><p>A delegate to be called when <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_GetBalance_Libplanet_Address_Libplanet_Currency_System_Nullable_Libplanet_HashDigest_SHA256___Libplanet_Blockchain_FungibleAssetStateCompleter__0__">GetBalance(Address, Currency, Nullable&lt;HashDigest&lt;SHA256&gt;&gt;, FungibleAssetStateCompleter&lt;T&gt;)</a> method encounters
+a block having incomplete dirty states. <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_GetBalance_Libplanet_Address_Libplanet_Currency_System_Nullable_Libplanet_HashDigest_SHA256___Libplanet_Blockchain_FungibleAssetStateCompleter__0__">GetBalance(Address, Currency, Nullable&lt;HashDigest&lt;SHA256&gt;&gt;, FungibleAssetStateCompleter&lt;T&gt;)</a> method
+returns this delegate's return value instead for such case.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Libplanet.Blockchain.html">Libplanet.Blockchain</a></h6>
   <h6><strong>Assembly</strong>: Libplanet.dll</h6>
-  <h5 id="Libplanet_Blockchain_FungibleAssetStateCompleter_syntax">Syntax</h5>
+  <h5 id="Libplanet_Blockchain_FungibleAssetStateCompleter_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate BigInteger FungibleAssetStateCompleter(HashDigest&lt;SHA256&gt; blockDigest);</code></pre>
+    <pre><code class="lang-csharp hljs">public delegate BigInteger FungibleAssetStateCompleter&lt;T&gt;(BlockChain&lt;T&gt; blockChain, HashDigest&lt;SHA256&gt; blockHash, Address address, Currency currency)
+    where T : IAction, new();</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -95,9 +96,27 @@ value instead for such case.</p>
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="Libplanet.Blockchain.BlockChain-1.html">BlockChain</a>&lt;T&gt;</td>
+        <td><span class="parametername">blockChain</span></td>
+        <td><p>The blockchain to query.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="Libplanet.HashDigest-1.html">HashDigest</a>&lt;<span class="xref">SHA256</span>&gt;</td>
-        <td><span class="parametername">blockDigest</span></td>
+        <td><span class="parametername">blockHash</span></td>
         <td><p>The hash of a block to lacks its dirty states.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Libplanet.Address.html">Address</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>The account to query its balance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Libplanet.Currency.html">Currency</a></td>
+        <td><span class="parametername">currency</span></td>
+        <td><p>The currency to query.</p>
 </td>
       </tr>
     </tbody>
@@ -118,6 +137,23 @@ value instead for such case.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>An <a class="xref" href="Libplanet.Action.IAction.html">IAction</a> type.  It should match
+to <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html">BlockChain&lt;T&gt;</a>'s type parameter.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -126,10 +162,10 @@ value instead for such case.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/new/block-states-completer/apiSpec/new?filename=Libplanet_Blockchain_FungibleAssetStateCompleter.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.FungibleAssetStateCompleter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dahlia/libplanet/new/block-states-completer/apiSpec/new?filename=Libplanet_Blockchain_FungibleAssetStateCompleter_1.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.FungibleAssetStateCompleter%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/block-states-completer/Libplanet/Blockchain/FungibleAssetStateCompleter.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/block-states-completer/Libplanet/Blockchain/FungibleAssetStateCompleter.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
