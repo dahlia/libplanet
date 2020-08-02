@@ -1979,6 +1979,65 @@ references:
   fullName.vb: Libplanet.Blockchain.StateCompleters(Of T).Reject
   nameWithType: StateCompleters<T>.Reject
   nameWithType.vb: StateCompleters(Of T).Reject
+- uid: Libplanet.Blockchain.StateCompleterSet`1
+  name: StateCompleterSet<T>
+  href: api/Libplanet.Blockchain.StateCompleterSet-1.html
+  commentId: T:Libplanet.Blockchain.StateCompleterSet`1
+  name.vb: StateCompleterSet(Of T)
+  fullName: Libplanet.Blockchain.StateCompleterSet<T>
+  fullName.vb: Libplanet.Blockchain.StateCompleterSet(Of T)
+  nameWithType: StateCompleterSet<T>
+  nameWithType.vb: StateCompleterSet(Of T)
+- uid: Libplanet.Blockchain.StateCompleterSet`1.FungibleAssetStateCompleter
+  name: FungibleAssetStateCompleter
+  href: api/Libplanet.Blockchain.StateCompleterSet-1.html#Libplanet_Blockchain_StateCompleterSet_1_FungibleAssetStateCompleter
+  commentId: P:Libplanet.Blockchain.StateCompleterSet`1.FungibleAssetStateCompleter
+  fullName: Libplanet.Blockchain.StateCompleterSet<T>.FungibleAssetStateCompleter
+  fullName.vb: Libplanet.Blockchain.StateCompleterSet(Of T).FungibleAssetStateCompleter
+  nameWithType: StateCompleterSet<T>.FungibleAssetStateCompleter
+  nameWithType.vb: StateCompleterSet(Of T).FungibleAssetStateCompleter
+- uid: Libplanet.Blockchain.StateCompleterSet`1.FungibleAssetStateCompleter*
+  name: FungibleAssetStateCompleter
+  href: api/Libplanet.Blockchain.StateCompleterSet-1.html#Libplanet_Blockchain_StateCompleterSet_1_FungibleAssetStateCompleter_
+  commentId: Overload:Libplanet.Blockchain.StateCompleterSet`1.FungibleAssetStateCompleter
+  isSpec: "True"
+  fullName: Libplanet.Blockchain.StateCompleterSet<T>.FungibleAssetStateCompleter
+  fullName.vb: Libplanet.Blockchain.StateCompleterSet(Of T).FungibleAssetStateCompleter
+  nameWithType: StateCompleterSet<T>.FungibleAssetStateCompleter
+  nameWithType.vb: StateCompleterSet(Of T).FungibleAssetStateCompleter
+- uid: Libplanet.Blockchain.StateCompleterSet`1.Recalculate
+  name: Recalculate
+  href: api/Libplanet.Blockchain.StateCompleterSet-1.html#Libplanet_Blockchain_StateCompleterSet_1_Recalculate
+  commentId: F:Libplanet.Blockchain.StateCompleterSet`1.Recalculate
+  fullName: Libplanet.Blockchain.StateCompleterSet<T>.Recalculate
+  fullName.vb: Libplanet.Blockchain.StateCompleterSet(Of T).Recalculate
+  nameWithType: StateCompleterSet<T>.Recalculate
+  nameWithType.vb: StateCompleterSet(Of T).Recalculate
+- uid: Libplanet.Blockchain.StateCompleterSet`1.Reject
+  name: Reject
+  href: api/Libplanet.Blockchain.StateCompleterSet-1.html#Libplanet_Blockchain_StateCompleterSet_1_Reject
+  commentId: F:Libplanet.Blockchain.StateCompleterSet`1.Reject
+  fullName: Libplanet.Blockchain.StateCompleterSet<T>.Reject
+  fullName.vb: Libplanet.Blockchain.StateCompleterSet(Of T).Reject
+  nameWithType: StateCompleterSet<T>.Reject
+  nameWithType.vb: StateCompleterSet(Of T).Reject
+- uid: Libplanet.Blockchain.StateCompleterSet`1.StateCompleter
+  name: StateCompleter
+  href: api/Libplanet.Blockchain.StateCompleterSet-1.html#Libplanet_Blockchain_StateCompleterSet_1_StateCompleter
+  commentId: P:Libplanet.Blockchain.StateCompleterSet`1.StateCompleter
+  fullName: Libplanet.Blockchain.StateCompleterSet<T>.StateCompleter
+  fullName.vb: Libplanet.Blockchain.StateCompleterSet(Of T).StateCompleter
+  nameWithType: StateCompleterSet<T>.StateCompleter
+  nameWithType.vb: StateCompleterSet(Of T).StateCompleter
+- uid: Libplanet.Blockchain.StateCompleterSet`1.StateCompleter*
+  name: StateCompleter
+  href: api/Libplanet.Blockchain.StateCompleterSet-1.html#Libplanet_Blockchain_StateCompleterSet_1_StateCompleter_
+  commentId: Overload:Libplanet.Blockchain.StateCompleterSet`1.StateCompleter
+  isSpec: "True"
+  fullName: Libplanet.Blockchain.StateCompleterSet<T>.StateCompleter
+  fullName.vb: Libplanet.Blockchain.StateCompleterSet(Of T).StateCompleter
+  nameWithType: StateCompleterSet<T>.StateCompleter
+  nameWithType.vb: StateCompleterSet(Of T).StateCompleter
 - uid: Libplanet.Blocks
   name: Libplanet.Blocks
   href: api/Libplanet.Blocks.html
