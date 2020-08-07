@@ -110,6 +110,15 @@ constructor.  [<a href="https://github.com/planetarium/libplanet/issues/666">#66
 <code>Block&lt;T&gt;()</code> constructor. [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
 <li>Replaced <code>SerializationInfoExtensions.GetValueOrDefault&lt;T&gt;()</code> to
 <code>SerializationInfoExtensions.TryGetValue&lt;T&gt;()</code>.  [<a href="https://github.com/planetarium/libplanet/pull/940">#940</a>]</li>
+<li>Added <code>bool append = true</code> option to both <code>BlockChain&lt;T&gt;.MineBlock()</code>
+overloaded methods.  Although this breaks ABI-level backward compatibility
+(i.e., you need to rebuild your assemblies), still is backward-compatible at
+API-level as the option is turned on by default.  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
+<li>Added <code>CancellationToken cancellationToken = default(CancellationToken)</code>
+option to <code>BlockChain&lt;T&gt;.MineBlock(Address miner)</code> overloaded method.
+Although this breaks ABI-level backward compatibility (i.e., you need to
+rebuild your assemblies), still is backward-compatible at API-level as
+the option has the default value.  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
 </ul>
 <h3 id="backward-incompatible-network-protocol-changes">Backward-incompatible network protocol changes</h3>
 <ul>
@@ -153,7 +162,7 @@ and <code>ChainStatus</code> (<code>0x21</code>).  [<a href="https://github.com/
 <li>Added <code>BlockHeader.PreEvaluationHash</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
 <li>Added <code>HashDigest(ImmutableArray&lt;byte&gt;)</code> constructor.  [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
 <li>Incomplete block states became able to be handled in more flexible way.
-[<a href="https://github.com/planetarium/libplanet/issues/929">#929</a>, <a href="https://github.com/planetarium/libplanet/pull/934">#934</a>]
+[<a href="https://github.com/planetarium/libplanet/issues/929">#929</a>, <a href="https://github.com/planetarium/libplanet/pull/934">#934</a>, <a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]
 <ul>
 <li>Replaced <code>BlockChain&lt;T&gt;.GetState(Address, HashDigest&lt;SHA256&gt;?, bool)</code>
 method with <code>GetState(Address, HashDigest&lt;SHA256&gt;?, StateCompleter&lt;T&gt;)</code>
