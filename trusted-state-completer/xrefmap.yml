@@ -1484,6 +1484,23 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Policy
   nameWithType: BlockChain<T>.Policy
   nameWithType.vb: BlockChain(Of T).Policy
+- uid: Libplanet.Blockchain.BlockChain`1.Render
+  name: Render
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Render
+  commentId: P:Libplanet.Blockchain.BlockChain`1.Render
+  fullName: Libplanet.Blockchain.BlockChain<T>.Render
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Render
+  nameWithType: BlockChain<T>.Render
+  nameWithType.vb: BlockChain(Of T).Render
+- uid: Libplanet.Blockchain.BlockChain`1.Render*
+  name: Render
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Render_
+  commentId: Overload:Libplanet.Blockchain.BlockChain`1.Render
+  isSpec: "True"
+  fullName: Libplanet.Blockchain.BlockChain<T>.Render
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Render
+  nameWithType: BlockChain<T>.Render
+  nameWithType.vb: BlockChain(Of T).Render
 - uid: Libplanet.Blockchain.BlockChain`1.Reorged
   name: Reorged
   href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Reorged
@@ -6594,22 +6611,24 @@ references:
   fullName.vb: Libplanet.Net.Swarm(Of T).Running
   nameWithType: Swarm<T>.Running
   nameWithType.vb: Swarm(Of T).Running
-- uid: Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,CancellationToken)
-  name: StartAsync(Int32, Int32, CancellationToken)
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_System_Int32_System_Int32_CancellationToken_
-  commentId: M:Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,CancellationToken)
-  fullName: Libplanet.Net.Swarm<T>.StartAsync(System.Int32, System.Int32, CancellationToken)
-  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(System.Int32, System.Int32, CancellationToken)
-  nameWithType: Swarm<T>.StartAsync(Int32, Int32, CancellationToken)
-  nameWithType.vb: Swarm(Of T).StartAsync(Int32, Int32, CancellationToken)
-- uid: Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,CancellationToken)
-  name: StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_TimeSpan_TimeSpan_CancellationToken_
-  commentId: M:Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,CancellationToken)
-  fullName: Libplanet.Net.Swarm<T>.StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  nameWithType: Swarm<T>.StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  nameWithType.vb: Swarm(Of T).StartAsync(TimeSpan, TimeSpan, CancellationToken)
+- uid: Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,IImmutableSet{Libplanet.Address},CancellationToken)
+  name: StartAsync(Int32, Int32, IImmutableSet<Address>, CancellationToken)
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_System_Int32_System_Int32_IImmutableSet_Libplanet_Address__CancellationToken_
+  commentId: M:Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,IImmutableSet{Libplanet.Address},CancellationToken)
+  name.vb: StartAsync(Int32, Int32, IImmutableSet(Of Address), CancellationToken)
+  fullName: Libplanet.Net.Swarm<T>.StartAsync(System.Int32, System.Int32, IImmutableSet<Libplanet.Address>, CancellationToken)
+  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(System.Int32, System.Int32, IImmutableSet(Of Libplanet.Address), CancellationToken)
+  nameWithType: Swarm<T>.StartAsync(Int32, Int32, IImmutableSet<Address>, CancellationToken)
+  nameWithType.vb: Swarm(Of T).StartAsync(Int32, Int32, IImmutableSet(Of Address), CancellationToken)
+- uid: Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,IImmutableSet{Libplanet.Address},CancellationToken)
+  name: StartAsync(TimeSpan, TimeSpan, IImmutableSet<Address>, CancellationToken)
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_TimeSpan_TimeSpan_IImmutableSet_Libplanet_Address__CancellationToken_
+  commentId: M:Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,IImmutableSet{Libplanet.Address},CancellationToken)
+  name.vb: StartAsync(TimeSpan, TimeSpan, IImmutableSet(Of Address), CancellationToken)
+  fullName: Libplanet.Net.Swarm<T>.StartAsync(TimeSpan, TimeSpan, IImmutableSet<Libplanet.Address>, CancellationToken)
+  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(TimeSpan, TimeSpan, IImmutableSet(Of Libplanet.Address), CancellationToken)
+  nameWithType: Swarm<T>.StartAsync(TimeSpan, TimeSpan, IImmutableSet<Address>, CancellationToken)
+  nameWithType.vb: Swarm(Of T).StartAsync(TimeSpan, TimeSpan, IImmutableSet(Of Address), CancellationToken)
 - uid: Libplanet.Net.Swarm`1.StartAsync*
   name: StartAsync
   href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_

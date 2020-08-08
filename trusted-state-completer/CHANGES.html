@@ -119,6 +119,11 @@ option to <code>BlockChain&lt;T&gt;.MineBlock(Address miner)</code> overloaded m
 Although this breaks ABI-level backward compatibility (i.e., you need to
 rebuild your assemblies), still is backward-compatible at API-level as
 the option has the default value.  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
+<li>Added <code>IImmutableSet&lt;Address&gt; trustedStateValidators = null</code> option to both
+<code>Swarm&lt;T&gt;.StartAsync()</code> overloaded methods.  Although this breaks ABI-level
+backward compatibility (i.e., you need to rebuild your assemblies), still is
+backward-compatible at API-level as the option is turned on by default.
+[<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
 </ul>
 <h3 id="backward-incompatible-network-protocol-changes">Backward-incompatible network protocol changes</h3>
 <ul>
@@ -183,6 +188,7 @@ by <code>stateCompleter: StateCompleters&lt;T&gt;.Recalculate</code> and
 <li>Added <code>Swarm&lt;T&gt;.GetTrustedStateCompleterAsync()</code> method.</li>
 </ul>
 </li>
+<li>Added <code>BlockChain&lt;T&gt;.Render</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
 <li>Added <code>Reorged</code> event on <code>BlockChain&lt;T&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/945">#945</a>]</li>
 <li>Added <code>ReorgedEventArgs</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/945">#945</a>]</li>
 </ul>
