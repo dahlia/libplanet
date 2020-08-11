@@ -564,13 +564,13 @@ Can be <code>null</code> if the blockchain is empty.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/trusted-state-completer/apiSpec/new?filename=Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.BlockChain%601.Append(Libplanet.Blocks.Block%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/trusted-state-completer/apiSpec/new?filename=Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__DateTimeOffset_System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.BlockChain%601.Append(Libplanet.Blocks.Block%7B%600%7D%2CDateTimeOffset%2CSystem.Nullable%7BLibplanet.Blockchain.StateCompleterSet%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L465">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L494">View Source</a>
   </span>
   <a id="Libplanet_Blockchain_BlockChain_1_Append_" data-uid="Libplanet.Blockchain.BlockChain`1.Append*"></a>
-  <h4 id="Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__" data-uid="Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0})">Append(Block&lt;T&gt;)</h4>
+  <h4 id="Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__DateTimeOffset_System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___" data-uid="Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0},DateTimeOffset,System.Nullable{Libplanet.Blockchain.StateCompleterSet{`0}})">Append(Block&lt;T&gt;, DateTimeOffset, Nullable&lt;StateCompleterSet&lt;T&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Adds a <code data-dev-comment-type="paramref" class="paramref">block</code> to the end of this chain.</p>
 <p>Note that <a class="xref" href="Libplanet.Action.IAction.html#Libplanet_Action_IAction_Render_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_">Render(IActionContext, IAccountStateDelta)</a> methods of
 all <a class="xref" href="Libplanet.Action.IAction.html">IAction</a> objects that belong
@@ -581,7 +581,7 @@ reflect changes in the <code data-dev-comment-type="paramref" class="paramref">b
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Append(Block&lt;T&gt; block)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Append(Block&lt;T&gt; block, DateTimeOffset currentTime, StateCompleterSet&lt;T&gt;? stateCompleters = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -598,6 +598,20 @@ reflect changes in the <code data-dev-comment-type="paramref" class="paramref">b
         <td><span class="parametername">block</span></td>
         <td><p>A next <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a>, which is mined,
 to add.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">DateTimeOffset</span></td>
+        <td><span class="parametername">currentTime</span></td>
+        <td><p>The current time.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Libplanet.Blockchain.StateCompleterSet-1.html">StateCompleterSet</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">stateCompleters</span></td>
+        <td><p>The strategy to complement incomplete block states which
+are required for action execution and rendering.
+<a class="xref" href="Libplanet.Blockchain.StateCompleterSet-1.html#Libplanet_Blockchain_StateCompleterSet_1_Recalculate">Recalculate</a> by default.</p>
 </td>
       </tr>
     </tbody>
@@ -630,13 +644,13 @@ the <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Block
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/trusted-state-completer/apiSpec/new?filename=Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__DateTimeOffset_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.BlockChain%601.Append(Libplanet.Blocks.Block%7B%600%7D%2CDateTimeOffset)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/trusted-state-completer/apiSpec/new?filename=Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.BlockChain%601.Append(Libplanet.Blocks.Block%7B%600%7D%2CSystem.Nullable%7BLibplanet.Blockchain.StateCompleterSet%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L486">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L469">View Source</a>
   </span>
   <a id="Libplanet_Blockchain_BlockChain_1_Append_" data-uid="Libplanet.Blockchain.BlockChain`1.Append*"></a>
-  <h4 id="Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__DateTimeOffset_" data-uid="Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0},DateTimeOffset)">Append(Block&lt;T&gt;, DateTimeOffset)</h4>
+  <h4 id="Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___" data-uid="Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0},System.Nullable{Libplanet.Blockchain.StateCompleterSet{`0}})">Append(Block&lt;T&gt;, Nullable&lt;StateCompleterSet&lt;T&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Adds a <code data-dev-comment-type="paramref" class="paramref">block</code> to the end of this chain.</p>
 <p>Note that <a class="xref" href="Libplanet.Action.IAction.html#Libplanet_Action_IAction_Render_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_">Render(IActionContext, IAccountStateDelta)</a> methods of
 all <a class="xref" href="Libplanet.Action.IAction.html">IAction</a> objects that belong
@@ -647,7 +661,7 @@ reflect changes in the <code data-dev-comment-type="paramref" class="paramref">b
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Append(Block&lt;T&gt; block, DateTimeOffset currentTime)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Append(Block&lt;T&gt; block, StateCompleterSet&lt;T&gt;? stateCompleters = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -667,9 +681,11 @@ to add.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">DateTimeOffset</span></td>
-        <td><span class="parametername">currentTime</span></td>
-        <td><p>The current time.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Libplanet.Blockchain.StateCompleterSet-1.html">StateCompleterSet</a>&lt;T&gt;&gt;</td>
+        <td><span class="parametername">stateCompleters</span></td>
+        <td><p>The strategy to complement incomplete block states which
+are required for action execution and rendering.
+<a class="xref" href="Libplanet.Blockchain.StateCompleterSet-1.html#Libplanet_Blockchain_StateCompleterSet_1_Recalculate">Recalculate</a> by default.</p>
 </td>
       </tr>
     </tbody>
@@ -852,7 +868,7 @@ instead.</p>
     <a href="https://github.com/dahlia/libplanet/new/trusted-state-completer/apiSpec/new?filename=Libplanet_Blockchain_BlockChain_1_GetNextTxNonce_Libplanet_Address_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.BlockChain%601.GetNextTxNonce(Libplanet.Address)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L558">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L576">View Source</a>
   </span>
   <a id="Libplanet_Blockchain_BlockChain_1_GetNextTxNonce_" data-uid="Libplanet.Blockchain.BlockChain`1.GetNextTxNonce*"></a>
   <h4 id="Libplanet_Blockchain_BlockChain_1_GetNextTxNonce_Libplanet_Address_" data-uid="Libplanet.Blockchain.BlockChain`1.GetNextTxNonce(Libplanet.Address)">GetNextTxNonce(Address)</h4>
@@ -1091,7 +1107,7 @@ use <see cref="!:DateTimeOffset.UtcNow"></see> as default.</p>
     <a href="https://github.com/dahlia/libplanet/new/trusted-state-completer/apiSpec/new?filename=Libplanet_Blockchain_BlockChain_1_MakeTransaction_Libplanet_Crypto_PrivateKey_IEnumerable__0__IImmutableSet_Libplanet_Address__System_Nullable_DateTimeOffset__.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.BlockChain%601.MakeTransaction(Libplanet.Crypto.PrivateKey%2CIEnumerable%7B%600%7D%2CIImmutableSet%7BLibplanet.Address%7D%2CSystem.Nullable%7BDateTimeOffset%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L726">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L744">View Source</a>
   </span>
   <a id="Libplanet_Blockchain_BlockChain_1_MakeTransaction_" data-uid="Libplanet.Blockchain.BlockChain`1.MakeTransaction*"></a>
   <h4 id="Libplanet_Blockchain_BlockChain_1_MakeTransaction_Libplanet_Crypto_PrivateKey_IEnumerable__0__IImmutableSet_Libplanet_Address__System_Nullable_DateTimeOffset__" data-uid="Libplanet.Blockchain.BlockChain`1.MakeTransaction(Libplanet.Crypto.PrivateKey,IEnumerable{`0},IImmutableSet{Libplanet.Address},System.Nullable{DateTimeOffset})">MakeTransaction(PrivateKey, IEnumerable&lt;T&gt;, IImmutableSet&lt;Address&gt;, Nullable&lt;DateTimeOffset&gt;)</h4>
@@ -1168,12 +1184,13 @@ signed.</p>
     <a href="https://github.com/dahlia/libplanet/new/trusted-state-completer/apiSpec/new?filename=Libplanet_Blockchain_BlockChain_1_MineBlock_Libplanet_Address_DateTimeOffset_System_Boolean_CancellationToken_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.BlockChain%601.MineBlock(Libplanet.Address%2CDateTimeOffset%2CSystem.Boolean%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L606">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L624">View Source</a>
   </span>
   <a id="Libplanet_Blockchain_BlockChain_1_MineBlock_" data-uid="Libplanet.Blockchain.BlockChain`1.MineBlock*"></a>
   <h4 id="Libplanet_Blockchain_BlockChain_1_MineBlock_Libplanet_Address_DateTimeOffset_System_Boolean_CancellationToken_" data-uid="Libplanet.Blockchain.BlockChain`1.MineBlock(Libplanet.Address,DateTimeOffset,System.Boolean,CancellationToken)">MineBlock(Address, DateTimeOffset, Boolean, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Mines a next <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a> using staged <a class="xref" href="Libplanet.Tx.Transaction-1.html">Transaction&lt;T&gt;</a>s,
-and then <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__">Append(Block&lt;T&gt;)</a> it to the chain (unless the <code data-dev-comment-type="paramref" class="paramref">append</code> option is turned off).</p>
+and then <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___">Append(Block&lt;T&gt;, Nullable&lt;StateCompleterSet&lt;T&gt;&gt;)</a> it to the chain
+(unless the <code data-dev-comment-type="paramref" class="paramref">append</code> option is turned off).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1205,8 +1222,8 @@ and then <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">append</span></td>
-        <td><p>Whether to <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__">Append(Block&lt;T&gt;)</a> the mined block.
-Turned on by default.</p>
+        <td><p>Whether to <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___">Append(Block&lt;T&gt;, Nullable&lt;StateCompleterSet&lt;T&gt;&gt;)</a>
+the mined block.  Turned on by default.</p>
 </td>
       </tr>
       <tr>
@@ -1239,12 +1256,13 @@ operation should be canceled.</p>
     <a href="https://github.com/dahlia/libplanet/new/trusted-state-completer/apiSpec/new?filename=Libplanet_Blockchain_BlockChain_1_MineBlock_Libplanet_Address_System_Boolean_CancellationToken_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.BlockChain%601.MineBlock(Libplanet.Address%2CSystem.Boolean%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L704">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L722">View Source</a>
   </span>
   <a id="Libplanet_Blockchain_BlockChain_1_MineBlock_" data-uid="Libplanet.Blockchain.BlockChain`1.MineBlock*"></a>
   <h4 id="Libplanet_Blockchain_BlockChain_1_MineBlock_Libplanet_Address_System_Boolean_CancellationToken_" data-uid="Libplanet.Blockchain.BlockChain`1.MineBlock(Libplanet.Address,System.Boolean,CancellationToken)">MineBlock(Address, Boolean, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Mines a next <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a> using staged <a class="xref" href="Libplanet.Tx.Transaction-1.html">Transaction&lt;T&gt;</a>s,
-and then <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__">Append(Block&lt;T&gt;)</a> it to the chain (unless the <code data-dev-comment-type="paramref" class="paramref">append</code> option is turned off).</p>
+and then <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___">Append(Block&lt;T&gt;, Nullable&lt;StateCompleterSet&lt;T&gt;&gt;)</a> it to the chain
+(unless the <code data-dev-comment-type="paramref" class="paramref">append</code> option is turned off).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1270,8 +1288,8 @@ and then <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">append</span></td>
-        <td><p>Whether to <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__">Append(Block&lt;T&gt;)</a> the mined block.
-Turned on by default.</p>
+        <td><p>Whether to <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___">Append(Block&lt;T&gt;, Nullable&lt;StateCompleterSet&lt;T&gt;&gt;)</a>
+the mined block.  Turned on by default.</p>
 </td>
       </tr>
       <tr>
@@ -1304,7 +1322,7 @@ operation should be canceled.</p>
     <a href="https://github.com/dahlia/libplanet/new/trusted-state-completer/apiSpec/new?filename=Libplanet_Blockchain_BlockChain_1_StageTransaction_Libplanet_Tx_Transaction__0__.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.BlockChain%601.StageTransaction(Libplanet.Tx.Transaction%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L498">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L516">View Source</a>
   </span>
   <a id="Libplanet_Blockchain_BlockChain_1_StageTransaction_" data-uid="Libplanet.Blockchain.BlockChain`1.StageTransaction*"></a>
   <h4 id="Libplanet_Blockchain_BlockChain_1_StageTransaction_Libplanet_Tx_Transaction__0__" data-uid="Libplanet.Blockchain.BlockChain`1.StageTransaction(Libplanet.Tx.Transaction{`0})">StageTransaction(Transaction&lt;T&gt;)</h4>
@@ -1357,7 +1375,7 @@ a next <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a> t
     <a href="https://github.com/dahlia/libplanet/new/trusted-state-completer/apiSpec/new?filename=Libplanet_Blockchain_BlockChain_1_UnstageTransaction_Libplanet_Tx_Transaction__0__.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.BlockChain%601.UnstageTransaction(Libplanet.Tx.Transaction%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L535">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/trusted-state-completer/Libplanet/Blockchain/BlockChain.cs/#L553">View Source</a>
   </span>
   <a id="Libplanet_Blockchain_BlockChain_1_UnstageTransaction_" data-uid="Libplanet.Blockchain.BlockChain`1.UnstageTransaction*"></a>
   <h4 id="Libplanet_Blockchain_BlockChain_1_UnstageTransaction_Libplanet_Tx_Transaction__0__" data-uid="Libplanet.Blockchain.BlockChain`1.UnstageTransaction(Libplanet.Tx.Transaction{`0})">UnstageTransaction(Transaction&lt;T&gt;)</h4>
