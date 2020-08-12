@@ -932,7 +932,7 @@ operation should be canceled.</p>
   <h4 id="Libplanet_Net_Swarm_1_GetTrustedStateCompleterAsync_IImmutableSet_Libplanet_Address__System_Nullable_TimeSpan__System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___CancellationToken_" data-uid="Libplanet.Net.Swarm`1.GetTrustedStateCompleterAsync(IImmutableSet{Libplanet.Address},System.Nullable{TimeSpan},System.Nullable{Libplanet.Blockchain.StateCompleterSet{`0}},CancellationToken)">GetTrustedStateCompleterAsync(IImmutableSet&lt;Address&gt;, Nullable&lt;TimeSpan&gt;, Nullable&lt;StateCompleterSet&lt;T&gt;&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Gets state completers that complement incomplete block states by trusting
 (i.e., download-and-reusing) states calculated by the given
-<code data-dev-comment-type="paramref" class="paramref">trustedStateValidators</code>.  If no trustable states are available
+<code data-dev-comment-type="paramref" class="paramref">trustedStateValidators</code>.  If no trustworthy states are available
 incomplete states are complemented by recalculating
 (i.e., <a class="xref" href="Libplanet.Blockchain.StateCompleterSet-1.html#Libplanet_Blockchain_StateCompleterSet_1_Recalculate">Recalculate</a>).</p>
 </div>
@@ -957,7 +957,7 @@ incomplete states are complemented by recalculating
         <td><p>If any peer in this set is reachable and there are no block states in the current node
 <a class="xref" href="Libplanet.Net.Swarm-1.html">Swarm&lt;T&gt;</a> tries to receive the needed states from that trusted peer,
 which is also calculated by that peer.</p>
-<p>If it fails to find or receive trustable states from peers it recalculates
+<p>If it fails to find or receive trustworthy states from peers it recalculates
 (i.e., <a class="xref" href="Libplanet.Blockchain.StateCompleterSet-1.html#Libplanet_Blockchain_StateCompleterSet_1_Recalculate">Recalculate</a>) states by executing actions by
 itself instead.</p>
 <p>Note that this option is intended to be exposed to end users through a feasible
