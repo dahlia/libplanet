@@ -195,12 +195,12 @@ references:
   commentId: T:Libplanet.Action.IAccountStateDelta
   fullName: Libplanet.Action.IAccountStateDelta
   nameWithType: IAccountStateDelta
-- uid: Libplanet.Action.IAccountStateDelta.BurnAsset(Libplanet.Address,Libplanet.Assets.Currency,BigInteger)
-  name: BurnAsset(Address, Currency, BigInteger)
-  href: api/Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_BurnAsset_Libplanet_Address_Libplanet_Assets_Currency_BigInteger_
-  commentId: M:Libplanet.Action.IAccountStateDelta.BurnAsset(Libplanet.Address,Libplanet.Assets.Currency,BigInteger)
-  fullName: Libplanet.Action.IAccountStateDelta.BurnAsset(Libplanet.Address, Libplanet.Assets.Currency, BigInteger)
-  nameWithType: IAccountStateDelta.BurnAsset(Address, Currency, BigInteger)
+- uid: Libplanet.Action.IAccountStateDelta.BurnAsset(Libplanet.Address,Libplanet.Assets.FungibleAssetValue)
+  name: BurnAsset(Address, FungibleAssetValue)
+  href: api/Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_BurnAsset_Libplanet_Address_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Action.IAccountStateDelta.BurnAsset(Libplanet.Address,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Action.IAccountStateDelta.BurnAsset(Libplanet.Address, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: IAccountStateDelta.BurnAsset(Address, FungibleAssetValue)
 - uid: Libplanet.Action.IAccountStateDelta.BurnAsset*
   name: BurnAsset
   href: api/Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_BurnAsset_
@@ -234,12 +234,12 @@ references:
   isSpec: "True"
   fullName: Libplanet.Action.IAccountStateDelta.GetState
   nameWithType: IAccountStateDelta.GetState
-- uid: Libplanet.Action.IAccountStateDelta.MintAsset(Libplanet.Address,Libplanet.Assets.Currency,BigInteger)
-  name: MintAsset(Address, Currency, BigInteger)
-  href: api/Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_MintAsset_Libplanet_Address_Libplanet_Assets_Currency_BigInteger_
-  commentId: M:Libplanet.Action.IAccountStateDelta.MintAsset(Libplanet.Address,Libplanet.Assets.Currency,BigInteger)
-  fullName: Libplanet.Action.IAccountStateDelta.MintAsset(Libplanet.Address, Libplanet.Assets.Currency, BigInteger)
-  nameWithType: IAccountStateDelta.MintAsset(Address, Currency, BigInteger)
+- uid: Libplanet.Action.IAccountStateDelta.MintAsset(Libplanet.Address,Libplanet.Assets.FungibleAssetValue)
+  name: MintAsset(Address, FungibleAssetValue)
+  href: api/Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_MintAsset_Libplanet_Address_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Action.IAccountStateDelta.MintAsset(Libplanet.Address,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Action.IAccountStateDelta.MintAsset(Libplanet.Address, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: IAccountStateDelta.MintAsset(Address, FungibleAssetValue)
 - uid: Libplanet.Action.IAccountStateDelta.MintAsset*
   name: MintAsset
   href: api/Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_MintAsset_
@@ -273,12 +273,12 @@ references:
   isSpec: "True"
   fullName: Libplanet.Action.IAccountStateDelta.StateUpdatedAddresses
   nameWithType: IAccountStateDelta.StateUpdatedAddresses
-- uid: Libplanet.Action.IAccountStateDelta.TransferAsset(Libplanet.Address,Libplanet.Address,Libplanet.Assets.Currency,BigInteger,System.Boolean)
-  name: TransferAsset(Address, Address, Currency, BigInteger, Boolean)
-  href: api/Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_TransferAsset_Libplanet_Address_Libplanet_Address_Libplanet_Assets_Currency_BigInteger_System_Boolean_
-  commentId: M:Libplanet.Action.IAccountStateDelta.TransferAsset(Libplanet.Address,Libplanet.Address,Libplanet.Assets.Currency,BigInteger,System.Boolean)
-  fullName: Libplanet.Action.IAccountStateDelta.TransferAsset(Libplanet.Address, Libplanet.Address, Libplanet.Assets.Currency, BigInteger, System.Boolean)
-  nameWithType: IAccountStateDelta.TransferAsset(Address, Address, Currency, BigInteger, Boolean)
+- uid: Libplanet.Action.IAccountStateDelta.TransferAsset(Libplanet.Address,Libplanet.Address,Libplanet.Assets.FungibleAssetValue,System.Boolean)
+  name: TransferAsset(Address, Address, FungibleAssetValue, Boolean)
+  href: api/Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_TransferAsset_Libplanet_Address_Libplanet_Address_Libplanet_Assets_FungibleAssetValue_System_Boolean_
+  commentId: M:Libplanet.Action.IAccountStateDelta.TransferAsset(Libplanet.Address,Libplanet.Address,Libplanet.Assets.FungibleAssetValue,System.Boolean)
+  fullName: Libplanet.Action.IAccountStateDelta.TransferAsset(Libplanet.Address, Libplanet.Address, Libplanet.Assets.FungibleAssetValue, System.Boolean)
+  nameWithType: IAccountStateDelta.TransferAsset(Address, Address, FungibleAssetValue, Boolean)
 - uid: Libplanet.Action.IAccountStateDelta.TransferAsset*
   name: TransferAsset
   href: api/Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_TransferAsset_
@@ -499,15 +499,15 @@ references:
   commentId: T:Libplanet.Action.InsufficientBalanceException
   fullName: Libplanet.Action.InsufficientBalanceException
   nameWithType: InsufficientBalanceException
-- uid: Libplanet.Action.InsufficientBalanceException.#ctor(Libplanet.Address,Libplanet.Assets.Currency,BigInteger,System.Nullable{System.String})
-  name: InsufficientBalanceException(Address, Currency, BigInteger, Nullable<String>)
-  href: api/Libplanet.Action.InsufficientBalanceException.html#Libplanet_Action_InsufficientBalanceException__ctor_Libplanet_Address_Libplanet_Assets_Currency_BigInteger_System_Nullable_System_String__
-  commentId: M:Libplanet.Action.InsufficientBalanceException.#ctor(Libplanet.Address,Libplanet.Assets.Currency,BigInteger,System.Nullable{System.String})
-  name.vb: InsufficientBalanceException(Address, Currency, BigInteger, Nullable(Of String))
-  fullName: Libplanet.Action.InsufficientBalanceException.InsufficientBalanceException(Libplanet.Address, Libplanet.Assets.Currency, BigInteger, System.Nullable<System.String>)
-  fullName.vb: Libplanet.Action.InsufficientBalanceException.InsufficientBalanceException(Libplanet.Address, Libplanet.Assets.Currency, BigInteger, System.Nullable(Of System.String))
-  nameWithType: InsufficientBalanceException.InsufficientBalanceException(Address, Currency, BigInteger, Nullable<String>)
-  nameWithType.vb: InsufficientBalanceException.InsufficientBalanceException(Address, Currency, BigInteger, Nullable(Of String))
+- uid: Libplanet.Action.InsufficientBalanceException.#ctor(Libplanet.Address,Libplanet.Assets.FungibleAssetValue,System.Nullable{System.String})
+  name: InsufficientBalanceException(Address, FungibleAssetValue, Nullable<String>)
+  href: api/Libplanet.Action.InsufficientBalanceException.html#Libplanet_Action_InsufficientBalanceException__ctor_Libplanet_Address_Libplanet_Assets_FungibleAssetValue_System_Nullable_System_String__
+  commentId: M:Libplanet.Action.InsufficientBalanceException.#ctor(Libplanet.Address,Libplanet.Assets.FungibleAssetValue,System.Nullable{System.String})
+  name.vb: InsufficientBalanceException(Address, FungibleAssetValue, Nullable(Of String))
+  fullName: Libplanet.Action.InsufficientBalanceException.InsufficientBalanceException(Libplanet.Address, Libplanet.Assets.FungibleAssetValue, System.Nullable<System.String>)
+  fullName.vb: Libplanet.Action.InsufficientBalanceException.InsufficientBalanceException(Libplanet.Address, Libplanet.Assets.FungibleAssetValue, System.Nullable(Of System.String))
+  nameWithType: InsufficientBalanceException.InsufficientBalanceException(Address, FungibleAssetValue, Nullable<String>)
+  nameWithType.vb: InsufficientBalanceException.InsufficientBalanceException(Address, FungibleAssetValue, Nullable(Of String))
 - uid: Libplanet.Action.InsufficientBalanceException.#ctor*
   name: InsufficientBalanceException
   href: api/Libplanet.Action.InsufficientBalanceException.html#Libplanet_Action_InsufficientBalanceException__ctor_
@@ -541,19 +541,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Action.InsufficientBalanceException.Balance
   nameWithType: InsufficientBalanceException.Balance
-- uid: Libplanet.Action.InsufficientBalanceException.Currency
-  name: Currency
-  href: api/Libplanet.Action.InsufficientBalanceException.html#Libplanet_Action_InsufficientBalanceException_Currency
-  commentId: P:Libplanet.Action.InsufficientBalanceException.Currency
-  fullName: Libplanet.Action.InsufficientBalanceException.Currency
-  nameWithType: InsufficientBalanceException.Currency
-- uid: Libplanet.Action.InsufficientBalanceException.Currency*
-  name: Currency
-  href: api/Libplanet.Action.InsufficientBalanceException.html#Libplanet_Action_InsufficientBalanceException_Currency_
-  commentId: Overload:Libplanet.Action.InsufficientBalanceException.Currency
-  isSpec: "True"
-  fullName: Libplanet.Action.InsufficientBalanceException.Currency
-  nameWithType: InsufficientBalanceException.Currency
 - uid: Libplanet.Action.InsufficientBalanceException.GetObjectData(SerializationInfo,StreamingContext)
   name: GetObjectData(SerializationInfo, StreamingContext)
   href: api/Libplanet.Action.InsufficientBalanceException.html#Libplanet_Action_InsufficientBalanceException_GetObjectData_SerializationInfo_StreamingContext_
@@ -1222,19 +1209,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Assets.Currency.GetHashCode
   nameWithType: Currency.GetHashCode
-- uid: Libplanet.Assets.Currency.GetObjectData(SerializationInfo,StreamingContext)
-  name: GetObjectData(SerializationInfo, StreamingContext)
-  href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency_GetObjectData_SerializationInfo_StreamingContext_
-  commentId: M:Libplanet.Assets.Currency.GetObjectData(SerializationInfo,StreamingContext)
-  fullName: Libplanet.Assets.Currency.GetObjectData(SerializationInfo, StreamingContext)
-  nameWithType: Currency.GetObjectData(SerializationInfo, StreamingContext)
-- uid: Libplanet.Assets.Currency.GetObjectData*
-  name: GetObjectData
-  href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency_GetObjectData_
-  commentId: Overload:Libplanet.Assets.Currency.GetObjectData
-  isSpec: "True"
-  fullName: Libplanet.Assets.Currency.GetObjectData
-  nameWithType: Currency.GetObjectData
 - uid: Libplanet.Assets.Currency.Hash
   name: Hash
   href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency_Hash
@@ -1266,6 +1240,254 @@ references:
   isSpec: "True"
   fullName: Libplanet.Assets.Currency.ToString
   nameWithType: Currency.ToString
+- uid: Libplanet.Assets.FungibleAssetValue
+  name: FungibleAssetValue
+  href: api/Libplanet.Assets.FungibleAssetValue.html
+  commentId: T:Libplanet.Assets.FungibleAssetValue
+  fullName: Libplanet.Assets.FungibleAssetValue
+  nameWithType: FungibleAssetValue
+- uid: Libplanet.Assets.FungibleAssetValue.#ctor(Libplanet.Assets.Currency)
+  name: FungibleAssetValue(Currency)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue__ctor_Libplanet_Assets_Currency_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.#ctor(Libplanet.Assets.Currency)
+  fullName: Libplanet.Assets.FungibleAssetValue.FungibleAssetValue(Libplanet.Assets.Currency)
+  nameWithType: FungibleAssetValue.FungibleAssetValue(Currency)
+- uid: Libplanet.Assets.FungibleAssetValue.#ctor*
+  name: FungibleAssetValue
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue__ctor_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.#ctor
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.FungibleAssetValue
+  nameWithType: FungibleAssetValue.FungibleAssetValue
+- uid: Libplanet.Assets.FungibleAssetValue.CompareTo(Libplanet.Assets.FungibleAssetValue)
+  name: CompareTo(FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_CompareTo_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.CompareTo(Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.CompareTo(Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.CompareTo(FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.CompareTo(System.Object)
+  name: CompareTo(Object)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_CompareTo_System_Object_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.CompareTo(System.Object)
+  fullName: Libplanet.Assets.FungibleAssetValue.CompareTo(System.Object)
+  nameWithType: FungibleAssetValue.CompareTo(Object)
+- uid: Libplanet.Assets.FungibleAssetValue.CompareTo*
+  name: CompareTo
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_CompareTo_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.CompareTo
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.CompareTo
+  nameWithType: FungibleAssetValue.CompareTo
+- uid: Libplanet.Assets.FungibleAssetValue.Currency
+  name: Currency
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Currency
+  commentId: F:Libplanet.Assets.FungibleAssetValue.Currency
+  fullName: Libplanet.Assets.FungibleAssetValue.Currency
+  nameWithType: FungibleAssetValue.Currency
+- uid: Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue,BigInteger,Libplanet.Assets.FungibleAssetValue@)
+  name: DivRem(FungibleAssetValue, BigInteger, out FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_DivRem_Libplanet_Assets_FungibleAssetValue_BigInteger_Libplanet_Assets_FungibleAssetValue__
+  commentId: M:Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue,BigInteger,Libplanet.Assets.FungibleAssetValue@)
+  name.vb: DivRem(FungibleAssetValue, BigInteger, ByRef FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue, BigInteger, out Libplanet.Assets.FungibleAssetValue)
+  fullName.vb: Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue, BigInteger, ByRef Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.DivRem(FungibleAssetValue, BigInteger, out FungibleAssetValue)
+  nameWithType.vb: FungibleAssetValue.DivRem(FungibleAssetValue, BigInteger, ByRef FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.DivRem*
+  name: DivRem
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_DivRem_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.DivRem
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.DivRem
+  nameWithType: FungibleAssetValue.DivRem
+- uid: Libplanet.Assets.FungibleAssetValue.Equals(Libplanet.Assets.FungibleAssetValue)
+  name: Equals(FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Equals_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.Equals(Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.Equals(Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.Equals(FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Equals_System_Object_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.Equals(System.Object)
+  fullName: Libplanet.Assets.FungibleAssetValue.Equals(System.Object)
+  nameWithType: FungibleAssetValue.Equals(Object)
+- uid: Libplanet.Assets.FungibleAssetValue.Equals*
+  name: Equals
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Equals_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.Equals
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.Equals
+  nameWithType: FungibleAssetValue.Equals
+- uid: Libplanet.Assets.FungibleAssetValue.GetHashCode
+  name: GetHashCode()
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_GetHashCode
+  commentId: M:Libplanet.Assets.FungibleAssetValue.GetHashCode
+  fullName: Libplanet.Assets.FungibleAssetValue.GetHashCode()
+  nameWithType: FungibleAssetValue.GetHashCode()
+- uid: Libplanet.Assets.FungibleAssetValue.GetHashCode*
+  name: GetHashCode
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_GetHashCode_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.GetHashCode
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.GetHashCode
+  nameWithType: FungibleAssetValue.GetHashCode
+- uid: Libplanet.Assets.FungibleAssetValue.op_Addition(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  name: Addition(FungibleAssetValue, FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Addition_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_Addition(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.Addition(Libplanet.Assets.FungibleAssetValue, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.Addition(FungibleAssetValue, FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.op_Addition*
+  name: Addition
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Addition_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_Addition
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.Addition
+  nameWithType: FungibleAssetValue.Addition
+- uid: Libplanet.Assets.FungibleAssetValue.op_Division(Libplanet.Assets.FungibleAssetValue,BigInteger)
+  name: Division(FungibleAssetValue, BigInteger)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Division_Libplanet_Assets_FungibleAssetValue_BigInteger_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_Division(Libplanet.Assets.FungibleAssetValue,BigInteger)
+  fullName: Libplanet.Assets.FungibleAssetValue.Division(Libplanet.Assets.FungibleAssetValue, BigInteger)
+  nameWithType: FungibleAssetValue.Division(FungibleAssetValue, BigInteger)
+- uid: Libplanet.Assets.FungibleAssetValue.op_Division*
+  name: Division
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Division_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_Division
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.Division
+  nameWithType: FungibleAssetValue.Division
+- uid: Libplanet.Assets.FungibleAssetValue.op_Equality(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  name: Equality(FungibleAssetValue, FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Equality_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_Equality(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.Equality(Libplanet.Assets.FungibleAssetValue, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.Equality(FungibleAssetValue, FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.op_Equality*
+  name: Equality
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Equality_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_Equality
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.Equality
+  nameWithType: FungibleAssetValue.Equality
+- uid: Libplanet.Assets.FungibleAssetValue.op_GreaterThan(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  name: GreaterThan(FungibleAssetValue, FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_GreaterThan_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_GreaterThan(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.GreaterThan(Libplanet.Assets.FungibleAssetValue, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.GreaterThan(FungibleAssetValue, FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.op_GreaterThan*
+  name: GreaterThan
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_GreaterThan_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_GreaterThan
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.GreaterThan
+  nameWithType: FungibleAssetValue.GreaterThan
+- uid: Libplanet.Assets.FungibleAssetValue.op_GreaterThanOrEqual(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  name: GreaterThanOrEqual(FungibleAssetValue, FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_GreaterThanOrEqual_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_GreaterThanOrEqual(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.GreaterThanOrEqual(Libplanet.Assets.FungibleAssetValue, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.GreaterThanOrEqual(FungibleAssetValue, FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.op_GreaterThanOrEqual*
+  name: GreaterThanOrEqual
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_GreaterThanOrEqual_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_GreaterThanOrEqual
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.GreaterThanOrEqual
+  nameWithType: FungibleAssetValue.GreaterThanOrEqual
+- uid: Libplanet.Assets.FungibleAssetValue.op_Inequality(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  name: Inequality(FungibleAssetValue, FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Inequality_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_Inequality(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.Inequality(Libplanet.Assets.FungibleAssetValue, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.Inequality(FungibleAssetValue, FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.op_Inequality*
+  name: Inequality
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Inequality_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_Inequality
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.Inequality
+  nameWithType: FungibleAssetValue.Inequality
+- uid: Libplanet.Assets.FungibleAssetValue.op_LessThan(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  name: LessThan(FungibleAssetValue, FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_LessThan_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_LessThan(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.LessThan(Libplanet.Assets.FungibleAssetValue, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.LessThan(FungibleAssetValue, FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.op_LessThan*
+  name: LessThan
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_LessThan_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_LessThan
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.LessThan
+  nameWithType: FungibleAssetValue.LessThan
+- uid: Libplanet.Assets.FungibleAssetValue.op_LessThanOrEqual(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  name: LessThanOrEqual(FungibleAssetValue, FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_LessThanOrEqual_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_LessThanOrEqual(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.LessThanOrEqual(Libplanet.Assets.FungibleAssetValue, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.LessThanOrEqual(FungibleAssetValue, FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.op_LessThanOrEqual*
+  name: LessThanOrEqual
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_LessThanOrEqual_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_LessThanOrEqual
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.LessThanOrEqual
+  nameWithType: FungibleAssetValue.LessThanOrEqual
+- uid: Libplanet.Assets.FungibleAssetValue.op_Modulus(Libplanet.Assets.FungibleAssetValue,BigInteger)
+  name: Modulus(FungibleAssetValue, BigInteger)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Modulus_Libplanet_Assets_FungibleAssetValue_BigInteger_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_Modulus(Libplanet.Assets.FungibleAssetValue,BigInteger)
+  fullName: Libplanet.Assets.FungibleAssetValue.Modulus(Libplanet.Assets.FungibleAssetValue, BigInteger)
+  nameWithType: FungibleAssetValue.Modulus(FungibleAssetValue, BigInteger)
+- uid: Libplanet.Assets.FungibleAssetValue.op_Modulus*
+  name: Modulus
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Modulus_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_Modulus
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.Modulus
+  nameWithType: FungibleAssetValue.Modulus
+- uid: Libplanet.Assets.FungibleAssetValue.op_Multiply(Libplanet.Assets.FungibleAssetValue,BigInteger)
+  name: Multiply(FungibleAssetValue, BigInteger)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Multiply_Libplanet_Assets_FungibleAssetValue_BigInteger_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_Multiply(Libplanet.Assets.FungibleAssetValue,BigInteger)
+  fullName: Libplanet.Assets.FungibleAssetValue.Multiply(Libplanet.Assets.FungibleAssetValue, BigInteger)
+  nameWithType: FungibleAssetValue.Multiply(FungibleAssetValue, BigInteger)
+- uid: Libplanet.Assets.FungibleAssetValue.op_Multiply*
+  name: Multiply
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Multiply_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_Multiply
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.Multiply
+  nameWithType: FungibleAssetValue.Multiply
+- uid: Libplanet.Assets.FungibleAssetValue.op_Subtraction(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  name: Subtraction(FungibleAssetValue, FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Subtraction_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_Subtraction(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.Subtraction(Libplanet.Assets.FungibleAssetValue, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.Subtraction(FungibleAssetValue, FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.op_Subtraction*
+  name: Subtraction
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Subtraction_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_Subtraction
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.Subtraction
+  nameWithType: FungibleAssetValue.Subtraction
+- uid: Libplanet.Assets.FungibleAssetValue.ToString
+  name: ToString()
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_ToString
+  commentId: M:Libplanet.Assets.FungibleAssetValue.ToString
+  fullName: Libplanet.Assets.FungibleAssetValue.ToString()
+  nameWithType: FungibleAssetValue.ToString()
+- uid: Libplanet.Assets.FungibleAssetValue.ToString*
+  name: ToString
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_ToString_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.ToString
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.ToString
+  nameWithType: FungibleAssetValue.ToString
 - uid: Libplanet.Blockchain
   name: Libplanet.Blockchain
   href: api/Libplanet.Blockchain.html

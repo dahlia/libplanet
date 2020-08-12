@@ -82,7 +82,7 @@ returns this delegate's return value instead for such case.</p>
   <h6><strong>Assembly</strong>: Libplanet.dll</h6>
   <h5 id="Libplanet_Blockchain_FungibleAssetStateCompleter_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public delegate BigInteger FungibleAssetStateCompleter&lt;T&gt;(BlockChain&lt;T&gt; blockChain, HashDigest&lt;SHA256&gt; blockHash, Address address, Currency currency)
+    <pre><code class="lang-csharp hljs">public delegate FungibleAssetValue FungibleAssetStateCompleter&lt;T&gt;(BlockChain&lt;T&gt; blockChain, HashDigest&lt;SHA256&gt; blockHash, Address address, Currency currency)
     where T : IAction, new();</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -131,8 +131,9 @@ returns this delegate's return value instead for such case.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BigInteger</span></td>
-        <td><p>A complement balance value.</p>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><p>A complement balance value.  <em>Its <a class="xref" href="Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Currency">Currency</a>
+must match to the given <code data-dev-comment-type="paramref" class="paramref">currency</code>.</em></p>
 </td>
       </tr>
     </tbody>

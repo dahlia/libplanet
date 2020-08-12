@@ -69,7 +69,7 @@
 <li>Added <code>IAction.RenderError()</code> and <code>IAction.UnrenderError()</code> methods.
 [<a href="https://github.com/planetarium/libplanet/issues/860">#860</a>, <a href="https://github.com/planetarium/libplanet/pull/875">#875</a>]</li>
 <li>Added methods related fungible asset states to <code>IAccountStateDelta</code>:
-[<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]
+[<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>, <a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]
 <ul>
 <li><code>UpdatedFungibleAssetsAccounts</code> property</li>
 <li><code>MintAsset(Address, Currency, BigInteger)</code> method</li>
@@ -135,13 +135,14 @@ and <code>ChainStatus</code> (<code>0x21</code>).  [<a href="https://github.com/
 </ul>
 <h3 id="added-apis">Added APIs</h3>
 <ul>
-<li>Added <code>Currency</code> struct.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
-<li>Added <code>AccountBalanceGetter</code> delegate.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
+<li>Added <code>Currency</code> struct.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>, <a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]</li>
+<li>Added <code>FungibleAssetValue</code> struct.  [<a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]</li>
+<li>Added <code>AccountBalanceGetter</code> delegate.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>, <a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]</li>
 <li>Added <code>TurnClient.BindProxies()</code> method. [<a href="https://github.com/planetarium/libplanet/issues/756">#756</a>, <a href="https://github.com/planetarium/libplanet/pull/868">#868</a>]</li>
 <li>Added <code>ActionEvaluation.Exception</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/860">#860</a>, [<a href="https://github.com/planetarium/libplanet/pull/875">#875</a>]]</li>
 <li>Added <code>InvalidTxGenesisHashException</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/796">#796</a>, <a href="https://github.com/planetarium/libplanet/pull/878">#878</a>]</li>
 <li>Added <code>CurrencyPermissionException</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
-<li>Added <code>InsufficientBalanceException</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
+<li>Added <code>InsufficientBalanceException</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>, <a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]</li>
 <li>Added <code>BlockChain&lt;T&gt;.GetBalance()</code> method.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>]</li>
 <li>Added <code>Block&lt;T&gt;.TotalDifficulty</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/666">#666</a>, <a href="https://github.com/planetarium/libplanet/pull/917">#917</a>]</li>
 <li>Added <code>SwarmOptions</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/926">#926</a>]</li>
@@ -153,13 +154,20 @@ and <code>ChainStatus</code> (<code>0x21</code>).  [<a href="https://github.com/
 <li>Added <code>BlockHeader.PreEvaluationHash</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
 <li>Added <code>HashDigest(ImmutableArray&lt;byte&gt;)</code> constructor.  [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
 <li>Incomplete block states became able to be handled in more flexible way.
-[<a href="https://github.com/planetarium/libplanet/issues/929">#929</a>, <a href="https://github.com/planetarium/libplanet/pull/934">#934</a>]
+[<a href="https://github.com/planetarium/libplanet/issues/929">#929</a>, <a href="https://github.com/planetarium/libplanet/pull/934">#934</a>, <a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]
 <ul>
 <li>Replaced <code>BlockChain&lt;T&gt;.GetState(Address, HashDigest&lt;SHA256&gt;?, bool)</code>
 method with <code>GetState(Address, HashDigest&lt;SHA256&gt;?, StateCompleter&lt;T&gt;)</code>
 method.  Specifying <code>completeStates: true</code> and <code>false</code> can be replaced
 by <code>stateCompleter: StateCompleters&lt;T&gt;.Recalculate</code> and
 <code>StateCompleters&lt;T&gt;.Reject</code>, respectively.</li>
+<li>Replaced
+<code>BlockChain&lt;T&gt;.GetBalance(Address, Currency, HashDigest&lt;SHA256&gt;?, bool)</code>
+method with
+<code>GetState(Address, Currency, HashDigest&lt;SHA256&gt;?, StateCompleter&lt;T&gt;)</code>
+method.  Specifying <code>completeStates: true</code> and <code>false</code> can be replaced
+by <code>stateCompleter: FungibleAssetStateCompleters&lt;T&gt;.Recalculate</code> and
+<code>FungibleAssetStateCompleters&lt;T&gt;.Reject</code>, respectively.</li>
 <li>Added <code>StateCompleter&lt;T&gt;</code> delegate.</li>
 <li>Added <code>FungibleAssetStateCompleter&lt;T&gt;</code> delegate.</li>
 <li>Added <code>StateCompleterSet&lt;T&gt;</code> struct.</li>

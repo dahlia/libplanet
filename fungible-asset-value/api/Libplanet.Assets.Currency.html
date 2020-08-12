@@ -81,14 +81,14 @@ EUR (Euro), <em>not values</em> like $100 or €100.</p>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">ISerializable</span></div>
     <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Libplanet.Assets.Currency.html">Currency</a>&gt;</div>
+    <div><span class="xref">ISerializable</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Libplanet.Assets.html">Libplanet.Assets</a></h6>
   <h6><strong>Assembly</strong>: Libplanet.dll</h6>
   <h5 id="Libplanet_Assets_Currency_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Currency : ISerializable, IEquatable&lt;Currency&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct Currency : IEquatable&lt;Currency&gt;, ISerializable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -243,7 +243,7 @@ If this is <code>null</code> <em>anyone</em> can mint the currency.</p>
 </div>
   <h5 id="Libplanet_Assets_Currency_Minters_seealso">See Also</h5>
   <div class="seealso">
-      <div><a class="xref" href="Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_MintAsset_Libplanet_Address_Libplanet_Assets_Currency_BigInteger_">MintAsset(Address, Currency, BigInteger)</a></div>
+      <div><a class="xref" href="Libplanet.Action.IAccountStateDelta.html#Libplanet_Action_IAccountStateDelta_MintAsset_Libplanet_Address_Libplanet_Assets_FungibleAssetValue_">MintAsset(Address, FungibleAssetValue)</a></div>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -455,43 +455,6 @@ mint or burn assets of this currency.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency_GetObjectData_SerializationInfo_StreamingContext_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.GetObjectData(SerializationInfo%2CStreamingContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L113">View Source</a>
-  </span>
-  <a id="Libplanet_Assets_Currency_GetObjectData_" data-uid="Libplanet.Assets.Currency.GetObjectData*"></a>
-  <h4 id="Libplanet_Assets_Currency_GetObjectData_SerializationInfo_StreamingContext_" data-uid="Libplanet.Assets.Currency.GetObjectData(SerializationInfo,StreamingContext)">GetObjectData(SerializationInfo, StreamingContext)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void GetObjectData(SerializationInfo info, StreamingContext context)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">SerializationInfo</span></td>
-        <td><span class="parametername">info</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">StreamingContext</span></td>
-        <td><span class="parametername">context</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency_ToString.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -522,10 +485,10 @@ mint or burn assets of this currency.</p>
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">ISerializable</span>
+      <span class="xref">IEquatable&lt;&gt;</span>
   </div>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <span class="xref">ISerializable</span>
   </div>
 </article>
           </div>
