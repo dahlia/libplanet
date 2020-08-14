@@ -1278,12 +1278,15 @@ references:
   commentId: M:Libplanet.Assets.FungibleAssetValue.CompareTo(Libplanet.Assets.FungibleAssetValue)
   fullName: Libplanet.Assets.FungibleAssetValue.CompareTo(Libplanet.Assets.FungibleAssetValue)
   nameWithType: FungibleAssetValue.CompareTo(FungibleAssetValue)
-- uid: Libplanet.Assets.FungibleAssetValue.CompareTo(System.Object)
-  name: CompareTo(Object)
-  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_CompareTo_System_Object_
-  commentId: M:Libplanet.Assets.FungibleAssetValue.CompareTo(System.Object)
-  fullName: Libplanet.Assets.FungibleAssetValue.CompareTo(System.Object)
-  nameWithType: FungibleAssetValue.CompareTo(Object)
+- uid: Libplanet.Assets.FungibleAssetValue.CompareTo(System.Nullable{System.Object})
+  name: CompareTo(Nullable<Object>)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_CompareTo_System_Nullable_System_Object__
+  commentId: M:Libplanet.Assets.FungibleAssetValue.CompareTo(System.Nullable{System.Object})
+  name.vb: CompareTo(Nullable(Of Object))
+  fullName: Libplanet.Assets.FungibleAssetValue.CompareTo(System.Nullable<System.Object>)
+  fullName.vb: Libplanet.Assets.FungibleAssetValue.CompareTo(System.Nullable(Of System.Object))
+  nameWithType: FungibleAssetValue.CompareTo(Nullable<Object>)
+  nameWithType.vb: FungibleAssetValue.CompareTo(Nullable(Of Object))
 - uid: Libplanet.Assets.FungibleAssetValue.CompareTo*
   name: CompareTo
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_CompareTo_
@@ -1340,12 +1343,15 @@ references:
   commentId: M:Libplanet.Assets.FungibleAssetValue.Equals(Libplanet.Assets.FungibleAssetValue)
   fullName: Libplanet.Assets.FungibleAssetValue.Equals(Libplanet.Assets.FungibleAssetValue)
   nameWithType: FungibleAssetValue.Equals(FungibleAssetValue)
-- uid: Libplanet.Assets.FungibleAssetValue.Equals(System.Object)
-  name: Equals(Object)
-  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Equals_System_Object_
-  commentId: M:Libplanet.Assets.FungibleAssetValue.Equals(System.Object)
-  fullName: Libplanet.Assets.FungibleAssetValue.Equals(System.Object)
-  nameWithType: FungibleAssetValue.Equals(Object)
+- uid: Libplanet.Assets.FungibleAssetValue.Equals(System.Nullable{System.Object})
+  name: Equals(Nullable<Object>)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Equals_System_Nullable_System_Object__
+  commentId: M:Libplanet.Assets.FungibleAssetValue.Equals(System.Nullable{System.Object})
+  name.vb: Equals(Nullable(Of Object))
+  fullName: Libplanet.Assets.FungibleAssetValue.Equals(System.Nullable<System.Object>)
+  fullName.vb: Libplanet.Assets.FungibleAssetValue.Equals(System.Nullable(Of System.Object))
+  nameWithType: FungibleAssetValue.Equals(Nullable<Object>)
+  nameWithType.vb: FungibleAssetValue.Equals(Nullable(Of Object))
 - uid: Libplanet.Assets.FungibleAssetValue.Equals*
   name: Equals
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Equals_
