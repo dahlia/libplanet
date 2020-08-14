@@ -110,6 +110,41 @@ constructor.  [<a href="https://github.com/planetarium/libplanet/issues/666">#66
 <code>Block&lt;T&gt;()</code> constructor. [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
 <li>Replaced <code>SerializationInfoExtensions.GetValueOrDefault&lt;T&gt;()</code> to
 <code>SerializationInfoExtensions.TryGetValue&lt;T&gt;()</code>.  [<a href="https://github.com/planetarium/libplanet/pull/940">#940</a>]</li>
+<li>Added <code>bool append = true</code> option to both <code>BlockChain&lt;T&gt;.MineBlock()</code>
+overloaded methods.  Although this breaks ABI-level backward compatibility
+(i.e., you need to rebuild your assemblies), still is backward-compatible at
+API-level as the option is turned on by default.  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
+<li>Added <code>StateCompleterSet&lt;T&gt;? stateCompleters</code> option to two
+<code>BlockChain&lt;T&gt;.Append()</code> overloaded methods.  Although this breaks ABI-level
+backward compatibility (i.e., you need to rebuild your assemblies), still
+is backward-compatible at API-level as the option has the default value
+(<code>StateCompleterSet&lt;T&gt;.Recalculate</code>).  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
+<li>Added <code>CancellationToken cancellationToken = default(CancellationToken)</code>
+option to <code>BlockChain&lt;T&gt;.MineBlock(Address miner)</code> overloaded method.
+Although this breaks ABI-level backward compatibility (i.e., you need to
+rebuild your assemblies), still is backward-compatible at API-level as
+the option has the default value.  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
+<li>Added <code>IImmutableSet&lt;Address&gt; trustedStateValidators = null</code> option to both
+<code>Swarm&lt;T&gt;.StartAsync()</code> overloaded methods.  Although this breaks ABI-level
+backward compatibility (i.e., you need to rebuild your assemblies), still is
+backward-compatible at API-level as the option is turned on by default.
+[<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
+<li>Extracted <code>IStore</code>'s some methods dedicated to block states into <code>IBlockStatesStore</code>. [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]
+<ul>
+<li><code>ListStateKeys()</code> method.</li>
+<li><code>ListAllStateReferences()</code> method.</li>
+<li><code>LookupStateReference()</code> method.</li>
+<li><code>IterateStateReferences()</code> method.</li>
+<li><code>StoreStateReference()</code> method.</li>
+<li><code>ForkStateReferences()</code> method.</li>
+<li><code>GetBlockStates()</code> method.</li>
+<li><code>SetBlockStates()</code> method.</li>
+<li><code>PruneBlockStates()</code> method.</li>
+</ul>
+</li>
+<li>The signature of <code>IStore.LookupStateReference&lt;T&gt;(Guid, string, Block&lt;T&gt;)</code> method was
+changed to <code>LookupStateReference(Guid, string, long)</code>.  [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]</li>
+<li>Added <code>IStateStore</code>-typed <code>stateStore</code> to <code>BlockChain&lt;T&gt;</code> constructor.  [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]</li>
 </ul>
 <h3 id="backward-incompatible-network-protocol-changes">Backward-incompatible network protocol changes</h3>
 <ul>
@@ -125,8 +160,14 @@ replaced by a new <code>Pong</code> message type
 (with the type number <code>0x14</code>).  [<a href="https://github.com/planetarium/libplanet/issues/459">#459</a>, <a href="https://github.com/planetarium/libplanet/pull/919">#919</a>, <a href="https://github.com/planetarium/libplanet/issues/920">#920</a>, <a href="https://github.com/planetarium/libplanet/pull/930">#930</a>]</li>
 <li>The <code>TimestampThreshold</code> between <code>Block&lt;T&gt;</code>s was changed from 15 minutes to
 15 seconds.  [<a href="https://github.com/planetarium/libplanet/issues/922">#922</a>, <a href="https://github.com/planetarium/libplanet/pull/925">#925</a>]</li>
-<li><code>Swarm&lt;T&gt;</code> became to have two more message types: <code>GetChainStatus</code> (<code>0x20</code>)
-and <code>ChainStatus</code> (<code>0x21</code>).  [<a href="https://github.com/planetarium/libplanet/issues/920">#920</a>, <a href="https://github.com/planetarium/libplanet/pull/930">#930</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became to have 4 more message types:
+<ul>
+<li><code>GetChainStatus</code> (<code>0x20</code>)  [<a href="https://github.com/planetarium/libplanet/issues/920">#920</a>, <a href="https://github.com/planetarium/libplanet/pull/930">#930</a>]</li>
+<li><code>ChainStatus</code> (<code>0x21</code>)  [<a href="https://github.com/planetarium/libplanet/issues/920">#920</a>, <a href="https://github.com/planetarium/libplanet/pull/930">#930</a>]</li>
+<li><code>GetBlockStates</code> (<code>0x22</code>)  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
+<li><code>BlockStates</code> (<code>0x23</code>)  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
+</ul>
+</li>
 </ul>
 <h3 id="backward-incompatible-storage-format-changes">Backward-incompatible storage format changes</h3>
 <ul>
@@ -136,7 +177,7 @@ and <code>ChainStatus</code> (<code>0x21</code>).  [<a href="https://github.com/
 <h3 id="added-apis">Added APIs</h3>
 <ul>
 <li>Added <code>Currency</code> struct.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>, <a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]</li>
-<li>Added <code>FungibleAssetValue</code> struct.  [<a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]</li>
+<li>Added <code>FungibleAssetValue</code> struct.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]</li>
 <li>Added <code>AccountBalanceGetter</code> delegate.  [<a href="https://github.com/planetarium/libplanet/issues/861">#861</a>, <a href="https://github.com/planetarium/libplanet/pull/900">#900</a>, <a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]</li>
 <li>Added <code>TurnClient.BindProxies()</code> method. [<a href="https://github.com/planetarium/libplanet/issues/756">#756</a>, <a href="https://github.com/planetarium/libplanet/pull/868">#868</a>]</li>
 <li>Added <code>ActionEvaluation.Exception</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/860">#860</a>, [<a href="https://github.com/planetarium/libplanet/pull/875">#875</a>]]</li>
@@ -154,7 +195,7 @@ and <code>ChainStatus</code> (<code>0x21</code>).  [<a href="https://github.com/
 <li>Added <code>BlockHeader.PreEvaluationHash</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
 <li>Added <code>HashDigest(ImmutableArray&lt;byte&gt;)</code> constructor.  [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
 <li>Incomplete block states became able to be handled in more flexible way.
-[<a href="https://github.com/planetarium/libplanet/issues/929">#929</a>, <a href="https://github.com/planetarium/libplanet/pull/934">#934</a>, <a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]
+[<a href="https://github.com/planetarium/libplanet/issues/929">#929</a>, <a href="https://github.com/planetarium/libplanet/pull/934">#934</a>, <a href="https://github.com/planetarium/libplanet/pull/946">#946</a>, <a href="https://github.com/planetarium/libplanet/pull/952">#952</a>]
 <ul>
 <li>Replaced <code>BlockChain&lt;T&gt;.GetState(Address, HashDigest&lt;SHA256&gt;?, bool)</code>
 method with <code>GetState(Address, HashDigest&lt;SHA256&gt;?, StateCompleter&lt;T&gt;)</code>
@@ -173,10 +214,16 @@ by <code>stateCompleter: FungibleAssetStateCompleters&lt;T&gt;.Recalculate</code
 <li>Added <code>StateCompleterSet&lt;T&gt;</code> struct.</li>
 <li>Added <code>StateCompleters&lt;T&gt;</code> static class.</li>
 <li>Added <code>FungibleAssetStateCompleters&lt;T&gt;</code> static class.</li>
+<li>Added <code>Swarm&lt;T&gt;.GetTrustedStateCompleterAsync()</code> method.</li>
 </ul>
 </li>
+<li>Added <code>BlockChain&lt;T&gt;.Render</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
 <li>Added <code>Reorged</code> event on <code>BlockChain&lt;T&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/945">#945</a>]</li>
 <li>Added <code>ReorgedEventArgs</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/945">#945</a>]</li>
+<li>(Libplanet.RocksDB) <code>RocksDBStore</code> became to implement <code>IBlockStatesStore</code>.  [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]</li>
+<li><code>DefaultStore</code> became to implement <code>IBlockStatesStore</code>.  [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]</li>
+<li>Added <code>IStateStore</code> interface.  [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]</li>
+<li>Added <code>IBlockStatesStore</code> interface.  [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]</li>
 </ul>
 <h3 id="behavioral-changes">Behavioral changes</h3>
 <ul>

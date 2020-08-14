@@ -73,7 +73,10 @@
   
   <h1 id="Libplanet_Assets_FungibleAssetValue" data-uid="Libplanet.Assets.FungibleAssetValue" class="text-break">Struct FungibleAssetValue
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Holds a fungible asset value which holds its <a class="xref" href="Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Currency">Currency</a> together.</p>
+<p>It behaves like numbers except for division operator (<code>/</code>) to prevent to forget
+to handle its remainder; use <a class="xref" href="Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_DivRem_Libplanet_Assets_FungibleAssetValue_">DivRem(FungibleAssetValue)</a> and <a class="xref" href="Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_DivRem_BigInteger_">DivRem(BigInteger)</a> methods instead.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -95,11 +98,12 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue__ctor_Libplanet_Assets_Currency_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.%23ctor(Libplanet.Assets.Currency)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L20">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L34">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue__ctor_" data-uid="Libplanet.Assets.FungibleAssetValue.#ctor*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue__ctor_Libplanet_Assets_Currency_" data-uid="Libplanet.Assets.FungibleAssetValue.#ctor(Libplanet.Assets.Currency)">FungibleAssetValue(Currency)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a zero value of the <code data-dev-comment-type="paramref" class="paramref">currency</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -118,7 +122,8 @@
       <tr>
         <td><a class="xref" href="Libplanet.Assets.Currency.html">Currency</a></td>
         <td><span class="parametername">currency</span></td>
-        <td></td>
+        <td><p>The currency to create a zero value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -129,10 +134,11 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_Currency.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.Currency%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L16">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L26">View Source</a>
   </span>
   <h4 id="Libplanet_Assets_FungibleAssetValue_Currency" data-uid="Libplanet.Assets.FungibleAssetValue.Currency">Currency</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The currency of the fungible asset.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -157,10 +163,43 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_Abs.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.Abs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L328">View Source</a>
+  </span>
+  <a id="Libplanet_Assets_FungibleAssetValue_Abs_" data-uid="Libplanet.Assets.FungibleAssetValue.Abs*"></a>
+  <h4 id="Libplanet_Assets_FungibleAssetValue_Abs" data-uid="Libplanet.Assets.FungibleAssetValue.Abs">Abs()</h4>
+  <div class="markdown level1 summary"><p>Gets the absolute value.</p>
+<p>Removes the negative sign if it&apos;s negative.  Otherwise does nothing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FungibleAssetValue Abs()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><p>Its absolute value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_CompareTo_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.CompareTo(Libplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L112">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L356">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_CompareTo_" data-uid="Libplanet.Assets.FungibleAssetValue.CompareTo*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_CompareTo_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.CompareTo(Libplanet.Assets.FungibleAssetValue)">CompareTo(FungibleAssetValue)</h4>
@@ -207,7 +246,7 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_CompareTo_System_Object_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.CompareTo(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L106">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L348">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_CompareTo_" data-uid="Libplanet.Assets.FungibleAssetValue.CompareTo*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_CompareTo_System_Object_" data-uid="Libplanet.Assets.FungibleAssetValue.CompareTo(System.Object)">CompareTo(Object)</h4>
@@ -251,18 +290,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_DivRem_Libplanet_Assets_FungibleAssetValue_BigInteger_Libplanet_Assets_FungibleAssetValue__.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue%2CBigInteger%2CLibplanet.Assets.FungibleAssetValue%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_DivRem_BigInteger_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.DivRem(BigInteger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L86">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L303">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_DivRem_" data-uid="Libplanet.Assets.FungibleAssetValue.DivRem*"></a>
-  <h4 id="Libplanet_Assets_FungibleAssetValue_DivRem_Libplanet_Assets_FungibleAssetValue_BigInteger_Libplanet_Assets_FungibleAssetValue__" data-uid="Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue,BigInteger,Libplanet.Assets.FungibleAssetValue@)">DivRem(FungibleAssetValue, BigInteger, out FungibleAssetValue)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Libplanet_Assets_FungibleAssetValue_DivRem_BigInteger_" data-uid="Libplanet.Assets.FungibleAssetValue.DivRem(BigInteger)">DivRem(BigInteger)</h4>
+  <div class="markdown level1 summary"><p>Divides the value by <code data-dev-comment-type="paramref" class="paramref">divisor</code>, and returns a pair of the quotient
+and the remainder.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static FungibleAssetValue DivRem(FungibleAssetValue dividend, BigInteger divisor, out FungibleAssetValue remainder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (FungibleAssetValue Quotient, FungibleAssetValue Remainder) DivRem(BigInteger divisor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -275,19 +316,69 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
-        <td><span class="parametername">dividend</span></td>
-        <td></td>
+        <td><span class="xref">BigInteger</span></td>
+        <td><span class="parametername">divisor</span></td>
+        <td><p>The number to divide by.</p>
+</td>
       </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">ValueTuple</a>&lt;<a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a>, <a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a>&gt;</td>
+        <td><p>A tuple of the <code>Quotient</code> and <code>Remainder</code> of the division.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_DivRem_BigInteger_Libplanet_Assets_FungibleAssetValue__.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.DivRem(BigInteger%2CLibplanet.Assets.FungibleAssetValue%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L258">View Source</a>
+  </span>
+  <a id="Libplanet_Assets_FungibleAssetValue_DivRem_" data-uid="Libplanet.Assets.FungibleAssetValue.DivRem*"></a>
+  <h4 id="Libplanet_Assets_FungibleAssetValue_DivRem_BigInteger_Libplanet_Assets_FungibleAssetValue__" data-uid="Libplanet.Assets.FungibleAssetValue.DivRem(BigInteger,Libplanet.Assets.FungibleAssetValue@)">DivRem(BigInteger, out FungibleAssetValue)</h4>
+  <div class="markdown level1 summary"><p>Divides the value by <code data-dev-comment-type="paramref" class="paramref">divisor</code>, returns the quotient, and returns
+the <code data-dev-comment-type="paramref" class="paramref">remainder</code> in an output parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FungibleAssetValue DivRem(BigInteger divisor, out FungibleAssetValue remainder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td><span class="xref">BigInteger</span></td>
         <td><span class="parametername">divisor</span></td>
-        <td></td>
+        <td><p>The number to divide by.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">remainder</span></td>
-        <td></td>
+        <td><p>When this method returns (without any exception), the remainder
+after dividing the value by <code data-dev-comment-type="paramref" class="paramref">divisor</code>.  This parameter is passed
+uninitialized.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -302,7 +393,118 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
-        <td></td>
+        <td><p>The quotient of the division.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_DivRem_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L318">View Source</a>
+  </span>
+  <a id="Libplanet_Assets_FungibleAssetValue_DivRem_" data-uid="Libplanet.Assets.FungibleAssetValue.DivRem*"></a>
+  <h4 id="Libplanet_Assets_FungibleAssetValue_DivRem_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue)">DivRem(FungibleAssetValue)</h4>
+  <div class="markdown level1 summary"><p>Divides the value by <code data-dev-comment-type="paramref" class="paramref">divisor</code>, and returns a pair of the quotient
+and the remainder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public (BigInteger Quotient, FungibleAssetValue Remainder) DivRem(FungibleAssetValue divisor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><span class="parametername">divisor</span></td>
+        <td><p>The value to divide by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">ValueTuple</a>&lt;<span class="xref">BigInteger</span>, <a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a>&gt;</td>
+        <td><p>A tuple of the <code>Quotient</code> and <code>Remainder</code> of the division.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_DivRem_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue__.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue%2CLibplanet.Assets.FungibleAssetValue%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L279">View Source</a>
+  </span>
+  <a id="Libplanet_Assets_FungibleAssetValue_DivRem_" data-uid="Libplanet.Assets.FungibleAssetValue.DivRem*"></a>
+  <h4 id="Libplanet_Assets_FungibleAssetValue_DivRem_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue__" data-uid="Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue@)">DivRem(FungibleAssetValue, out FungibleAssetValue)</h4>
+  <div class="markdown level1 summary"><p>Divides the value by <code data-dev-comment-type="paramref" class="paramref">divisor</code>, returns the quotient, and returns
+the <code data-dev-comment-type="paramref" class="paramref">remainder</code> in an output parameter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BigInteger DivRem(FungibleAssetValue divisor, out FungibleAssetValue remainder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><span class="parametername">divisor</span></td>
+        <td><p>The value to divide by.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><span class="parametername">remainder</span></td>
+        <td><p>When this method returns (without any exception), the remainder
+after dividing the value by <code data-dev-comment-type="paramref" class="paramref">divisor</code>.  This parameter is passed
+uninitialized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BigInteger</span></td>
+        <td><p>The quotient of the division.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -311,7 +513,7 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_Equals_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.Equals(Libplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L97">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L333">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_Equals_" data-uid="Libplanet.Assets.FungibleAssetValue.Equals*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_Equals_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.Equals(Libplanet.Assets.FungibleAssetValue)">Equals(FungibleAssetValue)</h4>
@@ -358,7 +560,7 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L100">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L338">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_Equals_" data-uid="Libplanet.Assets.FungibleAssetValue.Equals*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_Equals_System_Object_" data-uid="Libplanet.Assets.FungibleAssetValue.Equals(System.Object)">Equals(Object)</h4>
@@ -405,7 +607,7 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_GetHashCode.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L103">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L343">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_GetHashCode_" data-uid="Libplanet.Assets.FungibleAssetValue.GetHashCode*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_GetHashCode" data-uid="Libplanet.Assets.FungibleAssetValue.GetHashCode">GetHashCode()</h4>
@@ -435,7 +637,7 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_ToString.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L124">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L371">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_ToString_" data-uid="Libplanet.Assets.FungibleAssetValue.ToString*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_ToString" data-uid="Libplanet.Assets.FungibleAssetValue.ToString">ToString()</h4>
@@ -467,11 +669,12 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_Addition_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_Addition(Libplanet.Assets.FungibleAssetValue%2CLibplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L57">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L154">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_op_Addition_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Addition*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_op_Addition_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Addition(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)">Addition(FungibleAssetValue, FungibleAssetValue)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds two values and returns the result.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -490,12 +693,14 @@
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The first value to add.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The second value to add.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -510,59 +715,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_Division_Libplanet_Assets_FungibleAssetValue_BigInteger_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_Division(Libplanet.Assets.FungibleAssetValue%2CBigInteger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L80">View Source</a>
-  </span>
-  <a id="Libplanet_Assets_FungibleAssetValue_op_Division_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Division*"></a>
-  <h4 id="Libplanet_Assets_FungibleAssetValue_op_Division_Libplanet_Assets_FungibleAssetValue_BigInteger_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Division(Libplanet.Assets.FungibleAssetValue,BigInteger)">Division(FungibleAssetValue, BigInteger)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static FungibleAssetValue operator /(FungibleAssetValue dividend, BigInteger divisor)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
-        <td><span class="parametername">dividend</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">BigInteger</span></td>
-        <td><span class="parametername">divisor</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
-        <td></td>
+        <td><p>The sum of <code data-dev-comment-type="paramref" class="paramref">left</code> and <code data-dev-comment-type="paramref" class="paramref">right</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -571,11 +725,12 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_Equality_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_Equality(Libplanet.Assets.FungibleAssetValue%2CLibplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L39">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L70">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_op_Equality_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Equality*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_op_Equality_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Equality(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)">Equality(FungibleAssetValue, FungibleAssetValue)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tests if two values are equal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -594,12 +749,14 @@
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>A value.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><p>Another value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -614,7 +771,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>true</code> if two values are equal.  Otherwise <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -623,11 +781,13 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_GreaterThan_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_GreaterThan(Libplanet.Assets.FungibleAssetValue%2CLibplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L51">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L118">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_op_GreaterThan_" data-uid="Libplanet.Assets.FungibleAssetValue.op_GreaterThan*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_op_GreaterThan_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.op_GreaterThan(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)">GreaterThan(FungibleAssetValue, FungibleAssetValue)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tests if the left operand (<code data-dev-comment-type="paramref" class="paramref">obj</code>) is greater than the right operand
+(<code data-dev-comment-type="paramref" class="paramref">other</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -646,12 +806,14 @@
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>The left operand to compare.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><p>The right operand to compare.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -666,7 +828,10 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>true</code> if the left operand (<code data-dev-comment-type="paramref" class="paramref">obj</code>) is greater than
+the right operand (<code data-dev-comment-type="paramref" class="paramref">other</code>).  Otherwise (even if two operands are
+equal) <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -675,11 +840,13 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_GreaterThanOrEqual_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_GreaterThanOrEqual(Libplanet.Assets.FungibleAssetValue%2CLibplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L54">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L130">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_op_GreaterThanOrEqual_" data-uid="Libplanet.Assets.FungibleAssetValue.op_GreaterThanOrEqual*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_op_GreaterThanOrEqual_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.op_GreaterThanOrEqual(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)">GreaterThanOrEqual(FungibleAssetValue, FungibleAssetValue)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tests if the left operand (<code data-dev-comment-type="paramref" class="paramref">obj</code>) is greater than or equal to the right
+operand (<code data-dev-comment-type="paramref" class="paramref">other</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -698,12 +865,14 @@
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>The left operand to compare.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><p>The right operand to compare.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -718,7 +887,9 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>true</code> if the left operand (<code data-dev-comment-type="paramref" class="paramref">obj</code>) is greater than or
+equal to the right operand (<code data-dev-comment-type="paramref" class="paramref">other</code>). Otherwise <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -727,11 +898,12 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_Inequality_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_Inequality(Libplanet.Assets.FungibleAssetValue%2CLibplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L42">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L80">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_op_Inequality_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Inequality*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_op_Inequality_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Inequality(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)">Inequality(FungibleAssetValue, FungibleAssetValue)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tests if two values are unequal.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -750,12 +922,14 @@
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>A value.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><p>Another value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -770,7 +944,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>false</code> if two values are equal.  Otherwise <code>true</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -779,11 +954,13 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_LessThan_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_LessThan(Libplanet.Assets.FungibleAssetValue%2CLibplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L45">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L93">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_op_LessThan_" data-uid="Libplanet.Assets.FungibleAssetValue.op_LessThan*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_op_LessThan_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.op_LessThan(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)">LessThan(FungibleAssetValue, FungibleAssetValue)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tests if the left operand (<code data-dev-comment-type="paramref" class="paramref">obj</code>) is less than the right operand
+(<code data-dev-comment-type="paramref" class="paramref">other</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -802,12 +979,14 @@
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>The left operand to compare.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><p>The right operand to compare.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -822,7 +1001,10 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>true</code> if the left operand (<code data-dev-comment-type="paramref" class="paramref">obj</code>) is less than the right
+operand (<code data-dev-comment-type="paramref" class="paramref">other</code>).  Otherwise (even if two operands are equal)
+<code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -831,11 +1013,13 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_LessThanOrEqual_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_LessThanOrEqual(Libplanet.Assets.FungibleAssetValue%2CLibplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L48">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L105">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_op_LessThanOrEqual_" data-uid="Libplanet.Assets.FungibleAssetValue.op_LessThanOrEqual*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_op_LessThanOrEqual_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.op_LessThanOrEqual(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)">LessThanOrEqual(FungibleAssetValue, FungibleAssetValue)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tests if the left operand (<code data-dev-comment-type="paramref" class="paramref">obj</code>) is less than or equal to the right
+operand (<code data-dev-comment-type="paramref" class="paramref">other</code>).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -854,12 +1038,14 @@
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">obj</span></td>
-        <td></td>
+        <td><p>The left operand to compare.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
+        <td><p>The right operand to compare.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -874,7 +1060,9 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>true</code> if the left operand (<code data-dev-comment-type="paramref" class="paramref">obj</code>) is less than or equal
+to the right operand (<code data-dev-comment-type="paramref" class="paramref">other</code>).  Otherwise <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -883,11 +1071,13 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_Modulus_Libplanet_Assets_FungibleAssetValue_BigInteger_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_Modulus(Libplanet.Assets.FungibleAssetValue%2CBigInteger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L83">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L215">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_op_Modulus_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Modulus*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_op_Modulus_Libplanet_Assets_FungibleAssetValue_BigInteger_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Modulus(Libplanet.Assets.FungibleAssetValue,BigInteger)">Modulus(FungibleAssetValue, BigInteger)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Divides the value (<code data-dev-comment-type="paramref" class="paramref">dividend</code>) by <code data-dev-comment-type="paramref" class="paramref">divisor</code>,
+and returns the remainder.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -906,12 +1096,14 @@
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">dividend</span></td>
-        <td></td>
+        <td><p>The value to be divided.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">BigInteger</span></td>
         <td><span class="parametername">divisor</span></td>
-        <td></td>
+        <td><p>The number to divide by.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -926,7 +1118,123 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
-        <td></td>
+        <td><p>The remainder after dividing <code data-dev-comment-type="paramref" class="paramref">dividend</code>
+by <code data-dev-comment-type="paramref" class="paramref">divisor</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_Modulus_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_Modulus(Libplanet.Assets.FungibleAssetValue%2CLibplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L231">View Source</a>
+  </span>
+  <a id="Libplanet_Assets_FungibleAssetValue_op_Modulus_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Modulus*"></a>
+  <h4 id="Libplanet_Assets_FungibleAssetValue_op_Modulus_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Modulus(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)">Modulus(FungibleAssetValue, FungibleAssetValue)</h4>
+  <div class="markdown level1 summary"><p>Divides the value (<code data-dev-comment-type="paramref" class="paramref">dividend</code>) by <code data-dev-comment-type="paramref" class="paramref">divisor</code>,
+and returns the remainder.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FungibleAssetValue operator %(FungibleAssetValue dividend, FungibleAssetValue divisor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><span class="parametername">dividend</span></td>
+        <td><p>The value to be divided.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><span class="parametername">divisor</span></td>
+        <td><p>The value to divide by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><p>The remainder after dividing <code data-dev-comment-type="paramref" class="paramref">dividend</code>
+by <code data-dev-comment-type="paramref" class="paramref">divisor</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_Multiply_BigInteger_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_Multiply(BigInteger%2CLibplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L201">View Source</a>
+  </span>
+  <a id="Libplanet_Assets_FungibleAssetValue_op_Multiply_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Multiply*"></a>
+  <h4 id="Libplanet_Assets_FungibleAssetValue_op_Multiply_BigInteger_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Multiply(BigInteger,Libplanet.Assets.FungibleAssetValue)">Multiply(BigInteger, FungibleAssetValue)</h4>
+  <div class="markdown level1 summary"><p>Multiplies <code data-dev-comment-type="paramref" class="paramref">left</code> times the <code data-dev-comment-type="paramref" class="paramref">right</code> value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FungibleAssetValue operator *(BigInteger left, FungibleAssetValue right)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">BigInteger</span></td>
+        <td><span class="parametername">left</span></td>
+        <td><p>The times to multiply.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><span class="parametername">right</span></td>
+        <td><p>The value to multiply.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><p>The multiplied value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -935,11 +1243,12 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_Multiply_Libplanet_Assets_FungibleAssetValue_BigInteger_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_Multiply(Libplanet.Assets.FungibleAssetValue%2CBigInteger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L77">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L191">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_op_Multiply_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Multiply*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_op_Multiply_Libplanet_Assets_FungibleAssetValue_BigInteger_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Multiply(Libplanet.Assets.FungibleAssetValue,BigInteger)">Multiply(FungibleAssetValue, BigInteger)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Multiplies <code data-dev-comment-type="paramref" class="paramref">right</code> times the <code data-dev-comment-type="paramref" class="paramref">left</code> value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -958,12 +1267,14 @@
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The value to multiply.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">BigInteger</span></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The times to multiply.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -978,7 +1289,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
-        <td></td>
+        <td><p>The multiplied value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -987,11 +1299,12 @@
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_Subtraction_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_Subtraction(Libplanet.Assets.FungibleAssetValue%2CLibplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L67">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L174">View Source</a>
   </span>
   <a id="Libplanet_Assets_FungibleAssetValue_op_Subtraction_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Subtraction*"></a>
   <h4 id="Libplanet_Assets_FungibleAssetValue_op_Subtraction_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.op_Subtraction(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)">Subtraction(FungibleAssetValue, FungibleAssetValue)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Subtracts the <code data-dev-comment-type="paramref" class="paramref">right</code> value from the <code data-dev-comment-type="paramref" class="paramref">left</code> value.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1010,12 +1323,14 @@
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">left</span></td>
-        <td></td>
+        <td><p>The value to subtract from (the minuend).</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
         <td><span class="parametername">right</span></td>
-        <td></td>
+        <td><p>The value to subtract (the subtrahend).</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1030,7 +1345,62 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
-        <td></td>
+        <td><p>The result of subtracting <code data-dev-comment-type="paramref" class="paramref">right</code> from
+<code data-dev-comment-type="paramref" class="paramref">left</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue_op_UnaryNegation_Libplanet_Assets_FungibleAssetValue_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue.op_UnaryNegation(Libplanet.Assets.FungibleAssetValue)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L142">View Source</a>
+  </span>
+  <a id="Libplanet_Assets_FungibleAssetValue_op_UnaryNegation_" data-uid="Libplanet.Assets.FungibleAssetValue.op_UnaryNegation*"></a>
+  <h4 id="Libplanet_Assets_FungibleAssetValue_op_UnaryNegation_Libplanet_Assets_FungibleAssetValue_" data-uid="Libplanet.Assets.FungibleAssetValue.op_UnaryNegation(Libplanet.Assets.FungibleAssetValue)">UnaryNegation(FungibleAssetValue)</h4>
+  <div class="markdown level1 summary"><p>Negates a <code data-dev-comment-type="paramref" class="paramref">value</code>.</p>
+<p>Adds a negative sign to the <code data-dev-comment-type="paramref" class="paramref">value</code> if it&apos;s positive.
+Removes a negative sign from the <code data-dev-comment-type="paramref" class="paramref">value</code> if it&apos;s already negative.
+Does nothing if the <code data-dev-comment-type="paramref" class="paramref">value</code> is zero.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FungibleAssetValue operator -(FungibleAssetValue value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>A value to negate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Libplanet.Assets.FungibleAssetValue.html">FungibleAssetValue</a></td>
+        <td><p>A negated <code data-dev-comment-type="paramref" class="paramref">value</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1058,7 +1428,7 @@
                     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_FungibleAssetValue.md&amp;value=---%0Auid%3A%20Libplanet.Assets.FungibleAssetValue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/FungibleAssetValue.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

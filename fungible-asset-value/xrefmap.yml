@@ -1259,6 +1259,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.Assets.FungibleAssetValue.FungibleAssetValue
   nameWithType: FungibleAssetValue.FungibleAssetValue
+- uid: Libplanet.Assets.FungibleAssetValue.Abs
+  name: Abs()
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Abs
+  commentId: M:Libplanet.Assets.FungibleAssetValue.Abs
+  fullName: Libplanet.Assets.FungibleAssetValue.Abs()
+  nameWithType: FungibleAssetValue.Abs()
+- uid: Libplanet.Assets.FungibleAssetValue.Abs*
+  name: Abs
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Abs_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.Abs
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.Abs
+  nameWithType: FungibleAssetValue.Abs
 - uid: Libplanet.Assets.FungibleAssetValue.CompareTo(Libplanet.Assets.FungibleAssetValue)
   name: CompareTo(FungibleAssetValue)
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_CompareTo_Libplanet_Assets_FungibleAssetValue_
@@ -1284,15 +1297,36 @@ references:
   commentId: F:Libplanet.Assets.FungibleAssetValue.Currency
   fullName: Libplanet.Assets.FungibleAssetValue.Currency
   nameWithType: FungibleAssetValue.Currency
-- uid: Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue,BigInteger,Libplanet.Assets.FungibleAssetValue@)
-  name: DivRem(FungibleAssetValue, BigInteger, out FungibleAssetValue)
-  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_DivRem_Libplanet_Assets_FungibleAssetValue_BigInteger_Libplanet_Assets_FungibleAssetValue__
-  commentId: M:Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue,BigInteger,Libplanet.Assets.FungibleAssetValue@)
-  name.vb: DivRem(FungibleAssetValue, BigInteger, ByRef FungibleAssetValue)
-  fullName: Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue, BigInteger, out Libplanet.Assets.FungibleAssetValue)
-  fullName.vb: Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue, BigInteger, ByRef Libplanet.Assets.FungibleAssetValue)
-  nameWithType: FungibleAssetValue.DivRem(FungibleAssetValue, BigInteger, out FungibleAssetValue)
-  nameWithType.vb: FungibleAssetValue.DivRem(FungibleAssetValue, BigInteger, ByRef FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.DivRem(BigInteger)
+  name: DivRem(BigInteger)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_DivRem_BigInteger_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.DivRem(BigInteger)
+  fullName: Libplanet.Assets.FungibleAssetValue.DivRem(BigInteger)
+  nameWithType: FungibleAssetValue.DivRem(BigInteger)
+- uid: Libplanet.Assets.FungibleAssetValue.DivRem(BigInteger,Libplanet.Assets.FungibleAssetValue@)
+  name: DivRem(BigInteger, out FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_DivRem_BigInteger_Libplanet_Assets_FungibleAssetValue__
+  commentId: M:Libplanet.Assets.FungibleAssetValue.DivRem(BigInteger,Libplanet.Assets.FungibleAssetValue@)
+  name.vb: DivRem(BigInteger, ByRef FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.DivRem(BigInteger, out Libplanet.Assets.FungibleAssetValue)
+  fullName.vb: Libplanet.Assets.FungibleAssetValue.DivRem(BigInteger, ByRef Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.DivRem(BigInteger, out FungibleAssetValue)
+  nameWithType.vb: FungibleAssetValue.DivRem(BigInteger, ByRef FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue)
+  name: DivRem(FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_DivRem_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.DivRem(FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue@)
+  name: DivRem(FungibleAssetValue, out FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_DivRem_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue__
+  commentId: M:Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue@)
+  name.vb: DivRem(FungibleAssetValue, ByRef FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue, out Libplanet.Assets.FungibleAssetValue)
+  fullName.vb: Libplanet.Assets.FungibleAssetValue.DivRem(Libplanet.Assets.FungibleAssetValue, ByRef Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.DivRem(FungibleAssetValue, out FungibleAssetValue)
+  nameWithType.vb: FungibleAssetValue.DivRem(FungibleAssetValue, ByRef FungibleAssetValue)
 - uid: Libplanet.Assets.FungibleAssetValue.DivRem*
   name: DivRem
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_DivRem_
@@ -1345,19 +1379,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Assets.FungibleAssetValue.Addition
   nameWithType: FungibleAssetValue.Addition
-- uid: Libplanet.Assets.FungibleAssetValue.op_Division(Libplanet.Assets.FungibleAssetValue,BigInteger)
-  name: Division(FungibleAssetValue, BigInteger)
-  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Division_Libplanet_Assets_FungibleAssetValue_BigInteger_
-  commentId: M:Libplanet.Assets.FungibleAssetValue.op_Division(Libplanet.Assets.FungibleAssetValue,BigInteger)
-  fullName: Libplanet.Assets.FungibleAssetValue.Division(Libplanet.Assets.FungibleAssetValue, BigInteger)
-  nameWithType: FungibleAssetValue.Division(FungibleAssetValue, BigInteger)
-- uid: Libplanet.Assets.FungibleAssetValue.op_Division*
-  name: Division
-  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Division_
-  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_Division
-  isSpec: "True"
-  fullName: Libplanet.Assets.FungibleAssetValue.Division
-  nameWithType: FungibleAssetValue.Division
 - uid: Libplanet.Assets.FungibleAssetValue.op_Equality(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
   name: Equality(FungibleAssetValue, FungibleAssetValue)
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Equality_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_
@@ -1442,6 +1463,12 @@ references:
   commentId: M:Libplanet.Assets.FungibleAssetValue.op_Modulus(Libplanet.Assets.FungibleAssetValue,BigInteger)
   fullName: Libplanet.Assets.FungibleAssetValue.Modulus(Libplanet.Assets.FungibleAssetValue, BigInteger)
   nameWithType: FungibleAssetValue.Modulus(FungibleAssetValue, BigInteger)
+- uid: Libplanet.Assets.FungibleAssetValue.op_Modulus(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  name: Modulus(FungibleAssetValue, FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Modulus_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_Modulus(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.Modulus(Libplanet.Assets.FungibleAssetValue, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.Modulus(FungibleAssetValue, FungibleAssetValue)
 - uid: Libplanet.Assets.FungibleAssetValue.op_Modulus*
   name: Modulus
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Modulus_
@@ -1449,6 +1476,12 @@ references:
   isSpec: "True"
   fullName: Libplanet.Assets.FungibleAssetValue.Modulus
   nameWithType: FungibleAssetValue.Modulus
+- uid: Libplanet.Assets.FungibleAssetValue.op_Multiply(BigInteger,Libplanet.Assets.FungibleAssetValue)
+  name: Multiply(BigInteger, FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Multiply_BigInteger_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_Multiply(BigInteger,Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.Multiply(BigInteger, Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.Multiply(BigInteger, FungibleAssetValue)
 - uid: Libplanet.Assets.FungibleAssetValue.op_Multiply(Libplanet.Assets.FungibleAssetValue,BigInteger)
   name: Multiply(FungibleAssetValue, BigInteger)
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Multiply_Libplanet_Assets_FungibleAssetValue_BigInteger_
@@ -1475,6 +1508,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.Assets.FungibleAssetValue.Subtraction
   nameWithType: FungibleAssetValue.Subtraction
+- uid: Libplanet.Assets.FungibleAssetValue.op_UnaryNegation(Libplanet.Assets.FungibleAssetValue)
+  name: UnaryNegation(FungibleAssetValue)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_UnaryNegation_Libplanet_Assets_FungibleAssetValue_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.op_UnaryNegation(Libplanet.Assets.FungibleAssetValue)
+  fullName: Libplanet.Assets.FungibleAssetValue.UnaryNegation(Libplanet.Assets.FungibleAssetValue)
+  nameWithType: FungibleAssetValue.UnaryNegation(FungibleAssetValue)
+- uid: Libplanet.Assets.FungibleAssetValue.op_UnaryNegation*
+  name: UnaryNegation
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_UnaryNegation_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.op_UnaryNegation
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.UnaryNegation
+  nameWithType: FungibleAssetValue.UnaryNegation
 - uid: Libplanet.Assets.FungibleAssetValue.ToString
   name: ToString()
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_ToString
@@ -1503,15 +1549,15 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T)
   nameWithType: BlockChain<T>
   nameWithType.vb: BlockChain(Of T)
-- uid: Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore,Libplanet.Blocks.Block{`0},System.Boolean)
-  name: BlockChain(IBlockPolicy<T>, IStore, Block<T>, Boolean)
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1__ctor_Libplanet_Blockchain_Policies_IBlockPolicy__0__Libplanet_Store_IStore_Libplanet_Blocks_Block__0__System_Boolean_
-  commentId: M:Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore,Libplanet.Blocks.Block{`0},System.Boolean)
-  name.vb: BlockChain(IBlockPolicy(Of T), IStore, Block(Of T), Boolean)
-  fullName: Libplanet.Blockchain.BlockChain<T>.BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy<T>, Libplanet.Store.IStore, Libplanet.Blocks.Block<T>, System.Boolean)
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy(Of T), Libplanet.Store.IStore, Libplanet.Blocks.Block(Of T), System.Boolean)
-  nameWithType: BlockChain<T>.BlockChain(IBlockPolicy<T>, IStore, Block<T>, Boolean)
-  nameWithType.vb: BlockChain(Of T).BlockChain(IBlockPolicy(Of T), IStore, Block(Of T), Boolean)
+- uid: Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore,Libplanet.Store.IStateStore,Libplanet.Blocks.Block{`0},System.Boolean)
+  name: BlockChain(IBlockPolicy<T>, IStore, IStateStore, Block<T>, Boolean)
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1__ctor_Libplanet_Blockchain_Policies_IBlockPolicy__0__Libplanet_Store_IStore_Libplanet_Store_IStateStore_Libplanet_Blocks_Block__0__System_Boolean_
+  commentId: M:Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore,Libplanet.Store.IStateStore,Libplanet.Blocks.Block{`0},System.Boolean)
+  name.vb: BlockChain(IBlockPolicy(Of T), IStore, IStateStore, Block(Of T), Boolean)
+  fullName: Libplanet.Blockchain.BlockChain<T>.BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy<T>, Libplanet.Store.IStore, Libplanet.Store.IStateStore, Libplanet.Blocks.Block<T>, System.Boolean)
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy(Of T), Libplanet.Store.IStore, Libplanet.Store.IStateStore, Libplanet.Blocks.Block(Of T), System.Boolean)
+  nameWithType: BlockChain<T>.BlockChain(IBlockPolicy<T>, IStore, IStateStore, Block<T>, Boolean)
+  nameWithType.vb: BlockChain(Of T).BlockChain(IBlockPolicy(Of T), IStore, IStateStore, Block(Of T), Boolean)
 - uid: Libplanet.Blockchain.BlockChain`1.#ctor*
   name: BlockChain
   href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1__ctor_
@@ -1521,24 +1567,24 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T).BlockChain
   nameWithType: BlockChain<T>.BlockChain
   nameWithType.vb: BlockChain(Of T).BlockChain
-- uid: Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0})
-  name: Append(Block<T>)
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__
-  commentId: M:Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0})
-  name.vb: Append(Block(Of T))
-  fullName: Libplanet.Blockchain.BlockChain<T>.Append(Libplanet.Blocks.Block<T>)
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Append(Libplanet.Blocks.Block(Of T))
-  nameWithType: BlockChain<T>.Append(Block<T>)
-  nameWithType.vb: BlockChain(Of T).Append(Block(Of T))
-- uid: Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0},DateTimeOffset)
-  name: Append(Block<T>, DateTimeOffset)
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__DateTimeOffset_
-  commentId: M:Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0},DateTimeOffset)
-  name.vb: Append(Block(Of T), DateTimeOffset)
-  fullName: Libplanet.Blockchain.BlockChain<T>.Append(Libplanet.Blocks.Block<T>, DateTimeOffset)
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Append(Libplanet.Blocks.Block(Of T), DateTimeOffset)
-  nameWithType: BlockChain<T>.Append(Block<T>, DateTimeOffset)
-  nameWithType.vb: BlockChain(Of T).Append(Block(Of T), DateTimeOffset)
+- uid: Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0},DateTimeOffset,System.Nullable{Libplanet.Blockchain.StateCompleterSet{`0}})
+  name: Append(Block<T>, DateTimeOffset, Nullable<StateCompleterSet<T>>)
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__DateTimeOffset_System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___
+  commentId: M:Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0},DateTimeOffset,System.Nullable{Libplanet.Blockchain.StateCompleterSet{`0}})
+  name.vb: Append(Block(Of T), DateTimeOffset, Nullable(Of StateCompleterSet(Of T)))
+  fullName: Libplanet.Blockchain.BlockChain<T>.Append(Libplanet.Blocks.Block<T>, DateTimeOffset, System.Nullable<Libplanet.Blockchain.StateCompleterSet<T>>)
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Append(Libplanet.Blocks.Block(Of T), DateTimeOffset, System.Nullable(Of Libplanet.Blockchain.StateCompleterSet(Of T)))
+  nameWithType: BlockChain<T>.Append(Block<T>, DateTimeOffset, Nullable<StateCompleterSet<T>>)
+  nameWithType.vb: BlockChain(Of T).Append(Block(Of T), DateTimeOffset, Nullable(Of StateCompleterSet(Of T)))
+- uid: Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0},System.Nullable{Libplanet.Blockchain.StateCompleterSet{`0}})
+  name: Append(Block<T>, Nullable<StateCompleterSet<T>>)
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_Libplanet_Blocks_Block__0__System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___
+  commentId: M:Libplanet.Blockchain.BlockChain`1.Append(Libplanet.Blocks.Block{`0},System.Nullable{Libplanet.Blockchain.StateCompleterSet{`0}})
+  name.vb: Append(Block(Of T), Nullable(Of StateCompleterSet(Of T)))
+  fullName: Libplanet.Blockchain.BlockChain<T>.Append(Libplanet.Blocks.Block<T>, System.Nullable<Libplanet.Blockchain.StateCompleterSet<T>>)
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Append(Libplanet.Blocks.Block(Of T), System.Nullable(Of Libplanet.Blockchain.StateCompleterSet(Of T)))
+  nameWithType: BlockChain<T>.Append(Block<T>, Nullable<StateCompleterSet<T>>)
+  nameWithType.vb: BlockChain(Of T).Append(Block(Of T), Nullable(Of StateCompleterSet(Of T)))
 - uid: Libplanet.Blockchain.BlockChain`1.Append*
   name: Append
   href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Append_
@@ -1793,22 +1839,22 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T).MakeTransaction
   nameWithType: BlockChain<T>.MakeTransaction
   nameWithType.vb: BlockChain(Of T).MakeTransaction
-- uid: Libplanet.Blockchain.BlockChain`1.MineBlock(Libplanet.Address)
-  name: MineBlock(Address)
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_MineBlock_Libplanet_Address_
-  commentId: M:Libplanet.Blockchain.BlockChain`1.MineBlock(Libplanet.Address)
-  fullName: Libplanet.Blockchain.BlockChain<T>.MineBlock(Libplanet.Address)
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).MineBlock(Libplanet.Address)
-  nameWithType: BlockChain<T>.MineBlock(Address)
-  nameWithType.vb: BlockChain(Of T).MineBlock(Address)
-- uid: Libplanet.Blockchain.BlockChain`1.MineBlock(Libplanet.Address,DateTimeOffset,CancellationToken)
-  name: MineBlock(Address, DateTimeOffset, CancellationToken)
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_MineBlock_Libplanet_Address_DateTimeOffset_CancellationToken_
-  commentId: M:Libplanet.Blockchain.BlockChain`1.MineBlock(Libplanet.Address,DateTimeOffset,CancellationToken)
-  fullName: Libplanet.Blockchain.BlockChain<T>.MineBlock(Libplanet.Address, DateTimeOffset, CancellationToken)
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).MineBlock(Libplanet.Address, DateTimeOffset, CancellationToken)
-  nameWithType: BlockChain<T>.MineBlock(Address, DateTimeOffset, CancellationToken)
-  nameWithType.vb: BlockChain(Of T).MineBlock(Address, DateTimeOffset, CancellationToken)
+- uid: Libplanet.Blockchain.BlockChain`1.MineBlock(Libplanet.Address,DateTimeOffset,System.Boolean,CancellationToken)
+  name: MineBlock(Address, DateTimeOffset, Boolean, CancellationToken)
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_MineBlock_Libplanet_Address_DateTimeOffset_System_Boolean_CancellationToken_
+  commentId: M:Libplanet.Blockchain.BlockChain`1.MineBlock(Libplanet.Address,DateTimeOffset,System.Boolean,CancellationToken)
+  fullName: Libplanet.Blockchain.BlockChain<T>.MineBlock(Libplanet.Address, DateTimeOffset, System.Boolean, CancellationToken)
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).MineBlock(Libplanet.Address, DateTimeOffset, System.Boolean, CancellationToken)
+  nameWithType: BlockChain<T>.MineBlock(Address, DateTimeOffset, Boolean, CancellationToken)
+  nameWithType.vb: BlockChain(Of T).MineBlock(Address, DateTimeOffset, Boolean, CancellationToken)
+- uid: Libplanet.Blockchain.BlockChain`1.MineBlock(Libplanet.Address,System.Boolean,CancellationToken)
+  name: MineBlock(Address, Boolean, CancellationToken)
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_MineBlock_Libplanet_Address_System_Boolean_CancellationToken_
+  commentId: M:Libplanet.Blockchain.BlockChain`1.MineBlock(Libplanet.Address,System.Boolean,CancellationToken)
+  fullName: Libplanet.Blockchain.BlockChain<T>.MineBlock(Libplanet.Address, System.Boolean, CancellationToken)
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).MineBlock(Libplanet.Address, System.Boolean, CancellationToken)
+  nameWithType: BlockChain<T>.MineBlock(Address, Boolean, CancellationToken)
+  nameWithType.vb: BlockChain(Of T).MineBlock(Address, Boolean, CancellationToken)
 - uid: Libplanet.Blockchain.BlockChain`1.MineBlock*
   name: MineBlock
   href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_MineBlock_
@@ -1835,6 +1881,23 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Policy
   nameWithType: BlockChain<T>.Policy
   nameWithType.vb: BlockChain(Of T).Policy
+- uid: Libplanet.Blockchain.BlockChain`1.Render
+  name: Render
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Render
+  commentId: P:Libplanet.Blockchain.BlockChain`1.Render
+  fullName: Libplanet.Blockchain.BlockChain<T>.Render
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Render
+  nameWithType: BlockChain<T>.Render
+  nameWithType.vb: BlockChain(Of T).Render
+- uid: Libplanet.Blockchain.BlockChain`1.Render*
+  name: Render
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Render_
+  commentId: Overload:Libplanet.Blockchain.BlockChain`1.Render
+  isSpec: "True"
+  fullName: Libplanet.Blockchain.BlockChain<T>.Render
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Render
+  nameWithType: BlockChain<T>.Render
+  nameWithType.vb: BlockChain(Of T).Render
 - uid: Libplanet.Blockchain.BlockChain`1.Reorged
   name: Reorged
   href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Reorged
@@ -6718,6 +6781,24 @@ references:
   fullName.vb: Libplanet.Net.Swarm(Of T).GetPeerChainStateAsync
   nameWithType: Swarm<T>.GetPeerChainStateAsync
   nameWithType.vb: Swarm(Of T).GetPeerChainStateAsync
+- uid: Libplanet.Net.Swarm`1.GetTrustedStateCompleterAsync(IImmutableSet{Libplanet.Address},System.Nullable{TimeSpan},System.Nullable{Libplanet.Blockchain.StateCompleterSet{`0}},CancellationToken)
+  name: GetTrustedStateCompleterAsync(IImmutableSet<Address>, Nullable<TimeSpan>, Nullable<StateCompleterSet<T>>, CancellationToken)
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_GetTrustedStateCompleterAsync_IImmutableSet_Libplanet_Address__System_Nullable_TimeSpan__System_Nullable_Libplanet_Blockchain_StateCompleterSet__0___CancellationToken_
+  commentId: M:Libplanet.Net.Swarm`1.GetTrustedStateCompleterAsync(IImmutableSet{Libplanet.Address},System.Nullable{TimeSpan},System.Nullable{Libplanet.Blockchain.StateCompleterSet{`0}},CancellationToken)
+  name.vb: GetTrustedStateCompleterAsync(IImmutableSet(Of Address), Nullable(Of TimeSpan), Nullable(Of StateCompleterSet(Of T)), CancellationToken)
+  fullName: Libplanet.Net.Swarm<T>.GetTrustedStateCompleterAsync(IImmutableSet<Libplanet.Address>, System.Nullable<TimeSpan>, System.Nullable<Libplanet.Blockchain.StateCompleterSet<T>>, CancellationToken)
+  fullName.vb: Libplanet.Net.Swarm(Of T).GetTrustedStateCompleterAsync(IImmutableSet(Of Libplanet.Address), System.Nullable(Of TimeSpan), System.Nullable(Of Libplanet.Blockchain.StateCompleterSet(Of T)), CancellationToken)
+  nameWithType: Swarm<T>.GetTrustedStateCompleterAsync(IImmutableSet<Address>, Nullable<TimeSpan>, Nullable<StateCompleterSet<T>>, CancellationToken)
+  nameWithType.vb: Swarm(Of T).GetTrustedStateCompleterAsync(IImmutableSet(Of Address), Nullable(Of TimeSpan), Nullable(Of StateCompleterSet(Of T)), CancellationToken)
+- uid: Libplanet.Net.Swarm`1.GetTrustedStateCompleterAsync*
+  name: GetTrustedStateCompleterAsync
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_GetTrustedStateCompleterAsync_
+  commentId: Overload:Libplanet.Net.Swarm`1.GetTrustedStateCompleterAsync
+  isSpec: "True"
+  fullName: Libplanet.Net.Swarm<T>.GetTrustedStateCompleterAsync
+  fullName.vb: Libplanet.Net.Swarm(Of T).GetTrustedStateCompleterAsync
+  nameWithType: Swarm<T>.GetTrustedStateCompleterAsync
+  nameWithType.vb: Swarm(Of T).GetTrustedStateCompleterAsync
 - uid: Libplanet.Net.Swarm`1.LastReceived
   name: LastReceived
   href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_LastReceived
@@ -6804,22 +6885,24 @@ references:
   fullName.vb: Libplanet.Net.Swarm(Of T).Running
   nameWithType: Swarm<T>.Running
   nameWithType.vb: Swarm(Of T).Running
-- uid: Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,CancellationToken)
-  name: StartAsync(Int32, Int32, CancellationToken)
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_System_Int32_System_Int32_CancellationToken_
-  commentId: M:Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,CancellationToken)
-  fullName: Libplanet.Net.Swarm<T>.StartAsync(System.Int32, System.Int32, CancellationToken)
-  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(System.Int32, System.Int32, CancellationToken)
-  nameWithType: Swarm<T>.StartAsync(Int32, Int32, CancellationToken)
-  nameWithType.vb: Swarm(Of T).StartAsync(Int32, Int32, CancellationToken)
-- uid: Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,CancellationToken)
-  name: StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_TimeSpan_TimeSpan_CancellationToken_
-  commentId: M:Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,CancellationToken)
-  fullName: Libplanet.Net.Swarm<T>.StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  nameWithType: Swarm<T>.StartAsync(TimeSpan, TimeSpan, CancellationToken)
-  nameWithType.vb: Swarm(Of T).StartAsync(TimeSpan, TimeSpan, CancellationToken)
+- uid: Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,IImmutableSet{Libplanet.Address},CancellationToken)
+  name: StartAsync(Int32, Int32, IImmutableSet<Address>, CancellationToken)
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_System_Int32_System_Int32_IImmutableSet_Libplanet_Address__CancellationToken_
+  commentId: M:Libplanet.Net.Swarm`1.StartAsync(System.Int32,System.Int32,IImmutableSet{Libplanet.Address},CancellationToken)
+  name.vb: StartAsync(Int32, Int32, IImmutableSet(Of Address), CancellationToken)
+  fullName: Libplanet.Net.Swarm<T>.StartAsync(System.Int32, System.Int32, IImmutableSet<Libplanet.Address>, CancellationToken)
+  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(System.Int32, System.Int32, IImmutableSet(Of Libplanet.Address), CancellationToken)
+  nameWithType: Swarm<T>.StartAsync(Int32, Int32, IImmutableSet<Address>, CancellationToken)
+  nameWithType.vb: Swarm(Of T).StartAsync(Int32, Int32, IImmutableSet(Of Address), CancellationToken)
+- uid: Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,IImmutableSet{Libplanet.Address},CancellationToken)
+  name: StartAsync(TimeSpan, TimeSpan, IImmutableSet<Address>, CancellationToken)
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_TimeSpan_TimeSpan_IImmutableSet_Libplanet_Address__CancellationToken_
+  commentId: M:Libplanet.Net.Swarm`1.StartAsync(TimeSpan,TimeSpan,IImmutableSet{Libplanet.Address},CancellationToken)
+  name.vb: StartAsync(TimeSpan, TimeSpan, IImmutableSet(Of Address), CancellationToken)
+  fullName: Libplanet.Net.Swarm<T>.StartAsync(TimeSpan, TimeSpan, IImmutableSet<Libplanet.Address>, CancellationToken)
+  fullName.vb: Libplanet.Net.Swarm(Of T).StartAsync(TimeSpan, TimeSpan, IImmutableSet(Of Libplanet.Address), CancellationToken)
+  nameWithType: Swarm<T>.StartAsync(TimeSpan, TimeSpan, IImmutableSet<Address>, CancellationToken)
+  nameWithType.vb: Swarm(Of T).StartAsync(TimeSpan, TimeSpan, IImmutableSet(Of Address), CancellationToken)
 - uid: Libplanet.Net.Swarm`1.StartAsync*
   name: StartAsync
   href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_StartAsync_
@@ -7150,6 +7233,211 @@ references:
   commentId: N:Libplanet.Store
   fullName: Libplanet.Store
   nameWithType: Libplanet.Store
+- uid: Libplanet.Store.BaseBlockStatesStore
+  name: BaseBlockStatesStore
+  href: api/Libplanet.Store.BaseBlockStatesStore.html
+  commentId: T:Libplanet.Store.BaseBlockStatesStore
+  fullName: Libplanet.Store.BaseBlockStatesStore
+  nameWithType: BaseBlockStatesStore
+- uid: Libplanet.Store.BaseBlockStatesStore.ContainsBlockStates(Libplanet.HashDigest{SHA256})
+  name: ContainsBlockStates(HashDigest<SHA256>)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_ContainsBlockStates_Libplanet_HashDigest_SHA256__
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.ContainsBlockStates(Libplanet.HashDigest{SHA256})
+  name.vb: ContainsBlockStates(HashDigest(Of SHA256))
+  fullName: Libplanet.Store.BaseBlockStatesStore.ContainsBlockStates(Libplanet.HashDigest<SHA256>)
+  fullName.vb: Libplanet.Store.BaseBlockStatesStore.ContainsBlockStates(Libplanet.HashDigest(Of SHA256))
+  nameWithType: BaseBlockStatesStore.ContainsBlockStates(HashDigest<SHA256>)
+  nameWithType.vb: BaseBlockStatesStore.ContainsBlockStates(HashDigest(Of SHA256))
+- uid: Libplanet.Store.BaseBlockStatesStore.ContainsBlockStates*
+  name: ContainsBlockStates
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_ContainsBlockStates_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.ContainsBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.ContainsBlockStates
+  nameWithType: BaseBlockStatesStore.ContainsBlockStates
+- uid: Libplanet.Store.BaseBlockStatesStore.ForkStateReferences*
+  name: ForkStateReferences
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_ForkStateReferences_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.ForkStateReferences
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.ForkStateReferences
+  nameWithType: BaseBlockStatesStore.ForkStateReferences
+- uid: Libplanet.Store.BaseBlockStatesStore.ForkStateReferences``1(Guid,Guid,Libplanet.Blocks.Block{``0})
+  name: ForkStateReferences<T>(Guid, Guid, Block<T>)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_ForkStateReferences__1_Guid_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.ForkStateReferences``1(Guid,Guid,Libplanet.Blocks.Block{``0})
+  name.vb: ForkStateReferences(Of T)(Guid, Guid, Block(Of T))
+  fullName: Libplanet.Store.BaseBlockStatesStore.ForkStateReferences<T>(Guid, Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.BaseBlockStatesStore.ForkStateReferences(Of T)(Guid, Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: BaseBlockStatesStore.ForkStateReferences<T>(Guid, Guid, Block<T>)
+  nameWithType.vb: BaseBlockStatesStore.ForkStateReferences(Of T)(Guid, Guid, Block(Of T))
+- uid: Libplanet.Store.BaseBlockStatesStore.ForkStates*
+  name: ForkStates
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_ForkStates_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.ForkStates
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.ForkStates
+  nameWithType: BaseBlockStatesStore.ForkStates
+- uid: Libplanet.Store.BaseBlockStatesStore.ForkStates``1(Guid,Guid,Libplanet.Blocks.Block{``0})
+  name: ForkStates<T>(Guid, Guid, Block<T>)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_ForkStates__1_Guid_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.ForkStates``1(Guid,Guid,Libplanet.Blocks.Block{``0})
+  name.vb: ForkStates(Of T)(Guid, Guid, Block(Of T))
+  fullName: Libplanet.Store.BaseBlockStatesStore.ForkStates<T>(Guid, Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.BaseBlockStatesStore.ForkStates(Of T)(Guid, Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: BaseBlockStatesStore.ForkStates<T>(Guid, Guid, Block<T>)
+  nameWithType.vb: BaseBlockStatesStore.ForkStates(Of T)(Guid, Guid, Block(Of T))
+- uid: Libplanet.Store.BaseBlockStatesStore.GetBlockStates(Libplanet.HashDigest{SHA256})
+  name: GetBlockStates(HashDigest<SHA256>)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_GetBlockStates_Libplanet_HashDigest_SHA256__
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.GetBlockStates(Libplanet.HashDigest{SHA256})
+  name.vb: GetBlockStates(HashDigest(Of SHA256))
+  fullName: Libplanet.Store.BaseBlockStatesStore.GetBlockStates(Libplanet.HashDigest<SHA256>)
+  fullName.vb: Libplanet.Store.BaseBlockStatesStore.GetBlockStates(Libplanet.HashDigest(Of SHA256))
+  nameWithType: BaseBlockStatesStore.GetBlockStates(HashDigest<SHA256>)
+  nameWithType.vb: BaseBlockStatesStore.GetBlockStates(HashDigest(Of SHA256))
+- uid: Libplanet.Store.BaseBlockStatesStore.GetBlockStates*
+  name: GetBlockStates
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_GetBlockStates_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.GetBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.GetBlockStates
+  nameWithType: BaseBlockStatesStore.GetBlockStates
+- uid: Libplanet.Store.BaseBlockStatesStore.GetState(System.String,System.Nullable{Libplanet.HashDigest{SHA256}},System.Nullable{Guid})
+  name: GetState(String, Nullable<HashDigest<SHA256>>, Nullable<Guid>)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_GetState_System_String_System_Nullable_Libplanet_HashDigest_SHA256___System_Nullable_Guid__
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.GetState(System.String,System.Nullable{Libplanet.HashDigest{SHA256}},System.Nullable{Guid})
+  name.vb: GetState(String, Nullable(Of HashDigest(Of SHA256)), Nullable(Of Guid))
+  fullName: Libplanet.Store.BaseBlockStatesStore.GetState(System.String, System.Nullable<Libplanet.HashDigest<SHA256>>, System.Nullable<Guid>)
+  fullName.vb: Libplanet.Store.BaseBlockStatesStore.GetState(System.String, System.Nullable(Of Libplanet.HashDigest(Of SHA256)), System.Nullable(Of Guid))
+  nameWithType: BaseBlockStatesStore.GetState(String, Nullable<HashDigest<SHA256>>, Nullable<Guid>)
+  nameWithType.vb: BaseBlockStatesStore.GetState(String, Nullable(Of HashDigest(Of SHA256)), Nullable(Of Guid))
+- uid: Libplanet.Store.BaseBlockStatesStore.GetState*
+  name: GetState
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_GetState_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.GetState
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.GetState
+  nameWithType: BaseBlockStatesStore.GetState
+- uid: Libplanet.Store.BaseBlockStatesStore.IterateStateReferences(Guid,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32})
+  name: IterateStateReferences(Guid, String, Nullable<Int64>, Nullable<Int64>, Nullable<Int32>)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_IterateStateReferences_Guid_System_String_System_Nullable_System_Int64__System_Nullable_System_Int64__System_Nullable_System_Int32__
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.IterateStateReferences(Guid,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32})
+  name.vb: IterateStateReferences(Guid, String, Nullable(Of Int64), Nullable(Of Int64), Nullable(Of Int32))
+  fullName: Libplanet.Store.BaseBlockStatesStore.IterateStateReferences(Guid, System.String, System.Nullable<System.Int64>, System.Nullable<System.Int64>, System.Nullable<System.Int32>)
+  fullName.vb: Libplanet.Store.BaseBlockStatesStore.IterateStateReferences(Guid, System.String, System.Nullable(Of System.Int64), System.Nullable(Of System.Int64), System.Nullable(Of System.Int32))
+  nameWithType: BaseBlockStatesStore.IterateStateReferences(Guid, String, Nullable<Int64>, Nullable<Int64>, Nullable<Int32>)
+  nameWithType.vb: BaseBlockStatesStore.IterateStateReferences(Guid, String, Nullable(Of Int64), Nullable(Of Int64), Nullable(Of Int32))
+- uid: Libplanet.Store.BaseBlockStatesStore.IterateStateReferences*
+  name: IterateStateReferences
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_IterateStateReferences_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.IterateStateReferences
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.IterateStateReferences
+  nameWithType: BaseBlockStatesStore.IterateStateReferences
+- uid: Libplanet.Store.BaseBlockStatesStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
+  name: ListAllStateReferences(Guid, Int64, Int64)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_ListAllStateReferences_Guid_System_Int64_System_Int64_
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
+  fullName: Libplanet.Store.BaseBlockStatesStore.ListAllStateReferences(Guid, System.Int64, System.Int64)
+  nameWithType: BaseBlockStatesStore.ListAllStateReferences(Guid, Int64, Int64)
+- uid: Libplanet.Store.BaseBlockStatesStore.ListAllStateReferences*
+  name: ListAllStateReferences
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_ListAllStateReferences_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.ListAllStateReferences
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.ListAllStateReferences
+  nameWithType: BaseBlockStatesStore.ListAllStateReferences
+- uid: Libplanet.Store.BaseBlockStatesStore.ListStateKeys(Guid)
+  name: ListStateKeys(Guid)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_ListStateKeys_Guid_
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.ListStateKeys(Guid)
+  fullName: Libplanet.Store.BaseBlockStatesStore.ListStateKeys(Guid)
+  nameWithType: BaseBlockStatesStore.ListStateKeys(Guid)
+- uid: Libplanet.Store.BaseBlockStatesStore.ListStateKeys*
+  name: ListStateKeys
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_ListStateKeys_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.ListStateKeys
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.ListStateKeys
+  nameWithType: BaseBlockStatesStore.ListStateKeys
+- uid: Libplanet.Store.BaseBlockStatesStore.LookupStateReference(Guid,System.String,System.Int64)
+  name: LookupStateReference(Guid, String, Int64)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_LookupStateReference_Guid_System_String_System_Int64_
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.LookupStateReference(Guid,System.String,System.Int64)
+  fullName: Libplanet.Store.BaseBlockStatesStore.LookupStateReference(Guid, System.String, System.Int64)
+  nameWithType: BaseBlockStatesStore.LookupStateReference(Guid, String, Int64)
+- uid: Libplanet.Store.BaseBlockStatesStore.LookupStateReference*
+  name: LookupStateReference
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_LookupStateReference_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.LookupStateReference
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.LookupStateReference
+  nameWithType: BaseBlockStatesStore.LookupStateReference
+- uid: Libplanet.Store.BaseBlockStatesStore.PruneBlockStates*
+  name: PruneBlockStates
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_PruneBlockStates_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.PruneBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.PruneBlockStates
+  nameWithType: BaseBlockStatesStore.PruneBlockStates
+- uid: Libplanet.Store.BaseBlockStatesStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name: PruneBlockStates<T>(Guid, Block<T>)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_PruneBlockStates__1_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name.vb: PruneBlockStates(Of T)(Guid, Block(Of T))
+  fullName: Libplanet.Store.BaseBlockStatesStore.PruneBlockStates<T>(Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.BaseBlockStatesStore.PruneBlockStates(Of T)(Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: BaseBlockStatesStore.PruneBlockStates<T>(Guid, Block<T>)
+  nameWithType.vb: BaseBlockStatesStore.PruneBlockStates(Of T)(Guid, Block(Of T))
+- uid: Libplanet.Store.BaseBlockStatesStore.SetBlockStates(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue})
+  name: SetBlockStates(HashDigest<SHA256>, IImmutableDictionary<String, IValue>)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_SetBlockStates_Libplanet_HashDigest_SHA256__IImmutableDictionary_System_String_IValue__
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.SetBlockStates(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue})
+  name.vb: SetBlockStates(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue))
+  fullName: Libplanet.Store.BaseBlockStatesStore.SetBlockStates(Libplanet.HashDigest<SHA256>, IImmutableDictionary<System.String, IValue>)
+  fullName.vb: Libplanet.Store.BaseBlockStatesStore.SetBlockStates(Libplanet.HashDigest(Of SHA256), IImmutableDictionary(Of System.String, IValue))
+  nameWithType: BaseBlockStatesStore.SetBlockStates(HashDigest<SHA256>, IImmutableDictionary<String, IValue>)
+  nameWithType.vb: BaseBlockStatesStore.SetBlockStates(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue))
+- uid: Libplanet.Store.BaseBlockStatesStore.SetBlockStates*
+  name: SetBlockStates
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_SetBlockStates_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.SetBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.SetBlockStates
+  nameWithType: BaseBlockStatesStore.SetBlockStates
+- uid: Libplanet.Store.BaseBlockStatesStore.SetStates*
+  name: SetStates
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_SetStates_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.SetStates
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.SetStates
+  nameWithType: BaseBlockStatesStore.SetStates
+- uid: Libplanet.Store.BaseBlockStatesStore.SetStates``1(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue},Func{Libplanet.HashDigest{SHA256},Libplanet.Blocks.Block{``0}})
+  name: SetStates<T>(HashDigest<SHA256>, IImmutableDictionary<String, IValue>, Func<HashDigest<SHA256>, Block<T>>)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_SetStates__1_Libplanet_HashDigest_SHA256__IImmutableDictionary_System_String_IValue__Func_Libplanet_HashDigest_SHA256__Libplanet_Blocks_Block___0___
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.SetStates``1(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue},Func{Libplanet.HashDigest{SHA256},Libplanet.Blocks.Block{``0}})
+  name.vb: SetStates(Of T)(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue), Func(Of HashDigest(Of SHA256), Block(Of T)))
+  fullName: Libplanet.Store.BaseBlockStatesStore.SetStates<T>(Libplanet.HashDigest<SHA256>, IImmutableDictionary<System.String, IValue>, Func<Libplanet.HashDigest<SHA256>, Libplanet.Blocks.Block<T>>)
+  fullName.vb: Libplanet.Store.BaseBlockStatesStore.SetStates(Of T)(Libplanet.HashDigest(Of SHA256), IImmutableDictionary(Of System.String, IValue), Func(Of Libplanet.HashDigest(Of SHA256), Libplanet.Blocks.Block(Of T)))
+  nameWithType: BaseBlockStatesStore.SetStates<T>(HashDigest<SHA256>, IImmutableDictionary<String, IValue>, Func<HashDigest<SHA256>, Block<T>>)
+  nameWithType.vb: BaseBlockStatesStore.SetStates(Of T)(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue), Func(Of HashDigest(Of SHA256), Block(Of T)))
+- uid: Libplanet.Store.BaseBlockStatesStore.StoreStateReference(Guid,IImmutableSet{System.String},Libplanet.HashDigest{SHA256},System.Int64)
+  name: StoreStateReference(Guid, IImmutableSet<String>, HashDigest<SHA256>, Int64)
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_StoreStateReference_Guid_IImmutableSet_System_String__Libplanet_HashDigest_SHA256__System_Int64_
+  commentId: M:Libplanet.Store.BaseBlockStatesStore.StoreStateReference(Guid,IImmutableSet{System.String},Libplanet.HashDigest{SHA256},System.Int64)
+  name.vb: StoreStateReference(Guid, IImmutableSet(Of String), HashDigest(Of SHA256), Int64)
+  fullName: Libplanet.Store.BaseBlockStatesStore.StoreStateReference(Guid, IImmutableSet<System.String>, Libplanet.HashDigest<SHA256>, System.Int64)
+  fullName.vb: Libplanet.Store.BaseBlockStatesStore.StoreStateReference(Guid, IImmutableSet(Of System.String), Libplanet.HashDigest(Of SHA256), System.Int64)
+  nameWithType: BaseBlockStatesStore.StoreStateReference(Guid, IImmutableSet<String>, HashDigest<SHA256>, Int64)
+  nameWithType.vb: BaseBlockStatesStore.StoreStateReference(Guid, IImmutableSet(Of String), HashDigest(Of SHA256), Int64)
+- uid: Libplanet.Store.BaseBlockStatesStore.StoreStateReference*
+  name: StoreStateReference
+  href: api/Libplanet.Store.BaseBlockStatesStore.html#Libplanet_Store_BaseBlockStatesStore_StoreStateReference_
+  commentId: Overload:Libplanet.Store.BaseBlockStatesStore.StoreStateReference
+  isSpec: "True"
+  fullName: Libplanet.Store.BaseBlockStatesStore.StoreStateReference
+  nameWithType: BaseBlockStatesStore.StoreStateReference
 - uid: Libplanet.Store.BaseIndex`2
   name: BaseIndex<TKey, TVal>
   href: api/Libplanet.Store.BaseIndex-2.html
@@ -7597,22 +7885,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.BaseStore.ForkBlockIndexes
   nameWithType: BaseStore.ForkBlockIndexes
-- uid: Libplanet.Store.BaseStore.ForkStateReferences*
-  name: ForkStateReferences
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_ForkStateReferences_
-  commentId: Overload:Libplanet.Store.BaseStore.ForkStateReferences
-  isSpec: "True"
-  fullName: Libplanet.Store.BaseStore.ForkStateReferences
-  nameWithType: BaseStore.ForkStateReferences
-- uid: Libplanet.Store.BaseStore.ForkStateReferences``1(Guid,Guid,Libplanet.Blocks.Block{``0})
-  name: ForkStateReferences<T>(Guid, Guid, Block<T>)
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_ForkStateReferences__1_Guid_Guid_Libplanet_Blocks_Block___0__
-  commentId: M:Libplanet.Store.BaseStore.ForkStateReferences``1(Guid,Guid,Libplanet.Blocks.Block{``0})
-  name.vb: ForkStateReferences(Of T)(Guid, Guid, Block(Of T))
-  fullName: Libplanet.Store.BaseStore.ForkStateReferences<T>(Guid, Guid, Libplanet.Blocks.Block<T>)
-  fullName.vb: Libplanet.Store.BaseStore.ForkStateReferences(Of T)(Guid, Guid, Libplanet.Blocks.Block(Of T))
-  nameWithType: BaseStore.ForkStateReferences<T>(Guid, Guid, Block<T>)
-  nameWithType.vb: BaseStore.ForkStateReferences(Of T)(Guid, Guid, Block(Of T))
 - uid: Libplanet.Store.BaseStore.GetBlock*
   name: GetBlock
   href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_GetBlock_
@@ -7661,22 +7933,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.BaseStore.GetBlockIndex
   nameWithType: BaseStore.GetBlockIndex
-- uid: Libplanet.Store.BaseStore.GetBlockStates(Libplanet.HashDigest{SHA256})
-  name: GetBlockStates(HashDigest<SHA256>)
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_GetBlockStates_Libplanet_HashDigest_SHA256__
-  commentId: M:Libplanet.Store.BaseStore.GetBlockStates(Libplanet.HashDigest{SHA256})
-  name.vb: GetBlockStates(HashDigest(Of SHA256))
-  fullName: Libplanet.Store.BaseStore.GetBlockStates(Libplanet.HashDigest<SHA256>)
-  fullName.vb: Libplanet.Store.BaseStore.GetBlockStates(Libplanet.HashDigest(Of SHA256))
-  nameWithType: BaseStore.GetBlockStates(HashDigest<SHA256>)
-  nameWithType.vb: BaseStore.GetBlockStates(HashDigest(Of SHA256))
-- uid: Libplanet.Store.BaseStore.GetBlockStates*
-  name: GetBlockStates
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_GetBlockStates_
-  commentId: Overload:Libplanet.Store.BaseStore.GetBlockStates
-  isSpec: "True"
-  fullName: Libplanet.Store.BaseStore.GetBlockStates
-  nameWithType: BaseStore.GetBlockStates
 - uid: Libplanet.Store.BaseStore.GetCanonicalChainId
   name: GetCanonicalChainId()
   href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_GetCanonicalChainId
@@ -7787,22 +8043,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.BaseStore.IterateStagedTransactionIds
   nameWithType: BaseStore.IterateStagedTransactionIds
-- uid: Libplanet.Store.BaseStore.IterateStateReferences(Guid,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32})
-  name: IterateStateReferences(Guid, String, Nullable<Int64>, Nullable<Int64>, Nullable<Int32>)
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_IterateStateReferences_Guid_System_String_System_Nullable_System_Int64__System_Nullable_System_Int64__System_Nullable_System_Int32__
-  commentId: M:Libplanet.Store.BaseStore.IterateStateReferences(Guid,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32})
-  name.vb: IterateStateReferences(Guid, String, Nullable(Of Int64), Nullable(Of Int64), Nullable(Of Int32))
-  fullName: Libplanet.Store.BaseStore.IterateStateReferences(Guid, System.String, System.Nullable<System.Int64>, System.Nullable<System.Int64>, System.Nullable<System.Int32>)
-  fullName.vb: Libplanet.Store.BaseStore.IterateStateReferences(Guid, System.String, System.Nullable(Of System.Int64), System.Nullable(Of System.Int64), System.Nullable(Of System.Int32))
-  nameWithType: BaseStore.IterateStateReferences(Guid, String, Nullable<Int64>, Nullable<Int64>, Nullable<Int32>)
-  nameWithType.vb: BaseStore.IterateStateReferences(Guid, String, Nullable(Of Int64), Nullable(Of Int64), Nullable(Of Int32))
-- uid: Libplanet.Store.BaseStore.IterateStateReferences*
-  name: IterateStateReferences
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_IterateStateReferences_
-  commentId: Overload:Libplanet.Store.BaseStore.IterateStateReferences
-  isSpec: "True"
-  fullName: Libplanet.Store.BaseStore.IterateStateReferences
-  nameWithType: BaseStore.IterateStateReferences
 - uid: Libplanet.Store.BaseStore.IterateTransactionIds
   name: IterateTransactionIds()
   href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_IterateTransactionIds
@@ -7816,19 +8056,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.BaseStore.IterateTransactionIds
   nameWithType: BaseStore.IterateTransactionIds
-- uid: Libplanet.Store.BaseStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
-  name: ListAllStateReferences(Guid, Int64, Int64)
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_ListAllStateReferences_Guid_System_Int64_System_Int64_
-  commentId: M:Libplanet.Store.BaseStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
-  fullName: Libplanet.Store.BaseStore.ListAllStateReferences(Guid, System.Int64, System.Int64)
-  nameWithType: BaseStore.ListAllStateReferences(Guid, Int64, Int64)
-- uid: Libplanet.Store.BaseStore.ListAllStateReferences*
-  name: ListAllStateReferences
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_ListAllStateReferences_
-  commentId: Overload:Libplanet.Store.BaseStore.ListAllStateReferences
-  isSpec: "True"
-  fullName: Libplanet.Store.BaseStore.ListAllStateReferences
-  nameWithType: BaseStore.ListAllStateReferences
 - uid: Libplanet.Store.BaseStore.ListChainIds
   name: ListChainIds()
   href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_ListChainIds
@@ -7842,19 +8069,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.BaseStore.ListChainIds
   nameWithType: BaseStore.ListChainIds
-- uid: Libplanet.Store.BaseStore.ListStateKeys(Guid)
-  name: ListStateKeys(Guid)
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_ListStateKeys_Guid_
-  commentId: M:Libplanet.Store.BaseStore.ListStateKeys(Guid)
-  fullName: Libplanet.Store.BaseStore.ListStateKeys(Guid)
-  nameWithType: BaseStore.ListStateKeys(Guid)
-- uid: Libplanet.Store.BaseStore.ListStateKeys*
-  name: ListStateKeys
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_ListStateKeys_
-  commentId: Overload:Libplanet.Store.BaseStore.ListStateKeys
-  isSpec: "True"
-  fullName: Libplanet.Store.BaseStore.ListStateKeys
-  nameWithType: BaseStore.ListStateKeys
 - uid: Libplanet.Store.BaseStore.ListTxNonces(Guid)
   name: ListTxNonces(Guid)
   href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_ListTxNonces_Guid_
@@ -7868,38 +8082,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.BaseStore.ListTxNonces
   nameWithType: BaseStore.ListTxNonces
-- uid: Libplanet.Store.BaseStore.LookupStateReference*
-  name: LookupStateReference
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_LookupStateReference_
-  commentId: Overload:Libplanet.Store.BaseStore.LookupStateReference
-  isSpec: "True"
-  fullName: Libplanet.Store.BaseStore.LookupStateReference
-  nameWithType: BaseStore.LookupStateReference
-- uid: Libplanet.Store.BaseStore.LookupStateReference``1(Guid,System.String,Libplanet.Blocks.Block{``0})
-  name: LookupStateReference<T>(Guid, String, Block<T>)
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_LookupStateReference__1_Guid_System_String_Libplanet_Blocks_Block___0__
-  commentId: M:Libplanet.Store.BaseStore.LookupStateReference``1(Guid,System.String,Libplanet.Blocks.Block{``0})
-  name.vb: LookupStateReference(Of T)(Guid, String, Block(Of T))
-  fullName: Libplanet.Store.BaseStore.LookupStateReference<T>(Guid, System.String, Libplanet.Blocks.Block<T>)
-  fullName.vb: Libplanet.Store.BaseStore.LookupStateReference(Of T)(Guid, System.String, Libplanet.Blocks.Block(Of T))
-  nameWithType: BaseStore.LookupStateReference<T>(Guid, String, Block<T>)
-  nameWithType.vb: BaseStore.LookupStateReference(Of T)(Guid, String, Block(Of T))
-- uid: Libplanet.Store.BaseStore.PruneBlockStates*
-  name: PruneBlockStates
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_PruneBlockStates_
-  commentId: Overload:Libplanet.Store.BaseStore.PruneBlockStates
-  isSpec: "True"
-  fullName: Libplanet.Store.BaseStore.PruneBlockStates
-  nameWithType: BaseStore.PruneBlockStates
-- uid: Libplanet.Store.BaseStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
-  name: PruneBlockStates<T>(Guid, Block<T>)
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_PruneBlockStates__1_Guid_Libplanet_Blocks_Block___0__
-  commentId: M:Libplanet.Store.BaseStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
-  name.vb: PruneBlockStates(Of T)(Guid, Block(Of T))
-  fullName: Libplanet.Store.BaseStore.PruneBlockStates<T>(Guid, Libplanet.Blocks.Block<T>)
-  fullName.vb: Libplanet.Store.BaseStore.PruneBlockStates(Of T)(Guid, Libplanet.Blocks.Block(Of T))
-  nameWithType: BaseStore.PruneBlockStates<T>(Guid, Block<T>)
-  nameWithType.vb: BaseStore.PruneBlockStates(Of T)(Guid, Block(Of T))
 - uid: Libplanet.Store.BaseStore.PutBlock*
   name: PutBlock
   href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_PutBlock_
@@ -7932,22 +8114,6 @@ references:
   fullName.vb: Libplanet.Store.BaseStore.PutTransaction(Of T)(Libplanet.Tx.Transaction(Of T))
   nameWithType: BaseStore.PutTransaction<T>(Transaction<T>)
   nameWithType.vb: BaseStore.PutTransaction(Of T)(Transaction(Of T))
-- uid: Libplanet.Store.BaseStore.SetBlockStates(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue})
-  name: SetBlockStates(HashDigest<SHA256>, IImmutableDictionary<String, IValue>)
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_SetBlockStates_Libplanet_HashDigest_SHA256__IImmutableDictionary_System_String_IValue__
-  commentId: M:Libplanet.Store.BaseStore.SetBlockStates(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue})
-  name.vb: SetBlockStates(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue))
-  fullName: Libplanet.Store.BaseStore.SetBlockStates(Libplanet.HashDigest<SHA256>, IImmutableDictionary<System.String, IValue>)
-  fullName.vb: Libplanet.Store.BaseStore.SetBlockStates(Libplanet.HashDigest(Of SHA256), IImmutableDictionary(Of System.String, IValue))
-  nameWithType: BaseStore.SetBlockStates(HashDigest<SHA256>, IImmutableDictionary<String, IValue>)
-  nameWithType.vb: BaseStore.SetBlockStates(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue))
-- uid: Libplanet.Store.BaseStore.SetBlockStates*
-  name: SetBlockStates
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_SetBlockStates_
-  commentId: Overload:Libplanet.Store.BaseStore.SetBlockStates
-  isSpec: "True"
-  fullName: Libplanet.Store.BaseStore.SetBlockStates
-  nameWithType: BaseStore.SetBlockStates
 - uid: Libplanet.Store.BaseStore.SetCanonicalChainId(Guid)
   name: SetCanonicalChainId(Guid)
   href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_SetCanonicalChainId_Guid_
@@ -7977,22 +8143,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.BaseStore.StageTransactionIds
   nameWithType: BaseStore.StageTransactionIds
-- uid: Libplanet.Store.BaseStore.StoreStateReference(Guid,IImmutableSet{System.String},Libplanet.HashDigest{SHA256},System.Int64)
-  name: StoreStateReference(Guid, IImmutableSet<String>, HashDigest<SHA256>, Int64)
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_StoreStateReference_Guid_IImmutableSet_System_String__Libplanet_HashDigest_SHA256__System_Int64_
-  commentId: M:Libplanet.Store.BaseStore.StoreStateReference(Guid,IImmutableSet{System.String},Libplanet.HashDigest{SHA256},System.Int64)
-  name.vb: StoreStateReference(Guid, IImmutableSet(Of String), HashDigest(Of SHA256), Int64)
-  fullName: Libplanet.Store.BaseStore.StoreStateReference(Guid, IImmutableSet<System.String>, Libplanet.HashDigest<SHA256>, System.Int64)
-  fullName.vb: Libplanet.Store.BaseStore.StoreStateReference(Guid, IImmutableSet(Of System.String), Libplanet.HashDigest(Of SHA256), System.Int64)
-  nameWithType: BaseStore.StoreStateReference(Guid, IImmutableSet<String>, HashDigest<SHA256>, Int64)
-  nameWithType.vb: BaseStore.StoreStateReference(Guid, IImmutableSet(Of String), HashDigest(Of SHA256), Int64)
-- uid: Libplanet.Store.BaseStore.StoreStateReference*
-  name: StoreStateReference
-  href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_StoreStateReference_
-  commentId: Overload:Libplanet.Store.BaseStore.StoreStateReference
-  isSpec: "True"
-  fullName: Libplanet.Store.BaseStore.StoreStateReference
-  nameWithType: BaseStore.StoreStateReference
 - uid: Libplanet.Store.BaseStore.UnstageTransactionIds(ISet{Libplanet.Tx.TxId})
   name: UnstageTransactionIds(ISet<TxId>)
   href: api/Libplanet.Store.BaseStore.html#Libplanet_Store_BaseStore_UnstageTransactionIds_ISet_Libplanet_Tx_TxId__
@@ -8620,6 +8770,12 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.DefaultStore.ListTxNonces
   nameWithType: DefaultStore.ListTxNonces
+- uid: Libplanet.Store.DefaultStore.LookupStateReference(Guid,System.String,System.Int64)
+  name: LookupStateReference(Guid, String, Int64)
+  href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_LookupStateReference_Guid_System_String_System_Int64_
+  commentId: M:Libplanet.Store.DefaultStore.LookupStateReference(Guid,System.String,System.Int64)
+  fullName: Libplanet.Store.DefaultStore.LookupStateReference(Guid, System.String, System.Int64)
+  nameWithType: DefaultStore.LookupStateReference(Guid, String, Int64)
 - uid: Libplanet.Store.DefaultStore.LookupStateReference*
   name: LookupStateReference
   href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_LookupStateReference_
@@ -8627,15 +8783,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.DefaultStore.LookupStateReference
   nameWithType: DefaultStore.LookupStateReference
-- uid: Libplanet.Store.DefaultStore.LookupStateReference``1(Guid,System.String,Libplanet.Blocks.Block{``0})
-  name: LookupStateReference<T>(Guid, String, Block<T>)
-  href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_LookupStateReference__1_Guid_System_String_Libplanet_Blocks_Block___0__
-  commentId: M:Libplanet.Store.DefaultStore.LookupStateReference``1(Guid,System.String,Libplanet.Blocks.Block{``0})
-  name.vb: LookupStateReference(Of T)(Guid, String, Block(Of T))
-  fullName: Libplanet.Store.DefaultStore.LookupStateReference<T>(Guid, System.String, Libplanet.Blocks.Block<T>)
-  fullName.vb: Libplanet.Store.DefaultStore.LookupStateReference(Of T)(Guid, System.String, Libplanet.Blocks.Block(Of T))
-  nameWithType: DefaultStore.LookupStateReference<T>(Guid, String, Block<T>)
-  nameWithType.vb: DefaultStore.LookupStateReference(Of T)(Guid, String, Block(Of T))
 - uid: Libplanet.Store.DefaultStore.PruneBlockStates*
   name: PruneBlockStates
   href: api/Libplanet.Store.DefaultStore.html#Libplanet_Store_DefaultStore_PruneBlockStates_
@@ -8761,6 +8908,217 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.DefaultStore.UnstageTransactionIds
   nameWithType: DefaultStore.UnstageTransactionIds
+- uid: Libplanet.Store.IBlockStatesStore
+  name: IBlockStatesStore
+  href: api/Libplanet.Store.IBlockStatesStore.html
+  commentId: T:Libplanet.Store.IBlockStatesStore
+  fullName: Libplanet.Store.IBlockStatesStore
+  nameWithType: IBlockStatesStore
+- uid: Libplanet.Store.IBlockStatesStore.ForkStateReferences*
+  name: ForkStateReferences
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_ForkStateReferences_
+  commentId: Overload:Libplanet.Store.IBlockStatesStore.ForkStateReferences
+  isSpec: "True"
+  fullName: Libplanet.Store.IBlockStatesStore.ForkStateReferences
+  nameWithType: IBlockStatesStore.ForkStateReferences
+- uid: Libplanet.Store.IBlockStatesStore.ForkStateReferences``1(Guid,Guid,Libplanet.Blocks.Block{``0})
+  name: ForkStateReferences<T>(Guid, Guid, Block<T>)
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_ForkStateReferences__1_Guid_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.IBlockStatesStore.ForkStateReferences``1(Guid,Guid,Libplanet.Blocks.Block{``0})
+  name.vb: ForkStateReferences(Of T)(Guid, Guid, Block(Of T))
+  fullName: Libplanet.Store.IBlockStatesStore.ForkStateReferences<T>(Guid, Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.IBlockStatesStore.ForkStateReferences(Of T)(Guid, Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: IBlockStatesStore.ForkStateReferences<T>(Guid, Guid, Block<T>)
+  nameWithType.vb: IBlockStatesStore.ForkStateReferences(Of T)(Guid, Guid, Block(Of T))
+- uid: Libplanet.Store.IBlockStatesStore.GetBlockStates(Libplanet.HashDigest{SHA256})
+  name: GetBlockStates(HashDigest<SHA256>)
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_GetBlockStates_Libplanet_HashDigest_SHA256__
+  commentId: M:Libplanet.Store.IBlockStatesStore.GetBlockStates(Libplanet.HashDigest{SHA256})
+  name.vb: GetBlockStates(HashDigest(Of SHA256))
+  fullName: Libplanet.Store.IBlockStatesStore.GetBlockStates(Libplanet.HashDigest<SHA256>)
+  fullName.vb: Libplanet.Store.IBlockStatesStore.GetBlockStates(Libplanet.HashDigest(Of SHA256))
+  nameWithType: IBlockStatesStore.GetBlockStates(HashDigest<SHA256>)
+  nameWithType.vb: IBlockStatesStore.GetBlockStates(HashDigest(Of SHA256))
+- uid: Libplanet.Store.IBlockStatesStore.GetBlockStates*
+  name: GetBlockStates
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_GetBlockStates_
+  commentId: Overload:Libplanet.Store.IBlockStatesStore.GetBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.IBlockStatesStore.GetBlockStates
+  nameWithType: IBlockStatesStore.GetBlockStates
+- uid: Libplanet.Store.IBlockStatesStore.IterateStateReferences(Guid,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32})
+  name: IterateStateReferences(Guid, String, Nullable<Int64>, Nullable<Int64>, Nullable<Int32>)
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_IterateStateReferences_Guid_System_String_System_Nullable_System_Int64__System_Nullable_System_Int64__System_Nullable_System_Int32__
+  commentId: M:Libplanet.Store.IBlockStatesStore.IterateStateReferences(Guid,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32})
+  name.vb: IterateStateReferences(Guid, String, Nullable(Of Int64), Nullable(Of Int64), Nullable(Of Int32))
+  fullName: Libplanet.Store.IBlockStatesStore.IterateStateReferences(Guid, System.String, System.Nullable<System.Int64>, System.Nullable<System.Int64>, System.Nullable<System.Int32>)
+  fullName.vb: Libplanet.Store.IBlockStatesStore.IterateStateReferences(Guid, System.String, System.Nullable(Of System.Int64), System.Nullable(Of System.Int64), System.Nullable(Of System.Int32))
+  nameWithType: IBlockStatesStore.IterateStateReferences(Guid, String, Nullable<Int64>, Nullable<Int64>, Nullable<Int32>)
+  nameWithType.vb: IBlockStatesStore.IterateStateReferences(Guid, String, Nullable(Of Int64), Nullable(Of Int64), Nullable(Of Int32))
+- uid: Libplanet.Store.IBlockStatesStore.IterateStateReferences*
+  name: IterateStateReferences
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_IterateStateReferences_
+  commentId: Overload:Libplanet.Store.IBlockStatesStore.IterateStateReferences
+  isSpec: "True"
+  fullName: Libplanet.Store.IBlockStatesStore.IterateStateReferences
+  nameWithType: IBlockStatesStore.IterateStateReferences
+- uid: Libplanet.Store.IBlockStatesStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
+  name: ListAllStateReferences(Guid, Int64, Int64)
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_ListAllStateReferences_Guid_System_Int64_System_Int64_
+  commentId: M:Libplanet.Store.IBlockStatesStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
+  fullName: Libplanet.Store.IBlockStatesStore.ListAllStateReferences(Guid, System.Int64, System.Int64)
+  nameWithType: IBlockStatesStore.ListAllStateReferences(Guid, Int64, Int64)
+- uid: Libplanet.Store.IBlockStatesStore.ListAllStateReferences*
+  name: ListAllStateReferences
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_ListAllStateReferences_
+  commentId: Overload:Libplanet.Store.IBlockStatesStore.ListAllStateReferences
+  isSpec: "True"
+  fullName: Libplanet.Store.IBlockStatesStore.ListAllStateReferences
+  nameWithType: IBlockStatesStore.ListAllStateReferences
+- uid: Libplanet.Store.IBlockStatesStore.ListStateKeys(Guid)
+  name: ListStateKeys(Guid)
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_ListStateKeys_Guid_
+  commentId: M:Libplanet.Store.IBlockStatesStore.ListStateKeys(Guid)
+  fullName: Libplanet.Store.IBlockStatesStore.ListStateKeys(Guid)
+  nameWithType: IBlockStatesStore.ListStateKeys(Guid)
+- uid: Libplanet.Store.IBlockStatesStore.ListStateKeys*
+  name: ListStateKeys
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_ListStateKeys_
+  commentId: Overload:Libplanet.Store.IBlockStatesStore.ListStateKeys
+  isSpec: "True"
+  fullName: Libplanet.Store.IBlockStatesStore.ListStateKeys
+  nameWithType: IBlockStatesStore.ListStateKeys
+- uid: Libplanet.Store.IBlockStatesStore.LookupStateReference(Guid,System.String,System.Int64)
+  name: LookupStateReference(Guid, String, Int64)
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_LookupStateReference_Guid_System_String_System_Int64_
+  commentId: M:Libplanet.Store.IBlockStatesStore.LookupStateReference(Guid,System.String,System.Int64)
+  fullName: Libplanet.Store.IBlockStatesStore.LookupStateReference(Guid, System.String, System.Int64)
+  nameWithType: IBlockStatesStore.LookupStateReference(Guid, String, Int64)
+- uid: Libplanet.Store.IBlockStatesStore.LookupStateReference*
+  name: LookupStateReference
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_LookupStateReference_
+  commentId: Overload:Libplanet.Store.IBlockStatesStore.LookupStateReference
+  isSpec: "True"
+  fullName: Libplanet.Store.IBlockStatesStore.LookupStateReference
+  nameWithType: IBlockStatesStore.LookupStateReference
+- uid: Libplanet.Store.IBlockStatesStore.PruneBlockStates*
+  name: PruneBlockStates
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_PruneBlockStates_
+  commentId: Overload:Libplanet.Store.IBlockStatesStore.PruneBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.IBlockStatesStore.PruneBlockStates
+  nameWithType: IBlockStatesStore.PruneBlockStates
+- uid: Libplanet.Store.IBlockStatesStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name: PruneBlockStates<T>(Guid, Block<T>)
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_PruneBlockStates__1_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.IBlockStatesStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
+  name.vb: PruneBlockStates(Of T)(Guid, Block(Of T))
+  fullName: Libplanet.Store.IBlockStatesStore.PruneBlockStates<T>(Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.IBlockStatesStore.PruneBlockStates(Of T)(Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: IBlockStatesStore.PruneBlockStates<T>(Guid, Block<T>)
+  nameWithType.vb: IBlockStatesStore.PruneBlockStates(Of T)(Guid, Block(Of T))
+- uid: Libplanet.Store.IBlockStatesStore.SetBlockStates(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue})
+  name: SetBlockStates(HashDigest<SHA256>, IImmutableDictionary<String, IValue>)
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_SetBlockStates_Libplanet_HashDigest_SHA256__IImmutableDictionary_System_String_IValue__
+  commentId: M:Libplanet.Store.IBlockStatesStore.SetBlockStates(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue})
+  name.vb: SetBlockStates(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue))
+  fullName: Libplanet.Store.IBlockStatesStore.SetBlockStates(Libplanet.HashDigest<SHA256>, IImmutableDictionary<System.String, IValue>)
+  fullName.vb: Libplanet.Store.IBlockStatesStore.SetBlockStates(Libplanet.HashDigest(Of SHA256), IImmutableDictionary(Of System.String, IValue))
+  nameWithType: IBlockStatesStore.SetBlockStates(HashDigest<SHA256>, IImmutableDictionary<String, IValue>)
+  nameWithType.vb: IBlockStatesStore.SetBlockStates(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue))
+- uid: Libplanet.Store.IBlockStatesStore.SetBlockStates*
+  name: SetBlockStates
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_SetBlockStates_
+  commentId: Overload:Libplanet.Store.IBlockStatesStore.SetBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.IBlockStatesStore.SetBlockStates
+  nameWithType: IBlockStatesStore.SetBlockStates
+- uid: Libplanet.Store.IBlockStatesStore.StoreStateReference(Guid,IImmutableSet{System.String},Libplanet.HashDigest{SHA256},System.Int64)
+  name: StoreStateReference(Guid, IImmutableSet<String>, HashDigest<SHA256>, Int64)
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_StoreStateReference_Guid_IImmutableSet_System_String__Libplanet_HashDigest_SHA256__System_Int64_
+  commentId: M:Libplanet.Store.IBlockStatesStore.StoreStateReference(Guid,IImmutableSet{System.String},Libplanet.HashDigest{SHA256},System.Int64)
+  name.vb: StoreStateReference(Guid, IImmutableSet(Of String), HashDigest(Of SHA256), Int64)
+  fullName: Libplanet.Store.IBlockStatesStore.StoreStateReference(Guid, IImmutableSet<System.String>, Libplanet.HashDigest<SHA256>, System.Int64)
+  fullName.vb: Libplanet.Store.IBlockStatesStore.StoreStateReference(Guid, IImmutableSet(Of System.String), Libplanet.HashDigest(Of SHA256), System.Int64)
+  nameWithType: IBlockStatesStore.StoreStateReference(Guid, IImmutableSet<String>, HashDigest<SHA256>, Int64)
+  nameWithType.vb: IBlockStatesStore.StoreStateReference(Guid, IImmutableSet(Of String), HashDigest(Of SHA256), Int64)
+- uid: Libplanet.Store.IBlockStatesStore.StoreStateReference*
+  name: StoreStateReference
+  href: api/Libplanet.Store.IBlockStatesStore.html#Libplanet_Store_IBlockStatesStore_StoreStateReference_
+  commentId: Overload:Libplanet.Store.IBlockStatesStore.StoreStateReference
+  isSpec: "True"
+  fullName: Libplanet.Store.IBlockStatesStore.StoreStateReference
+  nameWithType: IBlockStatesStore.StoreStateReference
+- uid: Libplanet.Store.IStateStore
+  name: IStateStore
+  href: api/Libplanet.Store.IStateStore.html
+  commentId: T:Libplanet.Store.IStateStore
+  fullName: Libplanet.Store.IStateStore
+  nameWithType: IStateStore
+- uid: Libplanet.Store.IStateStore.ContainsBlockStates(Libplanet.HashDigest{SHA256})
+  name: ContainsBlockStates(HashDigest<SHA256>)
+  href: api/Libplanet.Store.IStateStore.html#Libplanet_Store_IStateStore_ContainsBlockStates_Libplanet_HashDigest_SHA256__
+  commentId: M:Libplanet.Store.IStateStore.ContainsBlockStates(Libplanet.HashDigest{SHA256})
+  name.vb: ContainsBlockStates(HashDigest(Of SHA256))
+  fullName: Libplanet.Store.IStateStore.ContainsBlockStates(Libplanet.HashDigest<SHA256>)
+  fullName.vb: Libplanet.Store.IStateStore.ContainsBlockStates(Libplanet.HashDigest(Of SHA256))
+  nameWithType: IStateStore.ContainsBlockStates(HashDigest<SHA256>)
+  nameWithType.vb: IStateStore.ContainsBlockStates(HashDigest(Of SHA256))
+- uid: Libplanet.Store.IStateStore.ContainsBlockStates*
+  name: ContainsBlockStates
+  href: api/Libplanet.Store.IStateStore.html#Libplanet_Store_IStateStore_ContainsBlockStates_
+  commentId: Overload:Libplanet.Store.IStateStore.ContainsBlockStates
+  isSpec: "True"
+  fullName: Libplanet.Store.IStateStore.ContainsBlockStates
+  nameWithType: IStateStore.ContainsBlockStates
+- uid: Libplanet.Store.IStateStore.ForkStates*
+  name: ForkStates
+  href: api/Libplanet.Store.IStateStore.html#Libplanet_Store_IStateStore_ForkStates_
+  commentId: Overload:Libplanet.Store.IStateStore.ForkStates
+  isSpec: "True"
+  fullName: Libplanet.Store.IStateStore.ForkStates
+  nameWithType: IStateStore.ForkStates
+- uid: Libplanet.Store.IStateStore.ForkStates``1(Guid,Guid,Libplanet.Blocks.Block{``0})
+  name: ForkStates<T>(Guid, Guid, Block<T>)
+  href: api/Libplanet.Store.IStateStore.html#Libplanet_Store_IStateStore_ForkStates__1_Guid_Guid_Libplanet_Blocks_Block___0__
+  commentId: M:Libplanet.Store.IStateStore.ForkStates``1(Guid,Guid,Libplanet.Blocks.Block{``0})
+  name.vb: ForkStates(Of T)(Guid, Guid, Block(Of T))
+  fullName: Libplanet.Store.IStateStore.ForkStates<T>(Guid, Guid, Libplanet.Blocks.Block<T>)
+  fullName.vb: Libplanet.Store.IStateStore.ForkStates(Of T)(Guid, Guid, Libplanet.Blocks.Block(Of T))
+  nameWithType: IStateStore.ForkStates<T>(Guid, Guid, Block<T>)
+  nameWithType.vb: IStateStore.ForkStates(Of T)(Guid, Guid, Block(Of T))
+- uid: Libplanet.Store.IStateStore.GetState(System.String,System.Nullable{Libplanet.HashDigest{SHA256}},System.Nullable{Guid})
+  name: GetState(String, Nullable<HashDigest<SHA256>>, Nullable<Guid>)
+  href: api/Libplanet.Store.IStateStore.html#Libplanet_Store_IStateStore_GetState_System_String_System_Nullable_Libplanet_HashDigest_SHA256___System_Nullable_Guid__
+  commentId: M:Libplanet.Store.IStateStore.GetState(System.String,System.Nullable{Libplanet.HashDigest{SHA256}},System.Nullable{Guid})
+  name.vb: GetState(String, Nullable(Of HashDigest(Of SHA256)), Nullable(Of Guid))
+  fullName: Libplanet.Store.IStateStore.GetState(System.String, System.Nullable<Libplanet.HashDigest<SHA256>>, System.Nullable<Guid>)
+  fullName.vb: Libplanet.Store.IStateStore.GetState(System.String, System.Nullable(Of Libplanet.HashDigest(Of SHA256)), System.Nullable(Of Guid))
+  nameWithType: IStateStore.GetState(String, Nullable<HashDigest<SHA256>>, Nullable<Guid>)
+  nameWithType.vb: IStateStore.GetState(String, Nullable(Of HashDigest(Of SHA256)), Nullable(Of Guid))
+- uid: Libplanet.Store.IStateStore.GetState*
+  name: GetState
+  href: api/Libplanet.Store.IStateStore.html#Libplanet_Store_IStateStore_GetState_
+  commentId: Overload:Libplanet.Store.IStateStore.GetState
+  isSpec: "True"
+  fullName: Libplanet.Store.IStateStore.GetState
+  nameWithType: IStateStore.GetState
+- uid: Libplanet.Store.IStateStore.SetStates*
+  name: SetStates
+  href: api/Libplanet.Store.IStateStore.html#Libplanet_Store_IStateStore_SetStates_
+  commentId: Overload:Libplanet.Store.IStateStore.SetStates
+  isSpec: "True"
+  fullName: Libplanet.Store.IStateStore.SetStates
+  nameWithType: IStateStore.SetStates
+- uid: Libplanet.Store.IStateStore.SetStates``1(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue},Func{Libplanet.HashDigest{SHA256},Libplanet.Blocks.Block{``0}})
+  name: SetStates<T>(HashDigest<SHA256>, IImmutableDictionary<String, IValue>, Func<HashDigest<SHA256>, Block<T>>)
+  href: api/Libplanet.Store.IStateStore.html#Libplanet_Store_IStateStore_SetStates__1_Libplanet_HashDigest_SHA256__IImmutableDictionary_System_String_IValue__Func_Libplanet_HashDigest_SHA256__Libplanet_Blocks_Block___0___
+  commentId: M:Libplanet.Store.IStateStore.SetStates``1(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue},Func{Libplanet.HashDigest{SHA256},Libplanet.Blocks.Block{``0}})
+  name.vb: SetStates(Of T)(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue), Func(Of HashDigest(Of SHA256), Block(Of T)))
+  fullName: Libplanet.Store.IStateStore.SetStates<T>(Libplanet.HashDigest<SHA256>, IImmutableDictionary<System.String, IValue>, Func<Libplanet.HashDigest<SHA256>, Libplanet.Blocks.Block<T>>)
+  fullName.vb: Libplanet.Store.IStateStore.SetStates(Of T)(Libplanet.HashDigest(Of SHA256), IImmutableDictionary(Of System.String, IValue), Func(Of Libplanet.HashDigest(Of SHA256), Libplanet.Blocks.Block(Of T)))
+  nameWithType: IStateStore.SetStates<T>(HashDigest<SHA256>, IImmutableDictionary<String, IValue>, Func<HashDigest<SHA256>, Block<T>>)
+  nameWithType.vb: IStateStore.SetStates(Of T)(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue), Func(Of HashDigest(Of SHA256), Block(Of T)))
 - uid: Libplanet.Store.IStore
   name: IStore
   href: api/Libplanet.Store.IStore.html
@@ -8909,22 +9267,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.IStore.ForkBlockIndexes
   nameWithType: IStore.ForkBlockIndexes
-- uid: Libplanet.Store.IStore.ForkStateReferences*
-  name: ForkStateReferences
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_ForkStateReferences_
-  commentId: Overload:Libplanet.Store.IStore.ForkStateReferences
-  isSpec: "True"
-  fullName: Libplanet.Store.IStore.ForkStateReferences
-  nameWithType: IStore.ForkStateReferences
-- uid: Libplanet.Store.IStore.ForkStateReferences``1(Guid,Guid,Libplanet.Blocks.Block{``0})
-  name: ForkStateReferences<T>(Guid, Guid, Block<T>)
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_ForkStateReferences__1_Guid_Guid_Libplanet_Blocks_Block___0__
-  commentId: M:Libplanet.Store.IStore.ForkStateReferences``1(Guid,Guid,Libplanet.Blocks.Block{``0})
-  name.vb: ForkStateReferences(Of T)(Guid, Guid, Block(Of T))
-  fullName: Libplanet.Store.IStore.ForkStateReferences<T>(Guid, Guid, Libplanet.Blocks.Block<T>)
-  fullName.vb: Libplanet.Store.IStore.ForkStateReferences(Of T)(Guid, Guid, Libplanet.Blocks.Block(Of T))
-  nameWithType: IStore.ForkStateReferences<T>(Guid, Guid, Block<T>)
-  nameWithType.vb: IStore.ForkStateReferences(Of T)(Guid, Guid, Block(Of T))
 - uid: Libplanet.Store.IStore.GetBlock*
   name: GetBlock
   href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_GetBlock_
@@ -8973,22 +9315,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.IStore.GetBlockIndex
   nameWithType: IStore.GetBlockIndex
-- uid: Libplanet.Store.IStore.GetBlockStates(Libplanet.HashDigest{SHA256})
-  name: GetBlockStates(HashDigest<SHA256>)
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_GetBlockStates_Libplanet_HashDigest_SHA256__
-  commentId: M:Libplanet.Store.IStore.GetBlockStates(Libplanet.HashDigest{SHA256})
-  name.vb: GetBlockStates(HashDigest(Of SHA256))
-  fullName: Libplanet.Store.IStore.GetBlockStates(Libplanet.HashDigest<SHA256>)
-  fullName.vb: Libplanet.Store.IStore.GetBlockStates(Libplanet.HashDigest(Of SHA256))
-  nameWithType: IStore.GetBlockStates(HashDigest<SHA256>)
-  nameWithType.vb: IStore.GetBlockStates(HashDigest(Of SHA256))
-- uid: Libplanet.Store.IStore.GetBlockStates*
-  name: GetBlockStates
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_GetBlockStates_
-  commentId: Overload:Libplanet.Store.IStore.GetBlockStates
-  isSpec: "True"
-  fullName: Libplanet.Store.IStore.GetBlockStates
-  nameWithType: IStore.GetBlockStates
 - uid: Libplanet.Store.IStore.GetCanonicalChainId
   name: GetCanonicalChainId()
   href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_GetCanonicalChainId
@@ -9099,22 +9425,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.IStore.IterateStagedTransactionIds
   nameWithType: IStore.IterateStagedTransactionIds
-- uid: Libplanet.Store.IStore.IterateStateReferences(Guid,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32})
-  name: IterateStateReferences(Guid, String, Nullable<Int64>, Nullable<Int64>, Nullable<Int32>)
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_IterateStateReferences_Guid_System_String_System_Nullable_System_Int64__System_Nullable_System_Int64__System_Nullable_System_Int32__
-  commentId: M:Libplanet.Store.IStore.IterateStateReferences(Guid,System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32})
-  name.vb: IterateStateReferences(Guid, String, Nullable(Of Int64), Nullable(Of Int64), Nullable(Of Int32))
-  fullName: Libplanet.Store.IStore.IterateStateReferences(Guid, System.String, System.Nullable<System.Int64>, System.Nullable<System.Int64>, System.Nullable<System.Int32>)
-  fullName.vb: Libplanet.Store.IStore.IterateStateReferences(Guid, System.String, System.Nullable(Of System.Int64), System.Nullable(Of System.Int64), System.Nullable(Of System.Int32))
-  nameWithType: IStore.IterateStateReferences(Guid, String, Nullable<Int64>, Nullable<Int64>, Nullable<Int32>)
-  nameWithType.vb: IStore.IterateStateReferences(Guid, String, Nullable(Of Int64), Nullable(Of Int64), Nullable(Of Int32))
-- uid: Libplanet.Store.IStore.IterateStateReferences*
-  name: IterateStateReferences
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_IterateStateReferences_
-  commentId: Overload:Libplanet.Store.IStore.IterateStateReferences
-  isSpec: "True"
-  fullName: Libplanet.Store.IStore.IterateStateReferences
-  nameWithType: IStore.IterateStateReferences
 - uid: Libplanet.Store.IStore.IterateTransactionIds
   name: IterateTransactionIds()
   href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_IterateTransactionIds
@@ -9128,19 +9438,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.IStore.IterateTransactionIds
   nameWithType: IStore.IterateTransactionIds
-- uid: Libplanet.Store.IStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
-  name: ListAllStateReferences(Guid, Int64, Int64)
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_ListAllStateReferences_Guid_System_Int64_System_Int64_
-  commentId: M:Libplanet.Store.IStore.ListAllStateReferences(Guid,System.Int64,System.Int64)
-  fullName: Libplanet.Store.IStore.ListAllStateReferences(Guid, System.Int64, System.Int64)
-  nameWithType: IStore.ListAllStateReferences(Guid, Int64, Int64)
-- uid: Libplanet.Store.IStore.ListAllStateReferences*
-  name: ListAllStateReferences
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_ListAllStateReferences_
-  commentId: Overload:Libplanet.Store.IStore.ListAllStateReferences
-  isSpec: "True"
-  fullName: Libplanet.Store.IStore.ListAllStateReferences
-  nameWithType: IStore.ListAllStateReferences
 - uid: Libplanet.Store.IStore.ListChainIds
   name: ListChainIds()
   href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_ListChainIds
@@ -9154,19 +9451,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.IStore.ListChainIds
   nameWithType: IStore.ListChainIds
-- uid: Libplanet.Store.IStore.ListStateKeys(Guid)
-  name: ListStateKeys(Guid)
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_ListStateKeys_Guid_
-  commentId: M:Libplanet.Store.IStore.ListStateKeys(Guid)
-  fullName: Libplanet.Store.IStore.ListStateKeys(Guid)
-  nameWithType: IStore.ListStateKeys(Guid)
-- uid: Libplanet.Store.IStore.ListStateKeys*
-  name: ListStateKeys
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_ListStateKeys_
-  commentId: Overload:Libplanet.Store.IStore.ListStateKeys
-  isSpec: "True"
-  fullName: Libplanet.Store.IStore.ListStateKeys
-  nameWithType: IStore.ListStateKeys
 - uid: Libplanet.Store.IStore.ListTxNonces(Guid)
   name: ListTxNonces(Guid)
   href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_ListTxNonces_Guid_
@@ -9180,38 +9464,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.IStore.ListTxNonces
   nameWithType: IStore.ListTxNonces
-- uid: Libplanet.Store.IStore.LookupStateReference*
-  name: LookupStateReference
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_LookupStateReference_
-  commentId: Overload:Libplanet.Store.IStore.LookupStateReference
-  isSpec: "True"
-  fullName: Libplanet.Store.IStore.LookupStateReference
-  nameWithType: IStore.LookupStateReference
-- uid: Libplanet.Store.IStore.LookupStateReference``1(Guid,System.String,Libplanet.Blocks.Block{``0})
-  name: LookupStateReference<T>(Guid, String, Block<T>)
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_LookupStateReference__1_Guid_System_String_Libplanet_Blocks_Block___0__
-  commentId: M:Libplanet.Store.IStore.LookupStateReference``1(Guid,System.String,Libplanet.Blocks.Block{``0})
-  name.vb: LookupStateReference(Of T)(Guid, String, Block(Of T))
-  fullName: Libplanet.Store.IStore.LookupStateReference<T>(Guid, System.String, Libplanet.Blocks.Block<T>)
-  fullName.vb: Libplanet.Store.IStore.LookupStateReference(Of T)(Guid, System.String, Libplanet.Blocks.Block(Of T))
-  nameWithType: IStore.LookupStateReference<T>(Guid, String, Block<T>)
-  nameWithType.vb: IStore.LookupStateReference(Of T)(Guid, String, Block(Of T))
-- uid: Libplanet.Store.IStore.PruneBlockStates*
-  name: PruneBlockStates
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_PruneBlockStates_
-  commentId: Overload:Libplanet.Store.IStore.PruneBlockStates
-  isSpec: "True"
-  fullName: Libplanet.Store.IStore.PruneBlockStates
-  nameWithType: IStore.PruneBlockStates
-- uid: Libplanet.Store.IStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
-  name: PruneBlockStates<T>(Guid, Block<T>)
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_PruneBlockStates__1_Guid_Libplanet_Blocks_Block___0__
-  commentId: M:Libplanet.Store.IStore.PruneBlockStates``1(Guid,Libplanet.Blocks.Block{``0})
-  name.vb: PruneBlockStates(Of T)(Guid, Block(Of T))
-  fullName: Libplanet.Store.IStore.PruneBlockStates<T>(Guid, Libplanet.Blocks.Block<T>)
-  fullName.vb: Libplanet.Store.IStore.PruneBlockStates(Of T)(Guid, Libplanet.Blocks.Block(Of T))
-  nameWithType: IStore.PruneBlockStates<T>(Guid, Block<T>)
-  nameWithType.vb: IStore.PruneBlockStates(Of T)(Guid, Block(Of T))
 - uid: Libplanet.Store.IStore.PutBlock*
   name: PutBlock
   href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_PutBlock_
@@ -9244,22 +9496,6 @@ references:
   fullName.vb: Libplanet.Store.IStore.PutTransaction(Of T)(Libplanet.Tx.Transaction(Of T))
   nameWithType: IStore.PutTransaction<T>(Transaction<T>)
   nameWithType.vb: IStore.PutTransaction(Of T)(Transaction(Of T))
-- uid: Libplanet.Store.IStore.SetBlockStates(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue})
-  name: SetBlockStates(HashDigest<SHA256>, IImmutableDictionary<String, IValue>)
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_SetBlockStates_Libplanet_HashDigest_SHA256__IImmutableDictionary_System_String_IValue__
-  commentId: M:Libplanet.Store.IStore.SetBlockStates(Libplanet.HashDigest{SHA256},IImmutableDictionary{System.String,IValue})
-  name.vb: SetBlockStates(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue))
-  fullName: Libplanet.Store.IStore.SetBlockStates(Libplanet.HashDigest<SHA256>, IImmutableDictionary<System.String, IValue>)
-  fullName.vb: Libplanet.Store.IStore.SetBlockStates(Libplanet.HashDigest(Of SHA256), IImmutableDictionary(Of System.String, IValue))
-  nameWithType: IStore.SetBlockStates(HashDigest<SHA256>, IImmutableDictionary<String, IValue>)
-  nameWithType.vb: IStore.SetBlockStates(HashDigest(Of SHA256), IImmutableDictionary(Of String, IValue))
-- uid: Libplanet.Store.IStore.SetBlockStates*
-  name: SetBlockStates
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_SetBlockStates_
-  commentId: Overload:Libplanet.Store.IStore.SetBlockStates
-  isSpec: "True"
-  fullName: Libplanet.Store.IStore.SetBlockStates
-  nameWithType: IStore.SetBlockStates
 - uid: Libplanet.Store.IStore.SetCanonicalChainId(Guid)
   name: SetCanonicalChainId(Guid)
   href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_SetCanonicalChainId_Guid_
@@ -9289,22 +9525,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Store.IStore.StageTransactionIds
   nameWithType: IStore.StageTransactionIds
-- uid: Libplanet.Store.IStore.StoreStateReference(Guid,IImmutableSet{System.String},Libplanet.HashDigest{SHA256},System.Int64)
-  name: StoreStateReference(Guid, IImmutableSet<String>, HashDigest<SHA256>, Int64)
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_StoreStateReference_Guid_IImmutableSet_System_String__Libplanet_HashDigest_SHA256__System_Int64_
-  commentId: M:Libplanet.Store.IStore.StoreStateReference(Guid,IImmutableSet{System.String},Libplanet.HashDigest{SHA256},System.Int64)
-  name.vb: StoreStateReference(Guid, IImmutableSet(Of String), HashDigest(Of SHA256), Int64)
-  fullName: Libplanet.Store.IStore.StoreStateReference(Guid, IImmutableSet<System.String>, Libplanet.HashDigest<SHA256>, System.Int64)
-  fullName.vb: Libplanet.Store.IStore.StoreStateReference(Guid, IImmutableSet(Of System.String), Libplanet.HashDigest(Of SHA256), System.Int64)
-  nameWithType: IStore.StoreStateReference(Guid, IImmutableSet<String>, HashDigest<SHA256>, Int64)
-  nameWithType.vb: IStore.StoreStateReference(Guid, IImmutableSet(Of String), HashDigest(Of SHA256), Int64)
-- uid: Libplanet.Store.IStore.StoreStateReference*
-  name: StoreStateReference
-  href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_StoreStateReference_
-  commentId: Overload:Libplanet.Store.IStore.StoreStateReference
-  isSpec: "True"
-  fullName: Libplanet.Store.IStore.StoreStateReference
-  nameWithType: IStore.StoreStateReference
 - uid: Libplanet.Store.IStore.UnstageTransactionIds(ISet{Libplanet.Tx.TxId})
   name: UnstageTransactionIds(ISet<TxId>)
   href: api/Libplanet.Store.IStore.html#Libplanet_Store_IStore_UnstageTransactionIds_ISet_Libplanet_Tx_TxId__
