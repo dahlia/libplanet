@@ -5788,12 +5788,12 @@ references:
   commentId: T:Libplanet.Net.BoundPeer
   fullName: Libplanet.Net.BoundPeer
   nameWithType: BoundPeer
-- uid: Libplanet.Net.BoundPeer.#ctor(Libplanet.Crypto.PublicKey,DnsEndPoint,Libplanet.Net.AppProtocolVersion)
-  name: BoundPeer(PublicKey, DnsEndPoint, AppProtocolVersion)
-  href: api/Libplanet.Net.BoundPeer.html#Libplanet_Net_BoundPeer__ctor_Libplanet_Crypto_PublicKey_DnsEndPoint_Libplanet_Net_AppProtocolVersion_
-  commentId: M:Libplanet.Net.BoundPeer.#ctor(Libplanet.Crypto.PublicKey,DnsEndPoint,Libplanet.Net.AppProtocolVersion)
-  fullName: Libplanet.Net.BoundPeer.BoundPeer(Libplanet.Crypto.PublicKey, DnsEndPoint, Libplanet.Net.AppProtocolVersion)
-  nameWithType: BoundPeer.BoundPeer(PublicKey, DnsEndPoint, AppProtocolVersion)
+- uid: Libplanet.Net.BoundPeer.#ctor(Libplanet.Crypto.PublicKey,DnsEndPoint)
+  name: BoundPeer(PublicKey, DnsEndPoint)
+  href: api/Libplanet.Net.BoundPeer.html#Libplanet_Net_BoundPeer__ctor_Libplanet_Crypto_PublicKey_DnsEndPoint_
+  commentId: M:Libplanet.Net.BoundPeer.#ctor(Libplanet.Crypto.PublicKey,DnsEndPoint)
+  fullName: Libplanet.Net.BoundPeer.BoundPeer(Libplanet.Crypto.PublicKey, DnsEndPoint)
+  nameWithType: BoundPeer.BoundPeer(PublicKey, DnsEndPoint)
 - uid: Libplanet.Net.BoundPeer.#ctor*
   name: BoundPeer
   href: api/Libplanet.Net.BoundPeer.html#Libplanet_Net_BoundPeer__ctor_
@@ -6078,12 +6078,12 @@ references:
   commentId: T:Libplanet.Net.Peer
   fullName: Libplanet.Net.Peer
   nameWithType: Peer
-- uid: Libplanet.Net.Peer.#ctor(Libplanet.Crypto.PublicKey,Libplanet.Net.AppProtocolVersion)
-  name: Peer(PublicKey, AppProtocolVersion)
-  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer__ctor_Libplanet_Crypto_PublicKey_Libplanet_Net_AppProtocolVersion_
-  commentId: M:Libplanet.Net.Peer.#ctor(Libplanet.Crypto.PublicKey,Libplanet.Net.AppProtocolVersion)
-  fullName: Libplanet.Net.Peer.Peer(Libplanet.Crypto.PublicKey, Libplanet.Net.AppProtocolVersion)
-  nameWithType: Peer.Peer(PublicKey, AppProtocolVersion)
+- uid: Libplanet.Net.Peer.#ctor(Libplanet.Crypto.PublicKey)
+  name: Peer(PublicKey)
+  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer__ctor_Libplanet_Crypto_PublicKey_
+  commentId: M:Libplanet.Net.Peer.#ctor(Libplanet.Crypto.PublicKey)
+  fullName: Libplanet.Net.Peer.Peer(Libplanet.Crypto.PublicKey)
+  nameWithType: Peer.Peer(PublicKey)
 - uid: Libplanet.Net.Peer.#ctor(SerializationInfo,StreamingContext)
   name: Peer(SerializationInfo, StreamingContext)
   href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer__ctor_SerializationInfo_StreamingContext_
@@ -6110,19 +6110,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.Peer.Address
   nameWithType: Peer.Address
-- uid: Libplanet.Net.Peer.AppProtocolVersion
-  name: AppProtocolVersion
-  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_AppProtocolVersion
-  commentId: P:Libplanet.Net.Peer.AppProtocolVersion
-  fullName: Libplanet.Net.Peer.AppProtocolVersion
-  nameWithType: Peer.AppProtocolVersion
-- uid: Libplanet.Net.Peer.AppProtocolVersion*
-  name: AppProtocolVersion
-  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_AppProtocolVersion_
-  commentId: Overload:Libplanet.Net.Peer.AppProtocolVersion
-  isSpec: "True"
-  fullName: Libplanet.Net.Peer.AppProtocolVersion
-  nameWithType: Peer.AppProtocolVersion
 - uid: Libplanet.Net.Peer.GetObjectData(SerializationInfo,StreamingContext)
   name: GetObjectData(SerializationInfo, StreamingContext)
   href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_GetObjectData_SerializationInfo_StreamingContext_
@@ -6136,22 +6123,6 @@ references:
   isSpec: "True"
   fullName: Libplanet.Net.Peer.GetObjectData
   nameWithType: Peer.GetObjectData
-- uid: Libplanet.Net.Peer.IsCompatibleWith(Libplanet.Net.AppProtocolVersion,IEnumerable{Libplanet.Crypto.PublicKey},Libplanet.Net.DifferentAppProtocolVersionEncountered)
-  name: IsCompatibleWith(AppProtocolVersion, IEnumerable<PublicKey>, DifferentAppProtocolVersionEncountered)
-  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_IsCompatibleWith_Libplanet_Net_AppProtocolVersion_IEnumerable_Libplanet_Crypto_PublicKey__Libplanet_Net_DifferentAppProtocolVersionEncountered_
-  commentId: M:Libplanet.Net.Peer.IsCompatibleWith(Libplanet.Net.AppProtocolVersion,IEnumerable{Libplanet.Crypto.PublicKey},Libplanet.Net.DifferentAppProtocolVersionEncountered)
-  name.vb: IsCompatibleWith(AppProtocolVersion, IEnumerable(Of PublicKey), DifferentAppProtocolVersionEncountered)
-  fullName: Libplanet.Net.Peer.IsCompatibleWith(Libplanet.Net.AppProtocolVersion, IEnumerable<Libplanet.Crypto.PublicKey>, Libplanet.Net.DifferentAppProtocolVersionEncountered)
-  fullName.vb: Libplanet.Net.Peer.IsCompatibleWith(Libplanet.Net.AppProtocolVersion, IEnumerable(Of Libplanet.Crypto.PublicKey), Libplanet.Net.DifferentAppProtocolVersionEncountered)
-  nameWithType: Peer.IsCompatibleWith(AppProtocolVersion, IEnumerable<PublicKey>, DifferentAppProtocolVersionEncountered)
-  nameWithType.vb: Peer.IsCompatibleWith(AppProtocolVersion, IEnumerable(Of PublicKey), DifferentAppProtocolVersionEncountered)
-- uid: Libplanet.Net.Peer.IsCompatibleWith*
-  name: IsCompatibleWith
-  href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_IsCompatibleWith_
-  commentId: Overload:Libplanet.Net.Peer.IsCompatibleWith
-  isSpec: "True"
-  fullName: Libplanet.Net.Peer.IsCompatibleWith
-  nameWithType: Peer.IsCompatibleWith
 - uid: Libplanet.Net.Peer.op_Equality(Libplanet.Net.Peer,Libplanet.Net.Peer)
   name: Equality(Peer, Peer)
   href: api/Libplanet.Net.Peer.html#Libplanet_Net_Peer_op_Equality_Libplanet_Net_Peer_Libplanet_Net_Peer_
@@ -6585,6 +6556,23 @@ references:
   fullName.vb: Libplanet.Net.Swarm(Of T).Address
   nameWithType: Swarm<T>.Address
   nameWithType.vb: Swarm(Of T).Address
+- uid: Libplanet.Net.Swarm`1.AppProtocolVersion
+  name: AppProtocolVersion
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_AppProtocolVersion
+  commentId: P:Libplanet.Net.Swarm`1.AppProtocolVersion
+  fullName: Libplanet.Net.Swarm<T>.AppProtocolVersion
+  fullName.vb: Libplanet.Net.Swarm(Of T).AppProtocolVersion
+  nameWithType: Swarm<T>.AppProtocolVersion
+  nameWithType.vb: Swarm(Of T).AppProtocolVersion
+- uid: Libplanet.Net.Swarm`1.AppProtocolVersion*
+  name: AppProtocolVersion
+  href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_AppProtocolVersion_
+  commentId: Overload:Libplanet.Net.Swarm`1.AppProtocolVersion
+  isSpec: "True"
+  fullName: Libplanet.Net.Swarm<T>.AppProtocolVersion
+  fullName.vb: Libplanet.Net.Swarm(Of T).AppProtocolVersion
+  nameWithType: Swarm<T>.AppProtocolVersion
+  nameWithType.vb: Swarm(Of T).AppProtocolVersion
 - uid: Libplanet.Net.Swarm`1.AsPeer
   name: AsPeer
   href: api/Libplanet.Net.Swarm-1.html#Libplanet_Net_Swarm_1_AsPeer

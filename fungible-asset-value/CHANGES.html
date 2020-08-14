@@ -129,6 +129,12 @@ the option has the default value.  [<a href="https://github.com/planetarium/libp
 backward compatibility (i.e., you need to rebuild your assemblies), still is
 backward-compatible at API-level as the option is turned on by default.
 [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
+<li>Removed <code>Peer.AppProtocolVersion</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
+<li>Removed <code>Peer.IsCompatibleWith()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
+<li>Replaced <code>Peer(PublicKey, AppProtocolVersion)</code> constructor with
+<code>Peer(PublicKey)</code> constructor.  [<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
+<li>Replaced <code>BoundPeer(PublicKey, DnsEndPoint, AppProtocolVersion)</code> constructor
+with <code>Peer(PublicKey, DnsEndPoint)</code> constructor.  [<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
 <li>Extracted <code>IStore</code>'s some methods dedicated to block states into <code>IBlockStatesStore</code>. [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]
 <ul>
 <li><code>ListStateKeys()</code> method.</li>
@@ -160,14 +166,16 @@ replaced by a new <code>Pong</code> message type
 (with the type number <code>0x14</code>).  [<a href="https://github.com/planetarium/libplanet/issues/459">#459</a>, <a href="https://github.com/planetarium/libplanet/pull/919">#919</a>, <a href="https://github.com/planetarium/libplanet/issues/920">#920</a>, <a href="https://github.com/planetarium/libplanet/pull/930">#930</a>]</li>
 <li>The <code>TimestampThreshold</code> between <code>Block&lt;T&gt;</code>s was changed from 15 minutes to
 15 seconds.  [<a href="https://github.com/planetarium/libplanet/issues/922">#922</a>, <a href="https://github.com/planetarium/libplanet/pull/925">#925</a>]</li>
-<li><code>Swarm&lt;T&gt;</code> became to have 4 more message types:
+<li><code>Swarm&lt;T&gt;</code> became to have 5 more message types:
 <ul>
 <li><code>GetChainStatus</code> (<code>0x20</code>)  [<a href="https://github.com/planetarium/libplanet/issues/920">#920</a>, <a href="https://github.com/planetarium/libplanet/pull/930">#930</a>]</li>
 <li><code>ChainStatus</code> (<code>0x21</code>)  [<a href="https://github.com/planetarium/libplanet/issues/920">#920</a>, <a href="https://github.com/planetarium/libplanet/pull/930">#930</a>]</li>
 <li><code>GetBlockStates</code> (<code>0x22</code>)  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
 <li><code>BlockStates</code> (<code>0x23</code>)  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
+<li><code>DifferentVersion</code> (<code>0x30</code>)  [<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
 </ul>
 </li>
+<li>Every message now contains app protocol version in its header.  [<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
 </ul>
 <h3 id="backward-incompatible-storage-format-changes">Backward-incompatible storage format changes</h3>
 <ul>
@@ -220,6 +228,7 @@ by <code>stateCompleter: FungibleAssetStateCompleters&lt;T&gt;.Recalculate</code
 <li>Added <code>BlockChain&lt;T&gt;.Render</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
 <li>Added <code>Reorged</code> event on <code>BlockChain&lt;T&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/945">#945</a>]</li>
 <li>Added <code>ReorgedEventArgs</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/945">#945</a>]</li>
+<li>Added <code>Swarm&lt;T&gt;.AppProtocolVersion</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
 <li>(Libplanet.RocksDB) <code>RocksDBStore</code> became to implement <code>IBlockStatesStore</code>.  [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]</li>
 <li><code>DefaultStore</code> became to implement <code>IBlockStatesStore</code>.  [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]</li>
 <li>Added <code>IStateStore</code> interface.  [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]</li>
@@ -253,6 +262,8 @@ of a <code>Block&lt;T&gt;</code>.  [<a href="https://github.com/planetarium/libp
 instead of the longest chain.  [<a href="https://github.com/planetarium/libplanet/issues/459">#459</a>, <a href="https://github.com/planetarium/libplanet/pull/919">#919</a>]</li>
 <li><code>Swarm&lt;T&gt;.BootstrapAsync()</code> method became not to throw <code>TimeoutException</code> when
 it fails to connect to all neighbors.  [<a href="https://github.com/planetarium/libplanet/pull/933">#933</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became to respond to the messages with different app protocol version.
+[<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
 <ul>
