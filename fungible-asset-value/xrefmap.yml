@@ -1136,24 +1136,24 @@ references:
   commentId: T:Libplanet.Assets.Currency
   fullName: Libplanet.Assets.Currency
   nameWithType: Currency
-- uid: Libplanet.Assets.Currency.#ctor(System.String,System.Nullable{IImmutableSet{Libplanet.Address}})
-  name: Currency(String, Nullable<IImmutableSet<Address>>)
-  href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency__ctor_System_String_System_Nullable_IImmutableSet_Libplanet_Address___
-  commentId: M:Libplanet.Assets.Currency.#ctor(System.String,System.Nullable{IImmutableSet{Libplanet.Address}})
-  name.vb: Currency(String, Nullable(Of IImmutableSet(Of Address)))
-  fullName: Libplanet.Assets.Currency.Currency(System.String, System.Nullable<IImmutableSet<Libplanet.Address>>)
-  fullName.vb: Libplanet.Assets.Currency.Currency(System.String, System.Nullable(Of IImmutableSet(Of Libplanet.Address)))
-  nameWithType: Currency.Currency(String, Nullable<IImmutableSet<Address>>)
-  nameWithType.vb: Currency.Currency(String, Nullable(Of IImmutableSet(Of Address)))
-- uid: Libplanet.Assets.Currency.#ctor(System.String,System.Nullable{Libplanet.Address})
-  name: Currency(String, Nullable<Address>)
-  href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency__ctor_System_String_System_Nullable_Libplanet_Address__
-  commentId: M:Libplanet.Assets.Currency.#ctor(System.String,System.Nullable{Libplanet.Address})
-  name.vb: Currency(String, Nullable(Of Address))
-  fullName: Libplanet.Assets.Currency.Currency(System.String, System.Nullable<Libplanet.Address>)
-  fullName.vb: Libplanet.Assets.Currency.Currency(System.String, System.Nullable(Of Libplanet.Address))
-  nameWithType: Currency.Currency(String, Nullable<Address>)
-  nameWithType.vb: Currency.Currency(String, Nullable(Of Address))
+- uid: Libplanet.Assets.Currency.#ctor(System.String,System.Byte,System.Nullable{IImmutableSet{Libplanet.Address}})
+  name: Currency(String, Byte, Nullable<IImmutableSet<Address>>)
+  href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency__ctor_System_String_System_Byte_System_Nullable_IImmutableSet_Libplanet_Address___
+  commentId: M:Libplanet.Assets.Currency.#ctor(System.String,System.Byte,System.Nullable{IImmutableSet{Libplanet.Address}})
+  name.vb: Currency(String, Byte, Nullable(Of IImmutableSet(Of Address)))
+  fullName: Libplanet.Assets.Currency.Currency(System.String, System.Byte, System.Nullable<IImmutableSet<Libplanet.Address>>)
+  fullName.vb: Libplanet.Assets.Currency.Currency(System.String, System.Byte, System.Nullable(Of IImmutableSet(Of Libplanet.Address)))
+  nameWithType: Currency.Currency(String, Byte, Nullable<IImmutableSet<Address>>)
+  nameWithType.vb: Currency.Currency(String, Byte, Nullable(Of IImmutableSet(Of Address)))
+- uid: Libplanet.Assets.Currency.#ctor(System.String,System.Byte,System.Nullable{Libplanet.Address})
+  name: Currency(String, Byte, Nullable<Address>)
+  href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency__ctor_System_String_System_Byte_System_Nullable_Libplanet_Address__
+  commentId: M:Libplanet.Assets.Currency.#ctor(System.String,System.Byte,System.Nullable{Libplanet.Address})
+  name.vb: Currency(String, Byte, Nullable(Of Address))
+  fullName: Libplanet.Assets.Currency.Currency(System.String, System.Byte, System.Nullable<Libplanet.Address>)
+  fullName.vb: Libplanet.Assets.Currency.Currency(System.String, System.Byte, System.Nullable(Of Libplanet.Address))
+  nameWithType: Currency.Currency(String, Byte, Nullable<Address>)
+  nameWithType.vb: Currency.Currency(String, Byte, Nullable(Of Address))
 - uid: Libplanet.Assets.Currency.#ctor*
   name: Currency
   href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency__ctor_
@@ -1174,6 +1174,12 @@ references:
   isSpec: "True"
   fullName: Libplanet.Assets.Currency.AllowsToMint
   nameWithType: Currency.AllowsToMint
+- uid: Libplanet.Assets.Currency.DecimalPlaces
+  name: DecimalPlaces
+  href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency_DecimalPlaces
+  commentId: F:Libplanet.Assets.Currency.DecimalPlaces
+  fullName: Libplanet.Assets.Currency.DecimalPlaces
+  nameWithType: Currency.DecimalPlaces
 - uid: Libplanet.Assets.Currency.Equals(Libplanet.Assets.Currency)
   name: Equals(Currency)
   href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency_Equals_Libplanet_Assets_Currency_
@@ -1252,6 +1258,18 @@ references:
   commentId: M:Libplanet.Assets.FungibleAssetValue.#ctor(Libplanet.Assets.Currency)
   fullName: Libplanet.Assets.FungibleAssetValue.FungibleAssetValue(Libplanet.Assets.Currency)
   nameWithType: FungibleAssetValue.FungibleAssetValue(Currency)
+- uid: Libplanet.Assets.FungibleAssetValue.#ctor(Libplanet.Assets.Currency,BigInteger,BigInteger)
+  name: FungibleAssetValue(Currency, BigInteger, BigInteger)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue__ctor_Libplanet_Assets_Currency_BigInteger_BigInteger_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.#ctor(Libplanet.Assets.Currency,BigInteger,BigInteger)
+  fullName: Libplanet.Assets.FungibleAssetValue.FungibleAssetValue(Libplanet.Assets.Currency, BigInteger, BigInteger)
+  nameWithType: FungibleAssetValue.FungibleAssetValue(Currency, BigInteger, BigInteger)
+- uid: Libplanet.Assets.FungibleAssetValue.#ctor(Libplanet.Assets.Currency,System.Int32,BigInteger,BigInteger)
+  name: FungibleAssetValue(Currency, Int32, BigInteger, BigInteger)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue__ctor_Libplanet_Assets_Currency_System_Int32_BigInteger_BigInteger_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.#ctor(Libplanet.Assets.Currency,System.Int32,BigInteger,BigInteger)
+  fullName: Libplanet.Assets.FungibleAssetValue.FungibleAssetValue(Libplanet.Assets.Currency, System.Int32, BigInteger, BigInteger)
+  nameWithType: FungibleAssetValue.FungibleAssetValue(Currency, Int32, BigInteger, BigInteger)
 - uid: Libplanet.Assets.FungibleAssetValue.#ctor*
   name: FungibleAssetValue
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue__ctor_
@@ -1372,6 +1390,45 @@ references:
   isSpec: "True"
   fullName: Libplanet.Assets.FungibleAssetValue.GetHashCode
   nameWithType: FungibleAssetValue.GetHashCode
+- uid: Libplanet.Assets.FungibleAssetValue.GetQuantityString(System.Boolean)
+  name: GetQuantityString(Boolean)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_GetQuantityString_System_Boolean_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.GetQuantityString(System.Boolean)
+  fullName: Libplanet.Assets.FungibleAssetValue.GetQuantityString(System.Boolean)
+  nameWithType: FungibleAssetValue.GetQuantityString(Boolean)
+- uid: Libplanet.Assets.FungibleAssetValue.GetQuantityString*
+  name: GetQuantityString
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_GetQuantityString_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.GetQuantityString
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.GetQuantityString
+  nameWithType: FungibleAssetValue.GetQuantityString
+- uid: Libplanet.Assets.FungibleAssetValue.MajorUnit
+  name: MajorUnit
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_MajorUnit
+  commentId: P:Libplanet.Assets.FungibleAssetValue.MajorUnit
+  fullName: Libplanet.Assets.FungibleAssetValue.MajorUnit
+  nameWithType: FungibleAssetValue.MajorUnit
+- uid: Libplanet.Assets.FungibleAssetValue.MajorUnit*
+  name: MajorUnit
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_MajorUnit_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.MajorUnit
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.MajorUnit
+  nameWithType: FungibleAssetValue.MajorUnit
+- uid: Libplanet.Assets.FungibleAssetValue.MinorUnit
+  name: MinorUnit
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_MinorUnit
+  commentId: P:Libplanet.Assets.FungibleAssetValue.MinorUnit
+  fullName: Libplanet.Assets.FungibleAssetValue.MinorUnit
+  nameWithType: FungibleAssetValue.MinorUnit
+- uid: Libplanet.Assets.FungibleAssetValue.MinorUnit*
+  name: MinorUnit
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_MinorUnit_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.MinorUnit
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.MinorUnit
+  nameWithType: FungibleAssetValue.MinorUnit
 - uid: Libplanet.Assets.FungibleAssetValue.op_Addition(Libplanet.Assets.FungibleAssetValue,Libplanet.Assets.FungibleAssetValue)
   name: Addition(FungibleAssetValue, FungibleAssetValue)
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_op_Addition_Libplanet_Assets_FungibleAssetValue_Libplanet_Assets_FungibleAssetValue_
@@ -1527,6 +1584,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.Assets.FungibleAssetValue.UnaryNegation
   nameWithType: FungibleAssetValue.UnaryNegation
+- uid: Libplanet.Assets.FungibleAssetValue.Sign
+  name: Sign
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Sign
+  commentId: P:Libplanet.Assets.FungibleAssetValue.Sign
+  fullName: Libplanet.Assets.FungibleAssetValue.Sign
+  nameWithType: FungibleAssetValue.Sign
+- uid: Libplanet.Assets.FungibleAssetValue.Sign*
+  name: Sign
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Sign_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.Sign
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.Sign
+  nameWithType: FungibleAssetValue.Sign
 - uid: Libplanet.Assets.FungibleAssetValue.ToString
   name: ToString()
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_ToString

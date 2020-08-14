@@ -90,23 +90,28 @@ EUR (Euro), <em>not values</em> like $100 or €100.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public struct Currency : IEquatable&lt;Currency&gt;, ISerializable</code></pre>
   </div>
+  <h5 id="Libplanet_Assets_Currency_examples"><strong>Examples</strong></h5>
+  <p>Here is how US Dollar can be represented using <a class="xref" href="Libplanet.Assets.Currency.html">Currency</a>:</p>
+<pre><code>var USMint = new PrivateKey();
+var USD = new Currency(ticker: &quot;USD&quot;, decimalPlace: 2, minter: USMint.ToAddress());</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency__ctor_System_String_System_Nullable_IImmutableSet_Libplanet_Address___.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.%23ctor(System.String%2CSystem.Nullable%7BIImmutableSet%7BLibplanet.Address%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency__ctor_System_String_System_Byte_System_Nullable_IImmutableSet_Libplanet_Address___.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.%23ctor(System.String%2CSystem.Byte%2CSystem.Nullable%7BIImmutableSet%7BLibplanet.Address%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L55">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L72">View Source</a>
   </span>
   <a id="Libplanet_Assets_Currency__ctor_" data-uid="Libplanet.Assets.Currency.#ctor*"></a>
-  <h4 id="Libplanet_Assets_Currency__ctor_System_String_System_Nullable_IImmutableSet_Libplanet_Address___" data-uid="Libplanet.Assets.Currency.#ctor(System.String,System.Nullable{IImmutableSet{Libplanet.Address}})">Currency(String, Nullable&lt;IImmutableSet&lt;Address&gt;&gt;)</h4>
+  <h4 id="Libplanet_Assets_Currency__ctor_System_String_System_Byte_System_Nullable_IImmutableSet_Libplanet_Address___" data-uid="Libplanet.Assets.Currency.#ctor(System.String,System.Byte,System.Nullable{IImmutableSet{Libplanet.Address}})">Currency(String, Byte, Nullable&lt;IImmutableSet&lt;Address&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Defines a <a class="xref" href="Libplanet.Assets.Currency.html">Currency</a> type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Currency(string ticker, IImmutableSet&lt;Address&gt;? minters)</code></pre>
+    <pre><code class="lang-csharp hljs">public Currency(string ticker, byte decimalPlaces, IImmutableSet&lt;Address&gt;? minters)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -122,6 +127,13 @@ EUR (Euro), <em>not values</em> like $100 or €100.</p>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">ticker</span></td>
         <td><p>The ticker symbol, e.g., <code>&quot;USD&quot;</code>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">decimalPlaces</span></td>
+        <td><p>The number of digits to treat as <a href="https://w.wiki/ZXv#Treatment_of_minor_currency_units_(the_%22exponent%22)">minor
+units (i.e., exponent)</a>.</p>
 </td>
       </tr>
       <tr>
@@ -135,19 +147,19 @@ See also <a class="xref" href="Libplanet.Assets.Currency.html#Libplanet_Assets_C
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency__ctor_System_String_System_Nullable_Libplanet_Address__.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.%23ctor(System.String%2CSystem.Nullable%7BLibplanet.Address%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency__ctor_System_String_System_Byte_System_Nullable_Libplanet_Address__.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.%23ctor(System.String%2CSystem.Byte%2CSystem.Nullable%7BLibplanet.Address%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L80">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L101">View Source</a>
   </span>
   <a id="Libplanet_Assets_Currency__ctor_" data-uid="Libplanet.Assets.Currency.#ctor*"></a>
-  <h4 id="Libplanet_Assets_Currency__ctor_System_String_System_Nullable_Libplanet_Address__" data-uid="Libplanet.Assets.Currency.#ctor(System.String,System.Nullable{Libplanet.Address})">Currency(String, Nullable&lt;Address&gt;)</h4>
+  <h4 id="Libplanet_Assets_Currency__ctor_System_String_System_Byte_System_Nullable_Libplanet_Address__" data-uid="Libplanet.Assets.Currency.#ctor(System.String,System.Byte,System.Nullable{Libplanet.Address})">Currency(String, Byte, Nullable&lt;Address&gt;)</h4>
   <div class="markdown level1 summary"><p>Defines a <a class="xref" href="Libplanet.Assets.Currency.html">Currency</a> type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Currency(string ticker, Address? minter)</code></pre>
+    <pre><code class="lang-csharp hljs">public Currency(string ticker, byte decimalPlaces, Address? minter)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -166,10 +178,17 @@ See also <a class="xref" href="Libplanet.Assets.Currency.html#Libplanet_Assets_C
 </td>
       </tr>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td><span class="parametername">decimalPlaces</span></td>
+        <td><p>The number of digits to treat as <a href="https://w.wiki/ZXv#Treatment_of_minor_currency_units_(the_%22exponent%22)">minor
+units (i.e., exponent)</a>.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="Libplanet.Address.html">Address</a>&gt;</td>
         <td><span class="parametername">minter</span></td>
         <td><p>The address who can mint the currency.  To specify multiple
-minters, use the <see cref="!:Currency(string, IImmutableSet&lt;Address>)"></see> constructor
+minters, use the <see cref="!:Currency(string,byte,IImmutableSet&lt;Address>)"></see> constructor
 instead.  See also <a class="xref" href="Libplanet.Assets.Currency.html#Libplanet_Assets_Currency_Minters">Minters</a> field which corresponds to this.</p>
 </td>
       </tr>
@@ -179,10 +198,41 @@ instead.  See also <a class="xref" href="Libplanet.Assets.Currency.html#Libplane
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency_DecimalPlaces.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.DecimalPlaces%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L44">View Source</a>
+  </span>
+  <h4 id="Libplanet_Assets_Currency_DecimalPlaces" data-uid="Libplanet.Assets.Currency.DecimalPlaces">DecimalPlaces</h4>
+  <div class="markdown level1 summary"><p>The number of digits to treat as <a href="https://w.wiki/ZXv#Treatment_of_minor_currency_units_(the_%22exponent%22)">minor
+units (i.e., exponent)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly byte DecimalPlaces</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency_Hash.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.Hash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L45">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L59">View Source</a>
   </span>
   <h4 id="Libplanet_Assets_Currency_Hash" data-uid="Libplanet.Assets.Currency.Hash">Hash</h4>
   <div class="markdown level1 summary"><p>The deterministic hash derived from other fields.</p>
@@ -212,7 +262,7 @@ instead.  See also <a class="xref" href="Libplanet.Assets.Currency.html#Libplane
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency_Minters.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.Minters%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L40">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L54">View Source</a>
   </span>
   <h4 id="Libplanet_Assets_Currency_Minters" data-uid="Libplanet.Assets.Currency.Minters">Minters</h4>
   <div class="markdown level1 summary"><p>The <a class="xref" href="Libplanet.Address.html">Address</a>es who can mint the currency.
@@ -250,7 +300,7 @@ If this is <code>null</code> <em>anyone</em> can mint the currency.</p>
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency_Ticker.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.Ticker%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L30">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L37">View Source</a>
   </span>
   <h4 id="Libplanet_Assets_Currency_Ticker" data-uid="Libplanet.Assets.Currency.Ticker">Ticker</h4>
   <div class="markdown level1 summary"><p>The ticker symbol, e.g., <code>&quot;USD&quot;</code>.</p>
@@ -282,7 +332,7 @@ If this is <code>null</code> <em>anyone</em> can mint the currency.</p>
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency_AllowsToMint_Libplanet_Address_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.AllowsToMint(Libplanet.Address)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L111">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L134">View Source</a>
   </span>
   <a id="Libplanet_Assets_Currency_AllowsToMint_" data-uid="Libplanet.Assets.Currency.AllowsToMint*"></a>
   <h4 id="Libplanet_Assets_Currency_AllowsToMint_Libplanet_Address_" data-uid="Libplanet.Assets.Currency.AllowsToMint(Libplanet.Address)">AllowsToMint(Address)</h4>
@@ -334,7 +384,7 @@ mint or burn assets of this currency.</p>
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency_Equals_Libplanet_Assets_Currency_.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.Equals(Libplanet.Assets.Currency)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L145">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L163">View Source</a>
   </span>
   <a id="Libplanet_Assets_Currency_Equals_" data-uid="Libplanet.Assets.Currency.Equals*"></a>
   <h4 id="Libplanet_Assets_Currency_Equals_Libplanet_Assets_Currency_" data-uid="Libplanet.Assets.Currency.Equals(Libplanet.Assets.Currency)">Equals(Currency)</h4>
@@ -381,7 +431,7 @@ mint or burn assets of this currency.</p>
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency_Equals_System_Nullable_System_Object__.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.Equals(System.Nullable%7BSystem.Object%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L137">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L158">View Source</a>
   </span>
   <a id="Libplanet_Assets_Currency_Equals_" data-uid="Libplanet.Assets.Currency.Equals*"></a>
   <h4 id="Libplanet_Assets_Currency_Equals_System_Nullable_System_Object__" data-uid="Libplanet.Assets.Currency.Equals(System.Nullable{System.Object})">Equals(Nullable&lt;Object&gt;)</h4>
@@ -428,7 +478,7 @@ mint or burn assets of this currency.</p>
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency_GetHashCode.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L128">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L154">View Source</a>
   </span>
   <a id="Libplanet_Assets_Currency_GetHashCode_" data-uid="Libplanet.Assets.Currency.GetHashCode*"></a>
   <h4 id="Libplanet_Assets_Currency_GetHashCode" data-uid="Libplanet.Assets.Currency.GetHashCode">GetHashCode()</h4>
@@ -458,7 +508,7 @@ mint or burn assets of this currency.</p>
     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency_ToString.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L124">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L150">View Source</a>
   </span>
   <a id="Libplanet_Assets_Currency_ToString_" data-uid="Libplanet.Assets.Currency.ToString*"></a>
   <h4 id="Libplanet_Assets_Currency_ToString" data-uid="Libplanet.Assets.Currency.ToString">ToString()</h4>
@@ -505,7 +555,7 @@ mint or burn assets of this currency.</p>
                     <a href="https://github.com/dahlia/libplanet/new/fungible-asset-value/apiSpec/new?filename=Libplanet_Assets_Currency.md&amp;value=---%0Auid%3A%20Libplanet.Assets.Currency%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/fungible-asset-value/Libplanet/Assets/Currency.cs/#L31" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
