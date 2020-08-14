@@ -1227,6 +1227,25 @@ references:
   commentId: F:Libplanet.Assets.Currency.Minters
   fullName: Libplanet.Assets.Currency.Minters
   nameWithType: Currency.Minters
+- uid: Libplanet.Assets.Currency.op_Multiply(BigInteger,Libplanet.Assets.Currency)
+  name: Multiply(BigInteger, Currency)
+  href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency_op_Multiply_BigInteger_Libplanet_Assets_Currency_
+  commentId: M:Libplanet.Assets.Currency.op_Multiply(BigInteger,Libplanet.Assets.Currency)
+  fullName: Libplanet.Assets.Currency.Multiply(BigInteger, Libplanet.Assets.Currency)
+  nameWithType: Currency.Multiply(BigInteger, Currency)
+- uid: Libplanet.Assets.Currency.op_Multiply(Libplanet.Assets.Currency,BigInteger)
+  name: Multiply(Currency, BigInteger)
+  href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency_op_Multiply_Libplanet_Assets_Currency_BigInteger_
+  commentId: M:Libplanet.Assets.Currency.op_Multiply(Libplanet.Assets.Currency,BigInteger)
+  fullName: Libplanet.Assets.Currency.Multiply(Libplanet.Assets.Currency, BigInteger)
+  nameWithType: Currency.Multiply(Currency, BigInteger)
+- uid: Libplanet.Assets.Currency.op_Multiply*
+  name: Multiply
+  href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency_op_Multiply_
+  commentId: Overload:Libplanet.Assets.Currency.op_Multiply
+  isSpec: "True"
+  fullName: Libplanet.Assets.Currency.Multiply
+  nameWithType: Currency.Multiply
 - uid: Libplanet.Assets.Currency.Ticker
   name: Ticker
   href: api/Libplanet.Assets.Currency.html#Libplanet_Assets_Currency_Ticker
