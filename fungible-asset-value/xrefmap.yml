@@ -1603,6 +1603,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.Assets.FungibleAssetValue.UnaryNegation
   nameWithType: FungibleAssetValue.UnaryNegation
+- uid: Libplanet.Assets.FungibleAssetValue.Parse(Libplanet.Assets.Currency,System.String)
+  name: Parse(Currency, String)
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Parse_Libplanet_Assets_Currency_System_String_
+  commentId: M:Libplanet.Assets.FungibleAssetValue.Parse(Libplanet.Assets.Currency,System.String)
+  fullName: Libplanet.Assets.FungibleAssetValue.Parse(Libplanet.Assets.Currency, System.String)
+  nameWithType: FungibleAssetValue.Parse(Currency, String)
+- uid: Libplanet.Assets.FungibleAssetValue.Parse*
+  name: Parse
+  href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Parse_
+  commentId: Overload:Libplanet.Assets.FungibleAssetValue.Parse
+  isSpec: "True"
+  fullName: Libplanet.Assets.FungibleAssetValue.Parse
+  nameWithType: FungibleAssetValue.Parse
 - uid: Libplanet.Assets.FungibleAssetValue.Sign
   name: Sign
   href: api/Libplanet.Assets.FungibleAssetValue.html#Libplanet_Assets_FungibleAssetValue_Sign
