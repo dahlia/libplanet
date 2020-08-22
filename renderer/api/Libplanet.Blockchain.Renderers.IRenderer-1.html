@@ -68,10 +68,10 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Libplanet.Blockchain.IRenderer`1">
+            <article class="content wrap" id="_content" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1">
   
   
-  <h1 id="Libplanet_Blockchain_IRenderer_1" data-uid="Libplanet.Blockchain.IRenderer`1" class="text-break">Interface IRenderer&lt;T&gt;
+  <h1 id="Libplanet_Blockchain_Renderers_IRenderer_1" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1" class="text-break">Interface IRenderer&lt;T&gt;
   </h1>
   <div class="markdown level0 summary"><p>Listens state changes on a <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html">BlockChain&lt;T&gt;</a>.</p>
 <p>Usually, implementations of this interface purpose to update the in-memory game states
@@ -79,9 +79,9 @@
 on the display is redrawn.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Libplanet.Blockchain.html">Libplanet.Blockchain</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Libplanet.Blockchain.Renderers.html">Libplanet.Blockchain.Renderers</a></h6>
   <h6><strong>Assembly</strong>: Libplanet.dll</h6>
-  <h5 id="Libplanet_Blockchain_IRenderer_1_syntax">Syntax</h5>
+  <h5 id="Libplanet_Blockchain_Renderers_IRenderer_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public interface IRenderer&lt;T&gt;
     where T : IAction, new()</code></pre>
@@ -107,13 +107,13 @@ on the display is redrawn.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.IRenderer%601.RenderAction(Libplanet.Action.IAction%2CLibplanet.Action.IActionContext%2CLibplanet.Action.IAccountStateDelta)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_Renderers_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.Renderers.IRenderer%601.RenderAction(Libplanet.Action.IAction%2CLibplanet.Action.IActionContext%2CLibplanet.Action.IAccountStateDelta)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/IRenderer.cs/#L41">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/Renderers/IRenderer.cs/#L41">View Source</a>
   </span>
-  <a id="Libplanet_Blockchain_IRenderer_1_RenderAction_" data-uid="Libplanet.Blockchain.IRenderer`1.RenderAction*"></a>
-  <h4 id="Libplanet_Blockchain_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_" data-uid="Libplanet.Blockchain.IRenderer`1.RenderAction(Libplanet.Action.IAction,Libplanet.Action.IActionContext,Libplanet.Action.IAccountStateDelta)">RenderAction(IAction, IActionContext, IAccountStateDelta)</h4>
+  <a id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderAction_" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.RenderAction*"></a>
+  <h4 id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.RenderAction(Libplanet.Action.IAction,Libplanet.Action.IActionContext,Libplanet.Action.IAccountStateDelta)">RenderAction(IAction, IActionContext, IAccountStateDelta)</h4>
   <div class="markdown level1 summary"><p>Does things that should be done right after an <code data-dev-comment-type="paramref" class="paramref">action</code>
 is executed and applied to the blockchain.</p>
 </div>
@@ -158,22 +158,22 @@ which means it is equivalent to the states <code data-dev-comment-type="paramref
       </tr>
     </tbody>
   </table>
-  <h5 id="Libplanet_Blockchain_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta__remarks">Remarks</h5>
+  <h5 id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>It is guaranteed to be called only once for an <code data-dev-comment-type="paramref" class="paramref">action</code>,
 and only after applied to the blockchain, unless an exception is thrown during executing
-the <code data-dev-comment-type="paramref" class="paramref">action</code> (in that case <a class="xref" href="Libplanet.Blockchain.IRenderer-1.html#Libplanet_Blockchain_IRenderer_1_RenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_">RenderActionError(IAction, IActionContext, Exception)</a> is called instead) or
+the <code data-dev-comment-type="paramref" class="paramref">action</code> (in that case <a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html#Libplanet_Blockchain_Renderers_IRenderer_1_RenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_">RenderActionError(IAction, IActionContext, Exception)</a> is called instead) or
 once the <code data-dev-comment-type="paramref" class="paramref">action</code> has been unrendered.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_IRenderer_1_RenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.IRenderer%601.RenderActionError(Libplanet.Action.IAction%2CLibplanet.Action.IActionContext%2CException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_Renderers_IRenderer_1_RenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.Renderers.IRenderer%601.RenderActionError(Libplanet.Action.IAction%2CLibplanet.Action.IActionContext%2CException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/IRenderer.cs/#L84">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/Renderers/IRenderer.cs/#L84">View Source</a>
   </span>
-  <a id="Libplanet_Blockchain_IRenderer_1_RenderActionError_" data-uid="Libplanet.Blockchain.IRenderer`1.RenderActionError*"></a>
-  <h4 id="Libplanet_Blockchain_IRenderer_1_RenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_" data-uid="Libplanet.Blockchain.IRenderer`1.RenderActionError(Libplanet.Action.IAction,Libplanet.Action.IActionContext,Exception)">RenderActionError(IAction, IActionContext, Exception)</h4>
-  <div class="markdown level1 summary"><p>Does the similar things to <a class="xref" href="Libplanet.Blockchain.IRenderer-1.html#Libplanet_Blockchain_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_">RenderAction(IAction, IActionContext, IAccountStateDelta)</a>, except that this method
+  <a id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderActionError_" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.RenderActionError*"></a>
+  <h4 id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.RenderActionError(Libplanet.Action.IAction,Libplanet.Action.IActionContext,Exception)">RenderActionError(IAction, IActionContext, Exception)</h4>
+  <div class="markdown level1 summary"><p>Does the similar things to <a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html#Libplanet_Blockchain_Renderers_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_">RenderAction(IAction, IActionContext, IAccountStateDelta)</a>, except that this method
 is invoked when <code data-dev-comment-type="paramref" class="paramref">action</code> has terminated with an exception.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -214,7 +214,7 @@ That means <a class="xref" href="Libplanet.Action.IActionContext.html#Libplanet_
       </tr>
     </tbody>
   </table>
-  <h5 id="Libplanet_Blockchain_IRenderer_1_RenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception__remarks">Remarks</h5>
+  <h5 id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The reason why the parameter <code data-dev-comment-type="paramref" class="paramref">action</code> takes
 <a class="xref" href="Libplanet.Action.IAction.html">IAction</a> instead of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> is because it can take
 block actions (<a class="xref" href="Libplanet.Blockchain.Policies.IBlockPolicy-1.html#Libplanet_Blockchain_Policies_IBlockPolicy_1_BlockAction">BlockAction</a>) besides transaction
@@ -222,13 +222,13 @@ actions (<a class="xref" href="Libplanet.Tx.Transaction-1.html#Libplanet_Tx_Tran
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_IRenderer_1_RenderBlock_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.IRenderer%601.RenderBlock(Libplanet.Blocks.Block%7B%600%7D%2CLibplanet.Blocks.Block%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_Renderers_IRenderer_1_RenderBlock_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.Renderers.IRenderer%601.RenderBlock(Libplanet.Blocks.Block%7B%600%7D%2CLibplanet.Blocks.Block%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/IRenderer.cs/#L115">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/Renderers/IRenderer.cs/#L115">View Source</a>
   </span>
-  <a id="Libplanet_Blockchain_IRenderer_1_RenderBlock_" data-uid="Libplanet.Blockchain.IRenderer`1.RenderBlock*"></a>
-  <h4 id="Libplanet_Blockchain_IRenderer_1_RenderBlock_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__" data-uid="Libplanet.Blockchain.IRenderer`1.RenderBlock(Libplanet.Blocks.Block{`0},Libplanet.Blocks.Block{`0})">RenderBlock(Block&lt;T&gt;, Block&lt;T&gt;)</h4>
+  <a id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderBlock_" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.RenderBlock*"></a>
+  <h4 id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderBlock_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.RenderBlock(Libplanet.Blocks.Block{`0},Libplanet.Blocks.Block{`0})">RenderBlock(Block&lt;T&gt;, Block&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>Does things that should be done right after a new <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a> is appended to
 a <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html">BlockChain&lt;T&gt;</a> (so that its <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Tip">Tip</a> has changed).</p>
 </div>
@@ -261,19 +261,19 @@ a <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html">BlockChain&lt;T&
       </tr>
     </tbody>
   </table>
-  <h5 id="Libplanet_Blockchain_IRenderer_1_RenderBlock_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0___remarks">Remarks</h5>
+  <h5 id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderBlock_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>It is guranteed to be called only once for a block, and only after applied to
-the blockchain, unless it has been stale due to reorg (for that case, <a class="xref" href="Libplanet.Blockchain.IRenderer-1.html#Libplanet_Blockchain_IRenderer_1_RenderReorg_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__">RenderReorg(Block&lt;T&gt;, Block&lt;T&gt;, Block&lt;T&gt;)</a> is called in advance).</p>
+the blockchain, unless it has been stale due to reorg (for that case, <a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html#Libplanet_Blockchain_Renderers_IRenderer_1_RenderReorg_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__">RenderReorg(Block&lt;T&gt;, Block&lt;T&gt;, Block&lt;T&gt;)</a> is called in advance).</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_IRenderer_1_RenderReorg_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.IRenderer%601.RenderReorg(Libplanet.Blocks.Block%7B%600%7D%2CLibplanet.Blocks.Block%7B%600%7D%2CLibplanet.Blocks.Block%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_Renderers_IRenderer_1_RenderReorg_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.Renderers.IRenderer%601.RenderReorg(Libplanet.Blocks.Block%7B%600%7D%2CLibplanet.Blocks.Block%7B%600%7D%2CLibplanet.Blocks.Block%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/IRenderer.cs/#L130">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/Renderers/IRenderer.cs/#L130">View Source</a>
   </span>
-  <a id="Libplanet_Blockchain_IRenderer_1_RenderReorg_" data-uid="Libplanet.Blockchain.IRenderer`1.RenderReorg*"></a>
-  <h4 id="Libplanet_Blockchain_IRenderer_1_RenderReorg_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__" data-uid="Libplanet.Blockchain.IRenderer`1.RenderReorg(Libplanet.Blocks.Block{`0},Libplanet.Blocks.Block{`0},Libplanet.Blocks.Block{`0})">RenderReorg(Block&lt;T&gt;, Block&lt;T&gt;, Block&lt;T&gt;)</h4>
+  <a id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderReorg_" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.RenderReorg*"></a>
+  <h4 id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderReorg_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.RenderReorg(Libplanet.Blocks.Block{`0},Libplanet.Blocks.Block{`0},Libplanet.Blocks.Block{`0})">RenderReorg(Block&lt;T&gt;, Block&lt;T&gt;, Block&lt;T&gt;)</h4>
   <div class="markdown level1 summary"><p>Does things that should be done right after reorg has happened to a <a class="xref" href="Libplanet.Blockchain.BlockChain-1.html">BlockChain&lt;T&gt;</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -312,23 +312,23 @@ the blockchain, unless it has been stale due to reorg (for that case, <a class="
       </tr>
     </tbody>
   </table>
-  <h5 id="Libplanet_Blockchain_IRenderer_1_RenderReorg_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0___remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>For every call to this method, a call to <a class="xref" href="Libplanet.Blockchain.IRenderer-1.html#Libplanet_Blockchain_IRenderer_1_RenderBlock_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__">RenderBlock(Block&lt;T&gt;, Block&lt;T&gt;)</a> method with the same <code data-dev-comment-type="paramref" class="paramref">newTip</code>
-is made too.  Note that this method is guaranteed to be called before <a class="xref" href="Libplanet.Blockchain.IRenderer-1.html#Libplanet_Blockchain_IRenderer_1_RenderBlock_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__">RenderBlock(Block&lt;T&gt;, Block&lt;T&gt;)</a> method for the same <code data-dev-comment-type="paramref" class="paramref">newTip</code>.</p>
+  <h5 id="Libplanet_Blockchain_Renderers_IRenderer_1_RenderReorg_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>For every call to this method, a call to <a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html#Libplanet_Blockchain_Renderers_IRenderer_1_RenderBlock_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__">RenderBlock(Block&lt;T&gt;, Block&lt;T&gt;)</a> method with the same <code data-dev-comment-type="paramref" class="paramref">newTip</code>
+is made too.  Note that this method is guaranteed to be called before <a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html#Libplanet_Blockchain_Renderers_IRenderer_1_RenderBlock_Libplanet_Blocks_Block__0__Libplanet_Blocks_Block__0__">RenderBlock(Block&lt;T&gt;, Block&lt;T&gt;)</a> method for the same <code data-dev-comment-type="paramref" class="paramref">newTip</code>.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_IRenderer_1_UnrenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.IRenderer%601.UnrenderAction(Libplanet.Action.IAction%2CLibplanet.Action.IActionContext%2CLibplanet.Action.IAccountStateDelta)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_Renderers_IRenderer_1_UnrenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.Renderers.IRenderer%601.UnrenderAction(Libplanet.Action.IAction%2CLibplanet.Action.IActionContext%2CLibplanet.Action.IAccountStateDelta)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/IRenderer.cs/#L66">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/Renderers/IRenderer.cs/#L66">View Source</a>
   </span>
-  <a id="Libplanet_Blockchain_IRenderer_1_UnrenderAction_" data-uid="Libplanet.Blockchain.IRenderer`1.UnrenderAction*"></a>
-  <h4 id="Libplanet_Blockchain_IRenderer_1_UnrenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_" data-uid="Libplanet.Blockchain.IRenderer`1.UnrenderAction(Libplanet.Action.IAction,Libplanet.Action.IActionContext,Libplanet.Action.IAccountStateDelta)">UnrenderAction(IAction, IActionContext, IAccountStateDelta)</h4>
+  <a id="Libplanet_Blockchain_Renderers_IRenderer_1_UnrenderAction_" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.UnrenderAction*"></a>
+  <h4 id="Libplanet_Blockchain_Renderers_IRenderer_1_UnrenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.UnrenderAction(Libplanet.Action.IAction,Libplanet.Action.IActionContext,Libplanet.Action.IAccountStateDelta)">UnrenderAction(IAction, IActionContext, IAccountStateDelta)</h4>
   <div class="markdown level1 summary"><p>Does things that should be undone right after the given <code data-dev-comment-type="paramref" class="paramref">action</code> is
 invalidated (mostly due to reorg, i.e., a block which the action has belonged to becomes
 considered stale).</p>
-<p>This method takes the equivalent arguments to <a class="xref" href="Libplanet.Blockchain.IRenderer-1.html#Libplanet_Blockchain_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_">RenderAction(IAction, IActionContext, IAccountStateDelta)</a> method.</p>
+<p>This method takes the equivalent arguments to <a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html#Libplanet_Blockchain_Renderers_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_">RenderAction(IAction, IActionContext, IAccountStateDelta)</a> method.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -371,23 +371,23 @@ which means it is equivalent to the states <code data-dev-comment-type="paramref
       </tr>
     </tbody>
   </table>
-  <h5 id="Libplanet_Blockchain_IRenderer_1_UnrenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta__remarks">Remarks</h5>
+  <h5 id="Libplanet_Blockchain_Renderers_IRenderer_1_UnrenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>As a rule of thumb, this should be the inverse of
-<a class="xref" href="Libplanet.Blockchain.IRenderer-1.html#Libplanet_Blockchain_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_">RenderAction(IAction, IActionContext, IAccountStateDelta)</a> method
+<a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html#Libplanet_Blockchain_Renderers_IRenderer_1_RenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_">RenderAction(IAction, IActionContext, IAccountStateDelta)</a> method
 with redrawing the graphics on the display at the finish.</p>
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_IRenderer_1_UnrenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.IRenderer%601.UnrenderActionError(Libplanet.Action.IAction%2CLibplanet.Action.IActionContext%2CException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_Renderers_IRenderer_1_UnrenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.Renderers.IRenderer%601.UnrenderActionError(Libplanet.Action.IAction%2CLibplanet.Action.IActionContext%2CException)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/IRenderer.cs/#L104">View Source</a>
+    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/Renderers/IRenderer.cs/#L104">View Source</a>
   </span>
-  <a id="Libplanet_Blockchain_IRenderer_1_UnrenderActionError_" data-uid="Libplanet.Blockchain.IRenderer`1.UnrenderActionError*"></a>
-  <h4 id="Libplanet_Blockchain_IRenderer_1_UnrenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_" data-uid="Libplanet.Blockchain.IRenderer`1.UnrenderActionError(Libplanet.Action.IAction,Libplanet.Action.IActionContext,Exception)">UnrenderActionError(IAction, IActionContext, Exception)</h4>
-  <div class="markdown level1 summary"><p>Does the similar things to <a class="xref" href="Libplanet.Blockchain.IRenderer-1.html#Libplanet_Blockchain_IRenderer_1_UnrenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_">UnrenderAction(IAction, IActionContext, IAccountStateDelta)</a>, except that
+  <a id="Libplanet_Blockchain_Renderers_IRenderer_1_UnrenderActionError_" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.UnrenderActionError*"></a>
+  <h4 id="Libplanet_Blockchain_Renderers_IRenderer_1_UnrenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_" data-uid="Libplanet.Blockchain.Renderers.IRenderer`1.UnrenderActionError(Libplanet.Action.IAction,Libplanet.Action.IActionContext,Exception)">UnrenderActionError(IAction, IActionContext, Exception)</h4>
+  <div class="markdown level1 summary"><p>Does the similar things to <a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html#Libplanet_Blockchain_Renderers_IRenderer_1_UnrenderAction_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Libplanet_Action_IAccountStateDelta_">UnrenderAction(IAction, IActionContext, IAccountStateDelta)</a>, except that
 this methodis invoked when <code data-dev-comment-type="paramref" class="paramref">action</code> has terminated with an exception.</p>
-<p>This method takes the equivalent arguments to <a class="xref" href="Libplanet.Blockchain.IRenderer-1.html#Libplanet_Blockchain_IRenderer_1_RenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_">RenderActionError(IAction, IActionContext, Exception)</a> method.</p>
+<p>This method takes the equivalent arguments to <a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html#Libplanet_Blockchain_Renderers_IRenderer_1_RenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception_">RenderActionError(IAction, IActionContext, Exception)</a> method.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -427,7 +427,7 @@ That means <a class="xref" href="Libplanet.Action.IActionContext.html#Libplanet_
       </tr>
     </tbody>
   </table>
-  <h5 id="Libplanet_Blockchain_IRenderer_1_UnrenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception__remarks">Remarks</h5>
+  <h5 id="Libplanet_Blockchain_Renderers_IRenderer_1_UnrenderActionError_Libplanet_Action_IAction_Libplanet_Action_IActionContext_Exception__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>The reason why the parameter <code data-dev-comment-type="paramref" class="paramref">action</code> takes
 <a class="xref" href="Libplanet.Action.IAction.html">IAction</a> instead of <code data-dev-comment-type="typeparamref" class="typeparamref">T</code> is because it can take
 block actions (<a class="xref" href="Libplanet.Blockchain.Policies.IBlockPolicy-1.html#Libplanet_Blockchain_Policies_IBlockPolicy_1_BlockAction">BlockAction</a>) besides transaction
@@ -441,10 +441,10 @@ actions (<a class="xref" href="Libplanet.Tx.Transaction-1.html#Libplanet_Tx_Tran
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_IRenderer_1.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.IRenderer%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dahlia/libplanet/new/renderer/apiSpec/new?filename=Libplanet_Blockchain_Renderers_IRenderer_1.md&amp;value=---%0Auid%3A%20Libplanet.Blockchain.Renderers.IRenderer%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/IRenderer.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dahlia/libplanet/blob/renderer/Libplanet/Blockchain/Renderers/IRenderer.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
