@@ -82,6 +82,13 @@
 <p>This class is useful when you want an one-use ad-hoc implementation (i.e., Java-style
 anonymous class) of <a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html">IRenderer&lt;T&gt;</a> interface.</p>
 </section>
+      <h4><a class="xref" href="Libplanet.Blockchain.Renderers.LoggedRenderer-1.html">LoggedRenderer&lt;T&gt;</a></h4>
+      <section><p>Decorates an <a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html">IRenderer&lt;T&gt;</a> so that all event messages are logged.</p>
+<p>Every single event message causes two log messages: one is logged <em>before</em>
+rendering, and other one is logged <em>after</em> rendering.  If any exception is thrown
+it is also logged with the log level <see cref="!:LogEventLevel.Error"></see> (regardless of
+<a class="xref" href="Libplanet.Blockchain.Renderers.LoggedRenderer-1.html#Libplanet_Blockchain_Renderers_LoggedRenderer_1_Level">Level</a> configuration).</p>
+</section>
     <h3 id="interfaces">Interfaces
   </h3>
       <h4><a class="xref" href="Libplanet.Blockchain.Renderers.IRenderer-1.html">IRenderer&lt;T&gt;</a></h4>
