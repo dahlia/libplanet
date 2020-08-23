@@ -80,6 +80,8 @@ and <code>IRenderer&lt;T&gt;.RenderReorg()</code>.
 <code>IRenderer&lt;T&gt;.RenderAction()</code>.</li>
 <li>Removed <code>IAction.Unrender()</code> method, which was replaced by
 <code>IRenderer&lt;T&gt;.UnrenderAction()</code>.</li>
+<li>Removed <code>BlockChain&lt;T&gt;.TipChanged</code> event, which was replaced by
+<code>IRenderer&lt;T&gt;.RenderBlock()</code>.</li>
 <li>Removed <code>PolymorphicAction&lt;T&gt;.Render()</code> and <code>Unrender()</code> methods.</li>
 </ul>
 </li>
