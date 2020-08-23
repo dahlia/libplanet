@@ -1539,15 +1539,15 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T)
   nameWithType: BlockChain<T>
   nameWithType.vb: BlockChain(Of T)
-- uid: Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore,Libplanet.Store.IStateStore,Libplanet.Blocks.Block{`0},IEnumerable{Libplanet.Blockchain.Renderers.IRenderer{`0}},System.Boolean)
-  name: BlockChain(IBlockPolicy<T>, IStore, IStateStore, Block<T>, IEnumerable<IRenderer<T>>, Boolean)
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1__ctor_Libplanet_Blockchain_Policies_IBlockPolicy__0__Libplanet_Store_IStore_Libplanet_Store_IStateStore_Libplanet_Blocks_Block__0__IEnumerable_Libplanet_Blockchain_Renderers_IRenderer__0___System_Boolean_
-  commentId: M:Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore,Libplanet.Store.IStateStore,Libplanet.Blocks.Block{`0},IEnumerable{Libplanet.Blockchain.Renderers.IRenderer{`0}},System.Boolean)
-  name.vb: BlockChain(IBlockPolicy(Of T), IStore, IStateStore, Block(Of T), IEnumerable(Of IRenderer(Of T)), Boolean)
-  fullName: Libplanet.Blockchain.BlockChain<T>.BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy<T>, Libplanet.Store.IStore, Libplanet.Store.IStateStore, Libplanet.Blocks.Block<T>, IEnumerable<Libplanet.Blockchain.Renderers.IRenderer<T>>, System.Boolean)
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy(Of T), Libplanet.Store.IStore, Libplanet.Store.IStateStore, Libplanet.Blocks.Block(Of T), IEnumerable(Of Libplanet.Blockchain.Renderers.IRenderer(Of T)), System.Boolean)
-  nameWithType: BlockChain<T>.BlockChain(IBlockPolicy<T>, IStore, IStateStore, Block<T>, IEnumerable<IRenderer<T>>, Boolean)
-  nameWithType.vb: BlockChain(Of T).BlockChain(IBlockPolicy(Of T), IStore, IStateStore, Block(Of T), IEnumerable(Of IRenderer(Of T)), Boolean)
+- uid: Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore,Libplanet.Store.IStateStore,Libplanet.Blocks.Block{`0},IEnumerable{Libplanet.Blockchain.Renderers.IRenderer{`0}})
+  name: BlockChain(IBlockPolicy<T>, IStore, IStateStore, Block<T>, IEnumerable<IRenderer<T>>)
+  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1__ctor_Libplanet_Blockchain_Policies_IBlockPolicy__0__Libplanet_Store_IStore_Libplanet_Store_IStateStore_Libplanet_Blocks_Block__0__IEnumerable_Libplanet_Blockchain_Renderers_IRenderer__0___
+  commentId: M:Libplanet.Blockchain.BlockChain`1.#ctor(Libplanet.Blockchain.Policies.IBlockPolicy{`0},Libplanet.Store.IStore,Libplanet.Store.IStateStore,Libplanet.Blocks.Block{`0},IEnumerable{Libplanet.Blockchain.Renderers.IRenderer{`0}})
+  name.vb: BlockChain(IBlockPolicy(Of T), IStore, IStateStore, Block(Of T), IEnumerable(Of IRenderer(Of T)))
+  fullName: Libplanet.Blockchain.BlockChain<T>.BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy<T>, Libplanet.Store.IStore, Libplanet.Store.IStateStore, Libplanet.Blocks.Block<T>, IEnumerable<Libplanet.Blockchain.Renderers.IRenderer<T>>)
+  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).BlockChain(Libplanet.Blockchain.Policies.IBlockPolicy(Of T), Libplanet.Store.IStore, Libplanet.Store.IStateStore, Libplanet.Blocks.Block(Of T), IEnumerable(Of Libplanet.Blockchain.Renderers.IRenderer(Of T)))
+  nameWithType: BlockChain<T>.BlockChain(IBlockPolicy<T>, IStore, IStateStore, Block<T>, IEnumerable<IRenderer<T>>)
+  nameWithType.vb: BlockChain(Of T).BlockChain(IBlockPolicy(Of T), IStore, IStateStore, Block(Of T), IEnumerable(Of IRenderer(Of T)))
 - uid: Libplanet.Blockchain.BlockChain`1.#ctor*
   name: BlockChain
   href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1__ctor_
@@ -1871,23 +1871,6 @@ references:
   fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Policy
   nameWithType: BlockChain<T>.Policy
   nameWithType.vb: BlockChain(Of T).Policy
-- uid: Libplanet.Blockchain.BlockChain`1.Render
-  name: Render
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Render
-  commentId: P:Libplanet.Blockchain.BlockChain`1.Render
-  fullName: Libplanet.Blockchain.BlockChain<T>.Render
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Render
-  nameWithType: BlockChain<T>.Render
-  nameWithType.vb: BlockChain(Of T).Render
-- uid: Libplanet.Blockchain.BlockChain`1.Render*
-  name: Render
-  href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Render_
-  commentId: Overload:Libplanet.Blockchain.BlockChain`1.Render
-  isSpec: "True"
-  fullName: Libplanet.Blockchain.BlockChain<T>.Render
-  fullName.vb: Libplanet.Blockchain.BlockChain(Of T).Render
-  nameWithType: BlockChain<T>.Render
-  nameWithType.vb: BlockChain(Of T).Render
 - uid: Libplanet.Blockchain.BlockChain`1.Renderers
   name: Renderers
   href: api/Libplanet.Blockchain.BlockChain-1.html#Libplanet_Blockchain_BlockChain_1_Renderers

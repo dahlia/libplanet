@@ -101,10 +101,8 @@ distinguish state updates from asset states.  [<a href="https://github.com/plane
 <code>InvalidTxGenesisHashException</code> when it takes a <code>Transaction&lt;T&gt;</code> from
 a heterogeneous <code>BlockChain&lt;T&gt;</code> with a different genesis block.
 [<a href="https://github.com/planetarium/libplanet/issues/796">#796</a>, <a href="https://github.com/planetarium/libplanet/pull/878">#878</a>]</li>
-<li>Added <code>render</code> optional parameter to <code>BlockChain&lt;T&gt;()</code> constructor.
-[<a href="https://github.com/planetarium/libplanet/pull/883">#883</a>]</li>
 <li>Added <code>renderers</code> optional parameter to <code>BlockChain&lt;T&gt;()</code> constructor.
-[<a href="https://github.com/planetarium/libplanet/issues/959">#959</a>, <a href="https://github.com/planetarium/libplanet/pull/963">#963</a>]</li>
+[<a href="https://github.com/planetarium/libplanet/pull/883">#883</a>, <a href="https://github.com/planetarium/libplanet/issues/959">#959</a>, <a href="https://github.com/planetarium/libplanet/pull/963">#963</a>]</li>
 <li>Added <code>BigInteger</code>-typed <code>totalDifficulty</code> parameter to <code>Block&lt;T&gt;()</code>
 constructor.  [<a href="https://github.com/planetarium/libplanet/issues/666">#666</a>, <a href="https://github.com/planetarium/libplanet/pull/917">#917</a>]</li>
 <li>Added <code>BigInteger</code>-typed <code>previousTotalDifficulty</code> parameter to
@@ -247,7 +245,6 @@ by <code>stateCompleter: FungibleAssetStateCompleters&lt;T&gt;.Recalculate</code
 <li>Added <code>AnonymousRenderer&lt;T&gt;</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/959">#959</a>, <a href="https://github.com/planetarium/libplanet/pull/963">#963</a>]</li>
 <li>Added <code>LoggedRenderer&lt;T&gt;</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/959">#959</a>, <a href="https://github.com/planetarium/libplanet/pull/963">#963</a>]</li>
 <li>Added <code>BlockChain&lt;T&gt;.Renderers</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/959">#959</a>, <a href="https://github.com/planetarium/libplanet/pull/963">#963</a>]</li>
-<li>Added <code>BlockChain&lt;T&gt;.Render</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
 <li>Added <code>Reorged</code> event on <code>BlockChain&lt;T&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/945">#945</a>]</li>
 <li>Added <code>ReorgedEventArgs</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/945">#945</a>]</li>
 <li>Added <code>Swarm&lt;T&gt;.AppProtocolVersion</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
