@@ -229,7 +229,7 @@ an instance of <a class="xref" href="Libplanet.Action.PolymorphicAction-1.html">
     {
         if (action is PolymorphicAction&lt;ActionBase> polymorphicAction)
         {
-            switch (action.InnerAction)
+            switch (polymorphicAction.InnerAction)
             {
                 // render things here
             }
