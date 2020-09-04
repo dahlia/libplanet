@@ -2533,15 +2533,15 @@ references:
   fullName.vb: Libplanet.Blockchain.Renderers.DelayedActionRenderer(Of T)
   nameWithType: DelayedActionRenderer<T>
   nameWithType.vb: DelayedActionRenderer(Of T)
-- uid: Libplanet.Blockchain.Renderers.DelayedActionRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IActionRenderer{`0},Libplanet.Store.IStore,System.UInt32)
-  name: DelayedActionRenderer(IActionRenderer<T>, IStore, UInt32)
-  href: api/Libplanet.Blockchain.Renderers.DelayedActionRenderer-1.html#Libplanet_Blockchain_Renderers_DelayedActionRenderer_1__ctor_Libplanet_Blockchain_Renderers_IActionRenderer__0__Libplanet_Store_IStore_System_UInt32_
-  commentId: M:Libplanet.Blockchain.Renderers.DelayedActionRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IActionRenderer{`0},Libplanet.Store.IStore,System.UInt32)
-  name.vb: DelayedActionRenderer(IActionRenderer(Of T), IStore, UInt32)
-  fullName: Libplanet.Blockchain.Renderers.DelayedActionRenderer<T>.DelayedActionRenderer(Libplanet.Blockchain.Renderers.IActionRenderer<T>, Libplanet.Store.IStore, System.UInt32)
-  fullName.vb: Libplanet.Blockchain.Renderers.DelayedActionRenderer(Of T).DelayedActionRenderer(Libplanet.Blockchain.Renderers.IActionRenderer(Of T), Libplanet.Store.IStore, System.UInt32)
-  nameWithType: DelayedActionRenderer<T>.DelayedActionRenderer(IActionRenderer<T>, IStore, UInt32)
-  nameWithType.vb: DelayedActionRenderer(Of T).DelayedActionRenderer(IActionRenderer(Of T), IStore, UInt32)
+- uid: Libplanet.Blockchain.Renderers.DelayedActionRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IActionRenderer{`0},Libplanet.Store.IStore,System.Int32)
+  name: DelayedActionRenderer(IActionRenderer<T>, IStore, Int32)
+  href: api/Libplanet.Blockchain.Renderers.DelayedActionRenderer-1.html#Libplanet_Blockchain_Renderers_DelayedActionRenderer_1__ctor_Libplanet_Blockchain_Renderers_IActionRenderer__0__Libplanet_Store_IStore_System_Int32_
+  commentId: M:Libplanet.Blockchain.Renderers.DelayedActionRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IActionRenderer{`0},Libplanet.Store.IStore,System.Int32)
+  name.vb: DelayedActionRenderer(IActionRenderer(Of T), IStore, Int32)
+  fullName: Libplanet.Blockchain.Renderers.DelayedActionRenderer<T>.DelayedActionRenderer(Libplanet.Blockchain.Renderers.IActionRenderer<T>, Libplanet.Store.IStore, System.Int32)
+  fullName.vb: Libplanet.Blockchain.Renderers.DelayedActionRenderer(Of T).DelayedActionRenderer(Libplanet.Blockchain.Renderers.IActionRenderer(Of T), Libplanet.Store.IStore, System.Int32)
+  nameWithType: DelayedActionRenderer<T>.DelayedActionRenderer(IActionRenderer<T>, IStore, Int32)
+  nameWithType.vb: DelayedActionRenderer(Of T).DelayedActionRenderer(IActionRenderer(Of T), IStore, Int32)
 - uid: Libplanet.Blockchain.Renderers.DelayedActionRenderer`1.#ctor*
   name: DelayedActionRenderer
   href: api/Libplanet.Blockchain.Renderers.DelayedActionRenderer-1.html#Libplanet_Blockchain_Renderers_DelayedActionRenderer_1__ctor_
@@ -2699,15 +2699,15 @@ references:
   fullName.vb: Libplanet.Blockchain.Renderers.DelayedRenderer(Of T)
   nameWithType: DelayedRenderer<T>
   nameWithType.vb: DelayedRenderer(Of T)
-- uid: Libplanet.Blockchain.Renderers.DelayedRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IRenderer{`0},Libplanet.Store.IStore,System.UInt32)
-  name: DelayedRenderer(IRenderer<T>, IStore, UInt32)
-  href: api/Libplanet.Blockchain.Renderers.DelayedRenderer-1.html#Libplanet_Blockchain_Renderers_DelayedRenderer_1__ctor_Libplanet_Blockchain_Renderers_IRenderer__0__Libplanet_Store_IStore_System_UInt32_
-  commentId: M:Libplanet.Blockchain.Renderers.DelayedRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IRenderer{`0},Libplanet.Store.IStore,System.UInt32)
-  name.vb: DelayedRenderer(IRenderer(Of T), IStore, UInt32)
-  fullName: Libplanet.Blockchain.Renderers.DelayedRenderer<T>.DelayedRenderer(Libplanet.Blockchain.Renderers.IRenderer<T>, Libplanet.Store.IStore, System.UInt32)
-  fullName.vb: Libplanet.Blockchain.Renderers.DelayedRenderer(Of T).DelayedRenderer(Libplanet.Blockchain.Renderers.IRenderer(Of T), Libplanet.Store.IStore, System.UInt32)
-  nameWithType: DelayedRenderer<T>.DelayedRenderer(IRenderer<T>, IStore, UInt32)
-  nameWithType.vb: DelayedRenderer(Of T).DelayedRenderer(IRenderer(Of T), IStore, UInt32)
+- uid: Libplanet.Blockchain.Renderers.DelayedRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IRenderer{`0},Libplanet.Store.IStore,System.Int32)
+  name: DelayedRenderer(IRenderer<T>, IStore, Int32)
+  href: api/Libplanet.Blockchain.Renderers.DelayedRenderer-1.html#Libplanet_Blockchain_Renderers_DelayedRenderer_1__ctor_Libplanet_Blockchain_Renderers_IRenderer__0__Libplanet_Store_IStore_System_Int32_
+  commentId: M:Libplanet.Blockchain.Renderers.DelayedRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IRenderer{`0},Libplanet.Store.IStore,System.Int32)
+  name.vb: DelayedRenderer(IRenderer(Of T), IStore, Int32)
+  fullName: Libplanet.Blockchain.Renderers.DelayedRenderer<T>.DelayedRenderer(Libplanet.Blockchain.Renderers.IRenderer<T>, Libplanet.Store.IStore, System.Int32)
+  fullName.vb: Libplanet.Blockchain.Renderers.DelayedRenderer(Of T).DelayedRenderer(Libplanet.Blockchain.Renderers.IRenderer(Of T), Libplanet.Store.IStore, System.Int32)
+  nameWithType: DelayedRenderer<T>.DelayedRenderer(IRenderer<T>, IStore, Int32)
+  nameWithType.vb: DelayedRenderer(Of T).DelayedRenderer(IRenderer(Of T), IStore, Int32)
 - uid: Libplanet.Blockchain.Renderers.DelayedRenderer`1.#ctor*
   name: DelayedRenderer
   href: api/Libplanet.Blockchain.Renderers.DelayedRenderer-1.html#Libplanet_Blockchain_Renderers_DelayedRenderer_1__ctor_
