@@ -376,6 +376,19 @@ references:
   isSpec: "True"
   fullName: Libplanet.Action.IActionContext.BlockIndex
   nameWithType: IActionContext.BlockIndex
+- uid: Libplanet.Action.IActionContext.GetUnconsumedContext
+  name: GetUnconsumedContext()
+  href: api/Libplanet.Action.IActionContext.html#Libplanet_Action_IActionContext_GetUnconsumedContext
+  commentId: M:Libplanet.Action.IActionContext.GetUnconsumedContext
+  fullName: Libplanet.Action.IActionContext.GetUnconsumedContext()
+  nameWithType: IActionContext.GetUnconsumedContext()
+- uid: Libplanet.Action.IActionContext.GetUnconsumedContext*
+  name: GetUnconsumedContext
+  href: api/Libplanet.Action.IActionContext.html#Libplanet_Action_IActionContext_GetUnconsumedContext_
+  commentId: Overload:Libplanet.Action.IActionContext.GetUnconsumedContext
+  isSpec: "True"
+  fullName: Libplanet.Action.IActionContext.GetUnconsumedContext
+  nameWithType: IActionContext.GetUnconsumedContext
 - uid: Libplanet.Action.IActionContext.Miner
   name: Miner
   href: api/Libplanet.Action.IActionContext.html#Libplanet_Action_IActionContext_Miner
