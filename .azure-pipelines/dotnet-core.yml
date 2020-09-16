@@ -61,13 +61,23 @@ steps:
     displayName: xunit *.Tests.dll
     inputs:
       targetType: inline
-      script: xunit $(testAssemblies) ${{ parameters.testArguments }}
+      script: |
+        set -vx
+        assemblies="$(testAssemblies)"
+        xunit \
+          $(echo -n "$assemblies" | tr -d '\n') \
+          ${{ parameters.testArguments }} \
+          -xml "$(Agent.TempDirectory)/xunit.xml"
     env:
       TURN_SERVER_URL: ${{ parameters.turnServerUrl }}
       LANG: ${{ parameters.locale }}
       LANGUAGE: ${{ parameters.locale }}
       LC_ALL: ${{ parameters.locale }}
     timeoutInMinutes: ${{ parameters.testTimeoutInMinutes }}
+  - task: PublishTestResults@2
+    inputs:
+      testRunner: XUnit
+      testResultsFiles: '$(Agent.TempDirectory)/xunit.xml'
 
 - ${{ if eq(parameters.useDotnetTest, true) }}:
   - task: DotNetCoreCLI@2

@@ -53,8 +53,14 @@ steps:
       ${{ parameters.testPrefix }} \
         xunit.runner.console.*/tools/net471/xunit.console.exe \
           $(testAssemblies) \
-          ${{ parameters.testArguments }}
+          ${{ parameters.testArguments }} \
+          -xml "$(Agent.TempDirectory)/xunit.xml"
   env:
     TURN_SERVER_URL: ${{ parameters.turnServerUrl }}
     MONO_THREADS_SUSPEND: preemptive
   timeoutInMinutes: ${{ parameters.testTimeoutInMinutes }}
+
+- task: PublishTestResults@2
+  inputs:
+    testRunner: XUnit
+    testResultsFiles: '$(Agent.TempDirectory)/xunit.xml'

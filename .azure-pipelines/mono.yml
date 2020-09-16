@@ -4,6 +4,7 @@ parameters:
   testCommand: "mono --server xunit.runner.console.*/tools/net471/xunit.console.exe"
   testArguments: -verbose -parallel none
   testTimeoutInMinutes: 12
+  publicTestResult: true
 
 steps:
 
@@ -39,14 +40,33 @@ steps:
           "`pwd`/$f"/bin/${{ parameters.configuration }}/net*/"$f".dll
       done
 
-- task: CmdLine@2
-  displayName: ${{ parameters.testDisplayName }}
-  inputs:
-    script: |
-      ${{ parameters.testCommand }} \
-        $(testAssemblies) \
-        ${{ parameters.testArguments }}
-  env:
-    TURN_SERVER_URL: ${{ parameters.turnServerUrl }}
-    MONO_THREADS_SUSPEND: preemptive
-  timeoutInMinutes: ${{ parameters.testTimeoutInMinutes }}
+- ${{ if eq(parameters.publicTestResult, false) }}:
+  - task: CmdLine@2
+    displayName: ${{ parameters.testDisplayName }}
+    inputs:
+      script: |
+        ${{ parameters.testCommand }} \
+          $(testAssemblies) \
+          ${{ parameters.testArguments }}
+    env:
+      TURN_SERVER_URL: ${{ parameters.turnServerUrl }}
+      MONO_THREADS_SUSPEND: preemptive
+    timeoutInMinutes: ${{ parameters.testTimeoutInMinutes }}
+
+- ${{ if eq(parameters.publicTestResult, true) }}:
+  - task: CmdLine@2
+    displayName: ${{ parameters.testDisplayName }}
+    inputs:
+      script: |
+        ${{ parameters.testCommand }} \
+          $(testAssemblies) \
+          ${{ parameters.testArguments }} \
+          -xml "$(Agent.TempDirectory)/xunit.xml"
+    env:
+      TURN_SERVER_URL: ${{ parameters.turnServerUrl }}
+      MONO_THREADS_SUSPEND: preemptive
+    timeoutInMinutes: ${{ parameters.testTimeoutInMinutes }}
+  - task: PublishTestResults@2
+    inputs:
+      testRunner: XUnit
+      testResultsFiles: '$(Agent.TempDirectory)/xunit.xml'
