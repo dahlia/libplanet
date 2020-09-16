@@ -72,14 +72,15 @@ From now on, rendering logic needs to be <em>injected</em> from outside
 through <code>BlockChain&lt;T&gt;.Renderers</code>, rather than <code>IAction</code>s knowing
 how to render themselves.
 <code>IRenderer&lt;T&gt;</code> also unified <code>BlockChain&lt;T&gt;.TipChanged</code> event,
-and introduced new events like <code>IRenderer&lt;T&gt;.RenderActionError()</code>
-and <code>IRenderer&lt;T&gt;.RenderReorg()</code>.
+and introduced new events like <code>IActionRenderer&lt;T&gt;.RenderActionError()</code>,
+<code>IActionRenderer&lt;T&gt;.RenderBlockEnd()</code>, <code>IRenderer&lt;T&gt;.RenderReorg()</code>, and
+<code>IRenderer&lt;T&gt;.RenderReorgEnd()</code>.
 [<a href="https://github.com/planetarium/libplanet/issues/860">#860</a>, <a href="https://github.com/planetarium/libplanet/pull/875">#875</a>, <a href="https://github.com/planetarium/libplanet/issues/959">#959</a>, <a href="https://github.com/planetarium/libplanet/pull/963">#963</a>]
 <ul>
 <li>Removed <code>IAction.Render()</code> method, which was replaced by
-<code>IRenderer&lt;T&gt;.RenderAction()</code>.</li>
+<code>IActionRenderer&lt;T&gt;.RenderAction()</code>.</li>
 <li>Removed <code>IAction.Unrender()</code> method, which was replaced by
-<code>IRenderer&lt;T&gt;.UnrenderAction()</code>.</li>
+<code>IActionRenderer&lt;T&gt;.UnrenderAction()</code>.</li>
 <li>Removed <code>BlockChain&lt;T&gt;.TipChanged</code> event, which was replaced by
 <code>IRenderer&lt;T&gt;.RenderBlock()</code>.</li>
 <li>Removed <code>PolymorphicAction&lt;T&gt;.Render()</code> and <code>Unrender()</code> methods.</li>
@@ -173,6 +174,10 @@ changed to <code>LookupStateReference(Guid, string, long)</code>.  [<a href="htt
 <code>Swarm&lt;T&gt;.FindSpecificPeerAsync(Address, int, TimeSpan?, CancellationToken)</code>.
 [<a href="https://github.com/planetarium/libplanet/pull/981">#981</a>]</li>
 <li>Added <code>IActionContext.GetUnconsumedContext()</code> method.  [<a href="https://github.com/planetarium/libplanet/pull/980">#980</a>]</li>
+<li>Added <code>ImmutableArray&lt;byte&gt;</code>-typed <code>stateRootHash</code> parameter to
+<code>BlockHeader</code> constructor.  [<a href="https://github.com/planetarium/libplanet/pull/986">#986</a>]</li>
+<li>Added <code>HashDigest&lt;SHA256&gt;</code>-typed <code>stateRootHash</code> parameter to
+<code>Block&lt;T&gt;()</code> constructor.  [<a href="https://github.com/planetarium/libplanet/pull/986">#986</a>]</li>
 </ul>
 <h3 id="backward-incompatible-network-protocol-changes">Backward-incompatible network protocol changes</h3>
 <ul>
@@ -191,13 +196,16 @@ replaced by a new <code>Pong</code> message type
 <li><code>Swarm&lt;T&gt;</code> became to have 5 more message types:
 <ul>
 <li><code>GetChainStatus</code> (<code>0x20</code>)  [<a href="https://github.com/planetarium/libplanet/issues/920">#920</a>, <a href="https://github.com/planetarium/libplanet/pull/930">#930</a>]</li>
-<li><code>ChainStatus</code> (<code>0x21</code>)  [<a href="https://github.com/planetarium/libplanet/issues/920">#920</a>, <a href="https://github.com/planetarium/libplanet/pull/930">#930</a>]</li>
+<li><code>ChainStatus</code> (<code>0x24</code>)  [<a href="https://github.com/planetarium/libplanet/issues/920">#920</a>, <a href="https://github.com/planetarium/libplanet/pull/930">#930</a>, <a href="https://github.com/planetarium/libplanet/issues/1003">#1003</a>, <a href="https://github.com/planetarium/libplanet/pull/1004">#1004</a>]</li>
 <li><code>GetBlockStates</code> (<code>0x22</code>)  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
 <li><code>BlockStates</code> (<code>0x23</code>)  [<a href="https://github.com/planetarium/libplanet/pull/946">#946</a>]</li>
 <li><code>DifferentVersion</code> (<code>0x30</code>)  [<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
 </ul>
 </li>
 <li>Every message now contains app protocol version in its header.  [<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
+<li>The existing <code>BlockHeaderMessage</code> message type (with the type number <code>0x0d</code>) was
+replaced by a new <code>BlockHeaderMessage</code> message type
+(with the type number <code>0x0c</code>).  [<a href="https://github.com/planetarium/libplanet/issues/1003">#1003</a>, <a href="https://github.com/planetarium/libplanet/pull/1004">#1004</a>]</li>
 </ul>
 <h3 id="backward-incompatible-storage-format-changes">Backward-incompatible storage format changes</h3>
 <ul>
@@ -269,6 +277,9 @@ by <code>stateCompleter: FungibleAssetStateCompleters&lt;T&gt;.Recalculate</code
 <li>(Libplanet.RocksDBStore) <code>RocksDBStore</code> became to implement
 <code>IBlockStatesStore</code>.  [<a href="https://github.com/planetarium/libplanet/pull/950">#950</a>]</li>
 <li>(Libplanet.RocksDBStore) Added <code>RocksDBKeyValueStore</code>.  [<a href="https://github.com/planetarium/libplanet/pull/939">#939</a>]</li>
+<li>Added <code>InvalidBlockStateRootHashException</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/986">#986</a>]</li>
+<li>Added <code>Block&lt;T&gt;.StateRootHash</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/986">#986</a>]</li>
+<li>Added <code>BlockHeader.StateRootHash</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/986">#986</a>]</li>
 </ul>
 <h3 id="behavioral-changes">Behavioral changes</h3>
 <ul>
@@ -300,6 +311,14 @@ instead of the longest chain.  [<a href="https://github.com/planetarium/libplane
 it fails to connect to all neighbors.  [<a href="https://github.com/planetarium/libplanet/pull/933">#933</a>]</li>
 <li><code>Swarm&lt;T&gt;</code> became to respond to the messages with different app protocol version.
 [<a href="https://github.com/planetarium/libplanet/pull/949">#949</a>]</li>
+<li><code>Swarm&lt;T&gt;.PreloadAsync()</code> became to execute the actions from the branch point
+rather than the genesis block when there is a branch point.  [<a href="https://github.com/planetarium/libplanet/pull/991">#991</a>]</li>
+<li><code>BlockPolicy&lt;T&gt;</code> became to validate <code>Block&lt;T&gt;.StateRootHash</code> property
+of a <code>Block&lt;T&gt;</code>.  [<a href="https://github.com/planetarium/libplanet/pull/986">#986</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became not to sync <code>Block&lt;T&gt;</code>s from the peers with
+different genesis block.  [<a href="https://github.com/planetarium/libplanet/issues/1003">#1003</a>, <a href="https://github.com/planetarium/libplanet/pull/1004">#1004</a>]</li>
+<li><code>Swarm&lt;T&gt;</code> became to ignore <code>BlockHeaderMessage</code> from the peers with
+different genesis block.  [<a href="https://github.com/planetarium/libplanet/issues/1003">#1003</a>, <a href="https://github.com/planetarium/libplanet/pull/1004">#1004</a>]</li>
 </ul>
 <h3 id="bug-fixes">Bug fixes</h3>
 <ul>
@@ -322,6 +341,10 @@ when the target block does not exist in the chain.  [<a href="https://github.com
 was once called.  [<a href="https://github.com/planetarium/libplanet/pull/965">#965</a>]</li>
 <li>Fixed a bug that <code>TurnClient</code> had thrown <code>InvalidOperationException</code> when
 reconnecting.  [<a href="https://github.com/planetarium/libplanet/issues/957">#957</a>, <a href="https://github.com/planetarium/libplanet/pull/972">#972</a>]</li>
+<li>Fixed a bug that <code>Swarm&lt;T&gt;</code> had not received block headers after failing
+to receive previous blocks.  [<a href="https://github.com/planetarium/libplanet/pull/996">#996</a>]</li>
+<li>Fixed a bug that <code>Swarm&lt;T&gt;</code> had thrown <code>InvalidGenesisBlockException</code>
+when reorg its chain repeatedly.  [<a href="https://github.com/planetarium/libplanet/pull/996">#996</a>]</li>
 </ul>
 <h3 id="cli-tools">CLI tools</h3>
 <ul>
