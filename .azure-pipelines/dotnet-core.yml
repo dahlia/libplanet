@@ -7,6 +7,48 @@ parameters:
 
 steps:
 
+- ${{ if eq(parameters.useDotnetTest, false) }}:
+  - task: Bash@3
+    displayName: List all test assemblies
+    inputs:
+      targetType: inline
+      script: |
+        set -evx
+        for f in *.Tests; do
+          printf '%q ' \
+            "$f"/bin/${{ parameters.configuration }}/net*/"$f".dll
+        done
+  - task: Bash@3
+    displayName: List all test assemblies
+    inputs:
+      targetType: inline
+      script: |
+        echo -n '##vso[task.setvariable variable=testAssemblies]'
+        for f in *.Tests; do
+          printf '%q ' \
+            "$f"/bin/${{ parameters.configuration }}/net*/"$f".dll
+        done
+  - task: Bash@3
+    displayName: xunit *.Tests.dll
+    inputs:
+      targetType: inline
+      script: |
+        set -evx
+        env
+        echo "BEFORE"
+        echo "CONTENTS: $[ variables.testAssemblies ]"
+        echo "AFTER"
+    env:
+      TURN_SERVER_URL: ${{ parameters.turnServerUrl }}
+      LANG: ${{ parameters.locale }}
+      LANGUAGE: ${{ parameters.locale }}
+      LC_ALL: ${{ parameters.locale }}
+    timeoutInMinutes: ${{ parameters.testTimeoutInMinutes }}
+  - task: PublishTestResults@2
+    inputs:
+      testRunner: XUnit
+      testResultsFiles: '$(Agent.TempDirectory)/xunit.xml'
+
 - task: Bash@3
   displayName: hooks/check-bom
   inputs:
@@ -45,39 +87,6 @@ steps:
     arguments: >-
       --configuration ${{ parameters.configuration }}
       -p:SkipSonar=true
-
-- ${{ if eq(parameters.useDotnetTest, false) }}:
-  - task: Bash@3
-    displayName: List all test assemblies
-    inputs:
-      targetType: inline
-      script: |
-        echo -n '##vso[task.setvariable variable=testAssemblies]'
-        for f in *.Tests; do
-          printf '%q ' \
-            "$f"/bin/${{ parameters.configuration }}/net*/"$f".dll
-        done
-  - task: Bash@3
-    displayName: xunit *.Tests.dll
-    inputs:
-      targetType: inline
-      script: |
-        set -vx
-        assemblies="$(testAssemblies)"
-        xunit \
-          $(echo -n "$assemblies" | tr -d '\n') \
-          ${{ parameters.testArguments }} \
-          -xml "$(Agent.TempDirectory)/xunit.xml"
-    env:
-      TURN_SERVER_URL: ${{ parameters.turnServerUrl }}
-      LANG: ${{ parameters.locale }}
-      LANGUAGE: ${{ parameters.locale }}
-      LC_ALL: ${{ parameters.locale }}
-    timeoutInMinutes: ${{ parameters.testTimeoutInMinutes }}
-  - task: PublishTestResults@2
-    inputs:
-      testRunner: XUnit
-      testResultsFiles: '$(Agent.TempDirectory)/xunit.xml'
 
 - ${{ if eq(parameters.useDotnetTest, true) }}:
   - task: DotNetCoreCLI@2
