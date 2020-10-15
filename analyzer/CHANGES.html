@@ -369,20 +369,13 @@ to receive previous blocks.  [<a href="https://github.com/planetarium/libplanet/
 <li>Fixed a bug that <code>Swarm&lt;T&gt;</code> had thrown <code>InvalidGenesisBlockException</code>
 when reorg its chain repeatedly.  [<a href="https://github.com/planetarium/libplanet/pull/996">#996</a>]</li>
 </ul>
-<h3 id="static-analyzer">Static analyzer</h3>
-<ul>
-<li>Introduced the <em>Libplanet.Analyzers</em> package, a Roslyn Analyzer, which
-checks if code has common mistakes prone to made with Libplanet-powered
-game apps, e.g., breaking determinism in <code>IAction</code> implementations.
-[<a href="https://github.com/planetarium/libplanet/pull/1028">#1028</a>]</li>
-</ul>
 <h3 id="cli-tools">CLI tools</h3>
 <ul>
 <li>The <code>planet</code> command became installable using <code>npm</code>.  [<a href="https://github.com/planetarium/libplanet/pull/923">#923</a>, <a href="https://github.com/planetarium/libplanet/pull/982">#982</a>]</li>
 <li>Fixed a bug that <kbd>^H</kbd> had not removed the rightmost character
 in passphrase prompts.  [<a href="https://github.com/planetarium/libplanet/issues/983">#983</a>, <a href="https://github.com/planetarium/libplanet/pull/984">#984</a>]</li>
-<li>Added a new sub-command <code>planet mpt</code>.  [<a href="https://github.com/planetarium/libplanet/pull/1023">#1023</a>, <a href="https://github.com/planetarium/libplanet/pull/1026">#1026</a>]</li>
-<li>Introduced a configuration file.  It's placed in:  [<a href="https://github.com/planetarium/libplanet/pull/1023">#1023</a>, <a href="https://github.com/planetarium/libplanet/pull/1026">#1026</a>]
+<li>Added a new sub-command <code>planet mpt</code>.  [<a href="https://github.com/planetarium/libplanet/pull/1023">#1023</a>]</li>
+<li>Introduced a configuration file.  It's placed in:  [<a href="https://github.com/planetarium/libplanet/pull/1023">#1023</a>]
 <ul>
 <li>Linux/macOS: <em><var>$XDG_CONFIG_HOME</var>/planetarium/cli.json</em></li>
 <li>Windows: <em><var>%AppData%</var>\planetarium\cli.json</em></li>
