@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "CHANGES.html",
-          "hash": "QirtVyzb4hw1+WC0HxCiDQ=="
+          "hash": "GT/T0cSvfy95UdEYx5SPoA=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,31 @@
       "output": {
         ".html": {
           "relative_path": "CONTRIBUTING.html",
-          "hash": "EnAl6kOhDih8Bq9wFNCjHw=="
+          "hash": "MJJtERthG+l0Vuk3M3J9qQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Libplanet.Analyzers/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "analyzer/README.html",
+          "hash": "xhAkamXOTcRWW1uvwRIEjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Libplanet.Analyzers/rules/LAA1001.md",
+      "output": {
+        ".html": {
+          "relative_path": "analyzer/rules/LAA1001.html",
+          "hash": "CRasmASZFQByx8Sg9tmR6g=="
         }
       },
       "is_incremental": false,
@@ -117,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Action.IAction.html",
-          "hash": "TsMV5Z8gbWAi3FfTbWoYJQ=="
+          "hash": "42ayc2x45gxJSe4TA14/ug=="
         }
       },
       "is_incremental": false,
@@ -177,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Action.PolymorphicAction-1.html",
-          "hash": "zp2bgfajMap0FxHBvCYqrg=="
+          "hash": "wijSNme1c4UaD6fGtj7O+Q=="
         }
       },
       "is_incremental": false,
@@ -1617,7 +1641,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Store.Trie.MerkleTrie.html",
-          "hash": "WnzCkaRp7DURpTgMQGqgSQ=="
+          "hash": "jHeKTfrI3wy+3Rs4fZQkMg=="
         }
       },
       "is_incremental": false,
@@ -1629,7 +1653,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Store.Trie.MerkleTrieExtensions.html",
-          "hash": "rHw/1eZWPpcqPk0o3vfogg=="
+          "hash": "6qgRjo1U3rJnQwuhksmUig=="
         }
       },
       "is_incremental": false,
@@ -1915,7 +1939,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "zmsmOjsJuyrvspLm+vLVdA=="
+          "hash": "16wLqoahPBAbxvJLYy6gcg=="
         }
       },
       "is_incremental": false,
@@ -1933,17 +1957,10 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 7,
+          "total_file_count": 9,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
@@ -1955,6 +1972,13 @@
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
