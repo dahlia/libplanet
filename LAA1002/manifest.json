@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "analyzer/rules/LAA1002.html",
-          "hash": "rUMMyrm1HNeiSvGdu9Zrqw=="
+          "hash": "KXlmhJw4qZx7EXpT9IyzvA=="
         }
       },
       "is_incremental": false,
@@ -1969,6 +1969,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
@@ -1979,13 +1986,6 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 148,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
