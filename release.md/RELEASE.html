@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Releasing guide | Libplanet </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Releasing guide | Libplanet ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="releasing-guide">Releasing guide</h1>
+
+<p>This document explains how to release a new version.  As the whole releasing
+process is half automated, this covers the other half humans should manually
+conduct.</p>
+<p>Note that there is the <a href="#quick-summary">quick summary</a> to remind those who have
+already read this document of check list on the bottom.  If it is your first
+time to this, you should read the whole of it first.</p>
+<h2 id="versioning">Versioning</h2>
+<p>The Libplanet project follows <a href="https://semver.org/">Semantic Versioning</a>.  If you are not familiar
+with this versioning system, you should read its specification first.  We will
+use the terms Semantic Versioning defines, e.g., major/minor/patch versions.</p>
+<h2 id="changelog">Changelog</h2>
+<p>Immediately before releasing a new version, you need to fill up the release
+date on the changelog of the version to release.  As long as there is nothing
+wrong with it, there should be a section of the unreleased version in
+the <a href="CHANGES.html"><em>CHANGES.md</em></a> file.</p>
+<p>For example, let's suppose you are going to release the version <em>1.2.3</em>.
+Then there should be a section like this:</p>
+<pre><code class="lang-commonmark">Version 1.2.3
+-------------
+
+To be released.
+
+...
+</code></pre>
+<p>You should replace the sentence <q>To be released</q> with
+<q>Released on ...</q> (put the release date instead):</p>
+<pre><code class="lang-commonmark">Version 1.2.3
+-------------
+
+Released on October 20, 2020.
+
+...
+</code></pre>
+<p>Also it's recommended to double check if the changelog has any formatting
+errors or is well rendered in the web browser.</p>
+<p>The commit that contains this change should have the message like
+<q>Release 1.2.3</q>:</p>
+<pre><code class="lang-bash">git commit -m &quot;Release 1.2.3&quot; CHANGES.md
+</code></pre>
+<p>See also these commits for example:</p>
+<ul>
+<li><a href="https://github.com/planetarium/libplanet/commit/ea1086d161c72f1ac5d0d6bbb8d67728034f6451">https://github.com/planetarium/libplanet/commit/ea1086d161c72f1ac5d0d6bbb8d67728034f6451</a></li>
+<li><a href="https://github.com/planetarium/libplanet/commit/eba9e7bd436c5186bb56851bc853105805ed747f">https://github.com/planetarium/libplanet/commit/eba9e7bd436c5186bb56851bc853105805ed747f</a></li>
+</ul>
+<p>The commit should not be pushed to the upstream repository, but be sent
+as a pull request instead.</p>
+<h2 id="tagging">Tagging</h2>
+<p>After the pull request (which filling up the release date on the changelog)
+being merged, you need to tag the pull request's merge commit.  The tag name
+must be the version number without any prefix or suffix, e.g., <code>1.2.3</code>;
+the tag message should be like <q>Libplanet 1.2.3</q>.</p>
+<pre><code class="lang-bash">git tag -m &quot;Libplanet 1.2.3&quot; 1.2.3
+</code></pre>
+<p>If you have a GPG (PGP) key, it is recommended to sign the tag using your key:</p>
+<pre><code class="lang-bash">git tag --sign -m &quot;Libplanet 1.2.3&quot; 1.2.3
+</code></pre>
+<p>Note that signed tags are visually distinct on GitHub:</p>
+<p><img src="https://git.io/JTRJs" alt="Signed tags appearing distinct on GitHub."></p>
+<p>The created tag should be directly pushed to the upstream repository.
+A tag push triggers GitHub Actions to release a new version.  The script
+automates the below processes:</p>
+<ul>
+<li>Listing a new version on <a href="https://github.com/planetarium/libplanet/releases">GitHub Releases</a>.  The corresponding changelog
+section is extracted to fill up the description of the release.
+Each release contains:
+<ul>
+<li>NuGet packages (<em>Libplanet*.nupkg</em>)</li>
+<li>Complete assemblies (<em>Libplanet*-net*.tar.xz</em>) for .NET Core and
+.NET Framework/Mono</li>
+<li>Prebuilt binaries of Libplanet Tools for Linux
+(<em>planet-*-linux-*.tar.xz</em>), macOS (<em>planet-*-osx-*.tar.xz</em>),
+and Windows (<em>planet-*-win-*.tar.xz</em>)</li>
+</ul>
+</li>
+<li>Submitting NuGet packages of a new version.  The packages are listed
+in the <a href="CONTRIBUTING.html#projects">Contributing guide</a>.</li>
+<li>Building a new version of docs and uploading it on
+<a href="https://docs.libplanet.net/">https://docs.libplanet.net/</a>, which is hosted by GitHub Pages.
+See also the <em>gh-pages</em> branch.</li>
+<li>Submitting Libplanet.Tools to npm <a href="https://www.npmjs.com/package/@planetarium/cli">@planetarium/cli</a>.</li>
+</ul>
+<p>In other words, you don't have to do them by yourself.  However, you should
+check twice if all these packages and docs are successfully submitted.
+If something went wrong, start the debugging from reading the build logs on
+GitHub Actions.</p>
+<h2 id="preparing-next">Preparing next</h2>
+<p>After a new tag is merged and all automated processes are successful,
+you need to prepare the next release.  This process is slightly tricky,
+because the process is vary depending on whether the released version
+was a major/minor release, or just a patch release.</p>
+<h3 id="patch-release">Patch release</h3>
+<p>If you have just released a patch version, it goes relatively simple.
+You should be on a maintenance branch, e.g., <em>1.2-maintenance</em>, and it should
+be up-to-date.</p>
+<p>First of all, you need to bump the patch version of the <code>&lt;VersionPrefix&gt;</code> field
+in the <em>Libplanet/Libplanet.csproj</em> file.  For example, if the version you have
+just released is <em>1.2.3</em>, bump it to <em>1.2.4</em> (3 + 1 = 4).</p>
+<p>Also the changelog section for the next patch release should be prepared; add
+a new section like this on the topmost next the to-level heading of
+the changelog document:</p>
+<pre><code class="lang-commonmark">Version 1.2.4
+-------------
+
+To be released.
+
+</code></pre>
+<p>Note that the release date for this is not decided.</p>
+<p>A simple message like <q>Version bump</q> is enough for a commit for above
+changes.</p>
+<p>See also the following commit for example:</p>
+<p><a href="https://github.com/planetarium/libplanet/commit/481b0e559b78bbc4027a88cc12698a1540bb4c5b">https://github.com/planetarium/libplanet/commit/481b0e559b78bbc4027a88cc12698a1540bb4c5b</a></p>
+<h2 id="quick-summary">Quick summary</h2>
+<p><em>This summary is not for first-time readers.  You should read the whole document
+at very first time.</em></p>
+<p>Note that X.Y.Z means a version to release.</p>
+<p>The check list to release a new version:</p>
+<ol>
+<li>Make sure if you are on the right branch (<em>X.Y-maintenance</em> for a patch
+release, and <em>main</em> for a major/minor release).</li>
+<li>Fill up the released date on the changelog.</li>
+<li><code>git commit -m Release X.Y.Z</code></li>
+<li>Send a pull request and wait until it is merged.</li>
+<li><code>git tag --sign -m &quot;Libplanet X.Y.Z&quot; X.Y.Z</code></li>
+<li><code>git push upstream X.Y.Z</code></li>
+<li>Check if the all automated processes are successful.
+<ul>
+<li>GitHub Releases</li>
+<li>NuGet</li>
+<li>npm</li>
+<li><a href="https://docs.libplanet.io/">https://docs.libplanet.io/</a> (GitHub Pages)</li>
+</ul>
+</li>
+</ol>
+<p>The check list to prepare the next release:</p>
+<ul>
+<li><p>If you have just released a <em>patch version</em>:</p>
+<ol>
+<li>Make sure if you are on the <em>X.Y-maintenance</em> branch and
+it is up-to-date.</li>
+<li>Bump <code>&lt;VersionPrefix&gt;</code>'s patch version on <em>Libplanet/Libplanet.csproj</em>.
+(For example, if you have just released <em>1.2.3</em>, bump it to <em>1.2.4</em>.)</li>
+<li>Add a new section for the next unreleased version to the changelog,
+with the sentence <q>To be released</q> (no release date).</li>
+<li>Commit the changes with a message <q>Version bump</q>.</li>
+<li>Send a pull request to the upstream's <em>X.Y-maintenance</em> branch.</li>
+</ol>
+</li>
+<li><p>If you have just released a <em>major/minor version</em>:</p>
+<ol>
+<li>Make sure if you are on the <em>main</em> branch and it is up-to-date.</li>
+<li>Create a new branch named <em>X.Y-maintenance</em> branch and make its <em>HEAD</em>
+refers to the upstream <em>main</em>.</li>
+<li>Bump <code>&lt;VersionPrefix&gt;</code> on <em>Libplanet/Libplanet.csproj</em> to <em>X.Y.1</em>.</li>
+<li>Add a new section for the next unreleased version (<em>X.Y.1</em>) to the
+changelog, with the sentence <q>To be released</q> (no release date).</li>
+<li>Commit the changes with a message <q>Version bump</q>.</li>
+<li><code>git push upstream X.Y-maintenance</code></li>
+<li>Switch to the <em>main</em> branch.</li>
+<li>Bump <code>&lt;VersionPrefix&gt;</code>'s minor version on <em>Libplanet/Libplanet.csproj</em>.
+(For example, if you have just released <em>1.2.0</em>, bump it to <em>1.3.0</em>.)</li>
+<li>Add a new section for the next unreleased minor version to the
+changelog, with the sentence <q>To be released</q> (no release date).</li>
+<li>Commit the changes with a message <q>Version bump</q>.</li>
+<li>Send a pull request to the upstream's <em>X.Y-maintenance</em> branch.</li>
+</ol>
+</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dahlia/libplanet/blob/release.md/RELEASE.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 2019–2020 <a href="https://planetariumhq.com/">Planetarium</a>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
