@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Assets.FungibleAssetValue.html",
-          "hash": "OEhg+iJoSVIAFCN2ECad9Q=="
+          "hash": "IiX3U1bn9fEh7Uyuku6VEg=="
         }
       },
       "is_incremental": false,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Blocks.InvalidBlockException.html",
-          "hash": "GW154p0rTXVaJLT8TLgiZw=="
+          "hash": "BZzAa1WgRAo/7ylyNVo6lw=="
         }
       },
       "is_incremental": false,
@@ -873,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.HashDigest-1.html",
-          "hash": "EXxCzf46uN/3tEipIu/H6g=="
+          "hash": "ZqD75scGJckFsYjoXADbzg=="
         }
       },
       "is_incremental": false,
@@ -885,7 +885,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.HashDigestExtensions.html",
-          "hash": "n854yj3m+NKMtsrJoupZmw=="
+          "hash": "R5gVhhIOkImH7W03HBr/jQ=="
         }
       },
       "is_incremental": false,
@@ -1053,7 +1053,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.KeyStore.KeyStoreException.html",
-          "hash": "Fj62v7v1mhnAbXGkualK2Q=="
+          "hash": "eieU8LJrTsJxD8PzKFelkw=="
         }
       },
       "is_incremental": false,
@@ -1533,7 +1533,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Store.DefaultStore.html",
-          "hash": "kdlvJM107Yf2DziV2TQJUQ=="
+          "hash": "NT37mmRwP1DPxqjqsMeYhQ=="
         }
       },
       "is_incremental": false,
@@ -1809,7 +1809,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Libplanet.Tx.Transaction-1.html",
-          "hash": "NDR+kZqeQH7CFwVwD/1QSA=="
+          "hash": "8R0BBiYPurcBGFgN6oV4MQ=="
         }
       },
       "is_incremental": false,
@@ -1981,6 +1981,13 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
@@ -1991,13 +1998,6 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 148,
-          "skipped_file_count": 0
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
