@@ -65,15 +65,16 @@
 <p><em>(The current process to release a new version still has many manual tasks.
 These should be further automated.)</em></p>
 <p>This document explains how to release a new version.  As the whole releasing
-process is half automated, this covers the other half that humans should manually
-conduct.</p>
+process is half automated, this covers the other half that humans should
+manually conduct.</p>
 <p>Note that there is the <a href="#quick-summary">quick summary</a> to remind those who have
 already read this document of checklist on the bottom.  If it is your first
 time to this, you should read the whole document first.</p>
 <h2 id="versioning">Versioning</h2>
 <p>The Libplanet project follows <a href="https://semver.org/">Semantic Versioning</a>.  If you are not familiar
 with this versioning system, you should read its specification first.  We will
-use the terms that Semantic Versioning defines, e.g., major/minor/patch versions.</p>
+use the terms that Semantic Versioning defines, e.g., major/minor/patch
+versions.</p>
 <p>Note that we use two kinds of branches in the project:</p>
 <ul>
 <li><p><em>main</em>: The unreleased code for the next <em>major</em>/<em>minor</em> version.
@@ -187,9 +188,9 @@ Then, merge the tag (e.g., <em>1.2.3</em>) you made above into the <em>main</em>
 git fetch upstream &amp;&amp; git reset --hard upstream/main
 git merge 1.2.3
 </code></pre>
-<p>Trying to merge like above will most likely have conflicts on the <em>CHANGES.md</em> file,
-because both branches (<em>main</em> and <em><var>X</var>.<var>Y</var>-maintenance</em>) have
-their own topmost section in the changelog.  However, this can be simply
+<p>Trying to merge like above will most likely have conflicts on the <em>CHANGES.md</em>
+file, because both branches (<em>main</em> and <em><var>X</var>.<var>Y</var>-maintenance</em>)
+have their own topmost section in the changelog.  However, this can be simply
 resolved: leave both sections and place the <em>main</em> branch's section topmost.</p>
 <p>After successful merging, send a pull request of it to the upstream's <em>main</em>
 branch.  See also the below commits for example:</p>
