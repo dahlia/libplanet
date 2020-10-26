@@ -261,6 +261,7 @@ method.  Use <code>SwarmOptions.BlockDownloadTimeout</code> instead.  [<a href="
 <li>Added <code>BlockHeader.EvaluationDigest</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
 <li>Added <code>Block&lt;T&gt;.PreEvaluationHash</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
 <li>Added <code>BlockHeader.PreEvaluationHash</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
+<li>Added <code>Transaction&lt;T&gt;.BytesLength</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/201">#201</a>, <a href="https://github.com/planetarium/libplanet/pull/1050">#1050</a>]</li>
 <li>Added <code>HashDigest(ImmutableArray&lt;byte&gt;)</code> constructor.  [<a href="https://github.com/planetarium/libplanet/issues/931">#931</a>, <a href="https://github.com/planetarium/libplanet/pull/935">#935</a>]</li>
 <li>Incomplete block states became able to be handled in more flexible way.
 [<a href="https://github.com/planetarium/libplanet/issues/929">#929</a>, <a href="https://github.com/planetarium/libplanet/pull/934">#934</a>, <a href="https://github.com/planetarium/libplanet/pull/946">#946</a>, <a href="https://github.com/planetarium/libplanet/pull/954">#954</a>]
@@ -314,6 +315,8 @@ by <code>stateCompleter: FungibleAssetStateCompleters&lt;T&gt;.Recalculate</code
 <li>Added <code>MerkleTrieExtensions</code> static class.  [<a href="https://github.com/planetarium/libplanet/pull/1023">#1023</a>]</li>
 <li>Added <code>IAccountStateDelta.PreviousStateRootHash</code> property to
 calculate states until previous action as state root hash.  [<a href="https://github.com/planetarium/libplanet/pull/1030">#1030</a>]</li>
+<li>Added <code>UnexpectedlyTerminatedActionException.PreviousStateRootHash</code>
+property.  [<a href="https://github.com/planetarium/libplanet/pull/1032">#1032</a>]</li>
 </ul>
 <h3 id="behavioral-changes">Behavioral changes</h3>
 <ul>
