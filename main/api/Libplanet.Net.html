@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Libplanet.Net
    | Libplanet ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -99,6 +99,9 @@
       <section></section>
       <h4><a class="xref" href="Libplanet.Net.InvalidStateTargetException.html">InvalidStateTargetException</a></h4>
       <section></section>
+      <h4><a class="xref" href="Libplanet.Net.NetMQTransport.html">NetMQTransport</a></h4>
+      <section><p>Implementation of <a class="xref" href="Libplanet.Net.ITransport.html">ITransport</a> interface using NetMQ.</p>
+</section>
       <h4><a class="xref" href="Libplanet.Net.NoSwarmContextException.html">NoSwarmContextException</a></h4>
       <section></section>
       <h4><a class="xref" href="Libplanet.Net.Peer.html">Peer</a></h4>
@@ -108,10 +111,6 @@
       <section></section>
       <h4><a class="xref" href="Libplanet.Net.PeerState.html">PeerState</a></h4>
       <section><p>Represents a <span class="xref">Libplanet.Net.PeerState.Peer</span>'s state in the routing table.</p>
-</section>
-      <h4><a class="xref" href="Libplanet.Net.PreloadBlockDownloadFailEventArgs.html">PreloadBlockDownloadFailEventArgs</a></h4>
-      <section><p>The event data that provides value to the event handler which is triggered when the block
-downloading fails during preloading.</p>
 </section>
       <h4><a class="xref" href="Libplanet.Net.PreloadState.html">PreloadState</a></h4>
       <section></section>
@@ -136,8 +135,17 @@ has its <a class="xref" href="Libplanet.Net.AppProtocolVersion.html#Libplanet_Ne
 <a class="xref" href="Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Verify_Libplanet_Crypto_PublicKey_">Verify(PublicKey)</a> method purposes to determine whether an information
 is claimed by its corresponding <a class="xref" href="Libplanet.Net.AppProtocolVersion.html#Libplanet_Net_AppProtocolVersion_Signer">Signer</a> in fact.</p>
 </section>
+      <h4><a class="xref" href="Libplanet.Net.BlockDemand.html">BlockDemand</a></h4>
+      <section><p>Struct represents <a class="xref" href="Libplanet.Net.Swarm-1.html">Swarm&lt;T&gt;</a>'s block demand status.</p>
+</section>
       <h4><a class="xref" href="Libplanet.Net.PeerChainState.html">PeerChainState</a></h4>
       <section><p>The blockchain state of <a class="xref" href="Libplanet.Net.BoundPeer.html">BoundPeer</a>.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Libplanet.Net.ITransport.html">ITransport</a></h4>
+      <section><p>An interface to handle peer-to-peer networking, including <a class="xref" href="Libplanet.Net.Messages.Message.html">Message</a> exchanging
+and <a class="xref" href="Libplanet.Net.Peer.html">Peer</a> managing.</p>
 </section>
     <h3 id="delegates">Delegates
   </h3>
@@ -155,7 +163,8 @@ a peer with different <a class="xref" href="Libplanet.Net.AppProtocolVersion.htm
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
@@ -169,7 +178,7 @@ a peer with different <a class="xref" href="Libplanet.Net.AppProtocolVersion.htm
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2019–2020 <a href="https://planetariumhq.com/">Planetarium</a>
+            Copyright © 2018–2021 <a href="https://planetariumhq.com/">Planetarium</a>
             
           </div>
         </div>

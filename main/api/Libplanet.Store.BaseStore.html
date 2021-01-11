@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class BaseStore
    | Libplanet ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.56.6.0">
     
     <link rel="shortcut icon" href="../images/favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -79,7 +79,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">BaseStore</span></div>
-      <div class="level2"><a class="xref" href="Libplanet.Store.BaseBlockStatesStore.html">BaseBlockStatesStore</a></div>
+      <div class="level2"><a class="xref" href="Libplanet.Store.DefaultStore.html">DefaultStore</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -1140,7 +1140,8 @@ the counter.  1 by default.</p>
     <tbody>
       <tr>
         <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Libplanet.Tx.TxId.html">TxId</a>&gt;</td>
-        <td><p>Staged <a class="xref" href="Libplanet.Tx.TxId.html">TxId</a>s.</p>
+        <td><p>Staged <a class="xref" href="Libplanet.Tx.TxId.html">TxId</a>s.  The earliest staged <a class="xref" href="Libplanet.Tx.TxId.html">TxId</a> goes first,
+and the latest staged <a class="xref" href="Libplanet.Tx.TxId.html">TxId</a> goes last.</p>
 </td>
       </tr>
     </tbody>
@@ -1273,7 +1274,9 @@ than 0.  (If there are underlying entries having zero nonces these must be hidde
   </span>
   <a id="Libplanet_Store_BaseStore_PutBlock_" data-uid="Libplanet.Store.BaseStore.PutBlock*"></a>
   <h4 id="Libplanet_Store_BaseStore_PutBlock__1_Libplanet_Blocks_Block___0__" data-uid="Libplanet.Store.BaseStore.PutBlock``1(Libplanet.Blocks.Block{``0})">PutBlock&lt;T&gt;(Block&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Puts the given <code data-dev-comment-type="paramref" class="paramref">block</code> in to the store.
+If the same block already exists in the store it does nothing.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1293,7 +1296,8 @@ than 0.  (If there are underlying entries having zero nonces these must be hidde
       <tr>
         <td><a class="xref" href="Libplanet.Blocks.Block-1.html">Block</a>&lt;T&gt;</td>
         <td><span class="parametername">block</span></td>
-        <td></td>
+        <td><p>A <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a> to put into the store.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1308,7 +1312,9 @@ than 0.  (If there are underlying entries having zero nonces these must be hidde
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>An <a class="xref" href="Libplanet.Action.IAction.html">IAction</a> class used with
+<code data-dev-comment-type="paramref" class="paramref">block</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1489,7 +1495,8 @@ a next <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a> t
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
@@ -1503,7 +1510,7 @@ a next <a class="xref" href="Libplanet.Blocks.Block-1.html">Block&lt;T&gt;</a> t
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            Copyright © 2019–2020 <a href="https://planetariumhq.com/">Planetarium</a>
+            Copyright © 2018–2021 <a href="https://planetariumhq.com/">Planetarium</a>
             
           </div>
         </div>
