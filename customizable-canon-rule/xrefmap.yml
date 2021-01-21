@@ -4079,15 +4079,15 @@ references:
   fullName.vb: Libplanet.Blockchain.Renderers.DelayedActionRenderer(Of T)
   nameWithType: DelayedActionRenderer<T>
   nameWithType.vb: DelayedActionRenderer(Of T)
-- uid: Libplanet.Blockchain.Renderers.DelayedActionRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IActionRenderer{`0},System.Collections.Generic.IComparer{Libplanet.Blocks.IBlockExcerpt},Libplanet.Store.IStore,System.Int32)
-  name: DelayedActionRenderer(IActionRenderer<T>, IComparer<IBlockExcerpt>, IStore, Int32)
-  href: api/Libplanet.Blockchain.Renderers.DelayedActionRenderer-1.html#Libplanet_Blockchain_Renderers_DelayedActionRenderer_1__ctor_Libplanet_Blockchain_Renderers_IActionRenderer__0__System_Collections_Generic_IComparer_Libplanet_Blocks_IBlockExcerpt__Libplanet_Store_IStore_System_Int32_
-  commentId: M:Libplanet.Blockchain.Renderers.DelayedActionRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IActionRenderer{`0},System.Collections.Generic.IComparer{Libplanet.Blocks.IBlockExcerpt},Libplanet.Store.IStore,System.Int32)
-  name.vb: DelayedActionRenderer(IActionRenderer(Of T), IComparer(Of IBlockExcerpt), IStore, Int32)
-  fullName: Libplanet.Blockchain.Renderers.DelayedActionRenderer<T>.DelayedActionRenderer(Libplanet.Blockchain.Renderers.IActionRenderer<T>, System.Collections.Generic.IComparer<Libplanet.Blocks.IBlockExcerpt>, Libplanet.Store.IStore, System.Int32)
-  fullName.vb: Libplanet.Blockchain.Renderers.DelayedActionRenderer(Of T).DelayedActionRenderer(Libplanet.Blockchain.Renderers.IActionRenderer(Of T), System.Collections.Generic.IComparer(Of Libplanet.Blocks.IBlockExcerpt), Libplanet.Store.IStore, System.Int32)
-  nameWithType: DelayedActionRenderer<T>.DelayedActionRenderer(IActionRenderer<T>, IComparer<IBlockExcerpt>, IStore, Int32)
-  nameWithType.vb: DelayedActionRenderer(Of T).DelayedActionRenderer(IActionRenderer(Of T), IComparer(Of IBlockExcerpt), IStore, Int32)
+- uid: Libplanet.Blockchain.Renderers.DelayedActionRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IActionRenderer{`0},System.Collections.Generic.IComparer{Libplanet.Blocks.IBlockExcerpt},Libplanet.Store.IStore,System.Int32,System.Int64)
+  name: DelayedActionRenderer(IActionRenderer<T>, IComparer<IBlockExcerpt>, IStore, Int32, Int64)
+  href: api/Libplanet.Blockchain.Renderers.DelayedActionRenderer-1.html#Libplanet_Blockchain_Renderers_DelayedActionRenderer_1__ctor_Libplanet_Blockchain_Renderers_IActionRenderer__0__System_Collections_Generic_IComparer_Libplanet_Blocks_IBlockExcerpt__Libplanet_Store_IStore_System_Int32_System_Int64_
+  commentId: M:Libplanet.Blockchain.Renderers.DelayedActionRenderer`1.#ctor(Libplanet.Blockchain.Renderers.IActionRenderer{`0},System.Collections.Generic.IComparer{Libplanet.Blocks.IBlockExcerpt},Libplanet.Store.IStore,System.Int32,System.Int64)
+  name.vb: DelayedActionRenderer(IActionRenderer(Of T), IComparer(Of IBlockExcerpt), IStore, Int32, Int64)
+  fullName: Libplanet.Blockchain.Renderers.DelayedActionRenderer<T>.DelayedActionRenderer(Libplanet.Blockchain.Renderers.IActionRenderer<T>, System.Collections.Generic.IComparer<Libplanet.Blocks.IBlockExcerpt>, Libplanet.Store.IStore, System.Int32, System.Int64)
+  fullName.vb: Libplanet.Blockchain.Renderers.DelayedActionRenderer(Of T).DelayedActionRenderer(Libplanet.Blockchain.Renderers.IActionRenderer(Of T), System.Collections.Generic.IComparer(Of Libplanet.Blocks.IBlockExcerpt), Libplanet.Store.IStore, System.Int32, System.Int64)
+  nameWithType: DelayedActionRenderer<T>.DelayedActionRenderer(IActionRenderer<T>, IComparer<IBlockExcerpt>, IStore, Int32, Int64)
+  nameWithType.vb: DelayedActionRenderer(Of T).DelayedActionRenderer(IActionRenderer(Of T), IComparer(Of IBlockExcerpt), IStore, Int32, Int64)
 - uid: Libplanet.Blockchain.Renderers.DelayedActionRenderer`1.#ctor*
   name: DelayedActionRenderer
   href: api/Libplanet.Blockchain.Renderers.DelayedActionRenderer-1.html#Libplanet_Blockchain_Renderers_DelayedActionRenderer_1__ctor_
