@@ -5686,6 +5686,25 @@ references:
   isSpec: "True"
   fullName: Libplanet.Blocks.BlockExceedingTransactionsException.MaxTransactionsPerBlock
   nameWithType: BlockExceedingTransactionsException.MaxTransactionsPerBlock
+- uid: Libplanet.Blocks.BlockExcerpt
+  name: BlockExcerpt
+  href: api/Libplanet.Blocks.BlockExcerpt.html
+  commentId: T:Libplanet.Blocks.BlockExcerpt
+  fullName: Libplanet.Blocks.BlockExcerpt
+  nameWithType: BlockExcerpt
+- uid: Libplanet.Blocks.BlockExcerpt.ToExcerptString(Libplanet.Blocks.IBlockExcerpt)
+  name: ToExcerptString(IBlockExcerpt)
+  href: api/Libplanet.Blocks.BlockExcerpt.html#Libplanet_Blocks_BlockExcerpt_ToExcerptString_Libplanet_Blocks_IBlockExcerpt_
+  commentId: M:Libplanet.Blocks.BlockExcerpt.ToExcerptString(Libplanet.Blocks.IBlockExcerpt)
+  fullName: Libplanet.Blocks.BlockExcerpt.ToExcerptString(Libplanet.Blocks.IBlockExcerpt)
+  nameWithType: BlockExcerpt.ToExcerptString(IBlockExcerpt)
+- uid: Libplanet.Blocks.BlockExcerpt.ToExcerptString*
+  name: ToExcerptString
+  href: api/Libplanet.Blocks.BlockExcerpt.html#Libplanet_Blocks_BlockExcerpt_ToExcerptString_
+  commentId: Overload:Libplanet.Blocks.BlockExcerpt.ToExcerptString
+  isSpec: "True"
+  fullName: Libplanet.Blocks.BlockExcerpt.ToExcerptString
+  nameWithType: BlockExcerpt.ToExcerptString
 - uid: Libplanet.Blocks.BlockHeader
   name: BlockHeader
   href: api/Libplanet.Blocks.BlockHeader.html

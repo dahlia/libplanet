@@ -81,6 +81,8 @@ constructors.  [<a href="https://github.com/planetarium/libplanet/issues/1155">#
 <code>DelayedRenderer()</code> constructor.  [<a href="https://github.com/planetarium/libplanet/issues/1155">#1155</a>, <a href="https://github.com/planetarium/libplanet/pull/1165">#1165</a>]</li>
 <li>Added <code>canonicalChainComparer</code> as the second parameter to
 <code>DelayedActionRenderer()</code> constructor.  [<a href="https://github.com/planetarium/libplanet/issues/1155">#1155</a>, <a href="https://github.com/planetarium/libplanet/pull/1165">#1165</a>]</li>
+<li>Added <code>reorgResistantHeight</code> parameter into <code>DelayedActionRenderer&lt;T&gt;()</code>
+constructor. [<a href="https://github.com/planetarium/libplanet/pull/1163">#1163</a>]</li>
 <li>Removed <code>TransactionSet&lt;T&gt;</code> class.  [<a href="https://github.com/planetarium/libplanet/pull/1165">#1165</a>]</li>
 <li>Removed <code>IBlockStatesStore</code> interface.  [<a href="https://github.com/planetarium/libplanet/pull/1117">#1117</a>]</li>
 <li>Removed <code>BaseBlockStatesStore</code> abstract class.  [<a href="https://github.com/planetarium/libplanet/pull/1117">#1117</a>]</li>
@@ -114,6 +116,7 @@ interface.  [<a href="https://github.com/planetarium/libplanet/pull/1117">#1117<
 <li>Added <code>Block&lt;T&gt;.Header</code> property.  [<a href="https://github.com/planetarium/libplanet/pull/1070">#1070</a>, <a href="https://github.com/planetarium/libplanet/pull/1102">#1102</a>]</li>
 <li>Added <code>BlockHeader.ProtocolVersion</code> property.  [<a href="https://github.com/planetarium/libplanet/issues/1142">#1142</a>, <a href="https://github.com/planetarium/libplanet/pull/1147">#1147</a>]</li>
 <li>Added <code>IBlockExcerpt</code> interface.  [<a href="https://github.com/planetarium/libplanet/issues/1155">#1155</a>, <a href="https://github.com/planetarium/libplanet/pull/1165">#1165</a>]</li>
+<li>Added <code>BlockExcerpt</code> class.  [<a href="https://github.com/planetarium/libplanet/issues/1155">#1155</a>, <a href="https://github.com/planetarium/libplanet/pull/1165">#1165</a>]</li>
 <li><code>Block&lt;T&gt;</code> became to implement <code>IBlockExceprt</code> interface.
 [<a href="https://github.com/planetarium/libplanet/issues/1155">#1155</a>, <a href="https://github.com/planetarium/libplanet/pull/1165">#1165</a>]</li>
 <li><code>BlockHeader</code> became to implement <code>IBlockExceprt</code> interface.
@@ -170,8 +173,6 @@ class.  [<a href="https://github.com/planetarium/libplanet/pull/1119">#1119</a>]
 <li>Added <code>IProtocol</code> interface.  [<a href="https://github.com/planetarium/libplanet/pull/1120">#1120</a>]</li>
 <li>Added <code>KademliaProtocol</code> class which implements <code>IProtocol</code>.
 [<a href="https://github.com/planetarium/libplanet/pull/1120">#1120</a>, <a href="https://github.com/planetarium/libplanet/pull/1135">#1135</a>]</li>
-<li>Added <code>reorgResistantHeight</code> parameters into <code>DelayedActionRenderer&lt;T&gt;()</code>
-constructor. [<a href="https://github.com/planetarium/libplanet/pull/1163">#1163</a>]</li>
 </ul>
 <h3 id="behavioral-changes">Behavioral changes</h3>
 <ul>
