@@ -78,6 +78,7 @@ To be released.
  -  Added `Block<T>.ProtocolVersion` property.  [[#1142], [#1147]]
  -  Added `Block<T>.Header` property.  [[#1070], [#1102]]
  -  Added `BlockHeader.ProtocolVersion` property.  [[#1142], [#1147]]
+ -  Added `BlockHash` struct.  [[#1192], [#1197]]
  -  Added `IBlockExcerpt` interface.  [[#1155], [#1165], [#1170]]
  -  Added `BlockExcerpt` static class.  [[#1155], [#1165], [#1170], [#1184]]
  -  `Block<T>` became to implement `IBlockExceprt` interface.
@@ -260,7 +261,10 @@ To be released.
 [#1184]: https://github.com/planetarium/libplanet/pull/1184
 [#1185]: https://github.com/planetarium/libplanet/pull/1185
 [#1186]: https://github.com/planetarium/libplanet/pull/1186
+[#1192]: https://github.com/planetarium/libplanet/issues/1192
 [#1194]: https://github.com/planetarium/libplanet/pull/1194
+[#1197]: https://github.com/planetarium/libplanet/pull/1197
+
 
 Version 0.10.3
 --------------
