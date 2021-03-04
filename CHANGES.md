@@ -79,6 +79,7 @@ To be released.
  -  Added `Block<T>.Header` property.  [[#1070], [#1102]]
  -  Added `BlockHeader.ProtocolVersion` property.  [[#1142], [#1147]]
  -  Added `BlockHash` struct.  [[#1192], [#1197]]
+ -  Added `HashDigest<T>.DeriveFrom()` method.  [[#1197]]
  -  Added `IBlockExcerpt` interface.  [[#1155], [#1165], [#1170]]
  -  Added `BlockExcerpt` static class.  [[#1155], [#1165], [#1170], [#1184]]
  -  `Block<T>` became to implement `IBlockExceprt` interface.
