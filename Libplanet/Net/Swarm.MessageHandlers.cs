@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
 using Libplanet.Blockchain.Policies;
@@ -51,7 +50,7 @@ namespace Libplanet.Net
                         FindNextHashesChunkSize
                     ).Deconstruct(
                         out long? offset,
-                        out IReadOnlyList<HashDigest<SHA256>> hashes
+                        out IReadOnlyList<BlockHash> hashes
                     );
                     var reply = new BlockHashes(offset, hashes)
                     {
@@ -233,13 +232,13 @@ namespace Libplanet.Net
 
             var blocks = new List<byte[]>();
 
-            List<HashDigest<SHA256>> hashes = getData.BlockHashes.ToList();
+            List<BlockHash> hashes = getData.BlockHashes.ToList();
             int i = 1;
             int total = hashes.Count;
             const string logMsg =
                 "Fetching a block #{Index}/{Total} ({Hash}) to include to " +
                 "a reply to {Identity}...";
-            foreach (HashDigest<SHA256> hash in hashes)
+            foreach (BlockHash hash in hashes)
             {
                 _logger.Verbose(logMsg, i, total, hash, identityHex);
                 if (_store.ContainsBlock(hash))

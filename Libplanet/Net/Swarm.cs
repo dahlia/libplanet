@@ -6,7 +6,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Net;
 using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
 using AsyncIO;
@@ -298,8 +297,7 @@ namespace Libplanet.Net
         /// a lot of calls to methods of <see cref="BlockChain{T}.Renderers"/> in a short
         /// period of time.  This can lead a game startup slow.  If you want to omit rendering of
         /// these actions in the behind blocks use <see cref=
-        /// "PreloadAsync(TimeSpan?, IProgress{PreloadState},
-        /// CancellationToken)"
+        /// "PreloadAsync(TimeSpan?, IProgress{PreloadState}, CancellationToken)"
         /// /> method too.</remarks>
         public async Task StartAsync(
             int millisecondsDialTimeout = 15000,
@@ -336,8 +334,7 @@ namespace Libplanet.Net
         /// a lot of calls to methods of <see cref="BlockChain{T}.Renderers"/> in a short
         /// period of time.  This can lead a game startup slow.  If you want to omit rendering of
         /// these actions in the behind blocks use <see cref=
-        /// "PreloadAsync(TimeSpan?, IProgress{PreloadState},
-        /// CancellationToken)"
+        /// "PreloadAsync(TimeSpan?, IProgress{PreloadState}, CancellationToken)"
         /// /> method too.</remarks>
         public async Task StartAsync(
             TimeSpan dialTimeout,
@@ -588,7 +585,7 @@ namespace Libplanet.Net
 
                 await foreach (var pair in demandBlockHashes)
                 {
-                    (long index, HashDigest<SHA256> hash) = pair;
+                    (long index, BlockHash hash) = pair;
                     cancellationToken.ThrowIfCancellationRequested();
 
                     if (index == 0 && !hash.Equals(workspace.Genesis.Hash))
@@ -723,7 +720,7 @@ namespace Libplanet.Net
                     if (deltaBlocks.First is LinkedListNode<Block<T>> node)
                     {
                         Block<T> b = node.Value;
-                        if (b.PreviousHash is HashDigest<SHA256> p)
+                        if (b.PreviousHash is { } p)
                         {
                             blockToAdd = wStore.GetBlock<T>(p);
                         }
@@ -752,7 +749,7 @@ namespace Libplanet.Net
                 if (deltaBlocks.First is LinkedListNode<Block<T>> deltaBottom)
                 {
                     Block<T> bottomBlock = deltaBottom.Value;
-                    if (bottomBlock.PreviousHash is HashDigest<SHA256> bp)
+                    if (bottomBlock.PreviousHash is { } bp)
                     {
                         branchpoint = workspace[bp];
                         workspace = workspace.Fork(bp);
@@ -794,7 +791,7 @@ namespace Libplanet.Net
                     else
                     {
                         Block<T> first = deltaBlocks.First.Value, last = deltaBlocks.Last.Value;
-                        HashDigest<SHA256> g = wStore.IndexBlockHash(wId, 0L).Value;
+                        BlockHash g = wStore.IndexBlockHash(wId, 0L).Value;
                         throw new SwarmException(
                             $"Downloaded blocks (#{first.Index} {first.Hash}\u2013" +
                             $"#{last.Index} {last.Hash}) are incompatible with the existing " +
@@ -927,10 +924,10 @@ namespace Libplanet.Net
         }
 
         // FIXME: This would be better if it's merged with GetDemandBlockHashes
-        internal async IAsyncEnumerable<Tuple<long, HashDigest<SHA256>>> GetBlockHashes(
+        internal async IAsyncEnumerable<Tuple<long, BlockHash>> GetBlockHashes(
             BoundPeer peer,
             BlockLocator locator,
-            HashDigest<SHA256>? stop,
+            BlockHash? stop,
             [EnumeratorCancellation] CancellationToken cancellationToken = default
         )
         {
@@ -947,16 +944,16 @@ namespace Libplanet.Net
             {
                 if (blockHashes.StartIndex is long idx)
                 {
-                    HashDigest<SHA256>[] hashes = blockHashes.Hashes.ToArray();
+                    BlockHash[] hashes = blockHashes.Hashes.ToArray();
                     _logger.Debug(
                         $"Received a {nameof(BlockHashes)} message with an offset index " +
                         "{OffsetIndex} (total {HashesLength} hashes).",
                         idx,
                         hashes.LongLength
                     );
-                    foreach (HashDigest<SHA256> hash in hashes)
+                    foreach (BlockHash hash in hashes)
                     {
-                        yield return new Tuple<long, HashDigest<SHA256>>(idx, hash);
+                        yield return new Tuple<long, BlockHash>(idx, hash);
                         idx++;
                     }
                 }
@@ -978,7 +975,7 @@ namespace Libplanet.Net
 
         internal async IAsyncEnumerable<Block<T>> GetBlocksAsync(
             BoundPeer peer,
-            IEnumerable<HashDigest<SHA256>> blockHashes,
+            IEnumerable<BlockHash> blockHashes,
             [EnumeratorCancellation] CancellationToken cancellationToken
         )
         {
@@ -988,7 +985,7 @@ namespace Libplanet.Net
                 peer.Address.ToHex()
             );
 
-            var blockHashesAsArray = blockHashes as HashDigest<SHA256>[] ?? blockHashes.ToArray();
+            var blockHashesAsArray = blockHashes as BlockHash[] ?? blockHashes.ToArray();
             var request = new GetBlocks(blockHashesAsArray);
             int hashCount = blockHashesAsArray.Count();
 
@@ -1091,7 +1088,7 @@ namespace Libplanet.Net
             }
         }
 
-        internal async IAsyncEnumerable<(long, HashDigest<SHA256>)> GetDemandBlockHashes(
+        internal async IAsyncEnumerable<(long, BlockHash)> GetDemandBlockHashes(
             BlockChain<T> blockChain,
             IList<(BoundPeer, long)> peersWithHeight,
             IProgress<PreloadState> progress,
@@ -1109,7 +1106,7 @@ namespace Libplanet.Net
                 long peerIndex = peerHeight ?? -1;
 
                 long branchIndex = -1;
-                HashDigest<SHA256> branchPoint = default;
+                BlockHash branchPoint = default;
 
                 // FIXME: The following condition should be fixed together when the issue #459 is
                 // fixed.  https://github.com/planetarium/libplanet/issues/459
@@ -1119,11 +1116,11 @@ namespace Libplanet.Net
                 }
 
                 long totalBlocksToDownload = peerIndex - currentTipIndex;
-                var pairsToYield = new List<Tuple<long, HashDigest<SHA256>>>();
+                var pairsToYield = new List<Tuple<long, BlockHash>>();
                 Exception error = null;
                 try
                 {
-                    var downloaded = new List<HashDigest<SHA256>>();
+                    var downloaded = new List<BlockHash>();
                     int previousDownloadedCount = -1;
                     int stagnant = 0;
                     const int stagnationLimit = 3;
@@ -1146,7 +1143,7 @@ namespace Libplanet.Net
                             totalBlocksToDownload
                         );
 
-                        IAsyncEnumerable<Tuple<long, HashDigest<SHA256>>> blockHashes =
+                        IAsyncEnumerable<Tuple<long, BlockHash>> blockHashes =
                             GetBlockHashes(peer, locator, null, cancellationToken);
 
                         if (branchIndex == -1 &&
@@ -1156,9 +1153,9 @@ namespace Libplanet.Net
                             totalBlocksToDownload = peerIndex - branchIndex;
                         }
 
-                        await foreach (Tuple<long, HashDigest<SHA256>> pair in blockHashes)
+                        await foreach (Tuple<long, BlockHash> pair in blockHashes)
                         {
-                            pair.Deconstruct(out long dlIndex, out HashDigest<SHA256> dlHash);
+                            pair.Deconstruct(out long dlIndex, out BlockHash dlHash);
                             _logger.Verbose(
                                 "Received a block hash from {Peer}: #{BlockIndex} {BlockHash}",
                                 peer,
@@ -1215,7 +1212,7 @@ namespace Libplanet.Net
                     error = e;
                 }
 
-                foreach (Tuple<long, HashDigest<SHA256>> pair in pairsToYield)
+                foreach (Tuple<long, BlockHash> pair in pairsToYield)
                 {
                     yield return pair.ToValueTuple();
                 }
@@ -1338,7 +1335,7 @@ namespace Libplanet.Net
             TimeSpan? dialTimeout,
             CancellationToken cancellationToken)
         {
-            HashDigest<SHA256> genesisHash = BlockChain.Genesis.Hash;
+            BlockHash genesisHash = BlockChain.Genesis.Hash;
             IComparer<BlockPerception> canonComparer = BlockChain.Policy.CanonicalChainComparer;
             BlockPerception tipPerception = BlockChain.PerceiveBlock(initialTip);
             var peersWithHeightAndDiff = (await DialToExistingPeers(dialTimeout, cancellationToken))
@@ -1382,7 +1379,7 @@ namespace Libplanet.Net
             DateTimeOffset executionStarted = DateTimeOffset.Now;
             _logger.Debug("Starts to execute actions of {0} blocks.", totalCount);
             var blockHashes = workspace.IterateBlockHashes((int)initHeight);
-            foreach (HashDigest<SHA256> hash in blockHashes)
+            foreach (BlockHash hash in blockHashes)
             {
                 cancellationToken.ThrowIfCancellationRequested();
 
@@ -1494,7 +1491,7 @@ namespace Libplanet.Net
         private async Task SyncPreviousBlocksAsync(
             BlockChain<T> blockChain,
             BoundPeer peer,
-            HashDigest<SHA256>? stop,
+            BlockHash? stop,
             IProgress<BlockDownloadState> progress,
             TimeSpan dialTimeout,
             long totalBlockCount,
@@ -1554,7 +1551,7 @@ namespace Libplanet.Net
         private async Task<BlockChain<T>> FillBlocksAsync(
             BoundPeer peer,
             BlockChain<T> blockChain,
-            HashDigest<SHA256>? stop,
+            BlockHash? stop,
             IProgress<BlockDownloadState> progress,
             long totalBlockCount,
             long receivedBlockCount,
@@ -1577,10 +1574,9 @@ namespace Libplanet.Net
                     _logger.Debug("Trying to find branchpoint...");
                     BlockLocator locator = workspace.GetBlockLocator();
                     _logger.Debug("Locator's count: {LocatorCount}", locator.Count());
-                    IAsyncEnumerable<Tuple<long, HashDigest<SHA256>>> hashesAsync =
+                    IAsyncEnumerable<Tuple<long, BlockHash>> hashesAsync =
                         GetBlockHashes(peer, locator, stop, cancellationToken);
-                    IEnumerable<Tuple<long, HashDigest<SHA256>>> hashes =
-                        await hashesAsync.ToArrayAsync();
+                    IEnumerable<Tuple<long, BlockHash>> hashes = await hashesAsync.ToArrayAsync();
 
                     if (!hashes.Any())
                     {
@@ -1591,11 +1587,7 @@ namespace Libplanet.Net
                         return workspace;
                     }
 
-                    hashes.First().Deconstruct(
-                        out long branchIndex,
-                        out HashDigest<SHA256> branchPoint
-                    );
-
+                    hashes.First().Deconstruct(out long branchIndex, out BlockHash branchPoint);
                     _logger.Debug(
                         "Branch point is #{BranchIndex} {BranchHash}.",
                         branchIndex,
@@ -1641,8 +1633,7 @@ namespace Libplanet.Net
 
                     _logger.Debug("Trying to fill up previous blocks...");
 
-                    var hashesAsArray =
-                        hashes as Tuple<long, HashDigest<SHA256>>[] ?? hashes.ToArray();
+                    var hashesAsArray = hashes as Tuple<long, BlockHash>[] ?? hashes.ToArray();
                     if (!hashesAsArray.Any())
                     {
                         break;
@@ -1762,7 +1753,7 @@ namespace Libplanet.Net
 
                 BlockDemand blockDemand = BlockDemand.Value;
                 BoundPeer peer = blockDemand.Peer;
-                var hash = new HashDigest<SHA256>(blockDemand.Header.Hash.ToArray());
+                var hash = new BlockHash(blockDemand.Header.Hash.ToArray());
 
                 try
                 {

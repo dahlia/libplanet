@@ -159,6 +159,9 @@ Actual:   new byte[{actual.LongLength}] {{ {actualRepr} }}";
             AssertBytesEqual(expected.ToByteArray(), actual.ToByteArray());
         }
 
+        public static void AssertBytesEqual(BlockHash expected, BlockHash actual) =>
+            AssertBytesEqual(expected.ToByteArray(), actual.ToByteArray());
+
         public static void AssertBytesEqual<T>(
             HashDigest<T> expected,
             HashDigest<T> actual
@@ -221,7 +224,7 @@ Actual:   new byte[{actual.LongLength}] {{ {actualRepr} }}";
             }
 
             long index = previousBlock.Index + 1;
-            HashDigest<SHA256> previousHash = previousBlock.Hash;
+            BlockHash previousHash = previousBlock.Hash;
             DateTimeOffset timestamp =
                 previousBlock.Timestamp.Add(blockInterval ?? TimeSpan.FromSeconds(15));
 
@@ -264,7 +267,7 @@ Actual:   new byte[{actual.LongLength}] {{ {actualRepr} }}";
             where T : IAction, new()
         {
             IValue StateGetter(
-                Address address, HashDigest<SHA256>? blockHash, StateCompleter<T> stateCompleter) =>
+                Address address, BlockHash? blockHash, StateCompleter<T> stateCompleter) =>
                 blockHash is null
                     ? null
                     : stateStore.GetState(ToStateKey(address), blockHash.Value);
@@ -272,7 +275,7 @@ Actual:   new byte[{actual.LongLength}] {{ {actualRepr} }}";
             FungibleAssetValue FungibleAssetValueGetter(
                 Address address,
                 Currency currency,
-                HashDigest<SHA256>? blockHash,
+                BlockHash? blockHash,
                 FungibleAssetStateCompleter<T> stateCompleter)
             {
                 if (blockHash is null)
@@ -393,7 +396,7 @@ Actual:   new byte[{actual.LongLength}] {{ {actualRepr} }}";
                 dict.Add(address.ToHex(), actionEvaluation.OutputStates.GetState(address));
             }
 
-            return Hashcash.Hash(new Codec().Encode(dict));
+            return HashDigest<SHA256>.DeriveFrom(new Codec().Encode(dict));
         }
     }
 }
