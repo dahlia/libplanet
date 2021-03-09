@@ -1,17 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageId>Libplanet.Explorer</PackageId>
-    <LangVersion>8</LangVersion>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Libplanet.Explorer</RootNamespace>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <PackageProjectUrl>https://github.com/planetarium/libplanet-explorer</PackageProjectUrl>
-    <RepositoryUrl>git://github.com/planetarium/libplanet-explorer.git</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <Company>Planetarium</Company>
+    <Title>Libplanet Explorer</Title>
+    <PackageProjectUrl>https://libplanet.io/</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <Authors>Planetarium</Authors>
-    <VersionPrefix>0.1.0</VersionPrefix>
-    <NoWarn>NU1701</NoWarn>
+    <Company>Planetarium</Company>
+    <PackageLicenseExpression>LGPL-2.1-or-later</PackageLicenseExpression>
+    <RequireLicenseAcceptance>true</RequireLicenseAcceptance>
+    <RepositoryUrl>git://github.com/planetarium/libplanet.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Libplanet.Explorerer</AssemblyName>
+    <RootNamespace>Libplanet.Explorer</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>$(NoWarn);NU1701</NoWarn>
+    <IsTestProject>false</IsTestProject>
     <CodeAnalysisRuleSet>..\Libplanet.Explorer.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
@@ -38,17 +48,14 @@
     </PackageReference>
     <PackageReference Include="GraphQL" Version="3.0.0" />
     <PackageReference Include="GraphQL.SystemTextJson" Version="3.0.0" />
-    <PackageReference Include="Libplanet" Version="0.11.0-dev.20210217041916" />
-    <PackageReference Include="Libplanet.RocksDBStore" Version="0.11.0-dev.20210217041916" />
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Views\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\*" />
+    <ProjectReference Include="..\Libplanet\Libplanet.csproj" />
+    <ProjectReference Include="..\Libplanet.RocksDBStore\Libplanet.RocksDBStore.csproj" />
+    <!-- FIXME: We should specify the version range when the following NuGet
+    issue is addressed: <https://github.com/NuGet/Home/issues/5556>. -->
   </ItemGroup>
 
   <ItemGroup>
