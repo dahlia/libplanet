@@ -16,12 +16,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "../CONTRIBUTING.md",
       "output": {
         ".html": {
           "relative_path": "CONTRIBUTING.html",
-          "hash": "htagyuDa2uN9xG9d/ol4gg=="
+          "hash": "EMYCWqrt3VmQ1psHHcIakA=="
         }
       },
       "is_incremental": false,
