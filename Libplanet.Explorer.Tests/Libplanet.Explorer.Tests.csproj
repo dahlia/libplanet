@@ -1,13 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <IsPublishable>false</IsPublishable>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(TestsTargetFramework)'!='' ">
-    <TargetFramework>$(TestsTargetFramework)</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

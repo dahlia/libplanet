@@ -30,7 +30,7 @@ steps:
     inputs:
       command: custom
       custom: tool
-      arguments: install --global xunit-cli --version 0.1.12
+      arguments: install --global xunit-cli --version 0.1.14
 
 - task: DotNetCoreCLI@2
   displayName: dotnet build

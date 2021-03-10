@@ -17,6 +17,10 @@
     <AdditionalFiles Include="..\stylecop.json" />
   </ItemGroup>
 
+  <PropertyGroup Condition=" '$(TestsTargetFramework)'!='' ">
+    <TargetFramework>$(TestsTargetFramework)</TargetFramework>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="AsyncEnumerator" Version="4.0.2" />
     <PackageReference Include="Menees.Analyzers.2017" Version="2.0.3">

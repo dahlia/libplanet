@@ -116,6 +116,10 @@ namespace Libplanet.Explorer.Store
             _store.IncreaseTxNonce(chainId, signer, delta);
         }
 
+        /// <inheritdoc cref="IStore.ForkTxNonces(Guid, Guid)"/>
+        public void ForkTxNonces(Guid sourceChainId, Guid destinationChainId) =>
+            _store.ForkTxNonces(sourceChainId, destinationChainId);
+
         /// <inheritdoc cref="IStore"/>
         public bool ContainsTransaction(TxId txId)
         {
